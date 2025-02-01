@@ -1,0 +1,24 @@
+using JetBrains.Annotations;
+using UnityEngine;
+
+public struct IDCard
+{
+    public string Name { get; }
+    public int SecurityLevel { get; }
+
+    private IDCard(string name, int securityLevel)
+    {
+        Name = name;
+        SecurityLevel = securityLevel;
+    }
+
+    // Predefined ID levels
+    public static readonly IDCard Thief = new IDCard("Thief", 0);
+    public static readonly IDCard Patient = new IDCard("Patient", 0);
+    public static readonly IDCard Brawler = new IDCard("Brawler", 0);
+    public static readonly IDCard Guard = new IDCard("Guard", 1);
+    public static readonly IDCard Doctor = new IDCard("Doctor", 2);
+
+
+    public override string ToString() => $"{Name} (Level {SecurityLevel})";
+}
