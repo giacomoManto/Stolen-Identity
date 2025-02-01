@@ -1,16 +1,25 @@
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField]
+    TMP_InputField playerInput;
+
+    [SerializeField]
+    RoomBehavior currentPlayerRoom;
+
+    [SerializeField]
+    List<RoomBehavior> allRooms = new List<RoomBehavior>();
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void readPlayerInput()
     {
-        
+        print(playerInput.text);
     }
 }
