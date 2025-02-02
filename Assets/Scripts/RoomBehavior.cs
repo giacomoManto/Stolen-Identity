@@ -18,7 +18,7 @@ public class RoomBehavior : MonoBehaviour
     /// </summary>
     /// <param name="currentIDCard">The Player ID name in all lower case.</param>
     /// <returns>A room description.</returns>
-    public String GetRoomDescription(String currentIDCard)
+    public String GetRoomDescription(IDCard currentIDCard)
     {
         StringBuilder fullRoomDescription = new StringBuilder();
         fullRoomDescription.Append(roomDescription);
@@ -26,7 +26,7 @@ public class RoomBehavior : MonoBehaviour
         //For each item in the list, print the specific room description from the player
         foreach (var item in ItemList)
         {
-            String descriptionIndex = currentIDCard + item.Key;
+            String descriptionIndex = currentIDCard.Name + item.Key;
 
             ///REPLACE THIS
             String itemRoomDescription = item.Value;    //Go to item, get description based on description index.
@@ -59,8 +59,9 @@ public class RoomBehavior : MonoBehaviour
             catchChance = catchChance * .5f;
         }
         return Math.Clamp(catchChance,0f,1f);
+        
     }
 
-
+    
 
 }

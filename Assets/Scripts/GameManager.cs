@@ -33,11 +33,20 @@ public class GameManager : MonoBehaviour
         //Set current player room to starting room, this should be changed on load
         currentPlayerRoom = allRooms["Starting Room"];
         //Set room description
-        roomDescription.text = currentPlayerRoom.GetRoomDescription(currentPlayerID.Name);
+        roomDescription.text = currentPlayerRoom.GetRoomDescription(currentPlayerID);
     }
 
     public void readPlayerInput()
     {
         print(playerInput.text);
+    }
+
+    void OnGUI()
+    {
+        Event e = Event.current;
+        if (e.isKey)
+        {
+            Debug.Log("Detected key code: " + e.keyCode);
+        }
     }
 }

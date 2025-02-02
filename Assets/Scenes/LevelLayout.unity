@@ -480,8 +480,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInput: {fileID: 1784418820}
+  roomDescription: {fileID: 1927730900}
   currentPlayerRoom: {fileID: 0}
-  allRooms: []
 --- !u!4 &145529331
 Transform:
   m_ObjectHideFlags: 0
