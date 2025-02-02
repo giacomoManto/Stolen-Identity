@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
-    TMP_InputField playerInput;
+    TMP_InputField playerInputField;
 
     [SerializeField]
     TMP_Text roomDescription;
@@ -28,25 +28,36 @@ public class GameManager : MonoBehaviour
         List<RoomBehavior>temp = new List<RoomBehavior>(rooms);
         foreach (RoomBehavior room in temp)
         {
-            allRooms[room.name] = room; 
+            allRooms[room.name.ToLower()] = room; 
         }
         //Set current player room to starting room, this should be changed on load
-        currentPlayerRoom = allRooms["Starting Room"];
+        currentPlayerRoom = allRooms["starting room"];
         //Set room description
         roomDescription.text = currentPlayerRoom.GetRoomDescription(currentPlayerID);
     }
 
     public void readPlayerInput()
     {
-        print(playerInput.text);
+        string playerInput = playerInputField.text.ToLower();
+        print(playerInputField.text);
+        moveTo(playerInput);
     }
-
-    void OnGUI()
+    private void moveTo(string roomName)
     {
-        Event e = Event.current;
-        if (e.isKey)
+        if (!allRooms.ContainsKey(roomName))
         {
-            Debug.Log("Detected key code: " + e.keyCode);
+            print("command invalid");
+            return;
         }
+        currentPlayerRoom = allRooms[roomName];
+        roomDescription.text = currentPlayerRoom.GetRoomDescription(currentPlayerID);
     }
+    //void OnGUI()
+    //{
+    //    Event e = Event.current;
+    //    if (e.isKey)
+    //    {
+    //        Debug.Log("Detected key code: " + e.keyCode);
+    //    }
+    //}
 }

@@ -8,10 +8,12 @@ public class RoomBehavior : MonoBehaviour
 {
     public int securityLevel = 0;
     public String roomName = "";
+    public List<RoomBehavior> hasDoorsTo= new List<RoomBehavior>();
     [SerializeField]
     String roomDescription = "";
     [SerializeField]
     Dictionary<String,String> ItemList = new Dictionary<String, String>(); //Temporary until we have an object class
+
 
     /// <summary>
     /// Gets the room description based on the player ID currently held.
@@ -34,7 +36,12 @@ public class RoomBehavior : MonoBehaviour
             
             fullRoomDescription.AppendLine(itemRoomDescription);
         }
-        return fullRoomDescription.ToString();
+        fullRoomDescription.AppendLine("\nThe room also seems to have doors to ");
+        foreach (var room in hasDoorsTo)
+        {
+            fullRoomDescription.AppendLine( "the " + room.roomName + ", ");
+        }
+            return fullRoomDescription.ToString();
     }
     /// <summary>
     /// Performs a player action on an object in the room. The action performed may be based on the current ID card.
