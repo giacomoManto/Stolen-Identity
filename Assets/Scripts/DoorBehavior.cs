@@ -5,9 +5,6 @@ using UnityEngine;
 public class DoorBehavior : Interactable
 {
     [SerializeField]
-    private string DoorName;
-
-    [SerializeField]
     private RoomBehavior room;
 
     [SerializeField]
@@ -33,12 +30,12 @@ public class DoorBehavior : Interactable
 
     public DoorBehavior() : base()
     {
-        this.SetName(DoorName);
+        this.SetName(interactableName);
     }
 
     public override string GetDescription(IDCard id)
     {
-        throw new System.NotImplementedException();
+        return "PLACEHOLDER: A white door.";
     }
 
     private string GoThrough(IDCard id)

@@ -4,7 +4,7 @@ public class ExampleApple: Interactable
 {
     public ExampleApple(): base()
     {
-        this.SetName("Apple");
+        this.SetName(interactableName);
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
