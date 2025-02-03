@@ -27,13 +27,12 @@ public class JournalOutput : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        viewableText = GetComponentInChildren<TMP_Text>();
+        scrollRect = GetComponent<ScrollRect>();
     }
 
     private void Start()
     {
-        viewableText = GetComponentInChildren<TMP_Text>();
-        scrollRect = GetComponent<ScrollRect>();
-        Clear();
     }
 
     public void Clear()
