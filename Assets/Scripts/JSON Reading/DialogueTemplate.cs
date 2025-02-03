@@ -20,8 +20,12 @@ public class DialogueTemplate
     public DialogueTemplate()
     {
         doorDialogue = new SerializableDictionary<string, string>();
+        doorDialogue["doorDialogue Key"] = "Hello Value";
+        doorDialogue["doorDialogue 2nd Key"] = "2nd Value";
         roomDialogue = new SerializableDictionary<string, string>();
+        roomDialogue["roomDialogue Key"] = "Hello Value";
         objectDialogue = new SerializableDictionary<string, string>();
+        objectDialogue["objectDialogue Key"] = "Hello Value";
 
     }
 }

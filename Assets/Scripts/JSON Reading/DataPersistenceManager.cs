@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -27,7 +28,9 @@ public class DataPersistenceManager : MonoBehaviour
     private void Awake()
     {
           instance = this;
-        dataHandler = new FileDataHandler<DialogueTemplate>(Application.persistentDataPath, fileName);
+        string path = Application.dataPath +  "\\Dialogue";
+        dataHandler = new FileDataHandler<DialogueTemplate>(path, fileName);
+        Debug.Log(path);
     }
     private void Start()
     {
