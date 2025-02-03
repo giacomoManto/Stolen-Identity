@@ -17,10 +17,14 @@ public abstract class Interactable : MonoBehaviour
     /// </summary>
     /// <param name="name"></param>
     /// <exception cref="ArgumentNullException"></exception>
-    public Interactable(string name)
+    public Interactable()
     {
-        interactableName = name ?? throw new ArgumentNullException(nameof(name));
         this.RegisterAction("inspect", GetDescription);
+    }
+
+    protected void SetName(string name)
+    {
+        this.interactableName = name;
     }
 
     /// <summary>

@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class ExampleApple: Interactable
 {
-    public ExampleApple(): base("Apple")
+    public ExampleApple(): base()
     {
-        
+        this.SetName("Apple");
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

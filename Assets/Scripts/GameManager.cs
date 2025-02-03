@@ -22,6 +22,25 @@ public class GameManager : MonoBehaviour
 
     private JournalOutput journal;
 
+    private static GameManager instance;
+
+    public static GameManager GetInstance()
+    {
+        return instance;
+    }
+
+    GameManager()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            DestroyImmediate(gameObject);
+        }
+    }
+
     void Start()
     {
         journal = JournalOutput.GetInstance();
@@ -60,6 +79,13 @@ public class GameManager : MonoBehaviour
             return;
         }
         journal.AddGameText(currentPlayerRoom.ActOn(currentPlayerID, split[1], split[0]));
+    }
+
+    public void changeRoom(RoomBehavior room)
+    {
+        this.currentPlayerRoom = room;
+        journal.Clear();
+        journal.AddGameText(this.currentPlayerRoom.GetRoomDescription(currentPlayerID));
     }
 
     //void OnGUI()
