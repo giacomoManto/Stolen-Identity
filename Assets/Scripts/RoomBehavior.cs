@@ -65,7 +65,7 @@ public class RoomBehavior : MonoBehaviour
         Action = Action.ToLower();
         if (!ItemDictionary.ContainsKey(Object))
         {
-            Debug.LogError("Attempted to act on " + Object + " but it was not found in the item list of " + roomName);
+            Debug.LogWarning("Attempted to act on " + Object + " but it was not found in the item list of " + roomName);
             return $"I seem to be hallucinating. There is no {char.ToUpper(Object[0]) + Object.Substring(1)} in this room.";
         }
         return ItemDictionary[Object].PerformAction(Action, currentIDCard);
