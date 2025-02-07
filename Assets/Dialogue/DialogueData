@@ -1,28 +1,14 @@
 {
-    "doorDialogue": {
-        "keys": [
-            "doorDialogue Key",
-            "doorDialogue 2nd Key"
-        ],
-        "values": [
-            "Hello Value",
-            "2nd Value"
-        ]
-    },
     "roomDialogue": {
-        "keys": [
-            "roomDialogue Key"
-        ],
-        "values": [
-            "Hello Value"
-        ]
+        "keys": [],
+        "values": []
     },
     "objectDialogue": {
-        "keys": [
-            "objectDialogue Key"
-        ],
-        "values": [
-            "Hello Value"
-        ]
+        "keys": [],
+        "values": []
+    },
+    "npcDialogue": {
+        "keys": [],
+        "values": []
     }
 }

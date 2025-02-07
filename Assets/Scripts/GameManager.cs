@@ -58,27 +58,18 @@ public class GameManager : MonoBehaviour
 
     }
 
-    private void Update()
-    {
-        // Set Room Description Here TODO IN FUTURE ONLY GET ROOM DESCRIPTION WHEN NEEDED.
-        // THIS IS NOT CORRECT TEMPORARY. We should print when we enter a new room and when the player requests it.
-        //if (roomDescription.text != currentPlayerRoom.GetRoomDescription(currentPlayerID))
-        //{
-        //    roomDescription.text = currentPlayerRoom.GetRoomDescription(currentPlayerID);
-        //}
-    }
 
     public void readPlayerInput()
     {
         print(playerInput.text);
         journal.AddPlayerText(playerInput.text);
-        string[] split = playerInput.text.Split(" ");
-        if (split.Length != 2)
+        string currentPlayerInput = playerInput.text.ToLower();
+        if (currentPlayerInput.Split(" ").Length < 2)
         {
             print("Invalid input. Please enter a verb and a noun.");
             return;
         }
-        journal.AddGameText(currentPlayerRoom.ActOn(currentPlayerID, split[1], split[0]));
+        journal.AddGameText(currentPlayerRoom.ActOn(currentPlayerID, currentPlayerInput));
     }
 
     public void changeRoom(RoomBehavior room)

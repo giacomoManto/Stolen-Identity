@@ -23,9 +23,12 @@ public class DoorBehavior : Interactable
         gameManager = GameManager.GetInstance();
 
         // Action Registration
-        this.RegisterAction("gothrough", GoThrough);
+        this.RegisterAction("go through", GoThrough);
+        this.RegisterAction("open", GoThrough);
+        this.RegisterAction("enter", GoThrough);
         this.RegisterAction("lockpick", Lockpick);
         this.RegisterAction("breakdown", Breakdown);
+        this.RegisterAction("break", Breakdown);
     }
 
     public DoorBehavior() : base()

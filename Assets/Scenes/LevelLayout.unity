@@ -166,6 +166,7 @@ MonoBehaviour:
   securityLevel: 1
   roomName: Break Room
   roomDescription: Break Room, Room Description.
+  ItemList: []
 --- !u!1 &62986275
 GameObject:
   m_ObjectHideFlags: 0
@@ -588,6 +589,7 @@ MonoBehaviour:
   securityLevel: 0
   roomName: Lobby
   roomDescription: Lobby Room Description.
+  ItemList: []
 --- !u!1 &289139624
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,6 +637,7 @@ MonoBehaviour:
   securityLevel: 2
   roomName: Doctor Office
   roomDescription: Doctor Office Room Description.
+  ItemList: []
 --- !u!1 &453564231
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,6 +685,7 @@ MonoBehaviour:
   securityLevel: 2
   roomName: Vault
   roomDescription: Vault Room Description.
+  ItemList: []
 --- !u!1 &479178960
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,7 +732,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   securityLevel: 0
   roomName: Patient Hallway
-  roomDescription: 
+  roomDescription: Patient Hallway Description
+  ItemList: []
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,6 +1002,7 @@ MonoBehaviour:
   securityLevel: 1
   roomName: Storage Room
   roomDescription: Storage Room Room Description.
+  ItemList: []
 --- !u!1 &727628864
 GameObject:
   m_ObjectHideFlags: 0
@@ -1044,6 +1050,7 @@ MonoBehaviour:
   securityLevel: 0
   roomName: Patient Hallway
   roomDescription: Patient Hallway Room Description.
+  ItemList: []
 --- !u!1 &866850113
 GameObject:
   m_ObjectHideFlags: 0
@@ -1528,6 +1535,7 @@ MonoBehaviour:
   securityLevel: 0
   roomName: Starting Room
   roomDescription: A default description for a starting room.
+  ItemList: []
 --- !u!1 &1499385319
 GameObject:
   m_ObjectHideFlags: 0
@@ -1575,6 +1583,7 @@ MonoBehaviour:
   securityLevel: 0
   roomName: Brawler Medical Room
   roomDescription: Brawler Medical Room Description.
+  ItemList: []
 --- !u!1 &1501790958
 GameObject:
   m_ObjectHideFlags: 0
@@ -1622,6 +1631,7 @@ MonoBehaviour:
   securityLevel: 0
   roomName: Cubicle Work Area
   roomDescription: Cubicle Work Area Room Description.
+  ItemList: []
 --- !u!1 &1582195720
 GameObject:
   m_ObjectHideFlags: 0
@@ -1669,6 +1679,7 @@ MonoBehaviour:
   securityLevel: 1
   roomName: Guarded Hallway
   roomDescription: Guarded Hallway Room Description.
+  ItemList: []
 --- !u!1 &1586635845
 GameObject:
   m_ObjectHideFlags: 0
@@ -2245,6 +2256,7 @@ MonoBehaviour:
   securityLevel: 0
   roomName: Janitor Room
   roomDescription: Janitor Room Room Description.
+  ItemList: []
 --- !u!1 &2094455742
 GameObject:
   m_ObjectHideFlags: 0
@@ -2292,6 +2304,7 @@ MonoBehaviour:
   securityLevel: 0
   roomName: Fire Exit
   roomDescription: Fire Exit Room Description.
+  ItemList: []
 --- !u!1 &2124758851
 GameObject:
   m_ObjectHideFlags: 0
@@ -2339,6 +2352,7 @@ MonoBehaviour:
   securityLevel: 0
   roomName: Janitor Maze
   roomDescription: Janitor Maze Room Description.
+  ItemList: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

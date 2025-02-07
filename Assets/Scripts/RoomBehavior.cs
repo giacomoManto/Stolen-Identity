@@ -12,7 +12,7 @@ public class RoomBehavior : MonoBehaviour
     public String roomName = "";
     [SerializeField]
     String roomDescription = "";
-
+    [SerializeField]
     List<Interactable> ItemList = new List<Interactable>();
 
 
@@ -59,11 +59,26 @@ public class RoomBehavior : MonoBehaviour
     /// </summary>
     /// <param name="Object"></param>
     /// <param name="Action"></param>
-    public string ActOn(IDCard currentIDCard, String Object, String Action)
+    public string ActOn(IDCard currentIDCard, String playerInput)
     {
-        Object = Object.ToLower();
-        Action = Action.ToLower();
-        if (!ItemDictionary.ContainsKey(Object))
+        String Action = "";
+        String Object = "";
+        foreach (String item in ItemDictionary.Keys)
+        {
+            if (playerInput.Contains(item))
+            {
+                Object = item;
+                Action = playerInput.Replace(item,"");
+                Action = Action.Substring(0, Action.Length-1);
+            }
+
+        }
+        if (Action.Equals("") && Object.Equals(""))
+        {
+            Debug.LogWarning("Empty player input");
+            return $"Your mind goes blank for a bit before you realize you should probably write something in the journal.";
+        }
+        else if (Object.Equals(""))
         {
             Debug.LogWarning("Attempted to act on " + Object + " but it was not found in the item list of " + roomName);
             return $"I seem to be hallucinating. There is no {char.ToUpper(Object[0]) + Object.Substring(1)} in this room.";
