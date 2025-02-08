@@ -9,9 +9,6 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
-    TMP_InputField playerInput;
-
-    [SerializeField]
     RoomBehavior currentPlayerRoom;
 
     [SerializeField]
@@ -59,17 +56,10 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void readPlayerInput()
+    public void handlePlayerInput(string playerInput)
     {
-        print(playerInput.text);
-        journal.AddPlayerText(playerInput.text);
-        string currentPlayerInput = playerInput.text.ToLower();
-        if (currentPlayerInput.Split(" ").Length < 2)
-        {
-            print("Invalid input. Please enter a verb and a noun.");
-            return;
-        }
-        journal.AddGameText(currentPlayerRoom.ActOn(currentPlayerID, currentPlayerInput));
+        playerInput = playerInput.ToLower();
+        journal.AddGameText(currentPlayerRoom.ActOn(currentPlayerID, playerInput));
     }
 
     public void changeRoom(RoomBehavior room)
@@ -79,12 +69,5 @@ public class GameManager : MonoBehaviour
         journal.AddGameText(this.currentPlayerRoom.GetRoomDescription(currentPlayerID));
     }
 
-    //void OnGUI()
-    //{
-    //    Event e = Event.current;
-    //    if (e.isKey)
-    //    {
-    //        Debug.Log("Detected key code: " + e.keyCode);
-    //    }
-    //}
+
 }
