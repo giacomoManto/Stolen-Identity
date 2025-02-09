@@ -17,44 +17,53 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     [Tooltip("Where the dialogue will be pulled from")]
     private string fileName;
-    [SerializeField]
 
-    string path = Application.dataPath + "\\Dialogue";
+    private string path = Application.dataPath + "/Dialogue";
     private DialogueTemplate dialogueData;  //Keeps track of the player data from save/load. Things like player virus and player energy are stored in this format.
 
-    private FileDataHandler<DialogueTemplate> dataHandler;  //A file handler that will load and save player data to and from a Json format.
+    private FileDataHandler<SerializableDictionary<String, SerializableDictionary<String, String>>> dataHandler;  //A file handler that will load and save player data to and from a Json format.
 
 
     public static DialogueManager instance { get; private set; } //A static variable to ensure theres only one DataPersistenceManager in the scene.
 
     private void Awake()
     {
+
         instance = this;
-        dataHandler = new FileDataHandler<DialogueTemplate>(path, fileName);
+        dataHandler = new FileDataHandler<SerializableDictionary<String, SerializableDictionary<String, String>>>(path, fileName);
         Debug.Log(path);
     }
+
     private void Start()
     {
-        dialogueData = dataHandler.Load();
+        SerializableDictionary<String, SerializableDictionary<String, String>> temp = new SerializableDictionary<String, SerializableDictionary<String, String>>();
+        SerializableDictionary<String, String> action = new SerializableDictionary<string, string>();
+        action.Add("eat", "you ate the apple.");
+        temp.Add("apple", action);
+        dataHandler.Save(temp);
+        //dialogueData = dataHandler.Load();
+        print(dialogueData);
     }
+
     public String getDialogue(String key)
     {
-        if (dialogueData.roomDialogue.ContainsKey(key))
-        {
-            return dialogueData.roomDialogue[key];
-        }
-        else if (dialogueData.npcDialogue.ContainsKey(key))
-        {
-            return dialogueData.npcDialogue[key];
-        }
-        else if (dialogueData.objectDialogue.ContainsKey(key))
-        {
-            return dialogueData.objectDialogue[key];
-        }
-        else
-        {
-            return "key not found";
-        }
+        //if (dialogueData.roomDialogue.ContainsKey(key))
+        //{
+        //    return dialogueData.roomDialogue[key];
+        //}
+        //else if (dialogueData.npcDialogue.ContainsKey(key))
+        //{
+        //    return dialogueData.npcDialogue[key];
+        //}
+        //else if (dialogueData.objectDialogue.ContainsKey(key))
+        //{
+        //    return dialogueData.objectDialogue[key];
+        //}
+        //else
+        //{
+        //    return "key not found";
+        //}
+        return "";
         
     }
 

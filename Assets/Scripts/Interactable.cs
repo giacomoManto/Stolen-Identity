@@ -65,7 +65,7 @@ public abstract class Interactable : MonoBehaviour
         {
             return actions[action](id);
         }//Check if action exists in JSON doc but under specific ID
-        else if (getTextFromJson(action,id) != "key not found")
+        else if (getTextFromJson(action, id) != "key not found")
         {
             return getTextFromJson(action, id);
         }//Check if action exists in JSON doc under no ID
@@ -99,5 +99,19 @@ public abstract class Interactable : MonoBehaviour
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
-    public abstract string GetDescription(IDCard id);
+    public virtual string GetDescription(IDCard id)
+    {
+        if (getTextFromJson("inspect", id) != "key not found")
+        {
+            return getTextFromJson("inspect", id);
+        }
+        else if (getTextFromJson("inspect", IDCard.None) != "key not found")
+        {
+            return getTextFromJson("inspect", IDCard.None);
+        }
+        else
+        {
+            throw new NotImplementedException();
+        }
+    }
 }
