@@ -9,18 +9,20 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
-    TMP_InputField playerInput;
+    private IDCard currentPlayerID = IDCard.Patient;
 
     [SerializeField]
-    RoomBehavior currentPlayerRoom;
+    private TMP_InputField playerInput;
 
     [SerializeField]
-    IDCard currentPlayerID = IDCard.Patient;
+    private RoomBehavior currentPlayerRoom;
 
     [SerializeField]
-    Dictionary<string, RoomBehavior> allRooms = new Dictionary<string, RoomBehavior>();
+    private Dictionary<string, RoomBehavior> allRooms = new Dictionary<string, RoomBehavior>();
 
     private JournalOutput journal;
+
+    private DialogueManager dialogueManager;
 
     private static GameManager instance;
 
@@ -56,6 +58,8 @@ public class GameManager : MonoBehaviour
         currentPlayerRoom = allRooms["Starting Room"];
         journal.AddGameText(currentPlayerRoom.GetRoomDescription(currentPlayerID));
 
+        dialogueManager = FindFirstObjectByType<DialogueManager>();
+
     }
 
 
@@ -64,11 +68,15 @@ public class GameManager : MonoBehaviour
         print(playerInput.text);
         journal.AddPlayerText(playerInput.text);
         string currentPlayerInput = playerInput.text.ToLower();
+        //Check for valid input (noun and verb)
         if (currentPlayerInput.Split(" ").Length < 2)
         {
+            journal.AddGameText("You pause, realizing you probably need a noun and a verb to act properly. ");
             print("Invalid input. Please enter a verb and a noun.");
             return;
         }
+
+        //Add the action to the journal while passing the action to the room
         journal.AddGameText(currentPlayerRoom.ActOn(currentPlayerID, currentPlayerInput));
     }
 
@@ -78,7 +86,10 @@ public class GameManager : MonoBehaviour
         journal.Clear();
         journal.AddGameText(this.currentPlayerRoom.GetRoomDescription(currentPlayerID));
     }
-
+    public String getDialogueOrDefault(string dialogueKey)
+    {
+        return dialogueManager.getDialogue(dialogueKey);
+    }
     //void OnGUI()
     //{
     //    Event e = Event.current;

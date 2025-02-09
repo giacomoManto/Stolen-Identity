@@ -1,6 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.InteropServices.WindowsRuntime;
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 public abstract class Interactable : MonoBehaviour
@@ -11,6 +14,9 @@ public abstract class Interactable : MonoBehaviour
 
     [SerializeField]
     protected string location;
+
+    [SerializeField]
+    private DialogueManager dialogueManager;
 
     /// <summary>
     /// Default constructor.
@@ -54,15 +60,38 @@ public abstract class Interactable : MonoBehaviour
     public string PerformAction(string action, IDCard id)
     {
         action = action.ToLower();
+        //Check if action exists in specific action list
         if (actions.ContainsKey(action))
         {
             return actions[action](id);
+        }//Check if action exists in JSON doc but under specific ID
+        else if (getTextFromJson(action,id) != "key not found")
+        {
+            return getTextFromJson(action, id);
+        }//Check if action exists in JSON doc under no ID
+        else if (getTextFromJson(action, IDCard.None) != "key not found")
+        {
+            return getTextFromJson(action, IDCard.None);
         }
         else
         {
             // Maybe add different responses based on the IDCard.
             return $"Now why would I want to {action} the {interactableName}.";
         }
+    }
+
+    //object name + action + ID,  Description
+    //object name + action + ID.NONE,  Description
+
+    //appleinspectbrawler, an apple...not as good as booze but its a nice snack
+    //applegrab, you grab the apple
+    public string getTextFromJson(String Action, IDCard id)
+    {
+        if (dialogueManager == null)
+        {
+            dialogueManager = FindFirstObjectByType<DialogueManager>();
+        }
+        return dialogueManager.getDialogue(this.interactableName + Action + id.Name);
     }
 
     /// <summary>

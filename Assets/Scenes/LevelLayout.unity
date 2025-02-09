@@ -481,6 +481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: DialogueData
+  path: D:/Other/Unity/Stolen-Identity/Assets\Dialogue
 --- !u!4 &79740000
 Transform:
   m_ObjectHideFlags: 0
@@ -1266,6 +1267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactableName: Door#1
   location: Meow
+  dialogueManager: {fileID: 0}
   room: {fileID: 479178962}
   lockLevel: 0
 --- !u!1 &1257863376
@@ -1366,6 +1368,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactableName: Apple
   location: sits on the floor beneath your feet.
+  dialogueManager: {fileID: 0}
 --- !u!1 &1401071886
 GameObject:
   m_ObjectHideFlags: 0

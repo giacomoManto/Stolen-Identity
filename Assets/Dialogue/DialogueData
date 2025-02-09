@@ -4,8 +4,12 @@
         "values": []
     },
     "objectDialogue": {
-        "keys": [],
-        "values": []
+        "keys": [	"Appleeat",
+			"Applemove to",
+			"Applemove toPatient"],
+        "values": [	"You ate the apple",
+			"You walk over to the apple", 
+			"As the patient you wander to the apple"]
     },
     "npcDialogue": {
         "keys": [],

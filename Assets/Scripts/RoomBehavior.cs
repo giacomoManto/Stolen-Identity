@@ -73,13 +73,9 @@ public class RoomBehavior : MonoBehaviour
             }
 
         }
-        if (Action.Equals("") && Object.Equals(""))
+        if (Object.Equals(""))
         {
-            Debug.LogWarning("Empty player input");
-            return $"Your mind goes blank for a bit before you realize you should probably write something in the journal.";
-        }
-        else if (Object.Equals(""))
-        {
+            Object = playerInput.Split(" ")[1];
             Debug.LogWarning("Attempted to act on " + Object + " but it was not found in the item list of " + roomName);
             return $"I seem to be hallucinating. There is no {char.ToUpper(Object[0]) + Object.Substring(1)} in this room.";
         }
