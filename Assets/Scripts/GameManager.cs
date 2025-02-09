@@ -66,7 +66,6 @@ public class GameManager : MonoBehaviour
     public void handlePlayerInput(string playerInput)
     {
         print(playerInput);
-        journal.AddPlayerText(playerInput);
         string currentPlayerInput = playerInput.ToLower();
         //Check for valid input (noun and verb)
         if (currentPlayerInput.Split(" ").Length < 2)
