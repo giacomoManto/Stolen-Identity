@@ -63,11 +63,11 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void readPlayerInput()
+    public void handlePlayerInput(string playerInput)
     {
-        print(playerInput.text);
-        journal.AddPlayerText(playerInput.text);
-        string currentPlayerInput = playerInput.text.ToLower();
+        print(playerInput);
+        journal.AddPlayerText(playerInput);
+        string currentPlayerInput = playerInput.ToLower();
         //Check for valid input (noun and verb)
         if (currentPlayerInput.Split(" ").Length < 2)
         {
@@ -90,12 +90,4 @@ public class GameManager : MonoBehaviour
     {
         return dialogueManager.getDialogue(dialogueKey);
     }
-    //void OnGUI()
-    //{
-    //    Event e = Event.current;
-    //    if (e.isKey)
-    //    {
-    //        Debug.Log("Detected key code: " + e.keyCode);
-    //    }
-    //}
-}
+    }

@@ -61,6 +61,11 @@ public class RoomBehavior : MonoBehaviour
     /// <param name="Action"></param>
     public string ActOn(IDCard currentIDCard, String playerInput)
     {
+        if (playerInput == "" || playerInput == null)
+        {
+            // Our earlier systems should not send empty player input to this function.
+            Debug.LogError("Empty player input");
+        }
         String Action = "";
         String Object = "";
         foreach (String item in ItemDictionary.Keys)
@@ -68,8 +73,8 @@ public class RoomBehavior : MonoBehaviour
             if (playerInput.Contains(item))
             {
                 Object = item;
-                Action = playerInput.Replace(item,"");
-                Action = Action.Substring(0, Action.Length-1);
+                Action = playerInput.Replace(item, "");
+                Action = Action.Substring(0, Action.Length - 1);
             }
 
         }
@@ -77,7 +82,6 @@ public class RoomBehavior : MonoBehaviour
         {
             Object = playerInput.Split(" ")[1];
             Debug.LogWarning("Attempted to act on " + Object + " but it was not found in the item list of " + roomName);
-            return $"I seem to be hallucinating. There is no {char.ToUpper(Object[0]) + Object.Substring(1)} in this room.";
         }
         return ItemDictionary[Object].PerformAction(Action, currentIDCard);
     }
