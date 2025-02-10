@@ -4,7 +4,9 @@ using System.Linq;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using static UnityEngine.Rendering.DebugUI;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,6 +25,9 @@ public class GameManager : MonoBehaviour
     private JournalOutput journal;
 
     private static GameManager instance;
+
+    private Dictionary<IDCard, int> statRecorder = new Dictionary<IDCard, int>();
+   
 
     public static GameManager GetInstance()
     {
@@ -55,13 +60,12 @@ public class GameManager : MonoBehaviour
         //Set current player room to starting room, this should be changed on load
         currentPlayerRoom = allRooms["Starting Room"];
         journal.AddGameText(currentPlayerRoom.GetRoomDescription(currentPlayerID));
-
-
     }
 
 
     public void handlePlayerInput(string playerInput)
     {
+        statRecorder[currentPlayerID] = (statRecorder.TryGetValue(currentPlayerID, out int val) ? val : 0) + 1;   
         print(playerInput);
         string currentPlayerInput = playerInput.ToLower();
         //Check for valid input (noun and verb)
