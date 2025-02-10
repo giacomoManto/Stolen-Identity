@@ -1,9 +1,77 @@
-Object : action : ID Card Name : description
+# Object : action : ID Card Name (or Any) : description
 
-Apple : eat : None : You walk over and decide to eat the apple. While munching you realize the apple is delicious. Praise the Apple!
+Apple : eat : Any : You walk over and decide to eat the apple. While munching you realize the apple is delicious. Praise the Apple!
 
-Apple : eat : Patient : You walk over to the apple wanting to eat it and then... wait what was I doing? Oh right I'm an amnesiac patient...
+Apple : eat : Patient : You walk over to the apple wanting to eat it and then... wait what was I doing? Oh right, I'm an amnesiac patient...
 
 
-# Thief, Patient, Brawler, Guard
-PatientID : inspect : None : You walk over to the patient ID and inspect it. Looks pretty standard to you.
+# ID Cards
+PatientID : inspect : Any : I walk over to the ID card and inspect it. It's a plain white card, nothing special.
+
+ThiefID : inspect : Any : I walk over to the ID card and inspect it. A portrait of a pretty shady individual is on the card along with a number to call for 'repossession' services.
+ThiefID : inspect : Guard : I walk over to the ID card and inspect it. This is clearly a thief, why would they leave this hanging around? I really hope they aren't planning to steal from us, I can't get fired again.
+
+BrawlerID : inspect : Any : I walk over to the ID card and inspect it. The card is a bit bent and has a few scratches on it. It's a bit hard to read but the profession says 'Bar Brawler'. That can't be a real job.
+
+DoctorID : inspect : Any : I walk over to the ID card and inspect it. The card is pristine and has a picture of an eager doctor on it.
+
+GuardID : inspect : Any : I walk over to the ID card and inspect it. The card is a bit worn but still legible. It has a picture of a stern looking guard on it.
+GuardID : inspect : Thief : I walk over to the ID card and inspect it. The card is a bit worn but my keen eye can still make out the picture. This is a guard, I need to keep an eye out for them.
+
+# Rediscover Yourself
+Patient File : inspect : Any : I hold up the file. The medical jargon is too complicated to understand. Useless to me since I can’t interpret it.
+Patient File : inspect : Brawler : I look at the words. They start to swirl around in my vision. I stumble and fall, dropping the file. This is what I get for trying to read.
+Patient File : inspect : Doctor : I scan the medical record. Relatives … unknown. Name … unknown. Age … Unknown. Why are there so many unknowns? Affliction … Amnesia. Oh, that makes more sense, how are we supposed to know if the patient doesn’t know themselves. I wonder who this belongs to? The room seems to be patientless.
+
+Permission Slip : inspect : Any : I take a look at the atrocious handwriting. It seems to be a doctors note releasing a patient from care.
+Permission Slip : inspect : Patient : I look at the piece of the paper. It’s the slip I got from the doctor giving me permission to leave since I finally remembered who I truly am. I just need to show this to the guards at the entrance.
+
+# Become a bar fighter
+Booze : inspect : Any : A bottle of nondescript alcohol. By the smell it must be at least 150 proof.
+Booze : inspect : Doctor : A bottle of nondescript alcohol. Smells strong enough to be used as a disinfectant. No way someone is drinking this right? … Right?
+Booze : inspect : Brawler: A bottle of delicious liquid sent by the gods. Now this just made my day better.
+
+Gauze Fist Wraps : inspect : Any : I take a step closer to the gauze wraps. They are covered in fresh blood. Gross.
+Gauze Fist Wraps : inspect : Doctor : I glance at the gauze wraps. They are clearly used. Great, someone left their medical waste lying around.
+Gauze Fist Wraps : inspect : Brawler : Hmm. These might make punching others hurt me less.
+
+Bar Rewards Card : inspect : Any : I pick up a battered, soggy bar loyalty card.
+Bar Rewards Card : inspect : Guard : I pick up a battered, soggy bar loyalty card. Probably banned from half the bars in town, yet still working through the rewards program. Impressive.
+Bar Rewards Card : inspect : Doctor : I pick up a battered, soggy bar loyalty card. Looks like this belonged to a true hardcore drinker. Wasn’t there a patient that came in earlier directly from a bar?
+Bar Rewards Card : inspect : Brawler : My rewards card. Only thirteen more drinks and I’ll get one for free.
+
+# Become a doctor
+Labcoat : inspect : Any : I take a closer look at the labcoat. It’s quite standard.
+Labcoat : inspect : Doctor : My lucky labcoat. This bad boy was the only warmth during my residency.
+Labcoat : inspect : Brawler : Looks like a napkin to me. Why was this in a vault?
+
+Punchcard : inspect : Any : I hold the punchcard up to the light. Nope, no hidden messages.
+Punchcard : inspect : Doctor : My punchcard. Contractually I can’t leave until I get this punched.
+Punchcard : inspect : Brawler : This looks pretty punchable to me.
+
+Punchcard Punched : inspect : Any : I hold the punchcard up to the light. The large hole lets the light through, blinding me temporarily. Still no hidden messages.
+Punchcard Punched : inspect : Doctor : My punchcard. Now with a nice hole clocking me out.
+Punchcard Punched : inspect : Brawler : This looks like it could handle a couple more hits.
+
+PhD : inspect : Any : A framed Doctorate. Someone must be really proud about getting this to frame it so securely.
+PhD : inspect : Doctor : My framed Doctorate. Without this who really am I?
+
+# Become a thief
+Calling Card : inspect : Any : A calling card. Why would you put your face on this?
+Calling Card : inspect : Guard : A calling card. Why would you put your face on this? I should keep an eye out for this person.
+Calling Card : inspect : Thief : My beautiful calling card. Silian Rail lettering, 16-point cardstock, it's a classic.
+
+The Golden Microscope : inspect : Any : A priceless golden microscope encrusted with jewels.
+The Golden Microscope : inspect : Doctor : My precious golden microscope. What would I do on those long, lonely nights without it?
+The Golden Microscope : inspect : Guard : The doctor's golden microscope. I told them the hospital's insurance won't cover it if it gets stolen. I hope they listen because I am not paid enough to make sure it stays safe.
+The Golden Microscope : inspect : Thief : A priceless golden microscope encrusted with jewels. It should be in a museum... or in my bag.
+
+# I am X
+Donuts : inspect : Any : A box of fresh donuts, still warm.
+Donuts : inspect : Doctor : A box of donuts. Too much sugar.
+Donuts : inspect : Guard : A box of donuts. They seem to have been baked 3 hours 14 minutes ago. I know I should be patrolling, but they’re right here. Maybe just one.
+Donuts : inspect : Thief : A box of fresh donuts. This is sure to distract any guards that can get their hands on them.
+
+Donuts : eat : Any : I check to make sure no one is looking and quickly scarf down the box of donuts. Delicious.
+Donuts : eat : Guard :  I open the box, open my throat and shove all the donuts straight to my stomach. All in a day's work.
+Donuts : eat : Thief : I eat the donuts. Savoring each bite. Knowing these aren’t mine made them taste so much better. Only a mastermind criminal such as myself would be able to stomach this crime, literally.

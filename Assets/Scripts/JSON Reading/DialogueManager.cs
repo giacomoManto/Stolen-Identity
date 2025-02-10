@@ -25,14 +25,14 @@ public class DialogueManager : MonoBehaviour
         {
             return dialogueData[itemName][action][id];
         }
-        else if (dialogueData.ContainsKey(itemName) && dialogueData[itemName].ContainsKey(action) && dialogueData[itemName][action].ContainsKey("Any")
+        else if (dialogueData.ContainsKey(itemName) && dialogueData[itemName].ContainsKey(action) && dialogueData[itemName][action].ContainsKey("Any"))
         {
             return dialogueData[itemName][action]["Any"];
         }
         else
         {
-            Debug.Log($"No entry in dialouge for [{itemName}][{action}][{id}]");
-            return "";
+            Debug.Log($"No entry in dialoge for [{itemName}][{action}][{id}]");
+            throw new KeyNotFoundException();
         }
     }
 
@@ -48,11 +48,15 @@ public class DialogueManager : MonoBehaviour
                 Debug.LogError("Dialogue file not found: " + filePath);
                 return allDialogue;
             }
-
+            int lineNum = 0;
             foreach (string line in File.ReadLines(filePath))
             {
+                lineNum++;
                 if (line.StartsWith("//") || line.StartsWith("#")) {
                     continue; // Skip comments
+                }
+                else if (line.Length == 0) {
+                    continue; // Skip empty lines
                 }
                 string[] parts = line.Split(':'); // Split on ':'
 
@@ -65,7 +69,7 @@ public class DialogueManager : MonoBehaviour
                 // Ensure proper formatting (Object, Action, ID, Description)
                 if (parts.Length != 4)
                 {
-                    Debug.LogWarning("Skipping malformed line: " + line);
+                    Debug.LogError($"Skipping malformed line ({lineNum}): {line}");
                     continue;
                 }
 

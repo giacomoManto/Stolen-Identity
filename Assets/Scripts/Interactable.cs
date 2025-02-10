@@ -64,18 +64,14 @@ public abstract class Interactable : MonoBehaviour
         if (actions.ContainsKey(action))
         {
             return actions[action](id);
-        }//Check if action exists in JSON doc but under specific ID
-        else if (GetTextFromJson(action, id) != "key not found")
+        }
+        try
         {
             return GetTextFromJson(action, id);
-        }//Check if action exists in JSON doc under no ID
-        else if (GetTextFromJson(action, IDCard.None) != "key not found")
-        {
-            return GetTextFromJson(action, IDCard.None);
         }
-        else
+        catch (KeyNotFoundException)
         {
-            // Maybe add different responses based on the IDCard.
+
             return $"Now why would I want to {action} the {interactableName}.";
         }
     }
