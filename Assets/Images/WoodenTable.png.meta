@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8aebcc33aa5924f40ba87f6ff95613de
+guid: 5da58c1aaea9a6c4fb8a33034ad7e929
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4441325262116787902
-    second: czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcHgxNDg1MjctaW1hZ2Uta3d2eHRpaGkuanBn_0
+      213: 7826233941730521221
+    second: WoodenTable_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcHgxNDg1MjctaW1hZ2Uta3d2eHRpaGkuanBn_0
+      name: WoodenTable_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1000
-        height: 1000
+        width: 612
+        height: 408
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eb690747bc1c2ad30800000000000000
-      internalID: 4441325262116787902
+      spriteID: 580f3f90e4e5c9c60800000000000000
+      internalID: 7826233941730521221
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 76c084923e8dc7245a098085108391f5
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcHgxNDg1MjctaW1hZ2Uta3d2eHRpaGkuanBn_0: 4441325262116787902
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
