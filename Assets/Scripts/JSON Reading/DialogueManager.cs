@@ -31,8 +31,7 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            Debug.Log($"No entry in dialoge for [{itemName}][{action}][{id}]");
-            throw new KeyNotFoundException();
+            throw new KeyNotFoundException($"No entry in dialogue for [{itemName}][{action}][{id}]");
         }
     }
 
