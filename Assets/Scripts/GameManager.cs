@@ -10,6 +10,8 @@ using static UnityEngine.Rendering.DebugUI;
 
 public class GameManager : MonoBehaviour
 {
+    private PlayerInfo player;
+
     [SerializeField]
     private IDCard currentPlayerID = IDCard.Patient;
 
