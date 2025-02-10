@@ -10,11 +10,6 @@ using static UnityEngine.Rendering.DebugUI;
 
 public class GameManager : MonoBehaviour
 {
-    private PlayerInfo player;
-
-    [SerializeField]
-    private IDCard currentPlayerID = IDCard.Patient;
-
     [SerializeField]
     private TMP_InputField playerInput;
 
@@ -23,6 +18,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private Dictionary<string, RoomBehavior> allRooms = new Dictionary<string, RoomBehavior>();
+
+    private PlayerInfo player;
 
     private JournalOutput journal;
 
@@ -61,13 +58,13 @@ public class GameManager : MonoBehaviour
         }
         //Set current player room to starting room, this should be changed on load
         currentPlayerRoom = allRooms["Starting Room"];
-        journal.AddGameText(currentPlayerRoom.GetRoomDescription(currentPlayerID));
+        journal.AddGameText(currentPlayerRoom.GetRoomDescription(player.getPlayerID()));
     }
 
 
     public void handlePlayerInput(string playerInput)
     {
-        statRecorder[currentPlayerID] = (statRecorder.TryGetValue(currentPlayerID, out int val) ? val : 0) + 1;   
+        statRecorder[player.getPlayerID()] = (statRecorder.TryGetValue(player.getPlayerID(), out int val) ? val : 0) + 1;   
         print(playerInput);
         string currentPlayerInput = playerInput.ToLower();
         //Check for valid input (noun and verb)
@@ -79,13 +76,13 @@ public class GameManager : MonoBehaviour
         }
 
         //Add the action to the journal while passing the action to the room
-        journal.AddGameText(currentPlayerRoom.ActOn(currentPlayerID, currentPlayerInput));
+        journal.AddGameText(currentPlayerRoom.ActOn(player.getPlayerID(), currentPlayerInput));
     }
 
     public void changeRoom(RoomBehavior room)
     {
         this.currentPlayerRoom = room;
         journal.Clear();
-        journal.AddGameText(this.currentPlayerRoom.GetRoomDescription(currentPlayerID));
+        journal.AddGameText(this.currentPlayerRoom.GetRoomDescription(player.getPlayerID()));
     }
     }
