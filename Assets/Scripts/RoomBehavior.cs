@@ -82,6 +82,7 @@ public class RoomBehavior : MonoBehaviour
         {
             Object = playerInput.Split(" ")[1];
             Debug.LogWarning("Attempted to act on " + Object + " but it was not found in the item list of " + roomName);
+            return "I must be losing my sanity... there is no "+Object+ " in this room...";
         }
         return ItemDictionary[Object].PerformAction(Action, currentIDCard);
     }

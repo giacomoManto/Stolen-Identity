@@ -22,8 +22,6 @@ public class GameManager : MonoBehaviour
 
     private JournalOutput journal;
 
-    private DialogueManager dialogueManager;
-
     private static GameManager instance;
 
     public static GameManager GetInstance()
@@ -58,7 +56,6 @@ public class GameManager : MonoBehaviour
         currentPlayerRoom = allRooms["Starting Room"];
         journal.AddGameText(currentPlayerRoom.GetRoomDescription(currentPlayerID));
 
-        dialogueManager = FindFirstObjectByType<DialogueManager>();
 
     }
 
@@ -84,9 +81,5 @@ public class GameManager : MonoBehaviour
         this.currentPlayerRoom = room;
         journal.Clear();
         journal.AddGameText(this.currentPlayerRoom.GetRoomDescription(currentPlayerID));
-    }
-    public String getDialogueOrDefault(string dialogueKey)
-    {
-        return dialogueManager.getDialogue(dialogueKey);
     }
     }

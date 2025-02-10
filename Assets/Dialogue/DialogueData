@@ -1,18 +1,5 @@
-{
-    "roomDialogue": {
-        "keys": [],
-        "values": []
-    },
-    "objectDialogue": {
-        "keys": [	"Appleeat",
-			"Applemove to",
-			"Applemove toPatient"],
-        "values": [	"You ate the apple",
-			"You walk over to the apple", 
-			"As the patient you wander to the apple"]
-    },
-    "npcDialogue": {
-        "keys": [],
-        "values": []
-    }
-}
+Object : action : ID Card Name : description
+
+Apple : eat : None : You walk over and decide to eat the apple. While munching you realize the apple is delicious. Praise the Apple!
+
+Apple : eat : Patient : You walk over to the apple wanting to eat it and then... wait what was I doing? Oh right I'm an amnesiac patient...

@@ -65,13 +65,13 @@ public abstract class Interactable : MonoBehaviour
         {
             return actions[action](id);
         }//Check if action exists in JSON doc but under specific ID
-        else if (getTextFromJson(action, id) != "key not found")
+        else if (GetTextFromJson(action, id) != "key not found")
         {
-            return getTextFromJson(action, id);
+            return GetTextFromJson(action, id);
         }//Check if action exists in JSON doc under no ID
-        else if (getTextFromJson(action, IDCard.None) != "key not found")
+        else if (GetTextFromJson(action, IDCard.None) != "key not found")
         {
-            return getTextFromJson(action, IDCard.None);
+            return GetTextFromJson(action, IDCard.None);
         }
         else
         {
@@ -85,13 +85,14 @@ public abstract class Interactable : MonoBehaviour
 
     //appleinspectbrawler, an apple...not as good as booze but its a nice snack
     //applegrab, you grab the apple
-    public string getTextFromJson(String Action, IDCard id)
+    public string GetTextFromJson(String Action, IDCard id)
     {
-        if (dialogueManager == null)
+        if(dialogueManager == null)
         {
             dialogueManager = FindFirstObjectByType<DialogueManager>();
         }
-        return dialogueManager.getDialogue(this.interactableName + Action + id.Name);
+        
+        return dialogueManager.GetDialogue(this.interactableName, Action, id.Name);
     }
 
     /// <summary>
@@ -101,13 +102,13 @@ public abstract class Interactable : MonoBehaviour
     /// <returns></returns>
     public virtual string GetDescription(IDCard id)
     {
-        if (getTextFromJson("inspect", id) != "key not found")
+        if (GetTextFromJson("inspect", id) != "key not found")
         {
-            return getTextFromJson("inspect", id);
+            return GetTextFromJson("inspect", id);
         }
-        else if (getTextFromJson("inspect", IDCard.None) != "key not found")
+        else if (GetTextFromJson("inspect", IDCard.None) != "key not found")
         {
-            return getTextFromJson("inspect", IDCard.None);
+            return GetTextFromJson("inspect", IDCard.None);
         }
         else
         {

@@ -1,73 +1,108 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-/// <summary>
-///A singleton class(only place one per scene) that keeps track of save and load data.
-///
-/// </summary>
-
-//If a reference or deeper explination is needed this was based on https://www.youtube.com/watch?v=aUi9aijvpgs&ab_channel=ShapedbyRainStudios.
 public class DialogueManager : MonoBehaviour
 {
-
-    [SerializeField]
-    [Tooltip("Where the dialogue will be pulled from")]
-    private string fileName;
-
-    private string path = Application.dataPath + "/Dialogue";
-    private DialogueTemplate dialogueData;  //Keeps track of the player data from save/load. Things like player virus and player energy are stored in this format.
-
-    private FileDataHandler<SerializableDictionary<String, SerializableDictionary<String, String>>> dataHandler;  //A file handler that will load and save player data to and from a Json format.
-
-
-    public static DialogueManager instance { get; private set; } //A static variable to ensure theres only one DataPersistenceManager in the scene.
-
-    private void Awake()
-    {
-
-        instance = this;
-        dataHandler = new FileDataHandler<SerializableDictionary<String, SerializableDictionary<String, String>>>(path, fileName);
-        Debug.Log(path);
-    }
+    public static DialogueManager instance;
+    private Dictionary<string, Dictionary<string, Dictionary<string, string>>> dialogueData;
+    private string dataDirPath = Application.dataPath + "/Dialogue";
+    private string dataFileName = "DialogueData";
 
     private void Start()
     {
-        SerializableDictionary<String, SerializableDictionary<String, String>> temp = new SerializableDictionary<String, SerializableDictionary<String, String>>();
-        SerializableDictionary<String, String> action = new SerializableDictionary<string, string>();
-        action.Add("eat", "you ate the apple.");
-        temp.Add("apple", action);
-        dataHandler.Save(temp);
-        //dialogueData = dataHandler.Load();
-        print(dialogueData);
+        dialogueData = this.ReadDialogueFromFile();
+        DebugDialogueData();
     }
 
-    public String getDialogue(String key)
+    // Retrieves dialogue based on item, action, and ID
+    public string GetDialogue(string itemName, string action, string id)
     {
-        //if (dialogueData.roomDialogue.ContainsKey(key))
-        //{
-        //    return dialogueData.roomDialogue[key];
-        //}
-        //else if (dialogueData.npcDialogue.ContainsKey(key))
-        //{
-        //    return dialogueData.npcDialogue[key];
-        //}
-        //else if (dialogueData.objectDialogue.ContainsKey(key))
-        //{
-        //    return dialogueData.objectDialogue[key];
-        //}
-        //else
-        //{
-        //    return "key not found";
-        //}
-        return "";
-        
+        if (dialogueData.ContainsKey(itemName) &&
+            dialogueData[itemName].ContainsKey(action) &&
+            dialogueData[itemName][action].ContainsKey(id))
+        {
+            return dialogueData[itemName][action][id];
+        }
+        else
+        {
+            return "key not found";
+        }
     }
 
+    private Dictionary<string, Dictionary<string, Dictionary<string, string>>> ReadDialogueFromFile()
+    {
+        string filePath = Path.Combine(dataDirPath, dataFileName);
+        var allDialogue = new Dictionary<string, Dictionary<string, Dictionary<string, string>>>();
+
+        try
+        {
+            if (!File.Exists(filePath))
+            {
+                Debug.LogError("Dialogue file not found: " + filePath);
+                return allDialogue;
+            }
+
+            foreach (string line in File.ReadLines(filePath))
+            {
+                string[] parts = line.Split(':'); // Split on ':'
+
+                // Trim each part
+                for (int i = 0; i < parts.Length; i++)
+                {
+                    parts[i] = parts[i].Trim();
+                }
+
+                // Ensure proper formatting (Object, Action, ID, Description)
+                if (parts.Length != 4)
+                {
+                    Debug.LogWarning("Skipping malformed line: " + line);
+                    continue;
+                }
+
+                string itemName = parts[0];
+                string action = parts[1];
+                string id = parts[2];
+                string dialogueText = parts[3];
+
+                if (!allDialogue.ContainsKey(itemName))
+                {
+                    allDialogue[itemName] = new Dictionary<string, Dictionary<string, string>>();
+                }
+
+                if (!allDialogue[itemName].ContainsKey(action))
+                {
+                    allDialogue[itemName][action] = new Dictionary<string, string>();
+                }
+
+                // Store the dialogue text under item -> action -> id
+                allDialogue[itemName][action][id] = dialogueText;
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.LogError("Error reading dialogue file: " + e.Message);
+        }
+
+        return allDialogue;
+    }
+
+    // Debug method to print the contents of dialogueData
+    private void DebugDialogueData()
+    {
+        Debug.Log("Dialogue Data Loaded:");
+        foreach (var itemEntry in dialogueData)
+        {
+            Debug.Log($"Item: {itemEntry.Key}");
+            foreach (var actionEntry in itemEntry.Value)
+            {
+                Debug.Log($"  Action: {actionEntry.Key}");
+                foreach (var idEntry in actionEntry.Value)
+                {
+                    Debug.Log($"    ID: {idEntry.Key} => Dialogue: {idEntry.Value}");
+                }
+            }
+        }
+    }
 }
-
-
-
