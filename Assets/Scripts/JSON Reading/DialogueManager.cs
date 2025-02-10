@@ -25,9 +25,14 @@ public class DialogueManager : MonoBehaviour
         {
             return dialogueData[itemName][action][id];
         }
+        else if (dialogueData.ContainsKey(itemName) && dialogueData[itemName].ContainsKey(action) && dialogueData[itemName][action].ContainsKey("Any")
+        {
+            return dialogueData[itemName][action]["Any"];
+        }
         else
         {
-            return "key not found";
+            Debug.Log($"No entry in dialouge for [{itemName}][{action}][{id}]");
+            return "";
         }
     }
 
@@ -46,6 +51,9 @@ public class DialogueManager : MonoBehaviour
 
             foreach (string line in File.ReadLines(filePath))
             {
+                if (line.StartsWith("//") || line.StartsWith("#")) {
+                    continue; // Skip comments
+                }
                 string[] parts = line.Split(':'); // Split on ':'
 
                 // Trim each part

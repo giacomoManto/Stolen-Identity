@@ -3,3 +3,7 @@ Object : action : ID Card Name : description
 Apple : eat : None : You walk over and decide to eat the apple. While munching you realize the apple is delicious. Praise the Apple!
 
 Apple : eat : Patient : You walk over to the apple wanting to eat it and then... wait what was I doing? Oh right I'm an amnesiac patient...
+
+
+# Thief, Patient, Brawler, Guard
+PatientID : inspect : None : You walk over to the patient ID and inspect it. Looks pretty standard to you.
