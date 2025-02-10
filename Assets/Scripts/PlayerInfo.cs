@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 
 public class PlayerInfo : MonoBehaviour
@@ -45,5 +46,27 @@ public class PlayerInfo : MonoBehaviour
     public void addItem(Interactable item)
     {
         itemInventory.Add(item.name, item);
+    }
+    public string listInventory()
+    {
+        StringBuilder stringBuilder = new StringBuilder();
+        int count = 1;
+        stringBuilder.Append("ID Cards: \n");
+        foreach (IDCard id in playerIDs)
+        {
+            stringBuilder.Append(count + ". ").Append(id.Name).Append("\n");
+            count++;
+        }
+        count = 1;
+        stringBuilder.Append("Other Items: \n");
+        foreach (string item in itemInventory.Keys){
+            stringBuilder.Append(count+". ").Append(item).Append("\n");
+            count++;
+        }
+        if(itemInventory.Keys.Count == 0)
+        {
+            stringBuilder.Append("None");
+        }
+        return stringBuilder.ToString();
     }
 }

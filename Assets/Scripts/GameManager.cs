@@ -49,6 +49,8 @@ public class GameManager : MonoBehaviour
     {
         journal = JournalOutput.GetInstance();
 
+        player = FindFirstObjectByType<PlayerInfo>();
+
         //Grab all rooms
         IEnumerable<RoomBehavior> rooms = FindObjectsByType<RoomBehavior>(FindObjectsSortMode.None);
         List<RoomBehavior> temp = new List<RoomBehavior>(rooms);
@@ -74,9 +76,30 @@ public class GameManager : MonoBehaviour
             print("Invalid input. Please enter a verb and a noun.");
             return;
         }
-
+        if (checkBuiltInCommands(playerInput)) return; 
         //Add the action to the journal while passing the action to the room
         journal.AddGameText(currentPlayerRoom.ActOn(player.getPlayerID(), currentPlayerInput));
+    }
+
+    public bool checkBuiltInCommands(string playerInput)
+    {
+        switch (playerInput)
+        {
+            case "check bag":
+                journal.AddGameText(player.listInventory());
+                return true;
+            case "list inventory":
+                journal.AddGameText(player.listInventory());
+                return true;
+            case "main menu":
+                journal.AddGameText("Implement main menu");
+                return true;
+            case "save game":
+                journal.AddGameText("Implement save game");
+                return true;
+            default:
+                return false;
+        }
     }
 
     public void changeRoom(RoomBehavior room)
