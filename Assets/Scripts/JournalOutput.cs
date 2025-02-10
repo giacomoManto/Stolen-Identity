@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 using static System.Net.Mime.MediaTypeNames;
+using System.Collections;
 
 public class JournalOutput : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class JournalOutput : MonoBehaviour
 
     private string currentEntry = "";
     private string history = "";
+    private bool allowTyping = true;
 
     public static JournalOutput GetInstance()
     {
@@ -37,7 +39,8 @@ public class JournalOutput : MonoBehaviour
 
     private void FixedUpdate()
     {
-        viewableText.text = history + $"<align=right>{currentEntry}</align>\n";
+        history.TrimStart('\n');
+        viewableText.text = history + $"{currentEntry}\n\n";
         UpdateScrollPosition();
     }
 
@@ -51,14 +54,29 @@ public class JournalOutput : MonoBehaviour
         currentEntry = "";
     }
 
-    public void AddPlayerText(string text)
-    {
-        history += $"<align=right>{text}\n</align>";
-    }
-
     public void AddGameText(string text)
     {
-        history += $"<align=left>{text}\n</align>";
+        //history += $"<align=left>{text}\n</align>";
+        StartCoroutine(AddGameTextSlowly(text));
+    }
+
+    IEnumerator AddGameTextSlowly(string text)
+    {
+        allowTyping = false;
+        float startTime = Time.time;
+        int charPerSec = 50;
+        for (int i = 0; i < text.Length;)
+        {
+            float timeSince = Time.time - startTime;
+            if ((float)i / timeSince < charPerSec)
+            {
+                history += text[i];
+                i++;
+            }
+            yield return null;
+        }
+        history += "\n\n";
+        allowTyping = true;
     }
 
     private void UpdateScrollPosition()
@@ -70,7 +88,7 @@ public class JournalOutput : MonoBehaviour
     void OnGUI()
     {
         Event e = Event.current;
-        if (e.type != EventType.KeyDown)
+        if (e.type != EventType.KeyDown || !allowTyping)
         {
             return;
         }
@@ -81,7 +99,6 @@ public class JournalOutput : MonoBehaviour
             {
                 return;
             }
-            AddPlayerText(currentEntry);
             // Pass Entry off to GameManager
             GameManager.GetInstance().handlePlayerInput(currentEntry);
             currentEntry = "";
