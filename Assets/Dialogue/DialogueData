@@ -57,8 +57,8 @@ PhD : inspect : Any : A framed Doctorate. Someone must be really proud about get
 PhD : inspect : Doctor : My framed Doctorate. Without this who really am I?
 
 # Become a thief
-Calling Card : inspect : Any : A calling card. Why would you put your face on this?
-Calling Card : inspect : Guard : A calling card. Why would you put your face on this? I should keep an eye out for this person.
+Calling Card : inspect : Any : A criminal's calling card. Why would you put your face on this?
+Calling Card : inspect : Guard : A criminal's calling card. Why would you put your face on this? I should keep an eye out for this person.
 Calling Card : inspect : Thief : My beautiful calling card. Silian Rail lettering, 16-point cardstock, it's a classic.
 
 The Golden Microscope : inspect : Any : A priceless golden microscope encrusted with jewels.
@@ -69,7 +69,7 @@ The Golden Microscope : inspect : Thief : A priceless golden microscope encruste
 # I am X
 Donuts : inspect : Any : A box of fresh donuts, still warm.
 Donuts : inspect : Doctor : A box of donuts. Too much sugar.
-Donuts : inspect : Guard : A box of donuts. They seem to have been baked 3 hours 14 minutes ago. I know I should be patrolling, but they’re right here. Maybe just one.
+Donuts : inspect : Guard : A box of donuts. They seem to have been baked 3 hours 14 minutes ago. I give them a sniff. These are definitely made by Erik from Donuts Ahoy. I know I should be patrolling, but they’re right here. Maybe just one.
 Donuts : inspect : Thief : A box of fresh donuts. This is sure to distract any guards that can get their hands on them.
 
 Donuts : eat : Any : I check to make sure no one is looking and quickly scarf down the box of donuts. Delicious.
