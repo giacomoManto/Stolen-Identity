@@ -1060,6 +1060,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactableName: Patient ID
   location: lies atop a bedside table
+  playerCanStore: 1
   dialogueManager: {fileID: 0}
 --- !u!1 &687393471
 GameObject:
@@ -1372,6 +1373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactableName: Door#1
   location: Meow
+  playerCanStore: 0
   dialogueManager: {fileID: 0}
   room: {fileID: 479178962}
   lockLevel: 0
@@ -1421,6 +1423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactableName: Apple
   location: sits on the floor beneath your feet.
+  playerCanStore: 1
   dialogueManager: {fileID: 0}
 --- !u!1 &1401071886
 GameObject:

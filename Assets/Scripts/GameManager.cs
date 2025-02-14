@@ -40,16 +40,6 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        // Start coroutine to wait for DialogueManager to load before initializing game elements.
-        StartCoroutine(WaitForDialogueAndInit());
-    }
-
-    private IEnumerator WaitForDialogueAndInit()
-    {
-        // Wait until DialogueManager exists and has finished loading.
-        yield return new WaitUntil(() =>
-            DialogueManager.instance != null && DialogueManager.instance.IsDialogueLoaded);
-
         // Now it's safe to initialize other components.
         journal = JournalOutput.GetInstance();
         player = FindFirstObjectByType<PlayerInfo>();
@@ -69,6 +59,16 @@ public class GameManager : MonoBehaviour
         addGenericCommand(new SaveGame(this, player));
         addGenericCommand(new UseCommand(this));
         addGenericCommand(new ViewRoom(this, player));
+
+        // Start coroutine to wait for DialogueManager to load before initializing dialogue elements.
+        StartCoroutine(WaitForDialogueAndInit());
+    }
+
+    private IEnumerator WaitForDialogueAndInit()
+    {
+        // Wait until DialogueManager exists and has finished loading.
+        yield return new WaitUntil(() =>
+            DialogueManager.instance != null && DialogueManager.instance.IsDialogueLoaded);
 
         errorCheckStart();
         displayCurrentRoomDesc();
@@ -124,8 +124,17 @@ public class GameManager : MonoBehaviour
         {
             return true;
         }
+        if (playerInput.StartsWith("switch"))
+        {
+            if(player.switchPlayerID(playerInput.Split(" ")[1]))
+            {
 
-        if (playerInput.StartsWith("info"))
+                return true;
+            }
+            
+        }
+
+            if (playerInput.StartsWith("info"))
         {
             foreach (string command in genericCommands.Keys)
             {
