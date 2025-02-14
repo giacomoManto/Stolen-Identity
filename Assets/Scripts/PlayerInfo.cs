@@ -38,7 +38,7 @@ public class PlayerInfo : MonoBehaviour
         }
         return false;
     }
-    public bool getInventory(string item)
+    public bool getItemFromInventory(string item)
     {
         if (itemInventory.ContainsKey(item)) return true;
         return false;

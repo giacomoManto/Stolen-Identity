@@ -25,6 +25,7 @@ public class DoorBehavior : Interactable
         // Action Registration
         this.RegisterAction("go through", GoThrough);
         this.RegisterAction("open", GoThrough);
+        this.RegisterAction("use", GoThrough);
         this.RegisterAction("enter", GoThrough);
         this.RegisterAction("lockpick", Lockpick);
         this.RegisterAction("breakdown", Breakdown);

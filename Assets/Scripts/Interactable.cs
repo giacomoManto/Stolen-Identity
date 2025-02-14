@@ -25,7 +25,7 @@ public abstract class Interactable : MonoBehaviour
     /// <exception cref="ArgumentNullException"></exception>
     public Interactable()
     {
-        this.RegisterAction("inspect", GetDescription);
+        //this.RegisterAction("inspect", GetDescription);
     }
 
     protected void SetName(string name)
