@@ -16,6 +16,9 @@ public abstract class Interactable : MonoBehaviour
     protected string location;
 
     [SerializeField]
+    protected bool playerCanStore = true;
+
+    [SerializeField]
     private DialogueManager dialogueManager;
 
     /// <summary>
@@ -25,9 +28,15 @@ public abstract class Interactable : MonoBehaviour
     /// <exception cref="ArgumentNullException"></exception>
     public Interactable()
     {
-        //this.RegisterAction("inspect", GetDescription);
+        this.RegisterAction("inspect", GetDescription);
+        this.RegisterAction("grab", TakeObject);
+        this.RegisterAction("take", TakeObject);
+        this.RegisterAction("steal", TakeObject);
     }
-
+    void Awake()
+    {
+        dialogueManager = FindFirstObjectByType<DialogueManager>();
+    }
     protected void SetName(string name)
     {
         this.interactableName = name;
@@ -110,5 +119,14 @@ public abstract class Interactable : MonoBehaviour
         {
             throw new NotImplementedException();
         }
+    }
+    public virtual string TakeObject(IDCard id)
+    {
+        if (!playerCanStore)
+        {
+            return "Pretty sure I dont want to take that " + interactableName;
+        }
+        
+        return "I pocket the " + interactableName;
     }
 }

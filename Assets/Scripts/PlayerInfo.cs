@@ -12,7 +12,7 @@ public class PlayerInfo : MonoBehaviour
     private IDCard currentPlayerID;
 
     [SerializeField]
-    private List<IDCard> playerIDs = new List<IDCard>();
+    private Dictionary<string, IDCard> playerIDs = new Dictionary<string,IDCard>();
 
     [SerializeField]
     private Dictionary<string, Interactable> itemInventory;
@@ -21,18 +21,18 @@ public class PlayerInfo : MonoBehaviour
     {
         itemInventory = new Dictionary<string, Interactable>();
         currentPlayerID = IDCard.Patient;
-        playerIDs.Add(currentPlayerID);
+        playerIDs.Add(currentPlayerID.Name.ToLower(), currentPlayerID);
         playerIDString = currentPlayerID.Name;
     }
     public IDCard getPlayerID() {
         
             return currentPlayerID;
          }
-    public bool switchPlayerID(IDCard id)
+    public bool switchPlayerID(string idName)
     {
-        if (playerIDs.Contains(id))
+        if (playerIDs.ContainsKey(idName))
         {
-            currentPlayerID = id;
+            currentPlayerID = playerIDs[idName];
             playerIDString = currentPlayerID.Name;
             return true;
         }
@@ -52,7 +52,7 @@ public class PlayerInfo : MonoBehaviour
         StringBuilder stringBuilder = new StringBuilder();
         int count = 1;
         stringBuilder.Append("ID Cards: \n");
-        foreach (IDCard id in playerIDs)
+        foreach (IDCard id in playerIDs.Values)
         {
             stringBuilder.Append(count + ". ").Append(id.Name).Append("\n");
             count++;

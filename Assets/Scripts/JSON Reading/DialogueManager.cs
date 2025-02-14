@@ -6,33 +6,60 @@ using UnityEngine;
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager instance;
+
+    // Flag to indicate when dialogue has finished loading.
+    public bool IsDialogueLoaded { get; private set; } = false;
+
     private Dictionary<string, Dictionary<string, Dictionary<string, string>>> dialogueData;
     private string dataDirPath = Application.dataPath + "/Dialogue";
     private string dataFileName = "DialogueData";
 
-    private void Start()
+    private void Awake()
     {
-        dialogueData = this.ReadDialogueFromFile();
-        DebugDialogueData();
-    }
-
-    // Retrieves dialogue based on item, action, and ID
-    public string GetDialogue(string itemName, string action, string id)
-    {
-        if (dialogueData.ContainsKey(itemName) &&
-            dialogueData[itemName].ContainsKey(action) &&
-            dialogueData[itemName][action].ContainsKey(id))
+        // Setup singleton instance.
+        if (instance == null)
         {
-            return dialogueData[itemName][action][id];
-        }
-        else if (dialogueData.ContainsKey(itemName) && dialogueData[itemName].ContainsKey(action) && dialogueData[itemName][action].ContainsKey("Any"))
-        {
-            return dialogueData[itemName][action]["Any"];
+            instance = this;
         }
         else
         {
-            throw new KeyNotFoundException($"No entry in dialogue for [{itemName}][{action}][{id}]");
+            DestroyImmediate(gameObject);
+            return;
         }
+
+        dialogueData = ReadDialogueFromFile();
+        DebugDialogueData();
+
+        // Mark dialogue as loaded.
+        IsDialogueLoaded = true;
+    }
+
+    public string GetDialogue(string itemName, string action, string id)
+    {
+        try
+        {
+            if (dialogueData.ContainsKey(itemName) &&
+                dialogueData[itemName].ContainsKey(action) &&
+                dialogueData[itemName][action].ContainsKey(id))
+            {
+                return dialogueData[itemName][action][id];
+            }
+            else if (dialogueData.ContainsKey(itemName) &&
+                     dialogueData[itemName].ContainsKey(action) &&
+                     dialogueData[itemName][action].ContainsKey("Any"))
+            {
+                return dialogueData[itemName][action]["Any"];
+            }
+            else
+            {
+                throw new KeyNotFoundException($"No entry in dialogue for [{itemName}][{action}][{id}]");
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.LogWarning($"Error occurred when parsing dialogue for item: {itemName}, action: {action}, id: {id}. Message: {e.Message}");
+        }
+        return "";
     }
 
     private Dictionary<string, Dictionary<string, Dictionary<string, string>>> ReadDialogueFromFile()
@@ -51,21 +78,17 @@ public class DialogueManager : MonoBehaviour
             foreach (string line in File.ReadLines(filePath))
             {
                 lineNum++;
-                if (line.StartsWith("//") || line.StartsWith("#")) {
-                    continue; // Skip comments
-                }
-                else if (line.Length == 0) {
-                    continue; // Skip empty lines
-                }
-                string[] parts = line.Split(':'); // Split on ':'
+                if (line.StartsWith("//") || line.StartsWith("#"))
+                    continue;
+                if (line.Length == 0)
+                    continue;
 
-                // Trim each part
+                string[] parts = line.Split(':');
                 for (int i = 0; i < parts.Length; i++)
                 {
                     parts[i] = parts[i].Trim();
                 }
 
-                // Ensure proper formatting (Object, Action, ID, Description)
                 if (parts.Length != 4)
                 {
                     Debug.LogError($"Skipping malformed line ({lineNum}): {line}");
@@ -78,16 +101,11 @@ public class DialogueManager : MonoBehaviour
                 string dialogueText = parts[3];
 
                 if (!allDialogue.ContainsKey(itemName))
-                {
                     allDialogue[itemName] = new Dictionary<string, Dictionary<string, string>>();
-                }
 
                 if (!allDialogue[itemName].ContainsKey(action))
-                {
                     allDialogue[itemName][action] = new Dictionary<string, string>();
-                }
 
-                // Store the dialogue text under item -> action -> id
                 allDialogue[itemName][action][id] = dialogueText;
             }
         }
@@ -99,7 +117,6 @@ public class DialogueManager : MonoBehaviour
         return allDialogue;
     }
 
-    // Debug method to print the contents of dialogueData
     private void DebugDialogueData()
     {
         Debug.Log("Dialogue Data Loaded:");

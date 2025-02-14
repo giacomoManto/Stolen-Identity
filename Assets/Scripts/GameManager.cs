@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -6,23 +7,19 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
-    private TMP_InputField playerInput; // UI input field for player commands
+    private TMP_InputField playerInput;
 
     [SerializeField]
-    private RoomBehavior currentPlayerRoom; // Tracks the player's current room
+    private RoomBehavior currentPlayerRoom;
 
     [SerializeField]
-    private Dictionary<string, RoomBehavior> allRooms = new Dictionary<string, RoomBehavior>(); // Stores all rooms by name
+    private Dictionary<string, RoomBehavior> allRooms = new Dictionary<string, RoomBehavior>();
 
-    private PlayerInfo player; // Reference to the player
-
-    private JournalOutput journal; // Reference to the in-game journal for text output
-
-    private static GameManager instance; // Singleton instance of GameManager
-
-    private Dictionary<IDCard, int> statRecorder = new Dictionary<IDCard, int>(); // Tracks player actions using their ID
-
-    private Dictionary<string, CommandTemplate> genericCommands = new Dictionary<string, CommandTemplate>(); // Stores available commands
+    private PlayerInfo player;
+    private JournalOutput journal;
+    private static GameManager instance;
+    private Dictionary<IDCard, int> statRecorder = new Dictionary<IDCard, int>();
+    private Dictionary<string, CommandTemplate> genericCommands = new Dictionary<string, CommandTemplate>();
 
     public static GameManager GetInstance()
     {
@@ -31,7 +28,6 @@ public class GameManager : MonoBehaviour
 
     GameManager()
     {
-        // Ensure only one instance of GameManager exists (Singleton pattern)
         if (instance == null)
         {
             instance = this;
@@ -44,10 +40,20 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        // Start coroutine to wait for DialogueManager to load before initializing game elements.
+        StartCoroutine(WaitForDialogueAndInit());
+    }
+
+    private IEnumerator WaitForDialogueAndInit()
+    {
+        // Wait until DialogueManager exists and has finished loading.
+        yield return new WaitUntil(() =>
+            DialogueManager.instance != null && DialogueManager.instance.IsDialogueLoaded);
+
+        // Now it's safe to initialize other components.
         journal = JournalOutput.GetInstance();
         player = FindFirstObjectByType<PlayerInfo>();
 
-        // Gather all RoomBehavior objects in the scene and store them in allRooms dictionary
         IEnumerable<RoomBehavior> rooms = FindObjectsByType<RoomBehavior>(FindObjectsSortMode.None);
         List<RoomBehavior> temp = new List<RoomBehavior>(rooms);
         foreach (RoomBehavior room in temp)
@@ -55,11 +61,8 @@ public class GameManager : MonoBehaviour
             allRooms[room.name] = room;
         }
 
-        // Set the starting room (should be changed on game load)
         currentPlayerRoom = allRooms["Starting Room"];
-        displayCurrentRoomDesc();
 
-        // Register built-in commands
         addGenericCommand(new CheckBag(this, player));
         addGenericCommand(new CheckInventory(this, player));
         addGenericCommand(new InspectCommand(this));
@@ -67,46 +70,37 @@ public class GameManager : MonoBehaviour
         addGenericCommand(new UseCommand(this));
         addGenericCommand(new ViewRoom(this, player));
 
+        errorCheckStart();
+        displayCurrentRoomDesc();
     }
 
     public void handlePlayerInput(string playerInput)
     {
-        // Record the number of actions a player has taken
         statRecorder[player.getPlayerID()] = (statRecorder.TryGetValue(player.getPlayerID(), out int val) ? val : 0) + 1;
-
-        print(playerInput);
+        Debug.Log(playerInput);
         string currentPlayerInput = playerInput.ToLower();
 
-        // Ensure input contains both a verb and a noun
         if (currentPlayerInput.Split(" ").Length < 2)
         {
             journal.AddGameText("You pause, realizing you probably need a noun and a verb to act properly.");
-            print("Invalid input. Please enter a verb and a noun.");
+            Debug.Log("Invalid input. Please enter a verb and a noun.");
             return;
         }
 
-        // Check if input matches built-in commands
         if (checkBuiltInCommands(currentPlayerInput)) return;
-
-        // Log action to journal and pass it to the current room
         journal.AddGameText(ActOnRoomObjects(player.getPlayerID(), currentPlayerInput));
     }
-    /// <summary>
-    /// Performs a player action on an object in the room. The action performed may be based on the current ID card.
-    /// </summary>
-    /// <param name="Object"></param>
-    /// <param name="Action"></param>
-    public string ActOnRoomObjects(IDCard currentIDCard, String playerInput)
+
+    public string ActOnRoomObjects(IDCard currentIDCard, string playerInput)
     {
         Dictionary<string, Interactable> ItemDictionary = currentPlayerRoom.getItemDictionary();
-        if (playerInput == "" || playerInput == null)
+        if (string.IsNullOrEmpty(playerInput))
         {
-            // Our earlier systems should not send empty player input to this function.
             Debug.LogError("Empty player input");
         }
-        String Action = "";
-        String Object = "";
-        foreach (String item in ItemDictionary.Keys)
+        string Action = "";
+        string Object = "";
+        foreach (string item in ItemDictionary.Keys)
         {
             if (playerInput.Contains(item))
             {
@@ -114,9 +108,8 @@ public class GameManager : MonoBehaviour
                 Action = playerInput.Replace(item, "");
                 Action = Action.Substring(0, Action.Length - 1);
             }
-
         }
-        if (Object.Equals(""))
+        if (string.IsNullOrEmpty(Object))
         {
             Object = playerInput.Split(" ")[1];
             Debug.LogWarning("Attempted to act on " + Object + " but it was not found in the item list of " + currentPlayerRoom.name);
@@ -124,21 +117,14 @@ public class GameManager : MonoBehaviour
         }
         return ItemDictionary[Object].PerformAction(Action, currentIDCard);
     }
-    /*
-     * ======================================================================
-     * Built-in Command Handling
-     * ======================================================================
-     */
 
     public bool checkBuiltInCommands(string playerInput)
     {
-        // Check if input is a list command
         if (checkListActions(playerInput))
         {
             return true;
         }
 
-        // Check if input is an "info" command to describe available actions
         if (playerInput.StartsWith("info"))
         {
             foreach (string command in genericCommands.Keys)
@@ -151,7 +137,6 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        // Execute a recognized command
         if (genericCommands.ContainsKey(playerInput))
         {
             Debug.Log("Now running command: " + playerInput);
@@ -168,7 +153,6 @@ public class GameManager : MonoBehaviour
 
     private bool checkListActions(string playerInput)
     {
-        // Handle different ways of listing available commands
         if (playerInput == "list actions" || playerInput == "check actions" || playerInput == "list commands")
         {
             string actionsList = "";
@@ -183,12 +167,6 @@ public class GameManager : MonoBehaviour
         return false;
     }
 
-    /*
-     * ======================================================================
-     * Room Management and Journal Updates
-     * ======================================================================
-     */
-
     public void displayCurrentRoomDesc()
     {
         addTextToJournal(this.currentPlayerRoom.GetRoomDescription(player.getPlayerID()));
@@ -196,7 +174,6 @@ public class GameManager : MonoBehaviour
 
     public void changeRoom(RoomBehavior room)
     {
-        // Updates the player's current room and refreshes the journal
         this.currentPlayerRoom = room;
         journal.Clear();
         displayCurrentRoomDesc();
@@ -205,5 +182,21 @@ public class GameManager : MonoBehaviour
     public void addTextToJournal(string text)
     {
         journal.AddGameText(text);
+    }
+
+    private void errorCheckStart()
+    {
+        if (currentPlayerRoom == null)
+            Debug.LogError("currentPlayerRoom is null");
+        if (allRooms == null || allRooms.Keys.Count <= 0)
+            Debug.LogError("allRooms is null or was not populated");
+        if (player == null)
+            Debug.LogError("player is null or was not populated");
+        if (journal == null)
+            Debug.LogError("journal is null or was not populated");
+        if (statRecorder == null)
+            Debug.LogError("statRecorder is null or was not populated");
+        if (genericCommands == null)
+            Debug.LogError("genericCommands is null or was not populated");
     }
 }
