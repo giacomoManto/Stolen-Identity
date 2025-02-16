@@ -70,10 +70,10 @@ public class RoomBehavior : MonoBehaviour
     }
     public void removeItemFromDictionary(Interactable item)
     {
-        if (ItemDictionary.ContainsKey(item.name.ToLower()))
+        if (ItemDictionary.ContainsKey(item.interactableName.ToLower()))
         {
-            Debug.Log("removed " + item.name);
-            ItemDictionary.Remove(item.name);
+            Debug.Log("removed " + item.interactableName);
+            ItemDictionary.Remove(item.interactableName.ToLower());
 
         }
         if (ItemList.Contains(item))
