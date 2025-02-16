@@ -38,7 +38,7 @@ public class RoomBehavior : MonoBehaviour
         fullRoomDescription.Append(roomDescription);
 
         //For each item in the list, print the specific room description from the player
-        foreach (Interactable item in ItemList)
+        foreach (Interactable item in ItemDictionary.Values)
         {
             fullRoomDescription.Append(" ");
             fullRoomDescription.Append(item.GetDescription(currentIDCard));
@@ -67,5 +67,20 @@ public class RoomBehavior : MonoBehaviour
     public Dictionary<string,Interactable> getItemDictionary()
     {
         return ItemDictionary;
+    }
+    public void removeItemFromDictionary(Interactable item)
+    {
+        if (ItemDictionary.ContainsKey(item.name.ToLower()))
+        {
+            Debug.Log("removed " + item.name);
+            ItemDictionary.Remove(item.name);
+
+        }
+        if (ItemList.Contains(item))
+        {
+            ItemList.Remove(item);
+
+        }
+
     }
 }

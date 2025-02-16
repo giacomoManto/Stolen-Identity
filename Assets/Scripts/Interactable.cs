@@ -126,7 +126,7 @@ public abstract class Interactable : MonoBehaviour
         {
             return "Pretty sure I dont want to take that " + interactableName;
         }
-        
+        FindFirstObjectByType<GameManager>().addObjectToPlayerInventory(this);
         return "I pocket the " + interactableName;
     }
 }

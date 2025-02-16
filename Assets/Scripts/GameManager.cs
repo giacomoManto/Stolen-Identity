@@ -59,6 +59,7 @@ public class GameManager : MonoBehaviour
         addGenericCommand(new SaveGame(this, player));
         addGenericCommand(new UseCommand(this));
         addGenericCommand(new ViewRoom(this, player));
+        addGenericCommand(new InfoCommand(this));
 
         // Start coroutine to wait for DialogueManager to load before initializing dialogue elements.
         StartCoroutine(WaitForDialogueAndInit());
@@ -116,6 +117,11 @@ public class GameManager : MonoBehaviour
             return "I must be losing my sanity... there is no " + Object + " in this room...";
         }
         return ItemDictionary[Object].PerformAction(Action, currentIDCard);
+    }
+    public void addObjectToPlayerInventory(Interactable item)
+    {
+        player.addItem(item);
+        currentPlayerRoom.removeItemFromDictionary(item);
     }
 
     public bool checkBuiltInCommands(string playerInput)
