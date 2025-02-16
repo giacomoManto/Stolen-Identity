@@ -21,6 +21,10 @@ public class GameManager : MonoBehaviour
     private Dictionary<IDCard, int> statRecorder = new Dictionary<IDCard, int>();
     private Dictionary<string, CommandTemplate> genericCommands = new Dictionary<string, CommandTemplate>();
 
+
+    private Dictionary<string, bool> gameFlags = new Dictionary<string, bool>();
+
+    #region Singleton Implementation
     public static GameManager GetInstance()
     {
         return instance;
@@ -37,7 +41,9 @@ public class GameManager : MonoBehaviour
             DestroyImmediate(gameObject);
         }
     }
+    #endregion
 
+    #region Initialization
     void Start()
     {
         // Now it's safe to initialize other components.
@@ -74,7 +80,38 @@ public class GameManager : MonoBehaviour
         errorCheckStart();
         displayCurrentRoomDesc();
     }
+    #endregion
 
+    #region GameState Management
+    public void storeBool(string key, bool value)
+    {
+        if (gameFlags.ContainsKey(key))
+        {
+            gameFlags[key] = value;
+            Debug.Log("Updated " + key + " to " + value);
+        }
+        else
+        {
+            gameFlags.Add(key, value);
+            Debug.Log("Added " + key + " with value " + value);
+        }
+    }
+
+    public bool getBool(string key, bool defaultFlag = false)
+    {
+        if (gameFlags.ContainsKey(key))
+        {
+            return gameFlags[key];
+        }
+        else
+        {
+            Debug.LogError("Key " + key + " not found in gameFlags");
+            return defaultFlag;
+        }
+    }
+    #endregion
+
+    #region Player Input Handling
     public void handlePlayerInput(string playerInput)
     {
         statRecorder[player.getPlayerID()] = (statRecorder.TryGetValue(player.getPlayerID(), out int val) ? val : 0) + 1;
@@ -118,12 +155,18 @@ public class GameManager : MonoBehaviour
         }
         return ItemDictionary[Object].PerformAction(Action, currentIDCard);
     }
+    #endregion
+
+    #region Inventory Management
     public void addObjectToPlayerInventory(Interactable item)
     {
+        item.transform.parent = player.transform;
         player.addItem(item);
-        currentPlayerRoom.removeItemFromDictionary(item);
+        currentPlayerRoom.InitIteractables();
     }
+    #endregion
 
+    #region Command Handling
     public bool checkBuiltInCommands(string playerInput)
     {
         if (checkListActions(playerInput))
@@ -132,15 +175,13 @@ public class GameManager : MonoBehaviour
         }
         if (playerInput.StartsWith("switch"))
         {
-            if(player.switchPlayerID(playerInput.Split(" ")[1]))
+            if (player.switchPlayerID(playerInput.Split(" ")[1]))
             {
-
                 return true;
             }
-            
         }
 
-            if (playerInput.StartsWith("info"))
+        if (playerInput.StartsWith("info"))
         {
             foreach (string command in genericCommands.Keys)
             {
@@ -181,7 +222,9 @@ public class GameManager : MonoBehaviour
         }
         return false;
     }
+    #endregion
 
+    #region Room Management
     public void displayCurrentRoomDesc()
     {
         addTextToJournal(this.currentPlayerRoom.GetRoomDescription(player.getPlayerID()));
@@ -193,12 +236,16 @@ public class GameManager : MonoBehaviour
         journal.Clear();
         displayCurrentRoomDesc();
     }
+    #endregion
 
+    #region Journal Management
     public void addTextToJournal(string text)
     {
         journal.AddGameText(text);
     }
+    #endregion
 
+    #region Error Checking
     private void errorCheckStart()
     {
         if (currentPlayerRoom == null)
@@ -214,4 +261,5 @@ public class GameManager : MonoBehaviour
         if (genericCommands == null)
             Debug.LogError("genericCommands is null or was not populated");
     }
+    #endregion
 }

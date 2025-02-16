@@ -35,9 +35,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     public string GetDialogue(string itemName, string action, string id)
-    {
-        try
-        {
+    { 
             if (dialogueData.ContainsKey(itemName) &&
                 dialogueData[itemName].ContainsKey(action) &&
                 dialogueData[itemName][action].ContainsKey(id))
@@ -54,12 +52,6 @@ public class DialogueManager : MonoBehaviour
             {
                 throw new KeyNotFoundException($"No entry in dialogue for [{itemName}][{action}][{id}]");
             }
-        }
-        catch (Exception e)
-        {
-            Debug.LogWarning($"Error occurred when parsing dialogue for item: {itemName}, action: {action}, id: {id}. Message: {e.Message}");
-        }
-        return "";
     }
 
     private Dictionary<string, Dictionary<string, Dictionary<string, string>>> ReadDialogueFromFile()

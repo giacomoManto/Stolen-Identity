@@ -40,6 +40,7 @@ public class JournalOutput : MonoBehaviour
     private void FixedUpdate()
     {
         history.TrimStart('\n');
+        history.Trim();
         viewableText.text = history + $"{currentEntry}\n\n";
         UpdateScrollPosition();
     }
@@ -56,12 +57,15 @@ public class JournalOutput : MonoBehaviour
 
     public void AddGameText(string text)
     {
-        //history += $"<align=left>{text}\n</align>";
         StartCoroutine(AddGameTextSlowly(text));
     }
 
     IEnumerator AddGameTextSlowly(string text)
     {
+        if (text.Length == 0)
+        {
+            yield break;
+        }
         allowTyping = false;
         float startTime = Time.time;
         int charPerSec = 50;

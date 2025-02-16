@@ -20,6 +20,12 @@ public class RoomBehavior : MonoBehaviour
 
     private void Awake()
     {
+        InitIteractables();
+    }
+
+    public void InitIteractables()
+    {
+        ItemDictionary.Clear();
         ItemList = new List<Interactable>(GetComponentsInChildren<Interactable>());
         foreach (Interactable item in ItemList)
         {
