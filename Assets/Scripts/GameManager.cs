@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
     #endregion
 
     #region GameState Management
-    public void storeBool(string key, bool value)
+    public void SetFlag(string key, bool value)
     {
         if (gameFlags.ContainsKey(key))
         {
@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public bool getBool(string key, bool defaultFlag = false)
+    public bool GetFlag(string key, bool defaultFlag = false)
     {
         if (gameFlags.ContainsKey(key))
         {

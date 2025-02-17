@@ -16,6 +16,7 @@ public class JournalOutput : MonoBehaviour
     private string currentEntry = "";
     private string history = "";
     private bool allowTyping = true;
+    private bool gameTextLock = false;
 
     public static JournalOutput GetInstance()
     {
@@ -62,6 +63,10 @@ public class JournalOutput : MonoBehaviour
 
     IEnumerator AddGameTextSlowly(string text)
     {
+        yield return new WaitUntil(() => !gameTextLock);
+
+        gameTextLock = true;
+
         if (text.Length == 0)
         {
             yield break;
@@ -81,6 +86,7 @@ public class JournalOutput : MonoBehaviour
         }
         history += "\n\n";
         allowTyping = true;
+        gameTextLock = false;
     }
 
     private void UpdateScrollPosition()

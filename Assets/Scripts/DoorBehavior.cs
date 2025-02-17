@@ -46,7 +46,7 @@ public class DoorBehavior : Interactable
     {
         if (!locked) {
             gameManager.changeRoom(room);
-            return "PLACEHOLDER: You go through the door into the next room.";
+            return ""; // Issue where text gets displayed incorrectly since we change rooms which prints directions and also the action text for going through rooms.
         }
         else
         {

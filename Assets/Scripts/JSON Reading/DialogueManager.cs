@@ -34,6 +34,11 @@ public class DialogueManager : MonoBehaviour
         IsDialogueLoaded = true;
     }
 
+    public static DialogueManager Instance()
+    {
+        return instance;
+    }
+
     public string GetDialogue(string itemName, string action, string id)
     { 
             if (dialogueData.ContainsKey(itemName) &&

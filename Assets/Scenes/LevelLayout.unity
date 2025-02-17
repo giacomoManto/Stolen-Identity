@@ -304,7 +304,6 @@ Transform:
   - {fileID: 479178961}
   - {fileID: 1499385320}
   - {fileID: 727628865}
-  - {fileID: 2094455743}
   - {fileID: 1501790959}
   - {fileID: 1950406219}
   - {fileID: 2124758852}
@@ -729,7 +728,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2094455743}
+  - {fileID: 771437825}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &479178962
@@ -1158,6 +1159,54 @@ MonoBehaviour:
   roomName: Patient Hallway
   roomDescription: Patient Hallway Room Description.
   ItemList: []
+--- !u!1 &771437824
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 771437825}
+  - component: {fileID: 771437826}
+  m_Layer: 0
+  m_Name: Fire Alarm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &771437825
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771437824}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 479178961}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &771437826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771437824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bb591057174da2439f3782dfb96b560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableName: Fire Alarm
+  location: On the wall.
+  playerCanStore: 0
+  dialogueManager: {fileID: 0}
 --- !u!1 &866850113
 GameObject:
   m_ObjectHideFlags: 0
@@ -1949,6 +1998,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2094455743}
   - component: {fileID: 2094455744}
+  - component: {fileID: 2094455745}
   m_Layer: 0
   m_Name: Fire Exit
   m_TagString: Untagged
@@ -1969,7 +2019,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 64296177}
+  m_Father: {fileID: 479178961}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2094455744
 MonoBehaviour:
@@ -1987,6 +2037,22 @@ MonoBehaviour:
   roomName: Fire Exit
   roomDescription: Fire Exit Room Description.
   ItemList: []
+--- !u!114 &2094455745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094455742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce85976fb8a33c441ac9964330439739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableName: Fire Exit
+  location: 
+  playerCanStore: 1
+  dialogueManager: {fileID: 0}
 --- !u!1 &2124758851
 GameObject:
   m_ObjectHideFlags: 0
