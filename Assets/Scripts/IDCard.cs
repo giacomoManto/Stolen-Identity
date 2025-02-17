@@ -13,7 +13,7 @@ public struct IDCard
     }
 
     // Predefined ID levels
-    public static readonly IDCard None = new IDCard("None", 0);
+    public static readonly IDCard None = new IDCard("Any", 0);
     public static readonly IDCard Thief = new IDCard("Thief", 0);
     public static readonly IDCard Patient = new IDCard("Patient", 0);
     public static readonly IDCard Brawler = new IDCard("Brawler", 0);
