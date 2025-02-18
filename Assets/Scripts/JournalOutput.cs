@@ -4,9 +4,19 @@ using UnityEngine.UI;
 using UnityEngine.UIElements;
 using static System.Net.Mime.MediaTypeNames;
 using System.Collections;
+using System.Collections.Generic;
 
 public class JournalOutput : MonoBehaviour
 {
+
+    [SerializeField]
+    private int standardCharPerSec = 50;
+    [SerializeField]
+    private int fastCharPerSec = 100;
+
+    private int charPerSec;
+
+
 
     private static JournalOutput instance;
 
@@ -16,9 +26,11 @@ public class JournalOutput : MonoBehaviour
     private string currentEntry = "";
     private string history = "";
     private bool allowTyping = true;
-    private bool gameTextLock = false;
+    private bool textDisplayRunning = false;
 
-    public static JournalOutput GetInstance()
+    private Queue<string> gameTextQueue = new Queue<string>();
+
+    public static JournalOutput Instance()
     {
         return instance;
     }
@@ -36,6 +48,7 @@ public class JournalOutput : MonoBehaviour
         }
         viewableText = GetComponentInChildren<TMP_Text>();
         scrollRect = GetComponent<ScrollRect>();
+        charPerSec = standardCharPerSec;
     }
 
     private void FixedUpdate()
@@ -44,6 +57,12 @@ public class JournalOutput : MonoBehaviour
         history.Trim();
         viewableText.text = history + $"{currentEntry}\n\n";
         UpdateScrollPosition();
+
+        if (gameTextQueue.Count > 0 && !textDisplayRunning)
+        {
+            textDisplayRunning = true;
+            StartCoroutine(AddGameTextSlowly(gameTextQueue.Dequeue()));
+        }
     }
 
     private void Start()
@@ -58,22 +77,17 @@ public class JournalOutput : MonoBehaviour
 
     public void AddGameText(string text)
     {
-        StartCoroutine(AddGameTextSlowly(text));
+        gameTextQueue.Enqueue(text);
     }
 
-    IEnumerator AddGameTextSlowly(string text)
+    private IEnumerator AddGameTextSlowly(string text)
     {
-        yield return new WaitUntil(() => !gameTextLock);
-
-        gameTextLock = true;
-
         if (text.Length == 0)
         {
             yield break;
         }
         allowTyping = false;
         float startTime = Time.time;
-        int charPerSec = 50;
         for (int i = 0; i < text.Length;)
         {
             float timeSince = Time.time - startTime;
@@ -86,7 +100,8 @@ public class JournalOutput : MonoBehaviour
         }
         history += "\n\n";
         allowTyping = true;
-        gameTextLock = false;
+        textDisplayRunning = false;
+        charPerSec = standardCharPerSec;
     }
 
     private void UpdateScrollPosition()
@@ -98,9 +113,26 @@ public class JournalOutput : MonoBehaviour
     void OnGUI()
     {
         Event e = Event.current;
-        if (e.type != EventType.KeyDown || !allowTyping)
+        if (e.type != EventType.KeyDown)
         {
             return;
+        }
+        else if (!allowTyping)
+        {
+            if (textDisplayRunning)
+            {
+                charPerSec = fastCharPerSec; // Speed up text display}
+                return;
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        if (textDisplayRunning)
+        {
+            
         }
 
         if (e.keyCode == KeyCode.Return)
@@ -110,7 +142,7 @@ public class JournalOutput : MonoBehaviour
                 return;
             }
             // Pass Entry off to GameManager
-            GameManager.GetInstance().handlePlayerInput(currentEntry);
+            GameManager.Instance().handlePlayerInput(currentEntry);
             currentEntry = "";
         }
         else if (e.keyCode == KeyCode.Backspace)

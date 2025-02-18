@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     private Dictionary<string, bool> gameFlags = new Dictionary<string, bool>();
 
     #region Singleton Implementation
-    public static GameManager GetInstance()
+    public static GameManager Instance()
     {
         return instance;
     }
@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         // Now it's safe to initialize other components.
-        journal = JournalOutput.GetInstance();
+        journal = JournalOutput.Instance();
         player = FindFirstObjectByType<PlayerInfo>();
 
         IEnumerable<RoomBehavior> rooms = FindObjectsByType<RoomBehavior>(FindObjectsSortMode.None);
@@ -120,16 +120,16 @@ public class GameManager : MonoBehaviour
 
         if (currentPlayerInput.Split(" ").Length < 2)
         {
-            journal.AddGameText("You pause, realizing you probably need a noun and a verb to act properly.");
+            AddTextToJournal("You pause, realizing you probably need a noun and a verb to act properly.");
             Debug.Log("Invalid input. Please enter a verb and a noun.");
             return;
         }
 
         if (checkBuiltInCommands(currentPlayerInput)) return;
-        journal.AddGameText(ActOnRoomObjects(player.getPlayerID(), currentPlayerInput));
+        ActOnRoomObjects(player.getPlayerID(), currentPlayerInput);
     }
 
-    public string ActOnRoomObjects(IDCard currentIDCard, string playerInput)
+    public void ActOnRoomObjects(IDCard currentIDCard, string playerInput)
     {
         Dictionary<string, Interactable> ItemDictionary = currentPlayerRoom.getItemDictionary();
         if (string.IsNullOrEmpty(playerInput))
@@ -151,9 +151,12 @@ public class GameManager : MonoBehaviour
         {
             Object = playerInput.Split(" ")[1];
             Debug.LogWarning("Attempted to act on " + Object + " but it was not found in the item list of " + currentPlayerRoom.name);
-            return "I must be losing my sanity... there is no " + Object + " in this room...";
+            AddTextToJournal("I must be losing my sanity... there is no " + Object + " in this room...");
         }
-        return ItemDictionary[Object].PerformAction(Action, currentIDCard);
+        else
+        {
+            ItemDictionary[Object].PerformAction(Action, currentIDCard);
+        }
     }
     #endregion
 
@@ -187,7 +190,7 @@ public class GameManager : MonoBehaviour
             {
                 if (playerInput.Contains(command))
                 {
-                    addTextToJournal(genericCommands[command].getDescription());
+                    AddTextToJournal(genericCommands[command].getDescription());
                     return true;
                 }
             }
@@ -217,7 +220,7 @@ public class GameManager : MonoBehaviour
                 actionsList += command + "\n";
             }
             actionsList = actionsList.Substring(0, actionsList.Length - 1);
-            addTextToJournal(actionsList);
+            AddTextToJournal(actionsList);
             return true;
         }
         return false;
@@ -227,19 +230,18 @@ public class GameManager : MonoBehaviour
     #region Room Management
     public void displayCurrentRoomDesc()
     {
-        addTextToJournal(this.currentPlayerRoom.GetRoomDescription(player.getPlayerID()));
+        this.currentPlayerRoom.DisplayRoomDescription(player.getPlayerID());
     }
 
     public void changeRoom(RoomBehavior room)
     {
         this.currentPlayerRoom = room;
-        journal.Clear();
         displayCurrentRoomDesc();
     }
     #endregion
 
     #region Journal Management
-    public void addTextToJournal(string text)
+    public void AddTextToJournal(string text)
     {
         journal.AddGameText(text);
     }

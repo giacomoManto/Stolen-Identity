@@ -14,10 +14,10 @@ public class Donuts : Interactable
         this.RegisterAction("eat", Eat);
     }
 
-    private string Eat(IDCard id)
+    private void Eat(IDCard id)
     {
-        Destroy(this.gameObject);
+        Destroy(this.gameObject, 100);
         GetComponentInParent<RoomBehavior>().InitIteractables();
-        return this.GetTextFromJson("eat", id);
+        GameManager.Instance().AddTextToJournal(this.GetTextFromJson("eat", id));
     }
 }

@@ -20,21 +20,24 @@ public class FireAlarm : Interactable
         this.RegisterAction("disable", Disable);
     }
 
-    private string Disable(IDCard id)
+    private void Disable(IDCard id)
     {
         if (isDisabled)
         {
-            return "The fire alarm is already disabled.";
+            GameManager.Instance().AddTextToJournal("The fire alarm is already disabled.");
         } else
         {
             isDisabled = true;
             disabledFireAlarms += 1;
             if (disabledFireAlarms == totalFireAlarms)
             {
-                GameManager.GetInstance().SetFlag("fireAlarmDisabled", true);
-                return "I disable the fire alarm. All fire alarms are now disabled. This might let me get out of here.";
+                GameManager.Instance().SetFlag("fireAlarmDisabled", true);
+                GameManager.Instance().AddTextToJournal("I disable the fire alarm. All fire alarms are now disabled. This might let me get out of here.");
             }
-            return this.GetTextFromJson("disable", id);
+            else
+            {
+                GameManager.Instance().AddTextToJournal(this.GetTextFromJson("disable", id));
+            }
         }
         
     }

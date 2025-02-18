@@ -7,7 +7,7 @@ public class SaveGame : CommandTemplate
     }
     public override bool Execute()
     {
-        gameManager.addTextToJournal("Game state saved! (Not really but at least this message pops up!)");
+        gameManager.AddTextToJournal("Game state saved! (Not really but at least this message pops up!)");
         return true;
     }
 }

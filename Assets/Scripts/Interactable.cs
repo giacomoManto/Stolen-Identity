@@ -10,7 +10,7 @@ public class Interactable : MonoBehaviour
 {
     public string interactableName;
 
-    private Dictionary<string, Func<IDCard, string>> actions = new Dictionary<string, Func<IDCard, string>>();
+    private Dictionary<string, Action<IDCard>> actions = new Dictionary<string, Action<IDCard>>();
 
     [SerializeField]
     protected string locationDescription;
@@ -47,7 +47,7 @@ public class Interactable : MonoBehaviour
     /// </summary>
     /// <param name="actionName"></param>
     /// <param name="action"></param>
-    protected void RegisterAction(string actionName, Func<IDCard, string> action)
+    protected void RegisterAction(string actionName, Action<IDCard> action)
     {
         actionName = actionName.ToLower();
         if (!actions.ContainsKey(actionName))
@@ -66,22 +66,25 @@ public class Interactable : MonoBehaviour
     /// <param name="action"></param>
     /// <param name="id"></param>
     /// <returns></returns>
-    public string PerformAction(string action, IDCard id)
+    public void PerformAction(string action, IDCard id)
     {
         action = action.ToLower();
         //Check if action exists in specific action list
         if (actions.ContainsKey(action))
         {
-            return actions[action](id);
+            actions[action](id);
         }
-        try
-        {
-            return GetTextFromJson(action, id);
-        }
-        catch (KeyNotFoundException)
-        {
+        else
+        { 
+            try
+            {
+                GameManager.Instance().AddTextToJournal(GetTextFromJson(action, id));
+            }
+            catch (KeyNotFoundException)
+            {
 
-            return $"Now why would I want to {action} the {interactableName}.";
+                GameManager.Instance().AddTextToJournal($"Now why would I want to {action} the {interactableName}.");
+            }
         }
     }
 
@@ -90,7 +93,7 @@ public class Interactable : MonoBehaviour
 
     //appleinspectbrawler, an apple...not as good as booze but its a nice snack
     //applegrab, you grab the apple
-    public string GetTextFromJson(String Action, IDCard id)
+    protected string GetTextFromJson(String Action, IDCard id)
     {
         try
         {
@@ -106,14 +109,16 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    public virtual string InspectObject(IDCard id)
+    public virtual void InspectObject(IDCard id)
     {
-        if(GetTextFromJson("inspect", id) != $"I try to inspect the {interactableName} but nothing happens.")
+        if (GetTextFromJson("inspect", id) != $"I try to inspect the {interactableName} but nothing happens.")
         {
-            return GetTextFromJson("inspect", id);
+            GameManager.Instance().AddTextToJournal(GetTextFromJson("inspect", id));
         }
-        return "looks like it really is just a " + interactableName;
-
+        else
+        {
+            GameManager.Instance().AddTextToJournal("looks like it really is just a " + interactableName);
+        }
     }
 
     /// <summary>
@@ -136,13 +141,15 @@ public class Interactable : MonoBehaviour
             return locationDescription;
         }
     }
-    public virtual string TakeObject(IDCard id)
+    public virtual void TakeObject(IDCard id)
     {
         if (!playerCanStore)
         {
-            return "Pretty sure I dont want to take that " + interactableName;
+            GameManager.Instance().AddTextToJournal("Pretty sure I dont want to take that " + interactableName);
         }
-        FindFirstObjectByType<GameManager>().addObjectToPlayerInventory(this);
-        return "I pocket the " + interactableName;
+        else { 
+            FindFirstObjectByType<GameManager>().addObjectToPlayerInventory(this);
+            GameManager.Instance().AddTextToJournal( "I pocket the " + interactableName);
+        }
     }
 }

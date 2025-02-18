@@ -19,16 +19,19 @@ public class PileOfPaperPHD : Interactable
         this.RegisterAction("search", Search);
     }
 
-    string Search(IDCard idCard)
+    private void Search(IDCard idCard)
     {
         if (searched)
         {
-            return "You find nothing of interest in the pile of paper.";
+            GameManager.Instance().AddTextToJournal("You find nothing of interest in the pile of paper.");
         }
-        GameObject PHDCopy = Instantiate(PHD, transform.parent.position, Quaternion.identity);
-        PHDCopy.SetActive(true);
-        PHDCopy.transform.parent = transform.parent;
-        GetComponentInParent<RoomBehavior>().InitIteractables();
-        return "You find a PHD in the pile of paper.";
+        else
+        {
+            GameObject PHDCopy = Instantiate(PHD, transform.parent.position, Quaternion.identity);
+            PHDCopy.SetActive(true);
+            PHDCopy.transform.parent = transform.parent;
+            GetComponentInParent<RoomBehavior>().InitIteractables();
+            GameManager.Instance().AddTextToJournal("You find a PHD in the pile of paper.");
+        }
     }
 }

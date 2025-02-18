@@ -1209,7 +1209,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableName: Fire Alarm
-  locationDescription: 
+  locationDescription: A small but clearly visible red fire alarm is attatched to
+    the wall next to the fire exit.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
 --- !u!1 &866850113
@@ -1425,7 +1426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactableName: Door
+  interactableName: door
   locationDescription: A hospital door with a small pane of glass is at the far end
     of the room. It looks like it leads into some sort of hallway.
   playerCanStore: 0
@@ -1581,6 +1582,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1826a95904541ec44b3cd8367139bd97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  standardCharPerSec: 50
+  fastCharPerSec: 150
 --- !u!114 &1401071889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2199,7 +2202,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2094455743}
-  - component: {fileID: 2094455744}
   - component: {fileID: 2094455745}
   m_Layer: 0
   m_Name: Fire Exit
@@ -2223,22 +2225,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 479178961}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2094455744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2094455742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b7dfc23fdc50e74780c1f47aa89fdd9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  securityLevel: 0
-  roomName: Fire Exit
-  roomDescription: Fire Exit Room Description.
-  ItemList: []
 --- !u!114 &2094455745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2252,7 +2238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableName: Fire Exit
-  locationDescription: 
+  locationDescription: A large red fire exit is at the end of the hallway.
   playerCanStore: 1
   dialogueManager: {fileID: 0}
 --- !u!1 &2098709137

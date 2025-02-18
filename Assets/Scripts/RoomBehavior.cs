@@ -38,7 +38,7 @@ public class RoomBehavior : MonoBehaviour
     /// </summary>
     /// <param name="currentIDCard">The Player ID name in all lower case.</param>
     /// <returns>A room description.</returns>
-    public string GetRoomDescription(IDCard currentIDCard)
+    public void DisplayRoomDescription(IDCard currentIDCard)
     {
         StringBuilder fullRoomDescription = new StringBuilder();
         fullRoomDescription.Append(roomDescription);
@@ -57,7 +57,7 @@ public class RoomBehavior : MonoBehaviour
         {
             fullRoomDescriptionString = Regex.Replace(fullRoomDescriptionString, item, $"<b>{item}</b>", RegexOptions.IgnoreCase);
         }
-        return fullRoomDescriptionString;
+        GameManager.Instance().AddTextToJournal(fullRoomDescriptionString);
     }
 
     public float getRoomCatchChance(float globalCatchChance, IDCard currentIDCard)

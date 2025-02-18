@@ -20,8 +20,8 @@ public class ExampleApple: Interactable
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
-    private string Lick(IDCard id)
+    private void Lick(IDCard id)
     {
-        return "You lick the apple. It tastes like an apple.";
+        GameManager.Instance().AddTextToJournal("You lick the apple. It tastes like an apple.");
     }
 }

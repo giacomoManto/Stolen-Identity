@@ -11,7 +11,7 @@ public class CheckInventory : CommandTemplate
     }
     public override bool Execute()
     {
-        gameManager.addTextToJournal(playerInfo.listInventory());
+        gameManager.AddTextToJournal(playerInfo.listInventory());
         return true;
     }
 }
