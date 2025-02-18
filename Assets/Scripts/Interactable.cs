@@ -13,7 +13,7 @@ public class Interactable : MonoBehaviour
     private Dictionary<string, Func<IDCard, string>> actions = new Dictionary<string, Func<IDCard, string>>();
 
     [SerializeField]
-    protected string location;
+    protected string locationDescription;
 
     [SerializeField]
     protected bool playerCanStore = true;
@@ -28,7 +28,7 @@ public class Interactable : MonoBehaviour
     /// <exception cref="ArgumentNullException"></exception>
     public Interactable()
     {
-        this.RegisterAction("inspect", GetDescription);
+        this.RegisterAction("inspect", InspectObject);
         this.RegisterAction("grab", TakeObject);
         this.RegisterAction("take", TakeObject);
         this.RegisterAction("steal", TakeObject);
@@ -106,6 +106,16 @@ public class Interactable : MonoBehaviour
         }
     }
 
+    public virtual string InspectObject(IDCard id)
+    {
+        if(GetTextFromJson("inspect", id) != $"I try to inspect the {interactableName} but nothing happens.")
+        {
+            return GetTextFromJson("inspect", id);
+        }
+        return "looks like it really is just a " + interactableName;
+
+    }
+
     /// <summary>
     /// Gets the description of the interactable based on the IDCard. Needs to be overriden.
     /// </summary>
@@ -113,17 +123,17 @@ public class Interactable : MonoBehaviour
     /// <returns></returns>
     public virtual string GetDescription(IDCard id)
     {
-        if (GetTextFromJson("inspect", id) != "key not found")
+        if (GetTextFromJson("location", id) != $"I try to location the {interactableName} but nothing happens.")
         {
-            return GetTextFromJson("inspect", id);
+            return GetTextFromJson("location", id);
         }
-        else if (GetTextFromJson("inspect", IDCard.None) != "key not found")
+        else if (GetTextFromJson("location", IDCard.None) != $"I try to location the {interactableName} but nothing happens.")
         {
-            return GetTextFromJson("inspect", IDCard.None);
+            return GetTextFromJson("location", IDCard.None);
         }
         else
         {
-            throw new NotImplementedException();
+            return locationDescription;
         }
     }
     public virtual string TakeObject(IDCard id)

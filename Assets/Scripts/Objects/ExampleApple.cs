@@ -14,15 +14,6 @@ public class ExampleApple: Interactable
         this.RegisterAction("lick", Lick);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    public override string GetDescription(IDCard id)
-    {
-        return "A juicy delicious red apple " + location;
-    }
 
     /// <summary>
     /// Lick the apple.

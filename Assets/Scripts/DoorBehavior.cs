@@ -37,10 +37,7 @@ public class DoorBehavior : Interactable
         this.SetName(interactableName);
     }
 
-    public override string GetDescription(IDCard id)
-    {
-        return "PLACEHOLDER: A white door.";
-    }
+
 
     private string GoThrough(IDCard id)
     {
