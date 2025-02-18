@@ -93,8 +93,25 @@ public class JournalOutput : MonoBehaviour
             float timeSince = Time.time - startTime;
             if ((float)i / timeSince < charPerSec)
             {
-                history += text[i];
-                i++;
+                // Skip all html business
+                if (text[i] == '<')
+                {
+                    while (text[i] != '>')
+                    {
+                        history += text[i];
+                        if (i >= text.Length)
+                        {
+                            throw new System.Exception("Invalid HTML in game text");
+                        }
+                        i++;
+                    }
+                    history += text[i];
+                    i++;
+                }
+                else {
+                    history += text[i];
+                    i++;
+                }
             }
             yield return null;
         }

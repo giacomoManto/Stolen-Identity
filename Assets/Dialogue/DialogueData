@@ -77,6 +77,10 @@ Donuts : eat : Guard :  I open the box, open my throat and shove all the donuts 
 Donuts : eat : Thief : I eat the donuts. Savoring each bite. Knowing these aren t mine made them taste so much better. Only a mastermind criminal such as myself would be able to stomach this crime, literally.
 
 # I am X fire excape
+Fire Alarm : disable : Any : I fiddle with the fire alarm. Eventually I get it disabled.
+Fire Alarm : disable : Doctor : I reluctantly disable the fire alarm. This goes against everything I stand for.
+Fire Alarm : disable : thief : I effeciently disable the fire alarm. Although this might make my escape easier, I can't help but feel a little guilty.
+
 Fire Exit : go through : Patient : I push the metal bar and the door swings open. I walk through the door, leaving the hospital behind me. Is this who I really am? I just can't be sure.
 Fire Exit : go through : Doctor : I push the metal bar and the door swings open. I walk through the door, leaving the hospital behind me. I guess I'll live the rest of my life out as a Doctor. I don't have the qualifications, experience or labcoat. I just can't be sure that this is really who I am.
 Fire Exit : go through : Guard : I push the metal bar and the door swings open. I walk through the door, leaving the hospital behind me. Guarding doesn't sound too bad. I guess I can live the rest of my life out as a guard. I wish I could remember who I really am - but, for now, I'm satisfied just leaving the hospital.
