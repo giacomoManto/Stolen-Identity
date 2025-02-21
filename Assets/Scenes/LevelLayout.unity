@@ -167,7 +167,8 @@ MonoBehaviour:
   securityLevel: 1
   roomName: Break Room
   roomDescription: Break Room, Room Description.
-  ItemList: []
+  visitText: []
+  allAfter: 
 --- !u!1 &62986275
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,7 +579,8 @@ MonoBehaviour:
   securityLevel: 0
   roomName: Lobby
   roomDescription: Lobby Room Description.
-  ItemList: []
+  visitText: []
+  allAfter: 
 --- !u!1 &289139624
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,7 +628,8 @@ MonoBehaviour:
   securityLevel: 2
   roomName: Doctor Office
   roomDescription: Doctor Office Room Description.
-  ItemList: []
+  visitText: []
+  allAfter: 
 --- !u!1 &453564231
 GameObject:
   m_ObjectHideFlags: 0
@@ -675,7 +678,8 @@ MonoBehaviour:
   securityLevel: 2
   roomName: Vault
   roomDescription: Vault Room Description.
-  ItemList: []
+  visitText: []
+  allAfter: 
 --- !u!1 &464826050
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,7 +806,8 @@ MonoBehaviour:
   securityLevel: 0
   roomName: Patient Hallway
   roomDescription: You look around and see a simple hallway.
-  ItemList: []
+  visitText: []
+  allAfter: 
 --- !u!1 &481385760
 GameObject:
   m_ObjectHideFlags: 0
@@ -1217,7 +1222,8 @@ MonoBehaviour:
   securityLevel: 1
   roomName: Storage Room
   roomDescription: Storage Room Room Description.
-  ItemList: []
+  visitText: []
+  allAfter: 
 --- !u!1 &688669856
 GameObject:
   m_ObjectHideFlags: 0
@@ -1782,8 +1788,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1826a95904541ec44b3cd8367139bd97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  standardCharPerSec: 50
-  fastCharPerSec: 150
+  standardCharPerSec: 100
+  fastCharPerSec: 1000
 --- !u!114 &1401071889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1953,7 +1959,10 @@ MonoBehaviour:
   roomName: Starting Room
   roomDescription: 'I look around the foreign room, taking in the details. Theres
     a few more patient beds next to mine, all empty. '
-  ItemList: []
+  visitText:
+  - Basic First Visit Text
+  - Basic Second Visit Text
+  allAfter: 
 --- !u!1 &1499385319
 GameObject:
   m_ObjectHideFlags: 0
@@ -2003,7 +2012,8 @@ MonoBehaviour:
   securityLevel: 0
   roomName: Brawler Medical Room
   roomDescription: Brawler Medical Room Description.
-  ItemList: []
+  visitText: []
+  allAfter: 
 --- !u!1 &1501790958
 GameObject:
   m_ObjectHideFlags: 0
@@ -2055,7 +2065,8 @@ MonoBehaviour:
   roomName: Cubicle Work Area
   roomDescription: A decently sized area with various cubicles. The walls aren't
     very tall so I can easily see into the work areas.
-  ItemList: []
+  visitText: []
+  allAfter: 
 --- !u!1 &1582195720
 GameObject:
   m_ObjectHideFlags: 0
@@ -2103,7 +2114,8 @@ MonoBehaviour:
   securityLevel: 1
   roomName: Guarded Hallway
   roomDescription: Guarded Hallway Room Description.
-  ItemList: []
+  visitText: []
+  allAfter: 
 --- !u!1 &1586635845
 GameObject:
   m_ObjectHideFlags: 0
@@ -2400,7 +2412,8 @@ MonoBehaviour:
   securityLevel: 0
   roomName: Janitor Room
   roomDescription: Janitor Room Room Description.
-  ItemList: []
+  visitText: []
+  allAfter: 
 --- !u!1 &1950935140
 GameObject:
   m_ObjectHideFlags: 0
@@ -2642,7 +2655,8 @@ MonoBehaviour:
   securityLevel: 0
   roomName: Janitor Maze
   roomDescription: Janitor Maze Room Description.
-  ItemList: []
+  visitText: []
+  allAfter: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using UnityEngine;
@@ -8,12 +9,19 @@ using UnityEngine.Windows;
 
 public class RoomBehavior : MonoBehaviour
 {
+    [Header("Room Settings")]
     public int securityLevel = 0;
     public String roomName = "";
     [SerializeField]
     String roomDescription = "";
-    [SerializeField]
     List<Interactable> ItemList = new List<Interactable>();
+
+    [Header("Visit Text")]
+    [SerializeField]
+    private List<string> visitText;
+    private int timesVisited = 0;
+    [SerializeField]
+    private string allAfter = string.Empty;
 
 
     private Dictionary<string, Interactable> ItemDictionary = new Dictionary<string, Interactable>();
@@ -30,6 +38,19 @@ public class RoomBehavior : MonoBehaviour
         foreach (Interactable item in ItemList)
         {
             ItemDictionary.Add(item.interactableName.ToLower(), item);
+        }
+    }
+
+    public void OnEnter()
+    {
+        if (timesVisited < visitText.Count)
+        {
+            GameManager.Instance().AddTextToJournal(visitText[timesVisited]);
+            timesVisited++;
+        }
+        else if (allAfter.Length > 0)
+        {
+            GameManager.Instance().AddTextToJournal(allAfter);
         }
     }
 

@@ -78,6 +78,7 @@ public class GameManager : MonoBehaviour
             DialogueManager.instance != null && DialogueManager.instance.IsDialogueLoaded);
 
         errorCheckStart();
+        currentPlayerRoom.OnEnter();
         displayCurrentRoomDesc();
     }
     #endregion
@@ -236,6 +237,7 @@ public class GameManager : MonoBehaviour
     public void changeRoom(RoomBehavior room)
     {
         this.currentPlayerRoom = room;
+        room.OnEnter();
         displayCurrentRoomDesc();
     }
     #endregion
