@@ -304,7 +304,6 @@ Transform:
   - {fileID: 1456374741}
   - {fileID: 479178961}
   - {fileID: 1499385320}
-  - {fileID: 727628865}
   - {fileID: 1501790959}
   - {fileID: 1950406219}
   - {fileID: 2124758852}
@@ -406,6 +405,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &152795877
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 152795878}
+  - component: {fileID: 152795879}
+  m_Layer: 0
+  m_Name: DoorToStartingRoom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &152795878
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152795877}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 479178961}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &152795879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152795877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableName: red door
+  locationDescription: There is a red door that leads to the room I woke up in.
+  playerCanStore: 0
+  dialogueManager: {fileID: 0}
+  room: {fileID: 1456374742}
+  lockLevel: 0
 --- !u!1 &201844054
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,8 +489,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -31, y: -224.99998}
-  m_SizeDelta: {x: 1000, y: 1000}
+  m_AnchoredPosition: {x: -15, y: -336}
+  m_SizeDelta: {x: 1382.4763, y: 1382.4763}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &201844056
 MonoBehaviour:
@@ -661,8 +710,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -22, y: 9}
-  m_SizeDelta: {x: 550, y: 400}
+  m_AnchoredPosition: {x: 0, y: 7}
+  m_SizeDelta: {x: 589.2568, y: 428.5503}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &464826052
 MonoBehaviour:
@@ -733,7 +782,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2094455743}
-  - {fileID: 771437825}
+  - {fileID: 152795878}
+  - {fileID: 653568687}
+  - {fileID: 936510603}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &479178962
@@ -750,7 +801,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   securityLevel: 0
   roomName: Patient Hallway
-  roomDescription: Patient Hallway Description
+  roomDescription: You look around and see a simple hallway.
   ItemList: []
 --- !u!1 &481385760
 GameObject:
@@ -1018,6 +1069,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &653568686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 653568687}
+  - component: {fileID: 653568688}
+  m_Layer: 0
+  m_Name: DoorToBrawlerRoom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &653568687
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653568686}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 479178961}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &653568688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653568686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableName: green door
+  locationDescription: There is also a green door that seems to lead another patient
+    room.
+  playerCanStore: 0
+  dialogueManager: {fileID: 0}
+  room: {fileID: 1499385321}
+  lockLevel: 0
 --- !u!1 &673477764
 GameObject:
   m_ObjectHideFlags: 0
@@ -1164,54 +1266,6 @@ MonoBehaviour:
   locationDescription: There is a fire alarm on the southern wall.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
---- !u!1 &727628864
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 727628865}
-  - component: {fileID: 727628866}
-  m_Layer: 0
-  m_Name: Patient Hallway
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &727628865
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 727628864}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 64296177}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &727628866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 727628864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b7dfc23fdc50e74780c1f47aa89fdd9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  securityLevel: 0
-  roomName: Patient Hallway
-  roomDescription: Patient Hallway Room Description.
-  ItemList: []
 --- !u!1 &771437824
 GameObject:
   m_ObjectHideFlags: 0
@@ -1237,12 +1291,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 771437824}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 479178961}
+  m_Father: {fileID: 1499385320}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &771437826
 MonoBehaviour:
@@ -1257,8 +1311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableName: Fire Alarm
-  locationDescription: A small but clearly visible red fire alarm is attatched to
-    the wall next to the fire exit.
+  locationDescription: A fire alarm rests on the wall by the door.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
 --- !u!1 &866850113
@@ -1340,6 +1393,105 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &936510602
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 936510603}
+  - component: {fileID: 936510604}
+  m_Layer: 0
+  m_Name: DoorToCubicleWorkArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &936510603
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936510602}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 479178961}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &936510604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936510602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableName: orange door
+  locationDescription: In front of me there is a orange door with no windows.
+  playerCanStore: 0
+  dialogueManager: {fileID: 0}
+  room: {fileID: 1501790960}
+  lockLevel: 0
+--- !u!1 &958311107
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 958311108}
+  - component: {fileID: 958311109}
+  m_Layer: 0
+  m_Name: Fire Alarm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &958311108
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958311107}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1501790959}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &958311109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958311107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bb591057174da2439f3782dfb96b560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableName: Fire Alarm
+  locationDescription: A red fire alarm is next to the water cooler bubbling in the
+    corner of the room.
+  playerCanStore: 0
+  dialogueManager: {fileID: 0}
 --- !u!1 &1016301092
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,8 +1528,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.0843964, y: 7}
-  m_SizeDelta: {x: 1.0844, y: 7}
+  m_AnchoredPosition: {x: -0.000030517578, y: 7}
+  m_SizeDelta: {x: 0.000030518, y: 7}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1016301094
 MonoBehaviour:
@@ -1615,8 +1767,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 96.0504, y: 8.8805}
-  m_SizeDelta: {x: 224.7408, y: 331.911}
+  m_AnchoredPosition: {x: 126.4763, y: 6.8720303}
+  m_SizeDelta: {x: 240.7819, y: 355.6014}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1401071888
 MonoBehaviour:
@@ -1831,7 +1983,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1902775118}
+  - {fileID: 771437825}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1499385321
@@ -1881,6 +2035,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1414727510}
+  - {fileID: 1951043252}
+  - {fileID: 958311108}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1501790960
@@ -1897,7 +2053,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   securityLevel: 0
   roomName: Cubicle Work Area
-  roomDescription: Cubicle Work Area Room Description.
+  roomDescription: A decently sized area with various cubicles. The walls aren't
+    very tall so I can easily see into the work areas.
   ItemList: []
 --- !u!1 &1582195720
 GameObject:
@@ -2032,8 +2189,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2146,6 +2303,56 @@ MonoBehaviour:
   locationDescription: 
   playerCanStore: 1
   dialogueManager: {fileID: 0}
+--- !u!1 &1902775117
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1902775118}
+  - component: {fileID: 1902775119}
+  m_Layer: 0
+  m_Name: DoorToPatientHallway
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1902775118
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902775117}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1499385320}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1902775119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902775117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableName: green door
+  locationDescription: Behind me is the green door I came in through.
+  playerCanStore: 0
+  dialogueManager: {fileID: 0}
+  room: {fileID: 479178962}
+  lockLevel: 0
 --- !u!1 &1950406218
 GameObject:
   m_ObjectHideFlags: 0
@@ -2242,6 +2449,56 @@ MonoBehaviour:
   locationDescription: 
   playerCanStore: 1
   dialogueManager: {fileID: 0}
+--- !u!1 &1951043251
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1951043252}
+  - component: {fileID: 1951043253}
+  m_Layer: 0
+  m_Name: DoorToPatientHallway
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1951043252
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951043251}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1501790959}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1951043253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951043251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableName: orange door
+  locationDescription: There is a orange door that I know goes to the patient hallway.
+  playerCanStore: 0
+  dialogueManager: {fileID: 0}
+  room: {fileID: 479178962}
+  lockLevel: 0
 --- !u!1 &2094455742
 GameObject:
   m_ObjectHideFlags: 0
