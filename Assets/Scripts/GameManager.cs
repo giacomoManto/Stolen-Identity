@@ -59,12 +59,14 @@ public class GameManager : MonoBehaviour
         currentPlayerRoom = allRooms["Starting Room"];
 
         addGenericCommand(new CheckBag(this, player));
-        addGenericCommand(new CheckInventory(this, player));
+        addGenericCommand("check inventory", new CheckBag(this, player));
+        addGenericCommand("view inventory", new CheckBag(this, player));
         addGenericCommand(new InspectCommand(this));
         addGenericCommand(new SaveGame(this, player));
         addGenericCommand(new UseCommand(this));
         addGenericCommand(new ViewRoom(this, player));
         addGenericCommand(new InfoCommand(this));
+        addGenericCommand(new HelpCommand(this));
 
         // Start coroutine to wait for DialogueManager to load before initializing dialogue elements.
         StartCoroutine(WaitForDialogueAndInit());
@@ -131,33 +133,59 @@ public class GameManager : MonoBehaviour
 
     public void ActOnRoomObjects(IDCard currentIDCard, string playerInput)
     {
-        Dictionary<string, Interactable> ItemDictionary = currentPlayerRoom.getItemDictionary();
-        if (string.IsNullOrEmpty(playerInput))
+        // Get room items and player's inventory
+        Dictionary<string, Interactable> roomItems = currentPlayerRoom.getItemDictionary();
+        Dictionary<string, Interactable> inventoryItems = player.getPlayerInventory();
+
+        string action = "";
+        string targetKey = "";
+
+        // First, look for a matching key in the room's items
+        foreach (string key in roomItems.Keys)
         {
-            Debug.LogError("Empty player input");
-        }
-        string Action = "";
-        string Object = "";
-        foreach (string item in ItemDictionary.Keys)
-        {
-            if (playerInput.Contains(item))
+            if (playerInput.Contains(key))
             {
-                Object = item;
-                Action = playerInput.Replace(item, "");
-                Action = Action.Substring(0, Action.Length - 1);
+                targetKey = key;
+                action = playerInput.Replace(key, "").Trim();
+                break;
             }
         }
-        if (string.IsNullOrEmpty(Object))
+
+        // If not found in room, check the player's inventory
+        if (string.IsNullOrEmpty(targetKey))
         {
-            Object = playerInput.Split(" ")[1];
-            Debug.LogWarning("Attempted to act on " + Object + " but it was not found in the item list of " + currentPlayerRoom.name);
-            AddTextToJournal("I must be losing my sanity... there is no " + Object + " in this room...");
+            foreach (string key in inventoryItems.Keys)
+            {
+                if (playerInput.Contains(key))
+                {
+                    targetKey = key;
+                    action = playerInput.Replace(key, "").Trim();
+                    break;
+                }
+            }
         }
-        else
+
+        // If still no match, report an error
+        if (string.IsNullOrEmpty(targetKey))
         {
-            ItemDictionary[Object].PerformAction(Action, currentIDCard);
+            string fallbackObject = playerInput.Split(" ")[1];
+            Debug.LogWarning("Attempted to act on " + fallbackObject + " but it was not found in the room or inventory");
+            AddTextToJournal("I must be losing my sanity... there is no " + fallbackObject + " here...");
+            return;
+        }
+
+        // Determine which dictionary the item came from and perform its action
+        Interactable targetItem = null;
+        if (roomItems.TryGetValue(targetKey, out targetItem))
+        {
+            targetItem.PerformAction(action, currentIDCard);
+        }
+        else if (inventoryItems.TryGetValue(targetKey, out targetItem))
+        {
+            targetItem.PerformAction(action, currentIDCard);
         }
     }
+
     #endregion
 
     #region Inventory Management
@@ -178,7 +206,7 @@ public class GameManager : MonoBehaviour
         }
         if (playerInput == "help")
         {
-            AddTextToJournal("If I remember correctly...which isn't saying much, <b>'list actions'</b> helps me remember what general things I'm able to do. If I want more information on certain actions I can write in <b>'info [action]'</b> to learn more. If I want to glean more information from important, <b>bold</b>, objects in the room I can write <b>'inspect [object]</b>'.");
+            AddTextToJournal("If I remember correctly...which isn't saying much, <b>'list actions'</b> helps me remember what general things I'm able to do. If I want more information on certain actions I can write in <b>'info [action]'</b> to learn more. If I want to glean more information from important, <b>bold</b>, objects in the room I can write <b>'inspect [object]</b>'. I guess it's also important to remember that most <b>objects</b> have less generic actions I can do to them, like <b>eat</b>ing an <b>apple</b> or <b>open</b>ing a <b>door</b>.");
             return true;
         }
         if (playerInput.StartsWith("switch"))

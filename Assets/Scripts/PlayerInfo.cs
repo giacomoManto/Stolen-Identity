@@ -43,9 +43,13 @@ public class PlayerInfo : MonoBehaviour
         if (itemInventory.ContainsKey(item)) return true;
         return false;
     }
+    public Dictionary<string, Interactable> getPlayerInventory()
+    {
+        return itemInventory;
+    }
     public void addItem(Interactable item)
     {
-        itemInventory.Add(item.name, item);
+        itemInventory.Add(item.name.ToLower(), item);
     }
     public string listInventory()
     {
