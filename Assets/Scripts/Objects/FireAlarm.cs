@@ -18,6 +18,8 @@ public class FireAlarm : Interactable
         playerCanStore = false;
         totalFireAlarms += 1;
         this.RegisterAction("disable", Disable);
+        this.RegisterAction("break", Disable);
+        this.RegisterAction("destroy", Disable);
     }
 
     private void Disable(IDCard id)

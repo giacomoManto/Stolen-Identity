@@ -805,8 +805,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   securityLevel: 0
   roomName: Patient Hallway
-  roomDescription: You look around and see a simple hallway.
-  visitText: []
+  roomDescription: 'I walk into an awfully dull hallway that seems to connect patient
+    rooms and the main wing of the hospital. I hope these people learn to decorate
+    sometime soon. '
+  visitText:
+  - "One thing\u2019s for sure: the more I write in this journal and start to remember,
+    the more determined I am to get out of here. I can only take the glaring lights,
+    pestering doctors, and the sterile all-white decor for so long. Ideally, I\u2019d
+    like to leave by today, but it sounds like I\u2019ll need a doctor\u2019s clearance
+    to walk out the front door. Plus, everyone here seems to carry an ID card\u2014maybe
+    if I can find mine and remember who I am, I\u2019ll finally get that clearance. "
   allAfter: 
 --- !u!1 &481385760
 GameObject:
@@ -1733,7 +1741,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactableName: Apple
   locationDescription: A delecious red apple lies on what appears to be a doctors
-    desk. I guess someone set it there to scare away the doctor.
+    desk.
   playerCanStore: 1
   dialogueManager: {fileID: 0}
 --- !u!1 &1401071886
@@ -1960,8 +1968,18 @@ MonoBehaviour:
   roomDescription: 'I look around the foreign room, taking in the details. Theres
     a few more patient beds next to mine, all empty. '
   visitText:
-  - Basic First Visit Text
-  - Basic Second Visit Text
+  - "I woke up in a hospital bed with no idea who I am. I found this journal on the
+    bedside table, so I\u2019m using it to keep track of everything I do and see\u2014maybe
+    it\u2019ll help me remember something important later.\\n I\u2019ve decided to
+    sketch some simple pictures on the left side of the journal to help me remember
+    the rooms if I ever leave. On the right, I\u2019ll write down what I want to
+    do and what I see, <b>bolding</b> any details that look important. They say that
+    writing things down can even help jog my memory.\\n Speaking of writing things
+    down, these a few phrases that help jog my memory: \u2022 Write <b>help</b> if
+    I ever get stuck or forget what I\u2019m supposed to do. \u2022 Write <b>List
+    Actions</b> to see a list of basic commands. \u2022 Write <b>Info [action]</b>
+    to learn more about a specific command. \u2022 Write <b>Inspect [object]</b>
+    to take a closer look at something."
   allAfter: 
 --- !u!1 &1499385319
 GameObject:
@@ -2011,7 +2029,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   securityLevel: 0
   roomName: Brawler Medical Room
-  roomDescription: Brawler Medical Room Description.
+  roomDescription: 'Looks almost identical to the patient room I woke up in, except
+    there''s a few more beds and slightly more sunlight. To the left of me there''s
+    a trash can filled with used gauze. '
   visitText: []
   allAfter: 
 --- !u!1 &1501790958
@@ -2063,8 +2083,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   securityLevel: 0
   roomName: Cubicle Work Area
-  roomDescription: A decently sized area with various cubicles. The walls aren't
-    very tall so I can easily see into the work areas.
+  roomDescription: I look around the decently sized area with various cubicles. The
+    walls aren't very tall so I can easily see into the work areas.
   visitText: []
   allAfter: 
 --- !u!1 &1582195720

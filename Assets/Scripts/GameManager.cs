@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -118,6 +117,7 @@ public class GameManager : MonoBehaviour
         statRecorder[player.getPlayerID()] = (statRecorder.TryGetValue(player.getPlayerID(), out int val) ? val : 0) + 1;
         Debug.Log(playerInput);
         string currentPlayerInput = playerInput.ToLower();
+        if (checkBuiltInCommands(currentPlayerInput)) return;
 
         if (currentPlayerInput.Split(" ").Length < 2)
         {
@@ -126,7 +126,6 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        if (checkBuiltInCommands(currentPlayerInput)) return;
         ActOnRoomObjects(player.getPlayerID(), currentPlayerInput);
     }
 
@@ -177,6 +176,11 @@ public class GameManager : MonoBehaviour
         {
             return true;
         }
+        if (playerInput == "help")
+        {
+            AddTextToJournal("If I remember correctly...which isn't saying much, <b>'list actions'</b> helps me remember what general things I'm able to do. If I want more information on certain actions I can write in <b>'info [action]'</b> to learn more. If I want to glean more information from important, <b>bold</b>, objects in the room I can write <b>'inspect [object]</b>'.");
+            return true;
+        }
         if (playerInput.StartsWith("switch"))
         {
             if (player.switchPlayerID(playerInput.Split(" ")[1]))
@@ -210,10 +214,14 @@ public class GameManager : MonoBehaviour
     {
         genericCommands.Add(command.getName(), command);
     }
+    private void addGenericCommand(string name, CommandTemplate command)
+    {
+        genericCommands.Add(name, command);
+    }
 
     private bool checkListActions(string playerInput)
     {
-        if (playerInput == "list actions" || playerInput == "check actions" || playerInput == "list commands")
+        if (playerInput == "list actions" || playerInput == "check actions" || playerInput == "list commands" || playerInput == "view actions")
         {
             string actionsList = "";
             foreach (string command in genericCommands.Keys)
