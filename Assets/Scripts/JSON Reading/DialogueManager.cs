@@ -11,7 +11,7 @@ public class DialogueManager : MonoBehaviour
     public bool IsDialogueLoaded { get; private set; } = false;
 
     private Dictionary<string, Dictionary<string, Dictionary<string, string>>> dialogueData;
-    private string dataDirPath = Application.dataPath + "/Dialogue";
+    private string dataDirPath = Application.streamingAssetsPath + "/Dialogue";
     private string dataFileName = "DialogueData";
 
     private void Awake()
@@ -72,6 +72,7 @@ public class DialogueManager : MonoBehaviour
                 return allDialogue;
             }
             int lineNum = 0;
+
             foreach (string line in File.ReadLines(filePath))
             {
                 lineNum++;
