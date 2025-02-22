@@ -11,8 +11,7 @@ public class DialogueManager : MonoBehaviour
     public bool IsDialogueLoaded { get; private set; } = false;
 
     private Dictionary<string, Dictionary<string, Dictionary<string, string>>> dialogueData;
-    private string dataDirPath = Application.streamingAssetsPath + "/Dialogue";
-    private string dataFileName = "DialogueData";
+    private string dataPath = Application.streamingAssetsPath + "/DialogueData";
 
     private void Awake()
     {
@@ -61,7 +60,7 @@ public class DialogueManager : MonoBehaviour
 
     private Dictionary<string, Dictionary<string, Dictionary<string, string>>> ReadDialogueFromFile()
     {
-        string filePath = Path.Combine(dataDirPath, dataFileName);
+        string filePath = dataPath;
         var allDialogue = new Dictionary<string, Dictionary<string, Dictionary<string, string>>>();
 
         try
