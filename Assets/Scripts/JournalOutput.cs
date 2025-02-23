@@ -56,7 +56,11 @@ public class JournalOutput : MonoBehaviour
         history.TrimStart('\n');
         history.Trim();
         viewableText.text = history + $"{currentEntry}\n\n";
-        UpdateScrollPosition();
+        if (textDisplayRunning)
+        {
+            UpdateScrollPosition();
+        }
+        
 
         if (gameTextQueue.Count > 0 && !textDisplayRunning)
         {
@@ -130,6 +134,10 @@ public class JournalOutput : MonoBehaviour
     void OnGUI()
     {
         Event e = Event.current;
+        if(e.type == EventType.KeyDown)
+        {
+            UpdateScrollPosition();
+        }
         if (e.type != EventType.KeyDown)
         {
             return;
@@ -146,7 +154,6 @@ public class JournalOutput : MonoBehaviour
                 return;
             }
         }
-
         if (textDisplayRunning)
         {
             
