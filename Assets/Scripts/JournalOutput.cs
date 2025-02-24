@@ -96,16 +96,19 @@ public class JournalOutput : MonoBehaviour
                 // Skip all html business
                 if (text[i] == '<')
                 {
+                    while (text[i] != '/')
+                    {
+                        history += text[i];
+                        i++;
+                    }
                     while (text[i] != '>')
                     {
-                        i++;
-                        continue;
                         history += text[i];
                         if (i >= text.Length)
                         {
                             throw new System.Exception("Invalid HTML in game text");
                         }
-                        
+                        i++;
                     }
                     history += text[i];
                     i++;
