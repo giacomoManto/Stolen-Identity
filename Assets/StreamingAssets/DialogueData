@@ -60,6 +60,8 @@ Punch Card Punched : inspect : Any : I hold the punch card up to the light. The 
 Punch Card Punched : inspect : Doctor : My punch card. Now with a nice hole clocking me out.
 Punch Card Punched : inspect : Brawler : This looks like it could handle a couple more hits.
 
+Pile of Paper : inspect : Any : I walk over to the pile of paper and take a look. It's a stack of mostly medical records with some weard odds and ends mixed in. I could search through it if I wanted to.
+
 PhD : inspect : Any : A framed Doctorate. Someone must be really proud about getting this to frame it so securely.
 PhD : inspect : Doctor : My framed Doctorate. Without this who really am I?
 
