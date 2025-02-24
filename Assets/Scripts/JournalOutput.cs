@@ -56,10 +56,6 @@ public class JournalOutput : MonoBehaviour
         history.TrimStart('\n');
         history.Trim();
         viewableText.text = history + $"{currentEntry}\n\n";
-        if (textDisplayRunning)
-        {
-            UpdateScrollPosition();
-        }
         
 
         if (gameTextQueue.Count > 0 && !textDisplayRunning)
@@ -102,12 +98,14 @@ public class JournalOutput : MonoBehaviour
                 {
                     while (text[i] != '>')
                     {
+                        i++;
+                        continue;
                         history += text[i];
                         if (i >= text.Length)
                         {
                             throw new System.Exception("Invalid HTML in game text");
                         }
-                        i++;
+                        
                     }
                     history += text[i];
                     i++;
@@ -117,6 +115,7 @@ public class JournalOutput : MonoBehaviour
                     i++;
                 }
             }
+            UpdateScrollPosition();
             yield return null;
         }
         history += "\n\n";
@@ -133,6 +132,10 @@ public class JournalOutput : MonoBehaviour
 
     void OnGUI()
     {
+        if (GameManager.Instance().GetFlag("gameOver"))
+        {
+            return;
+        }
         Event e = Event.current;
         if(e.type == EventType.KeyDown)
         {

@@ -22,6 +22,7 @@ public class FireExit : Interactable
         {
             GameManager.Instance().SetFlag("gameOver", true);
             GameManager.Instance().AddTextToJournal(this.GetTextFromJson("go through", id));
+            GameManager.Instance().AddTextToJournal("You have succesfully completed the prototype of stolen-identity. Thank you for playing!");
         }
         else
         {

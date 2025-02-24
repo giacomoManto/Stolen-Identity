@@ -108,6 +108,7 @@ public class GameManager : MonoBehaviour
         else
         {
             Debug.LogError("Key " + key + " not found in gameFlags");
+            this.SetFlag(key, defaultFlag);
             return defaultFlag;
         }
     }
