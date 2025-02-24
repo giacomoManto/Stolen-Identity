@@ -1798,7 +1798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1826a95904541ec44b3cd8367139bd97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  standardCharPerSec: 100
+  standardCharPerSec: 1000
   fastCharPerSec: 100000
 --- !u!114 &1401071889
 MonoBehaviour:

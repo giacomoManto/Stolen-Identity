@@ -65,6 +65,9 @@ Pile of Paper : inspect : Any : I walk over to the pile of paper and take a look
 PhD : inspect : Any : A framed Doctorate. Someone must be really proud about getting this to frame it so securely.
 PhD : inspect : Doctor : My framed Doctorate. Without this who really am I?
 
+PhD : location : Any : A PhD is laying next to the Pile of Paper that I searched.
+PhD : location : Doctor : Doctor : A gorgeous PhD belonging to a genius doctor (me) is laying next to my organized desk.
+
 # Become a thief
 Calling Card : inspect : Any : A criminal's calling card. Why would you put your face on this?
 Calling Card : inspect : Guard : A criminal's calling card. Why would you put your face on this? I should keep an eye out for this person.
