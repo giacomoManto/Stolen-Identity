@@ -20,6 +20,24 @@ public struct IDCard
     public static readonly IDCard Guard = new IDCard("Guard", 1);
     public static readonly IDCard Doctor = new IDCard("Doctor", 2);
 
+    public static IDCard StringAsID(string name)
+    {
+        switch (name.ToLower()) {
+            case "thief":
+                return Thief;
+            case "patient":
+                return Patient;
+            case "brawler":
+                return Brawler;
+            case "guard":
+                return Guard;
+            case "doctor":
+                return Doctor;
+            default:
+                return IDCard.None;
+        }
+    }
+
 
     public override string ToString() => $"{Name} (Level {SecurityLevel})";
 }

@@ -20,16 +20,16 @@ public class PlayerInfo : MonoBehaviour
     private void Start()
     {
         itemInventory = new Dictionary<string, Interactable>();
-        currentPlayerID = IDCard.Patient;
-        playerIDs.Add(currentPlayerID.Name.ToLower(), currentPlayerID);
+        currentPlayerID = IDCard.None;
         playerIDString = currentPlayerID.Name;
     }
     public IDCard getPlayerID() {
-        
             return currentPlayerID;
          }
     public bool switchPlayerID(string idName)
     {
+        Debug.Log(idName);
+        
         if (playerIDs.ContainsKey(idName))
         {
             currentPlayerID = playerIDs[idName];
@@ -49,7 +49,19 @@ public class PlayerInfo : MonoBehaviour
     }
     public void addItem(Interactable item)
     {
-        itemInventory.Add(item.name.ToLower(), item);
+        IDCard possibleCard = IDCard.StringAsID(item.interactableName.Substring(0,item.interactableName.Length-3));
+        //If item is card add it to the card inventory
+        if (!possibleCard.Equals(IDCard.None))
+        {
+            playerIDs.Add(possibleCard.Name.ToLower(), possibleCard);
+            return;
+        }
+        //otherwise add it to item inventory
+        else
+        {
+            itemInventory.Add(item.interactableName.ToLower(), item);
+        }
+        
     }
     public string listInventory()
     {
@@ -64,8 +76,11 @@ public class PlayerInfo : MonoBehaviour
         count = 1;
         stringBuilder.Append("Other Items: \n");
         foreach (string item in itemInventory.Keys){
-            stringBuilder.Append(count+". ").Append(item).Append("\n");
-            count++;
+            if (IDCard.StringAsID(item).Equals(IDCard.None))
+            {
+                stringBuilder.Append(count + ". ").Append(item).Append("\n");
+                count++;
+            }
         }
         if(itemInventory.Keys.Count == 0)
         {
