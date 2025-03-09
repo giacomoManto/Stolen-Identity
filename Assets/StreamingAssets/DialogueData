@@ -1,29 +1,33 @@
 # Object : action : ID Card Name (or Any) : description
 
 Apple : inspect: Any : I look at the apple closely and realize it's probably the most delicious looking apple ive seen. One bite wouldn't hurt anyone… probably?
-
 Apple : inspect: Doctor : Oh god an apple… better keep my distance.
 
 Apple : eat : Any : You walk over and decide to eat the apple. While munching you realize the apple is delicious. Praise the Apple!
-
 Apple : eat : Patient : I walk over to the apple ready to take a big bite and then... wait what was I doing? Oh right, I'm an amnesiac patient…
-
 Apple : eat : Doctor: I…against my better judgement… eat the apple.
 
 
 
 # ID Cards
 Patient ID : inspect : Any : I walk over to the ID card and inspect it. It's a plain white card, nothing special. However, I get the feeling that something in me might change if I decide to take this.
+Patient ID : switch : Any : I hold the Patient ID before me and my mind drifts in confusion and unease until suddenly… I realize maybe I'm just a hospital patient. I wonder what I'm in here for?
 
 Thief ID : inspect : Any : I walk over to the ID card and inspect it. A portrait of a pretty shady individual is on the card along with a number to call for 'repossession' services.
 Thief ID : inspect : Guard : I walk over to the ID card and inspect it. This is clearly a thief, why would they leave this hanging around? I really hope they aren't planning to steal from us, I can't get fired again.
+Thief ID : switch : Any : I take out the Thief ID, my eyes tracing the rough portrait and fading edges. A fragment of a rebellious dream stirs within me, whispering of secrets to uncover and treasures yet to be claimed.
 
 Brawler ID : inspect : Any : I walk over to the ID card and inspect it. The card is a bit bent and has a few scratches on it. It's a bit hard to read but the profession says 'Bar Brawler'. That can't be a real job.
+Brawler ID : switch : Any : I bring forth the battered Brawler ID, its worn edges and scratches speaking plainly of past conflicts. In that moment, my mind hazes as I feel raw strength and simmer anger within me, calling me to break any obstacles in my path.
 
 Doctor ID : inspect : Any : I walk over to the ID card and inspect it. The card is pristine and has a picture of an eager doctor on it.
+Doctor ID : switch : Any : I gently lift the clean pristine Doctor ID, and a calming clarity envelops me. I take a cloth out of my pocket and clean off a small smudge on the ID I didn't see before. It was time to work.
 
 Guard ID : inspect : Any : I walk over to the ID card and inspect it. The card is a bit worn but still legible. It has a picture of a stern looking guard on it.
 Guard ID : inspect : Thief : I walk over to the ID card and inspect it. The card is a bit worn but my keen eye can still make out the picture. This is a guard, I need to keep an eye out for them.
+Guard ID : switch : Any : I firmly clutch the Guard ID and feel a surge of duty course through my veins. I gain a stern look as in an instant, the world sharpens into focus as the call to protect and serve resonates deep within.
+
+
 
 # Rediscover Yourself
 Patient File : inspect : Any : I hold up the file. The medical jargon is too complicated to understand. Useless to me since I can t interpret it.
@@ -60,13 +64,8 @@ Punch Card Punched : inspect : Any : I hold the punch card up to the light. The 
 Punch Card Punched : inspect : Doctor : My punch card. Now with a nice hole clocking me out.
 Punch Card Punched : inspect : Brawler : This looks like it could handle a couple more hits.
 
-Pile of Paper : inspect : Any : I walk over to the pile of paper and take a look. It's a stack of mostly medical records with some weard odds and ends mixed in. I could search through it if I wanted to.
-
 PhD : inspect : Any : A framed Doctorate. Someone must be really proud about getting this to frame it so securely.
 PhD : inspect : Doctor : My framed Doctorate. Without this who really am I?
-
-PhD : location : Any : A PhD is laying next to the Pile of Paper that I searched.
-PhD : location : Doctor : Doctor : A gorgeous PhD belonging to a genius doctor (me) is laying next to my organized desk.
 
 # Become a thief
 Calling Card : inspect : Any : A criminal's calling card. Why would you put your face on this?
@@ -89,14 +88,13 @@ Donuts : eat : Guard :  I open the box, open my throat and shove all the donuts 
 Donuts : eat : Thief : I eat the donuts. Savoring each bite. Knowing these aren't mine made them taste so much better. Only a mastermind criminal such as myself would be able to stomach this crime, literally.
 
 # I am X fire escape
-Fire Alarm : inspect: Any : Looks like one of those super loud fire alarms that go off once someone goes through a fire exit or if smoke is detected. I could probably disable it if I really needed to.
+Fire Alarm : inspect: Any : Looks like one of those super loud fire alarms that go off once someone goes through a fire exit or if smoke is detected. I probably shouldn't mess with that unless I really have to.
 Fire Alarm : inspect: Doctor: Standard hospital fire alarm, if a bit outdated. These will help keep patients and staff safe from fires.
 Fire Alarm : inspect: Brawler: That thing looks breakable.
 Fire Alarm : disable : Any : I fiddle with the fire alarm. Eventually I got it disabled.
 Fire Alarm : disable : Doctor : I reluctantly disable the fire alarm. This goes against everything I stand for.
 Fire Alarm : disable : Thief : I efficiently disable the fire alarm. Although this might make my escape easier, I can't help but feel a little guilty.
 
-Fire Exit : inspect : Any : A fire exit. I could probably leave the hospital through here. Looks like it's linked to the fire system and without disabling the fire alarms the fire department will be notified if the door is opened.
 Fire Exit : go through : Patient : I push the metal bar and the door swings open. I walk through the door, leaving the hospital behind me. Is this who I really am? I just can't be sure.
 Fire Exit : go through : Doctor : I push the metal bar and the door swings open. I walk through the door, leaving the hospital behind me. I guess I'll live the rest of my life out as a Doctor. I don't have the qualifications, experience or lab coat. I just can't be sure that this is really who I am.
 Fire Exit : go through : Guard : I push the metal bar and the door swings open. I walk through the door, leaving the hospital behind me. Guarding doesn't sound too bad. I guess I can live the rest of my life out as a guard. I wish I could remember who I really am - but, for now, I'm satisfied just leaving the hospital.
