@@ -8,13 +8,13 @@ using System.Collections.Generic;
 
 public class JournalOutput : MonoBehaviour
 {
-
+    [Header("Text Char Speeds (multiply by 50 for char per sec)")]
     [SerializeField]
-    private int standardCharPerSec = 50;
+    private int standardCharSpeed = 1;
     [SerializeField]
-    private int fastCharPerSec = 100;
+    private int fastCharSpeed = 3;
 
-    private int charPerSec;
+    private int charSpeed;
 
 
 
@@ -22,11 +22,11 @@ public class JournalOutput : MonoBehaviour
 
     private TMP_Text viewableText;
     private ScrollRect scrollRect;
+    private int viewableChars = 0;
+
 
     private string currentEntry = "";
     private string history = "";
-    private bool allowTyping = true;
-    private bool textDisplayRunning = false;
 
     private Queue<string> gameTextQueue = new Queue<string>();
 
@@ -48,21 +48,25 @@ public class JournalOutput : MonoBehaviour
         }
         viewableText = GetComponentInChildren<TMP_Text>();
         scrollRect = GetComponent<ScrollRect>();
-        charPerSec = standardCharPerSec;
+        charSpeed = standardCharSpeed;
     }
 
     private void FixedUpdate()
     {
-        history.TrimStart('\n');
-        history.Trim();
-        viewableText.text = history + $"{currentEntry}\n\n";
-        
-
-        if (gameTextQueue.Count > 0 && !textDisplayRunning)
+        history = history.TrimStart('\n');
+        if (gameTextQueue.Count > 0 && viewableChars >= viewableText.textInfo.characterCount)
         {
-            textDisplayRunning = true;
-            StartCoroutine(AddGameTextSlowly(gameTextQueue.Dequeue()));
+            history += gameTextQueue.Dequeue() + '\n' + '\n';
         }
+
+        if (viewableChars < viewableText.textInfo.characterCount)
+        {
+            viewableChars += charSpeed;
+        }
+
+        viewableText.maxVisibleCharacters = viewableChars + currentEntry.Length;
+
+        viewableText.text = history + currentEntry;
     }
 
     private void Start()
@@ -80,53 +84,6 @@ public class JournalOutput : MonoBehaviour
         gameTextQueue.Enqueue(text);
     }
 
-    private IEnumerator AddGameTextSlowly(string text)
-    {
-        if (text.Length == 0)
-        {
-            yield break;
-        }
-        allowTyping = false;
-        float startTime = Time.time;
-        for (int i = 0; i < text.Length;)
-        {
-            float timeSince = Time.time - startTime;
-            if ((float)i / timeSince < charPerSec)
-            {
-                // Skip all html business
-                if (text[i] == '<')
-                {
-                    while (text[i] != '/')
-                    {
-                        history += text[i];
-                        i++;
-                    }
-                    while (text[i] != '>')
-                    {
-                        history += text[i];
-                        if (i >= text.Length)
-                        {
-                            throw new System.Exception("Invalid HTML in game text");
-                        }
-                        i++;
-                    }
-                    history += text[i];
-                    i++;
-                }
-                else {
-                    history += text[i];
-                    i++;
-                }
-            }
-            UpdateScrollPosition();
-            yield return null;
-        }
-        history += "\n\n";
-        allowTyping = true;
-        textDisplayRunning = false;
-        charPerSec = standardCharPerSec;
-    }
-
     private void UpdateScrollPosition()
     {
         Canvas.ForceUpdateCanvases();
@@ -140,7 +97,7 @@ public class JournalOutput : MonoBehaviour
             return;
         }
         Event e = Event.current;
-        if(e.type == EventType.KeyDown)
+        if(e.type == EventType.KeyDown || e.type == EventType.KeyUp)
         {
             UpdateScrollPosition();
         }
@@ -148,22 +105,17 @@ public class JournalOutput : MonoBehaviour
         {
             return;
         }
-        else if (!allowTyping)
+        
+        if (viewableChars < viewableText.textInfo.characterCount - currentEntry.Length)
         {
-            if (textDisplayRunning)
+            if (e.keyCode == KeyCode.Space)
             {
-                charPerSec = fastCharPerSec; // Speed up text display}
-                return;
+                viewableChars = viewableText.textInfo.characterCount - currentEntry.Length;
             }
-            else
-            {
-                return;
-            }
+            charSpeed = fastCharSpeed; // Speed up text display
+            return;
         }
-        if (textDisplayRunning)
-        {
-            
-        }
+        charSpeed = standardCharSpeed;
 
         if (e.keyCode == KeyCode.Return)
         {
