@@ -17,26 +17,46 @@ public class PlayerInfo : MonoBehaviour
     [SerializeField]
     private Dictionary<string, Interactable> itemInventory;
 
+    private DialogueManager dialogueManager;
+
+    //How should this work?
+    //Player info should contain all player info and do things player can do
+    //should have player inventory and ability to switch items
+    //should have id inventory and ability to id switch
+    //after an id switch it should list 
+
     private void Start()
     {
         itemInventory = new Dictionary<string, Interactable>();
         currentPlayerID = IDCard.None;
         playerIDString = currentPlayerID.Name;
+        dialogueManager = DialogueManager.instance;
     }
     public IDCard getPlayerID() {
             return currentPlayerID;
          }
     public bool switchPlayerID(string idName)
     {
-        Debug.Log(idName);
-        
-        if (playerIDs.ContainsKey(idName))
+        if (!playerIDs.ContainsKey(idName))
         {
-            currentPlayerID = playerIDs[idName];
-            playerIDString = currentPlayerID.Name;
-            return true;
+            return false;
         }
-        return false;
+        currentPlayerID = playerIDs[idName];
+        playerIDString = currentPlayerID.Name;
+        string idSwitchDialogue = "I feel the fog of confusion around my mind grow denser until... suddenly it clears...I believe my real identity is that of a " + currentPlayerID.Name + ".";
+        try
+        {
+            string switchDialogue = dialogueManager.GetDialogue(idName + " id", "switch", "Any");
+            
+        }
+        catch (KeyNotFoundException e)
+        {
+            Debug.LogWarning(e);
+        }
+        GameManager.Instance().AddTextToJournal(idSwitchDialogue);
+
+        return true;
+        
     }
     public bool getItemFromInventory(string item)
     {
@@ -54,14 +74,10 @@ public class PlayerInfo : MonoBehaviour
         if (!possibleCard.Equals(IDCard.None))
         {
             playerIDs.Add(possibleCard.Name.ToLower(), possibleCard);
-            return;
         }
-        //otherwise add it to item inventory
-        else
-        {
-            itemInventory.Add(item.interactableName.ToLower(), item);
-        }
-        
+        //add item to item inventory regardless
+        itemInventory.Add(item.interactableName.ToLower(), item);
+
     }
     public string listInventory()
     {
