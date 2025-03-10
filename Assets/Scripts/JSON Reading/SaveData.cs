@@ -16,7 +16,10 @@ public class SaveData
     public SaveData()
     {
         endingIAMX = new SerializableDictionary<string, bool>();
-        // Add endings
+        endingIAMX.Add("Patient", false);
+        endingIAMX.Add("Doctor", false);
+        endingIAMX.Add("Thief", false);
+        endingIAMX.Add("Brawler", false);
 
         endingRediscoverYourself = false;
         endingDoctor = false;
