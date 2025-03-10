@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
 
     private PlayerInfo player;
     private JournalOutput journal;
+    private LeftPageOutput leftPageOutput;
     private static GameManager instance;
     private Dictionary<IDCard, int> statRecorder = new Dictionary<IDCard, int>();
     private Dictionary<string, CommandTemplate> genericCommands = new Dictionary<string, CommandTemplate>();
@@ -47,6 +48,7 @@ public class GameManager : MonoBehaviour
     {
         // Now it's safe to initialize other components.
         journal = JournalOutput.Instance();
+        leftPageOutput = LeftPageOutput.Instance();
         player = FindFirstObjectByType<PlayerInfo>();
 
         IEnumerable<RoomBehavior> rooms = FindObjectsByType<RoomBehavior>(FindObjectsSortMode.None);
@@ -59,8 +61,6 @@ public class GameManager : MonoBehaviour
         currentPlayerRoom = allRooms["Starting Room"];
 
         addGenericCommand(new CheckBag(this, player));
-        addGenericCommand("check inventory", new CheckBag(this, player));
-        addGenericCommand("view inventory", new CheckBag(this, player));
         addGenericCommand(new InspectCommand(this));
         addGenericCommand(new SaveGame(this, player));
         addGenericCommand(new UseCommand(this));
@@ -79,6 +79,7 @@ public class GameManager : MonoBehaviour
             DialogueManager.instance != null && DialogueManager.instance.IsDialogueLoaded);
 
         errorCheckStart();
+        updateJournalLeftSide();
         currentPlayerRoom.OnEnter();
         displayCurrentRoomDesc();
     }
@@ -274,6 +275,7 @@ public class GameManager : MonoBehaviour
     public void changeRoom(RoomBehavior room)
     {
         this.currentPlayerRoom = room;
+        updateJournalLeftSide();
         room.OnEnter();
         displayCurrentRoomDesc();
     }
@@ -283,6 +285,10 @@ public class GameManager : MonoBehaviour
     public void AddTextToJournal(string text)
     {
         journal.AddGameText(text);
+    }
+    public void updateJournalLeftSide()
+    {
+        leftPageOutput.updatePage(currentPlayerRoom.roomName);
     }
     #endregion
 
