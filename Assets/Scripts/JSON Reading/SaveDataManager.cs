@@ -50,6 +50,11 @@ public class SaveDataManager : MonoBehaviour
             Debug.Log("Save/Load: No player data found on game load, creating new player data.");
             saveData = new SaveData();
         }
+        if (saveFileDataHandler.Load() == null)
+        {
+            Debug.Log("Save/Load: No player data found on game load, creating new player data.");
+            saveFileDataHandler.Save(saveData);
+        }
     }
 
     /// <summary>

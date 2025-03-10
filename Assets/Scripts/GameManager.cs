@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.Overlays;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -42,6 +43,10 @@ public class GameManager : MonoBehaviour
         }
     }
     #endregion
+
+    //SaveData savedata = SaveDataManager.Instance().LoadGame();
+    //savedata.playerName = "John Random";
+    //SaveDataManager.Instance().SaveGame(savedata);
 
     #region Initialization
     void Start()
