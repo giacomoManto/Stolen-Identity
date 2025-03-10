@@ -328,7 +328,7 @@ GameObject:
   - component: {fileID: 79740000}
   - component: {fileID: 79739999}
   m_Layer: 0
-  m_Name: DialogueLoader
+  m_Name: Dialogue Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -464,7 +464,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 1937749180558471230, guid: 3271a5790715b56428442943e762d163, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
