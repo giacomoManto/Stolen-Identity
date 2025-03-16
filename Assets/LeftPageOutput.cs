@@ -16,7 +16,7 @@ public class LeftPageOutput : MonoBehaviour
     private static LeftPageOutput instance;
 
     private TMP_Text viewableText;
-    private UnityEngine.UIElements.Image roomSketch;
+    private UnityEngine.UI.Image roomSketch;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -29,7 +29,7 @@ public class LeftPageOutput : MonoBehaviour
             Destroy(gameObject);
         }
         viewableText = GetComponentInChildren<TMP_Text>();
-        roomSketch = GetComponentInChildren<UnityEngine.UIElements.Image>();
+        roomSketch = GetComponentInChildren<UnityEngine.UI.Image>();
     }
     public static LeftPageOutput Instance()
     {

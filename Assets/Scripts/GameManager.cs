@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEditor.Overlays;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -48,11 +50,10 @@ public class GameManager : MonoBehaviour
     //savedata.playerName = "John Random";
     //SaveDataManager.Instance().SaveGame(savedata);
 
-    #region Initialization
+    #region Initialization and Deconstruction
     void Start()
     {
         // Now it's safe to initialize other components.
-        journal = JournalOutput.Instance();
         leftPageOutput = LeftPageOutput.Instance();
         player = FindFirstObjectByType<PlayerInfo>();
 
@@ -74,19 +75,31 @@ public class GameManager : MonoBehaviour
         addGenericCommand(new HelpCommand(this));
 
         // Start coroutine to wait for DialogueManager to load before initializing dialogue elements.
-        StartCoroutine(WaitForDialogueAndInit());
+        StartCoroutine(WaitForSingletonSetups());
     }
 
-    private IEnumerator WaitForDialogueAndInit()
+    private IEnumerator WaitForSingletonSetups()
     {
         // Wait until DialogueManager exists and has finished loading.
         yield return new WaitUntil(() =>
             DialogueManager.instance != null && DialogueManager.instance.IsDialogueLoaded);
 
+        yield return new WaitUntil(() =>
+            JournalOutput.Instance() != null && JournalOutput.Instance().Ready);
+
+        journal = JournalOutput.Instance();
+
         errorCheckStart();
         updateJournalLeftSide();
         currentPlayerRoom.OnEnter();
         displayCurrentRoomDesc();
+    }
+
+    private void OnDestroy()
+    {
+        // Add player save
+        instance = null;
+        gameFlags.Clear();
     }
     #endregion
 
@@ -116,6 +129,34 @@ public class GameManager : MonoBehaviour
             Debug.LogError("Key " + key + " not found in gameFlags");
             this.SetFlag(key, defaultFlag);
             return defaultFlag;
+        }
+    }
+
+    private IEnumerator FailAndReload(int waitSeconds)
+    {
+        yield return new WaitForSeconds(waitSeconds);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
+    }
+
+    private void FixedUpdate()
+    {
+        if (!GetFlag("gameOver"))
+        {
+            return;
+        }
+
+        if (JournalOutput.Instance().DisplayingText())
+        {
+            return;
+        }
+        
+        if (GetFlag("fail", false))
+        {
+            if (!GetFlag("reloading"))
+            {
+                StartCoroutine(FailAndReload(5));
+                SetFlag("reloading", true);
+            }
         }
     }
     #endregion

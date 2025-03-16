@@ -10,8 +10,6 @@ public class DoorBehavior : Interactable
     [SerializeField]
     private int lockLevel = 0;
 
-    private GameManager gameManager;
-
     private bool locked = true;
 
     private void Start()
@@ -20,7 +18,6 @@ public class DoorBehavior : Interactable
         {
             this.locked = false;
         }
-        gameManager = GameManager.Instance();
 
         // Action Registration
         this.RegisterAction("go through", GoThrough);
@@ -43,7 +40,7 @@ public class DoorBehavior : Interactable
     {
         if (!locked) {
             GameManager.Instance().AddTextToJournal("You go through the door.");
-            gameManager.changeRoom(room);
+            GameManager.Instance().changeRoom(room);
         }
         else
         {

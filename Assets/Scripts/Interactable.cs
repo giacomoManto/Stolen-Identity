@@ -60,6 +60,14 @@ public class Interactable : MonoBehaviour
         }
     }
 
+    protected void RegisterAction(Action<IDCard> action, params string[] actionNames)
+    {
+        foreach (string name in actionNames)
+        {
+            this.RegisterAction(name, action);
+        }
+    }
+
     /// <summary>
     /// Calls the action on the interactable if available.
     /// </summary>

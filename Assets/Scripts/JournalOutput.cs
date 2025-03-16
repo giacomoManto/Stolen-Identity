@@ -16,8 +16,6 @@ public class JournalOutput : MonoBehaviour
 
     private int charSpeed;
 
-
-
     private static JournalOutput instance;
 
     private TMP_Text viewableText;
@@ -28,7 +26,14 @@ public class JournalOutput : MonoBehaviour
     private string currentEntry = "";
     private string history = "";
 
-    private Queue<string> gameTextQueue = new Queue<string>();
+    private bool ready = false;
+    private bool loaded = false;
+
+    private Queue<string> gameTextQueue;
+    public bool Ready
+    {
+        get { return ready; }
+    }
 
     public static JournalOutput Instance()
     {
@@ -49,6 +54,21 @@ public class JournalOutput : MonoBehaviour
         viewableText = GetComponentInChildren<TMP_Text>();
         scrollRect = GetComponent<ScrollRect>();
         charSpeed = standardCharSpeed;
+        gameTextQueue = new Queue<string>();
+    }
+
+    private void Start()
+    {
+        ready = true;
+        gameTextQueue.Enqueue("Welcome to the game! Type 'help' for a list of commands.");
+        StartCoroutine(WaitForInit());
+    }
+
+    private IEnumerator WaitForInit()
+    {
+        yield return new WaitUntil(() =>
+            GameManager.Instance() != null);
+        loaded = true;
     }
 
     private void FixedUpdate()
@@ -62,6 +82,7 @@ public class JournalOutput : MonoBehaviour
         if (viewableChars < viewableText.textInfo.characterCount)
         {
             viewableChars += charSpeed;
+            UpdateScrollPosition();
         }
 
         viewableText.maxVisibleCharacters = viewableChars + currentEntry.Length;
@@ -69,8 +90,10 @@ public class JournalOutput : MonoBehaviour
         viewableText.text = history + currentEntry;
     }
 
-    private void Start()
+    public bool DisplayingText()
     {
+        bool test = viewableChars < viewableText.textInfo.characterCount || gameTextQueue.Count > 0;
+         return test;
     }
 
     public void Clear()
@@ -92,6 +115,10 @@ public class JournalOutput : MonoBehaviour
 
     void OnGUI()
     {
+        if (!loaded)
+        {
+            return;
+        }
         if (GameManager.Instance().GetFlag("gameOver"))
         {
             return;
@@ -142,6 +169,14 @@ public class JournalOutput : MonoBehaviour
             {
                 currentEntry += c;
             }
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (instance == this)
+        {
+            instance = null;
         }
     }
 
