@@ -60,15 +60,6 @@ public class JournalOutput : MonoBehaviour
     private void Start()
     {
         ready = true;
-        gameTextQueue.Enqueue("Welcome to the game! Type 'help' for a list of commands.");
-        StartCoroutine(WaitForInit());
-    }
-
-    private IEnumerator WaitForInit()
-    {
-        yield return new WaitUntil(() =>
-            GameManager.Instance() != null);
-        loaded = true;
     }
 
     private void FixedUpdate()
@@ -100,6 +91,7 @@ public class JournalOutput : MonoBehaviour
     {
         history = "";
         currentEntry = "";
+        viewableChars = 0;
     }
 
     public void AddGameText(string text)

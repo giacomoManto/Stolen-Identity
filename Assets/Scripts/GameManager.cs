@@ -32,12 +32,12 @@ public class GameManager : MonoBehaviour
     {
         return instance;
     }
-
-    GameManager()
+    public void Awake()
     {
         if (instance == null)
         {
             instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -94,13 +94,6 @@ public class GameManager : MonoBehaviour
         currentPlayerRoom.OnEnter();
         displayCurrentRoomDesc();
     }
-
-    private void OnDestroy()
-    {
-        // Add player save
-        instance = null;
-        gameFlags.Clear();
-    }
     #endregion
 
     #region GameState Management
@@ -132,9 +125,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Reset()
+    {
+        gameFlags.Clear();
+
+    }
+
     private IEnumerator FailAndReload(int waitSeconds)
     {
         yield return new WaitForSeconds(waitSeconds);
+        Reset();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
     }
 
