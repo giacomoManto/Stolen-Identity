@@ -60,6 +60,14 @@ public class JournalOutput : MonoBehaviour
     private void Start()
     {
         ready = true;
+        StartCoroutine(WaitForInit());
+    }
+
+    private IEnumerator WaitForInit()
+    {
+        yield return new WaitUntil(() =>
+            GameManager.Instance() != null);
+        loaded = true;
     }
 
     private void FixedUpdate()
@@ -160,6 +168,7 @@ public class JournalOutput : MonoBehaviour
             if (!char.IsControl(c))
             {
                 currentEntry += c;
+                currentEntry = currentEntry.TrimStart();
             }
         }
     }
