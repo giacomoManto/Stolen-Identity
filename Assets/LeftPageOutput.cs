@@ -39,14 +39,14 @@ public class LeftPageOutput : MonoBehaviour
     public void updatePage(string roomName)
     {
         viewableText.text = roomName;
-        //if (allRoomSketches.ContainsKey(roomName))
-        //{
-        //    roomSketch.sprite = allRoomSketches[roomName];
-        //}
-        //else
-        //{
-        //    roomSketch.sprite = allRoomSketches["default"];
-        //}
-        
+        if (correspondingRoomNames.Contains(roomName))
+        {
+            roomSketch.sprite = allRoomSprites.ToArray()[correspondingRoomNames.IndexOf(roomName)];
+        }
+        else
+        {
+            roomSketch.sprite = allRoomSprites[0];
+        }
+
     }
 }
