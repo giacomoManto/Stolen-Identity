@@ -22,6 +22,6 @@ public class ExampleApple: Interactable
     /// <returns></returns>
     private void Lick(IDCard id)
     {
-        GameManager.Instance().AddTextToJournal("You lick the apple. It tastes like an apple.");
+        GameManager.Instance().AddTextToJournal("I lick the apple. It tastes like an apple.");
     }
 }

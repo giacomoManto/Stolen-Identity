@@ -218,7 +218,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   securityLevel: 1
   roomName: Break Room
-  roomDescription: Break Room, Room Description.
+  roomDescription: 'I enter a break room with a relaxed vibe. Wooden tiled floors,
+    casual tables, and chairs create a comfortable setting. It seems there are a
+    few people on break, but none of them seem really interested in breaking the
+    peace or are just too tired to do so. '
   visitText: []
   allAfter: 
 --- !u!1 &62986275
@@ -709,8 +712,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   securityLevel: 0
   roomName: Hospital Lobby
-  roomDescription: A pretty generic hospital lobby. There aren't too many seats so
-    this probably isn't a huge facility.
+  roomDescription: I move into a brightly lit hospital lobby, complete with a seating
+    area for those awaiting admission.
   visitText: []
   allAfter: 
 --- !u!1 &289139624
@@ -761,7 +764,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   securityLevel: 2
   roomName: Doctor Office
-  roomDescription: Doctor Office Room Description.
+  roomDescription: 'I glance around, recognizing this as a doctor''s office. '
   visitText: []
   allAfter: 
 --- !u!1 &395825187
@@ -929,7 +932,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   securityLevel: 2
   roomName: Vault
-  roomDescription: Vault Room Description.
+  roomDescription: 'I wander into a pristine vault that feels out of place in a hospital.
+    Cold, bare steel walls and a few fluorescent lights illuminate the spotless,
+    clinical space. '
   visitText: []
   allAfter: 
 --- !u!1 &464826050
@@ -1650,7 +1655,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   securityLevel: 1
   roomName: Storage Room
-  roomDescription: Storage Room Room Description.
+  roomDescription: "I step into a somewhat cluttered storage room. Metal racks loaded
+    with a random assortment of boxes line the walls\u2014finding anything in this
+    jumble would be a real challenge. "
   visitText: []
   allAfter: 
 --- !u!1 &688669856
@@ -3006,7 +3013,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   securityLevel: 1
   roomName: Guarded Hallway
-  roomDescription: Guarded Hallway Room Description.
+  roomDescription: "I find myself in a corridor that resembles the patient hallway
+    I passed earlier, but with tighter security\u2014ceiling cameras and patrolling
+    guards keep a close watch. "
   visitText: []
   allAfter: 
 --- !u!1 &1586635845
@@ -3685,7 +3694,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   securityLevel: 0
   roomName: Janitor Room
-  roomDescription: Janitor Room Room Description.
+  roomDescription: I step into a bright, tidy room clearly maintained by the janitor.
+    Despite the age of the equipment, everything appears well cared for.
   visitText: []
   allAfter: 
 --- !u!1 &1950935140
@@ -4031,7 +4041,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   securityLevel: 0
   roomName: Janitor Maze
-  roomDescription: Janitor Maze Room Description.
+  roomDescription: "I enter a space that sharply contrasts with the neat janitor
+    room. Here, outdated and discarded equipment forms chaotic walls, arranged in
+    a way that almost seems intentional\u2014as if someone designed this mess to
+    be a maze."
   visitText: []
   allAfter: 
 --- !u!1660057539 &9223372036854775807

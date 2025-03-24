@@ -23,7 +23,7 @@ public class PileOfPaperPHD : Interactable
     {
         if (searched)
         {
-            GameManager.Instance().AddTextToJournal("You find nothing of interest in the pile of paper.");
+            GameManager.Instance().AddTextToJournal("I find nothing of interest in the pile of paper.");
         }
         else
         {
@@ -31,7 +31,7 @@ public class PileOfPaperPHD : Interactable
             PHDCopy.SetActive(true);
             PHDCopy.transform.parent = transform.parent;
             GetComponentInParent<RoomBehavior>().InitIteractables();
-            GameManager.Instance().AddTextToJournal("You find a PHD in the pile of paper.");
+            GameManager.Instance().AddTextToJournal("Bafflingly, I find a PHD in the pile of paper.");
         }
     }
 }
