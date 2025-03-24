@@ -175,7 +175,7 @@ public class GameManager : MonoBehaviour
 
         if (currentPlayerInput.Split(" ").Length < 2)
         {
-            AddTextToJournal("You pause, realizing you probably need a noun and a verb to act properly.");
+            AddTextToJournal("I pause, realizing I probably need a noun and a verb to act properly.");
             Debug.Log("Invalid input. Please enter a verb and a noun.");
             return;
         }
