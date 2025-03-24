@@ -143,6 +143,21 @@ public class PlayerInfo : MonoBehaviour
 
         // Add the item to the item inventory regardless.
         itemInventory.Add(item.interactableName.ToLower(), item);
+        Debug.Log($"Succesfully added {item.interactableName} to inventory");
+    }
+
+
+    public void removeItem(Interactable item)
+    {
+        if (itemInventory.ContainsKey(item.interactableName.ToLower()))
+        {
+            itemInventory.Remove(item.interactableName.ToLower());
+            Debug.Log($"Succesfully removed {item.interactableName} from inventory");
+        }
+        else
+        {
+            Debug.Log($"Failed to remove {item.interactableName} from inventory. Item not found.");
+        }
     }
 
     /// <summary>

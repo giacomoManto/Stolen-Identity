@@ -1,8 +1,12 @@
+using System;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class Donuts : Interactable
 {
     public RoomBehavior lobbyRoom;
+
+    public GameObject guardID;
 
     Donuts() : base()
     {
@@ -18,9 +22,25 @@ public class Donuts : Interactable
 
     private void Eat(IDCard id)
     {
-        Destroy(this.gameObject, 100);
-        GetComponentInParent<RoomBehavior>().InitIteractables();
+        try
+        {
+            GetComponentInParent<RoomBehavior>().InitIteractables();
+        }
+        catch (NullReferenceException)
+        {
+            // Do nothing
+        }
+        GameObject guardIDInstance = Instantiate(this.guardID, transform.parent.position, Quaternion.identity);
+        guardIDInstance.SetActive(true);
+        guardIDInstance.transform.parent = FindFirstObjectByType<PlayerInfo>().transform;
+        FindFirstObjectByType<PlayerInfo>().addItem(guardIDInstance.GetComponent<Interactable>());
         GameManager.Instance().AddTextToJournal(this.GetTextFromJson("eat", id));
+        GameManager.Instance().AddTextToJournal(this.GetTextFromJson("discoverID", id));
+
+        FindFirstObjectByType<PlayerInfo>().removeItem(this);
+        // Destroy the eaten donouts
+        DestroyImmediate(this.gameObject);
+
     }
 
     private void Give(IDCard id)

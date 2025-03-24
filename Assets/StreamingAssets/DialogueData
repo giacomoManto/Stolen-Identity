@@ -87,6 +87,9 @@ Donuts : eat : Any : I check to make sure no one is looking and quickly scarf do
 Donuts : eat : Guard :  I open the box, open my throat and shove all the donuts straight to my stomach. All in a day's work.
 Donuts : eat : Thief : I eat the donuts. Savoring each bite. Knowing these aren't mine made them taste so much better. Only a mastermind criminal such as myself would be able to stomach this crime, literally.
 
+Donuts : discoverID : Any : Underneath the last donut is a Guard ID. I wonder who left this here.
+Donuts : discoverID : Thief : Underneath the last donut is a Thief ID. The guards in this place really are fools.
+
 # I am X fire escape
 Fire Alarm : inspect: Any : Looks like one of those super loud fire alarms that go off once someone goes through a fire exit or if smoke is detected. I probably shouldn't mess with that unless I really have to.
 Fire Alarm : inspect: Doctor: Standard hospital fire alarm, if a bit outdated. These will help keep patients and staff safe from fires.
