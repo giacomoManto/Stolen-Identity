@@ -2745,16 +2745,18 @@ MonoBehaviour:
   visitText:
   - "I woke up in a hospital bed with no idea who I am. I found this journal on the
     bedside table, so I\u2019m using it to keep track of everything I do and see\u2014maybe
-    it\u2019ll help me remember something important later.\\n I\u2019ve decided to
-    sketch some simple pictures on the left side of the journal to help me remember
+    it\u2019ll help me remember something important later.\\n\\n I\u2019ve decided
+    to sketch some simple pictures on the left side of the journal to help me remember
     the rooms if I ever leave. On the right, I\u2019ll write down what I want to
     do and what I see, <b>bolding</b> any details that look important. They say that
-    writing things down can even help jog my memory.\\n Speaking of writing things
-    down, these a few phrases that help jog my memory: \u2022 Write <b>help</b> if
-    I ever get stuck or forget what I\u2019m supposed to do. \u2022 Write <b>List
+    writing things down can even help jog my memory.\\n\\n Speaking of writing things
+    down, these a few phrases that help jog my memory: \u2022 I should write <b>help</b>
+    if I ever get stuck or forget what I\u2019m supposed to do. \u2022 Write <b>List
     Actions</b> to see a list of basic commands. \u2022 Write <b>Info [action]</b>
     to learn more about a specific command. \u2022 Write <b>Inspect [object]</b>
-    to take a closer look at something."
+    to take a closer look at something. I should also try for concise commands\u2014something
+    basic like <b>verb noun</b>\u2014to ensure they\u2019re easy to recall, especially
+    since my memory for words isn\u2019t as strong as it could be."
   allAfter: 
 --- !u!1 &1499385319
 GameObject:
