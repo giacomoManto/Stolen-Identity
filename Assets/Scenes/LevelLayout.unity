@@ -696,6 +696,7 @@ Transform:
   - {fileID: 1948041384}
   - {fileID: 526537624}
   - {fileID: 36046826}
+  - {fileID: 1763008991}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &275165892
@@ -1318,8 +1319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableName: Exit Door
-  locationDescription: A large glass exit door leading to the the outside. Standing
-    at attention next to each side fo the door are two guards.
+  locationDescription: A large glass exit door leading to the the outside.
   playerCanStore: 1
   dialogueManager: {fileID: 0}
 --- !u!1 &538016599
@@ -3251,6 +3251,55 @@ MonoBehaviour:
   - {fileID: -3578298931649939517, guid: ee2d87b63e3c9054fa0016c825f63757, type: 3}
   - {fileID: -4372663946440342171, guid: f1d62d74e30bb4444b099d5afad2f01c, type: 3}
   - {fileID: 385903366105015525, guid: 2fdd7d18a80c0e741ae35fd20df688a2, type: 3}
+--- !u!1 &1763008990
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1763008991}
+  - component: {fileID: 1763008992}
+  m_Layer: 0
+  m_Name: Two Guards
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1763008991
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763008990}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 275165891}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1763008992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763008990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3cf7926d7f461d4897fb473645a563e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableName: guards
+  locationDescription: Standing at attention next to each side of the exit door are
+    two guards.
+  playerCanStore: 1
+  dialogueManager: {fileID: 0}
 --- !u!1 &1788951274
 GameObject:
   m_ObjectHideFlags: 0

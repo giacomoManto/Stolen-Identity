@@ -2,7 +2,7 @@ using System.Net.Sockets;
 using UnityEngine;
 
 public class ExitDoor : Interactable
-{
+{   
     ExitDoor() : base()
     {
         // Set the object's name

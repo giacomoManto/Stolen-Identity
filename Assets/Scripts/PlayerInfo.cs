@@ -113,7 +113,7 @@ public class PlayerInfo : MonoBehaviour
     /// <returns>True if the item is in the inventory; otherwise, false.</returns>
     public bool getItemFromInventory(string item)
     {
-        return itemInventory.ContainsKey(item);
+        return itemInventory.ContainsKey(item.ToLower()) || itemInventory.ContainsKey(item);
     }
 
     /// <summary>
@@ -157,6 +157,19 @@ public class PlayerInfo : MonoBehaviour
         else
         {
             Debug.Log($"Failed to remove {item.interactableName} from inventory. Item not found.");
+        }
+    }
+
+    public void removeItem(string item)
+    {
+        if (itemInventory.ContainsKey(item.ToLower()))
+        {
+            itemInventory.Remove(item.ToLower());
+            Debug.Log($"Succesfully removed {item} from inventory");
+        }
+        else
+        {
+            Debug.Log($"Failed to remove {item} from inventory. Item not found.");
         }
     }
 

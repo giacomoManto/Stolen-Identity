@@ -39,7 +39,7 @@ public class Donuts : Interactable
 
         FindFirstObjectByType<PlayerInfo>().removeItem(this);
         // Destroy the eaten donouts
-        DestroyImmediate(this.gameObject);
+        DestroyImmediate(this.gameObject);  
 
     }
 
