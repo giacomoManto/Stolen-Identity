@@ -26,6 +26,10 @@ public class GameManager : MonoBehaviour
 
 
     private Dictionary<string, bool> gameFlags = new Dictionary<string, bool>();
+    public RoomBehavior CurrentPlayerRoom
+    {
+        get { return currentPlayerRoom; }
+    }
 
     #region Singleton Implementation
     public static GameManager Instance()
@@ -194,7 +198,7 @@ public class GameManager : MonoBehaviour
             if (playerInput.Contains(key))
             {
                 targetKey = key;
-                action = playerInput.Replace(key, "").Trim();
+                action = playerInput.Substring(0, playerInput.IndexOf(key)).Trim();
                 break;
             }
         }
@@ -207,7 +211,7 @@ public class GameManager : MonoBehaviour
                 if (playerInput.Contains(key))
                 {
                     targetKey = key;
-                    action = playerInput.Replace(key, "").Trim();
+                    action = playerInput.Substring(0, playerInput.IndexOf(key)).Trim();
                     break;
                 }
             }

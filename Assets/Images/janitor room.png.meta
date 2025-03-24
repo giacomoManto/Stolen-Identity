@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      janitor room_0: 1864374511088906948
+      janitor room_1: 4368159261670261500
+      janitor room_2: 7859279682994707493
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

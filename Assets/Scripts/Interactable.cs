@@ -54,7 +54,8 @@ public class Interactable : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning($"Action {actionName} already exists for {interactableName}");
+            Debug.LogWarning($"Action {actionName} already exists for {interactableName}. Overwriting Previous entry");
+            actions[actionName] = action;
         }
     }
 

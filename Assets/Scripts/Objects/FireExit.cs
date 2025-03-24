@@ -21,8 +21,8 @@ public class FireExit : Interactable
         if (GameManager.Instance().GetFlag("fireAlarmDisabled"))
         {
             GameManager.Instance().SetFlag("gameOver", true);
+            GameManager.Instance().SetFlag("escaped", true);
             GameManager.Instance().AddTextToJournal(this.GetTextFromJson("go through", id));
-            GameManager.Instance().AddTextToJournal("You have succesfully completed the prototype of stolen-identity. Thank you for playing!");
         }
         else
         {

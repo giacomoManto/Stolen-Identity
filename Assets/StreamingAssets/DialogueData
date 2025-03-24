@@ -101,4 +101,9 @@ Fire Exit : go through : Guard : I push the metal bar and the door swings open. 
 Fire Exit : go through : Thief : I push the metal bar and the door swings open. I walk through the door, leaving the hospital behind me. Am I really a thief? It's who I am now, I guess. I just can't be sure.
 Fire Exit : go through : Brawler : I push the metal bar and the door swings open. I walk through the door, leaving the hospital behind me. I head straight to the closest bar. The smell of alcohol feels like it should sit right but deep down it disgusts me.
 
-
+# I am X Donut Escape
+Exit Door : go throughX : Patient : The guards are distracted with the donuts I gave them. They don't even notice me. I walk through the door, leaving the hospital behind me. Is this who I really am? I just can't be sure.
+Exit Door : go throughX : Doctor : The guards are distracted with the donuts I gave them. They don't even notice me.  I walk through the door, leaving the hospital behind me. I guess I'll live the rest of my life out as a Doctor. I don't have the qualifications, experience or lab coat. I just can't be sure that this is really who I am.
+Exit Door : go throughX : Guard : The guards are distracted with the donuts I gave them. They don't even notice me.  I walk through the door, leaving the hospital behind me. Guarding doesn't sound too bad. I guess I can live the rest of my life out as a guard. I wish I could remember who I really am - but, for now, I'm satisfied just leaving the hospital.
+Exit Door : go throughX : Thief : The guards are distracted with the donuts I gave them. They don't even notice me.  I walk through the door, leaving the hospital behind me. Am I really a thief? It's who I am now, I guess. I just can't be sure.
+Exit Door : go throughX : Brawler : The guards are distracted with the donuts I gave them. They don't even notice me.  I walk through the door, leaving the hospital behind me. I head straight to the closest bar. The smell of alcohol feels like it should sit right but deep down it disgusts me.
