@@ -102,19 +102,25 @@ public class Interactable : MonoBehaviour
     //applegrab, you grab the apple
     protected string GetTextFromJson(String Action, IDCard id)
     {
+        return GetTextFromJson(this.interactableName, Action, id);
+    }
+
+    protected string GetTextFromJson(string Item, string Action, IDCard id)
+    {
         try
         {
             if (dialogueManager == null)
             {
                 dialogueManager = FindFirstObjectByType<DialogueManager>();
             }
-            return dialogueManager.GetDialogue(this.interactableName, Action, id.Name);
+            return dialogueManager.GetDialogue(Item, Action, id.Name);
         }
         catch (KeyNotFoundException)
         {
-            return $"I try to {Action} the {interactableName} but nothing happens.";
+            return $"I try to {Action} the {Item} but nothing happens.";
         }
     }
+
 
     public virtual void InspectObject(IDCard id)
     {

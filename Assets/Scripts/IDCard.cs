@@ -14,11 +14,11 @@ public struct IDCard
 
     // Predefined ID levels
     public static readonly IDCard None = new IDCard("Any", 0);
-    public static readonly IDCard Thief = new IDCard("Thief", 0);
-    public static readonly IDCard Patient = new IDCard("Patient", 0);
-    public static readonly IDCard Brawler = new IDCard("Brawler", 0);
-    public static readonly IDCard Guard = new IDCard("Guard", 1);
-    public static readonly IDCard Doctor = new IDCard("Doctor", 2);
+    public static readonly IDCard Thief = new IDCard("Thief", 1);
+    public static readonly IDCard Patient = new IDCard("Patient", 1);
+    public static readonly IDCard Brawler = new IDCard("Brawler", 1);
+    public static readonly IDCard Guard = new IDCard("Guard", 2);
+    public static readonly IDCard Doctor = new IDCard("Doctor", 3);
 
     public static IDCard StringAsID(string name)
     {
@@ -40,4 +40,6 @@ public struct IDCard
 
 
     public override string ToString() => $"{Name}";
+
+    public int GetSecurityLevel() => SecurityLevel;
 }

@@ -2214,7 +2214,7 @@ MonoBehaviour:
   playerCanStore: 0
   dialogueManager: {fileID: 0}
   room: {fileID: 479178962}
-  lockLevel: 0
+  lockLevel: 1
 --- !u!1 &1189908566
 GameObject:
   m_ObjectHideFlags: 0

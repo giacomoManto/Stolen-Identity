@@ -1,3 +1,4 @@
+using System;
 using System.Threading;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -36,12 +37,20 @@ public class DoorBehavior : Interactable
     private void GoThrough(IDCard id)
     {
         if (!locked) {
-            GameManager.Instance().AddTextToJournal("You go through the door.");
+            GameManager.Instance().AddTextToJournal("I go through the door.");
             GameManager.Instance().changeRoom(room);
         }
         else
         {
-            GameManager.Instance().AddTextToJournal("PLACEHOLDER: You try the handle but the door is locked.");
+            if (id.GetSecurityLevel() >= lockLevel)
+            {
+                GameManager.Instance().AddTextToJournal(GetTextFromJson("door", "unlock", id));
+                GameManager.Instance().changeRoom(room);
+            }
+            else
+            {
+                GameManager.Instance().AddTextToJournal(GetTextFromJson("door", "unlockFail", id));
+            }
         }
     }
 

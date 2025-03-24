@@ -107,3 +107,19 @@ Exit Door : go throughX : Doctor : The guards are distracted with the donuts I g
 Exit Door : go throughX : Guard : The guards are distracted with the donuts I gave them. They don't even notice me.  I walk through the door, leaving the hospital behind me. Guarding doesn't sound too bad. I guess I can live the rest of my life out as a guard. I wish I could remember who I really am - but, for now, I'm satisfied just leaving the hospital.
 Exit Door : go throughX : Thief : The guards are distracted with the donuts I gave them. They don't even notice me.  I walk through the door, leaving the hospital behind me. Am I really a thief? It's who I am now, I guess. I just can't be sure.
 Exit Door : go throughX : Brawler : The guards are distracted with the donuts I gave them. They don't even notice me.  I walk through the door, leaving the hospital behind me. I head straight to the closest bar. The smell of alcohol feels like it should sit right but deep down it disgusts me.
+
+
+# Unlocking Doors
+door : unlock : Any : I fiddle with the lock trying to unlock the door. Turns out it was never actually locked.
+door : unlock : Patient : I swipe my patient id card and the door unlocks. I walk through the door.
+door : unlock : Doctor : I swipe my doctor id card and the door lock flashes green. I walk through the door with my labcoat flowing behind me.
+door : unlock : Guard : I swipe my guard id card and the door lock flashes green. I walk through the door.
+door : unlock : Thief : I swipe my thief id card. Somehow the door flashes green. Why would any door be locked and allow a thief to unlock it?
+door : unlock : Brawler : I swipe my brawler id card. The door lock flashes green. I walk through the door.
+
+door : unlockFail : Any : I try to go through the door. Twisting the handle, I realize it's locked. There is a card reader next to the door.
+door : unlockFail : Patient : I try to go through the door. Twisting the handle, I realize it's locked. There is a card reader next to the door. Maybe an ID card of someone working here would work?
+door : unlockFail : Doctor : I try to go through the door. Twisting the handle, I realize it's locked. There is a card reader next to the door.
+door : unlockFail : Guard : I try to go through the door. Twisting the handle, I realize it's locked. There is a card reader next to the door.
+door : unlockFail : Thief : I try to go through the door. Twisting the handle, I realize it's locked. There is a card reader next to the door. Maybe an ID card of someone working here would work?
+door : unlockFail : Brawler : I try to go through the door. Twisting the handle, I realize it's locked. There is a card reader next to the door. Maybe an ID card of someone working here would work?
