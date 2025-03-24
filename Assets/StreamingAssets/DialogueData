@@ -117,7 +117,7 @@ door : unlock : Guard : I swipe my guard id card and the door lock flashes green
 door : unlock : Thief : I swipe my thief id card. Somehow the door flashes green. Why would any door be locked and allow a thief to unlock it?
 door : unlock : Brawler : I swipe my brawler id card. The door lock flashes green. I walk through the door.
 
-door : unlockFail : Any : I try to go through the door. Twisting the handle, I realize it's locked. There is a card reader next to the door.
+door : unlockFail : Any : I try to go through the door. Twisting the handle, I realize it's locked. There is a card reader next to the door. Looks like I need to be somebody else to unlock this door.
 door : unlockFail : Patient : I try to go through the door. Twisting the handle, I realize it's locked. There is a card reader next to the door. Maybe an ID card of someone working here would work?
 door : unlockFail : Doctor : I try to go through the door. Twisting the handle, I realize it's locked. There is a card reader next to the door.
 door : unlockFail : Guard : I try to go through the door. Twisting the handle, I realize it's locked. There is a card reader next to the door.
