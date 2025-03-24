@@ -3521,6 +3521,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 687393472}
     m_Modifications:
+    - target: {fileID: 1011865646109826233, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
+      propertyPath: thisName
+      value: Glass Case
+      objectReference: {fileID: 0}
+    - target: {fileID: 1011865646109826233, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
+      propertyPath: locationDescription
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1011865646109826233, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
+      propertyPath: actionsWhichTriggerSpawn.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1011865646109826233, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
+      propertyPath: 'actionsWhichTriggerSpawn.Array.data[0]'
+      value: use
+      objectReference: {fileID: 0}
+    - target: {fileID: 1011865646109826233, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
+      propertyPath: 'actionsWhichTriggerSpawn.Array.data[1]'
+      value: open
+      objectReference: {fileID: 0}
+    - target: {fileID: 1011865646109826233, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
+      propertyPath: 'actionsWhichTriggerSpawn.Array.data[2]'
+      value: unseal
+      objectReference: {fileID: 0}
+    - target: {fileID: 1011865646109826233, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
+      propertyPath: 'actionsWhichTriggerSpawn.Array.data[3]'
+      value: reveal
+      objectReference: {fileID: 0}
     - target: {fileID: 1807000532342806654, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

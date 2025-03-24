@@ -79,6 +79,16 @@ The Golden Microscope : inspect : Doctor : My precious golden microscope. What w
 The Golden Microscope : inspect : Guard : The doctor's golden microscope. I told them the hospital's insurance won't cover it if it gets stolen. I hope they listen because I am not paid enough to make sure it stays safe.
 The Golden Microscope : inspect : Thief : A priceless golden microscope encrusted with jewels. It should be in a museum... or in my bag.
 
+Glass Case : location : Any : There seems to be a fairly large glass case which rests at the very back of the storage room.
+Glass Case : location : Doctor: At the back of the room lies a glass case containing my golden microscope in all its glory. 
+Glass Case : location : Thief: There seems to be a fairly large glass case which rests at the very back of the storage room. Whatever's inside is certain to be valuable.
+Glass Case : inspect : Any : I walk over to the glass case and realize it contains… a golden microscope? I do a double take before realizing it's not a fake. The glass case itself doesn't look like its locked, which feels like a mistake considering the value of its contents.
+Glass Case : inspect : Doctor: I walk over to the glass case knowing it contains my precious golden microscope. Even though I doubt the hospital insurance will cover it if it is stolen, how could I hide it away inside a safe?
+Glass Case : on spawn : Any : I open up the glass case and gaze in awe at the golden microscope which rests inside the glass case.
+Glass Case : object spawned: Any: An empty glass case, I’ve already taken the golden microscope which was inside.
+
+
+
 # I am X
 Donuts : inspect : Any : A box of fresh donuts, still warm.
 Donuts : inspect : Doctor : A box of donuts. Too much sugar.
