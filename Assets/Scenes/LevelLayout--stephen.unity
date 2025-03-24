@@ -696,7 +696,6 @@ Transform:
   - {fileID: 1948041384}
   - {fileID: 526537624}
   - {fileID: 36046826}
-  - {fileID: 1763008991}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &275165892
@@ -1319,7 +1318,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableName: Exit Door
-  locationDescription: A large glass exit door leading to the the outside.
+  locationDescription: A large glass exit door leading to the the outside. Standing
+    at attention next to each side fo the door are two guards.
   playerCanStore: 1
   dialogueManager: {fileID: 0}
 --- !u!1 &538016599
@@ -1637,7 +1637,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 643913728}
-  - {fileID: 1820977942}
+  - {fileID: 2142000704}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &687393473
@@ -2221,68 +2221,6 @@ MonoBehaviour:
   dialogueManager: {fileID: 0}
   room: {fileID: 479178962}
   lockLevel: 1
---- !u!1001 &1088189800
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2124758852}
-    m_Modifications:
-    - target: {fileID: 1471054829686080370, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
-      propertyPath: m_Name
-      value: Calling Card
-      objectReference: {fileID: 0}
-    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
---- !u!4 &1088189801 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
-  m_PrefabInstance: {fileID: 1088189800}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1189908566
 GameObject:
   m_ObjectHideFlags: 0
@@ -2432,6 +2370,56 @@ MonoBehaviour:
   locationDescription: 
   playerCanStore: 1
   dialogueManager: {fileID: 0}
+--- !u!1 &1394184038
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1394184039}
+  - component: {fileID: 1394184040}
+  m_Layer: 0
+  m_Name: Apple
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1394184039
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394184038}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1025.7123, y: -519.346, z: 3.1467535}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1456374741}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1394184040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394184038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cfbcdced7fe8f54ea00b638ec2167f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableName: Apple
+  locationDescription: A delecious red apple lies on what appears to be a doctors
+    desk.
+  playerCanStore: 1
+  dialogueManager: {fileID: 0}
+  crushedApple: {fileID: 0}
 --- !u!1 &1401071886
 GameObject:
   m_ObjectHideFlags: 0
@@ -2733,7 +2721,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7063798344599000805}
+  - {fileID: 1394184039}
   - {fileID: 1039126090}
   - {fileID: 673477765}
   - {fileID: 688669857}
@@ -3313,55 +3301,6 @@ MonoBehaviour:
   - {fileID: -3578298931649939517, guid: ee2d87b63e3c9054fa0016c825f63757, type: 3}
   - {fileID: -4372663946440342171, guid: f1d62d74e30bb4444b099d5afad2f01c, type: 3}
   - {fileID: 385903366105015525, guid: 2fdd7d18a80c0e741ae35fd20df688a2, type: 3}
---- !u!1 &1763008990
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1763008991}
-  - component: {fileID: 1763008992}
-  m_Layer: 0
-  m_Name: Two Guards
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1763008991
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1763008990}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 275165891}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1763008992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1763008990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3cf7926d7f461d4897fb473645a563e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactableName: guards
-  locationDescription: Standing at attention next to each side of the exit door are
-    two guards.
-  playerCanStore: 1
-  dialogueManager: {fileID: 0}
 --- !u!1 &1788951274
 GameObject:
   m_ObjectHideFlags: 0
@@ -3513,67 +3452,10 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1788951274}
   m_CullTransparentMesh: 1
---- !u!1001 &1820977941
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 687393472}
-    m_Modifications:
-    - target: {fileID: 1807000532342806654, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1807000532342806654, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1807000532342806654, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1807000532342806654, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1807000532342806654, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1807000532342806654, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1807000532342806654, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1807000532342806654, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1807000532342806654, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1807000532342806654, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3654513942289045422, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
-      propertyPath: m_Name
-      value: Glass Case
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
---- !u!4 &1820977942 stripped
+--- !u!4 &1800498458 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 1807000532342806654, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
-  m_PrefabInstance: {fileID: 1820977941}
+  m_CorrespondingSourceObject: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
+  m_PrefabInstance: {fileID: 3158035715406404140}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1902775117
 GameObject:
@@ -4054,7 +3936,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1088189801}
+  - {fileID: 1800498458}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2124758853
@@ -4077,56 +3959,125 @@ MonoBehaviour:
     be a maze."
   visitText: []
   allAfter: 
---- !u!1 &5673236767533906895
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7063798344599000805}
-  - component: {fileID: 7063798344599000806}
-  m_Layer: 0
-  m_Name: Apple
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7063798344599000805
+--- !u!4 &2142000704 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1807000532342806654, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
+  m_PrefabInstance: {fileID: 1305169199415102286}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5673236767533906895}
+--- !u!1001 &1305169199415102286
+PrefabInstance:
+  m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1025.7123, y: -519.346, z: 3.1467535}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1456374741}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7063798344599000806
-MonoBehaviour:
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 687393472}
+    m_Modifications:
+    - target: {fileID: 1807000532342806654, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807000532342806654, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807000532342806654, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807000532342806654, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807000532342806654, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807000532342806654, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807000532342806654, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807000532342806654, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807000532342806654, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807000532342806654, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654513942289045422, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
+      propertyPath: m_Name
+      value: Glass Case
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
+--- !u!1001 &3158035715406404140
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5673236767533906895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cfbcdced7fe8f54ea00b638ec2167f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactableName: apple
-  locationDescription: A crisp red apple sits on the bedside table. The sun reflects
-    off it gorgeous red skin.
-  playerCanStore: 1
-  dialogueManager: {fileID: 0}
-  crushedApple: {fileID: 1242989205509524980, guid: b547d376b02433047ae7e7dbd5400be7, type: 3}
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2124758852}
+    m_Modifications:
+    - target: {fileID: 1471054829686080370, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
+      propertyPath: m_Name
+      value: Calling Card
+      objectReference: {fileID: 0}
+    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

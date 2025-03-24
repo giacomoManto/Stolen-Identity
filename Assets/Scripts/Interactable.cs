@@ -19,7 +19,7 @@ public class Interactable : MonoBehaviour
     protected bool playerCanStore = true;
 
     [SerializeField]
-    private DialogueManager dialogueManager;
+    protected DialogueManager dialogueManager;
 
     /// <summary>
     /// Default constructor.
