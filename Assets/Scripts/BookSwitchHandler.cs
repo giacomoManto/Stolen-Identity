@@ -27,27 +27,29 @@ public class BookSwitchHandler : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        Color desiredColor;
         // FIWB Run it every fixed update idc
         switch (player.getPlayerID().ToString().ToLower())
         {
             case "doctor":
-                GetComponent<Image>().color = doctorColor;
+                desiredColor = doctorColor;
                 break;
             case "brawler":
-                GetComponent<Image>().color = brawlerColor;
+                desiredColor = brawlerColor;
                 break;
             case "patient":
-                GetComponent<Image>().color = patientColor;
+                desiredColor = patientColor;
                 break;
             case "thief":
-                GetComponent<Image>().color = thiefColor;
+                desiredColor = thiefColor;
                 break;
             case "guard":
-                GetComponent<Image>().color = guardColor;
+                desiredColor = guardColor;
                 break;
             default:
-                GetComponent<Image>().color = defaultColor;
+                desiredColor = defaultColor;
                 break;
         }
+        GetComponent<Image>().color = Vector4.Lerp(GetComponent<Image>().color, desiredColor, 0.01f); // Lerp the color of the image to the desired color
     }
 }
