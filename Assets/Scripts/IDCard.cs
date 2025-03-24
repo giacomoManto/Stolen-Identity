@@ -39,5 +39,5 @@ public struct IDCard
     }
 
 
-    public override string ToString() => $"{Name} (Level {SecurityLevel})";
+    public override string ToString() => $"{Name}";
 }

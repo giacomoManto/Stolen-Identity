@@ -119,6 +119,54 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &36046825
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 36046826}
+  - component: {fileID: 36046827}
+  m_Layer: 0
+  m_Name: Fire Alarm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &36046826
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36046825}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 275165891}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &36046827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36046825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bb591057174da2439f3782dfb96b560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableName: Fire Alarm
+  locationDescription: A fire alarm sits on the wall by a water cooler.
+  playerCanStore: 0
+  dialogueManager: {fileID: 0}
 --- !u!1 &52509124
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,6 +201,7 @@ Transform:
   - {fileID: 2061849514}
   - {fileID: 775823340}
   - {fileID: 1990417180}
+  - {fileID: 1422428917}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &52509126
@@ -643,6 +692,7 @@ Transform:
   - {fileID: 1950935141}
   - {fileID: 1948041384}
   - {fileID: 526537624}
+  - {fileID: 36046826}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &275165892
@@ -694,6 +744,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 444190420}
+  - {fileID: 1189908567}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &289139626
@@ -892,6 +943,7 @@ GameObject:
   - component: {fileID: 464826051}
   - component: {fileID: 464826053}
   - component: {fileID: 464826052}
+  - component: {fileID: 464826054}
   m_Layer: 5
   m_Name: Book Image
   m_TagString: Untagged
@@ -931,7 +983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.57861626, g: 0.57861626, b: 0.57861626, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -956,6 +1008,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 464826050}
   m_CullTransparentMesh: 1
+--- !u!114 &464826054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464826050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82c1efbdc0b88d4a8e2f631aa3f2851, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultColor: {r: 1, g: 1, b: 1, a: 1}
+  doctorColor: {r: 0.8156863, g: 0.9411765, b: 0.7529412, a: 1}
+  brawlerColor: {r: 1, g: 0.76862746, b: 0.75686276, a: 1}
+  patientColor: {r: 0.8784314, g: 0.8862745, b: 1, a: 1}
+  thiefColor: {r: 0.5803922, g: 0.5803922, b: 0.5803922, a: 1}
 --- !u!1 &479178960
 GameObject:
   m_ObjectHideFlags: 0
@@ -2145,6 +2214,56 @@ MonoBehaviour:
   dialogueManager: {fileID: 0}
   room: {fileID: 479178962}
   lockLevel: 0
+--- !u!1 &1189908566
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1189908567}
+  - component: {fileID: 1189908568}
+  m_Layer: 0
+  m_Name: Fire Alarm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1189908567
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189908566}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 289139625}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1189908568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189908566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bb591057174da2439f3782dfb96b560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableName: Fire Alarm
+  locationDescription: A fire alarm lathered in a coat of cream paint (must have
+    received the landlord special) that roughly matches the wall color is next to
+    the door.
+  playerCanStore: 0
+  dialogueManager: {fileID: 0}
 --- !u!1 &1261492214
 GameObject:
   m_ObjectHideFlags: 0
@@ -2514,6 +2633,55 @@ MonoBehaviour:
   playerCanStore: 1
   dialogueManager: {fileID: 0}
   PHD: {fileID: 7846380480380432487, guid: ba6605a430bf5764187a2bd8bff6802d, type: 3}
+--- !u!1 &1422428916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1422428917}
+  - component: {fileID: 1422428918}
+  m_Layer: 0
+  m_Name: Fire Alarm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1422428917
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422428916}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 52509125}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1422428918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422428916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bb591057174da2439f3782dfb96b560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableName: Fire Alarm
+  locationDescription: There is an old fire alarm half sticking out from behind the
+    refrigerator.
+  playerCanStore: 0
+  dialogueManager: {fileID: 0}
 --- !u!1 &1444359589
 GameObject:
   m_ObjectHideFlags: 0
@@ -3811,7 +3979,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableName: Donuts
-  locationDescription: 
+  locationDescription: A juicy box of donuts sits on a cheap plastic table in the
+    middle of the room.
   playerCanStore: 1
   dialogueManager: {fileID: 0}
   lobbyRoom: {fileID: 275165892}
