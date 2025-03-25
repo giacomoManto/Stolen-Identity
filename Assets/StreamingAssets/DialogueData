@@ -78,15 +78,20 @@ The Golden Microscope : inspect : Any : A priceless golden microscope encrusted 
 The Golden Microscope : inspect : Doctor : My precious golden microscope. What would I do on those long, lonely nights without it?
 The Golden Microscope : inspect : Guard : The doctor's golden microscope. I told them the hospital's insurance won't cover it if it gets stolen. I hope they listen because I am not paid enough to make sure it stays safe.
 The Golden Microscope : inspect : Thief : A priceless golden microscope encrusted with jewels. It should be in a museum... or in my bag.
+The Golden Microscope : location: Any : The Golden Microscope lies inside the glass case.
+The Golden Microscope : take : Guard : I am NOT taking that. If the Doctor found out he would be pissed and take away my donut privileges.
+The Golden Microscope : take : Brawler : That piece of junk is way too shiny, if I carried it with me there's no doubt I'd be the laughingstock of the pub.
+The Golden Microscope : take : Patient : I doubt taking this would help me restore my memory. Besides, I'm no crook or thief… at least I think?
+The Golden Microscope : take : Any: I doubt taking this would help me restore my memory. Besides, I'm no crook or thief… at least I think?
+
 
 Glass Case : location : Any : There seems to be a fairly large glass case which rests at the very back of the storage room.
 Glass Case : location : Doctor: At the back of the room lies a glass case containing my golden microscope in all its glory. 
 Glass Case : location : Thief: There seems to be a fairly large glass case which rests at the very back of the storage room. Whatever's inside is certain to be valuable.
 Glass Case : inspect : Any : I walk over to the glass case and realize it contains… a golden microscope? I do a double take before realizing it's not a fake. The glass case itself doesn't look like its locked, which feels like a mistake considering the value of its contents.
 Glass Case : inspect : Doctor: I walk over to the glass case knowing it contains my precious golden microscope. Even though I doubt the hospital insurance will cover it if it is stolen, how could I hide it away inside a safe?
-Glass Case : on spawn : Any : I open up the glass case and gaze in awe at the golden microscope which rests inside the glass case.
-Glass Case : object spawned: Any: An empty glass case, I’ve already taken the golden microscope which was inside.
-
+Glass Case : on spawn : Any : I open up the glass case, fully revealing the golden microscope which rests inside.
+Glass Case : object spawned: Any: An open glass case. There isn't really much else I can do with this.
 
 
 # I am X

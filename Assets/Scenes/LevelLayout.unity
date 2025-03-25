@@ -802,6 +802,11 @@ Transform:
   - {fileID: 79740000}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &397591039 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8071382534770958044, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
+  m_PrefabInstance: {fileID: 3812411592218610489}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &444190419
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,7 +887,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 538016600}
+  - {fileID: 983849251}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &453564231
@@ -1322,55 +1327,11 @@ MonoBehaviour:
   locationDescription: A large glass exit door leading to the the outside.
   playerCanStore: 1
   dialogueManager: {fileID: 0}
---- !u!1 &538016599
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 538016600}
-  - component: {fileID: 538016601}
-  m_Layer: 0
-  m_Name: Brawler ID
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &538016600
+--- !u!4 &538016600 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 2061239146618224918, guid: 0f1609ade90d79743a2d8104281930f9, type: 3}
+  m_PrefabInstance: {fileID: 4789754911816875678}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 538016599}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 450535963}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &538016601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 538016599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63384af4533103e43beeeec67b3432cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactableName: Guard ID
-  locationDescription: There also is some sort of Patient ID which rests atop a patients
-    bedside table.
-  playerCanStore: 1
-  dialogueManager: {fileID: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1638,6 +1599,8 @@ Transform:
   m_Children:
   - {fileID: 643913728}
   - {fileID: 1820977942}
+  - {fileID: 538016600}
+  - {fileID: 397591039}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &687393473
@@ -2080,6 +2043,16 @@ MonoBehaviour:
   dialogueManager: {fileID: 0}
   room: {fileID: 1501790960}
   lockLevel: 0
+--- !u!1 &983849250 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1076241964794849526, guid: a5a04b823225513449a01a1fe3063c1c, type: 3}
+  m_PrefabInstance: {fileID: 478548081088523399}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &983849251 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4959320627190995484, guid: a5a04b823225513449a01a1fe3063c1c, type: 3}
+  m_PrefabInstance: {fileID: 478548081088523399}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1016301092
 GameObject:
   m_ObjectHideFlags: 0
@@ -3526,6 +3499,10 @@ PrefabInstance:
       value: Glass Case
       objectReference: {fileID: 0}
     - target: {fileID: 1011865646109826233, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
+      propertyPath: spawnedObject
+      value: 
+      objectReference: {fileID: 983849250}
+    - target: {fileID: 1011865646109826233, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
       propertyPath: locationDescription
       value: 
       objectReference: {fileID: 0}
@@ -4105,6 +4082,186 @@ MonoBehaviour:
     be a maze."
   visitText: []
   allAfter: 
+--- !u!1001 &478548081088523399
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 450535963}
+    m_Modifications:
+    - target: {fileID: 1076241964794849526, guid: a5a04b823225513449a01a1fe3063c1c, type: 3}
+      propertyPath: m_Name
+      value: The Golden Microscope
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959320627190995484, guid: a5a04b823225513449a01a1fe3063c1c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959320627190995484, guid: a5a04b823225513449a01a1fe3063c1c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959320627190995484, guid: a5a04b823225513449a01a1fe3063c1c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959320627190995484, guid: a5a04b823225513449a01a1fe3063c1c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959320627190995484, guid: a5a04b823225513449a01a1fe3063c1c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959320627190995484, guid: a5a04b823225513449a01a1fe3063c1c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959320627190995484, guid: a5a04b823225513449a01a1fe3063c1c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959320627190995484, guid: a5a04b823225513449a01a1fe3063c1c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959320627190995484, guid: a5a04b823225513449a01a1fe3063c1c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959320627190995484, guid: a5a04b823225513449a01a1fe3063c1c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a5a04b823225513449a01a1fe3063c1c, type: 3}
+--- !u!1001 &3812411592218610489
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 687393472}
+    m_Modifications:
+    - target: {fileID: 6448042394550906417, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
+      propertyPath: m_Name
+      value: Thief ID
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071382534770958044, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071382534770958044, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071382534770958044, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071382534770958044, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071382534770958044, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071382534770958044, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071382534770958044, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071382534770958044, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071382534770958044, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071382534770958044, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
+--- !u!1001 &4789754911816875678
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 687393472}
+    m_Modifications:
+    - target: {fileID: 2061239146618224918, guid: 0f1609ade90d79743a2d8104281930f9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2061239146618224918, guid: 0f1609ade90d79743a2d8104281930f9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2061239146618224918, guid: 0f1609ade90d79743a2d8104281930f9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2061239146618224918, guid: 0f1609ade90d79743a2d8104281930f9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2061239146618224918, guid: 0f1609ade90d79743a2d8104281930f9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2061239146618224918, guid: 0f1609ade90d79743a2d8104281930f9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2061239146618224918, guid: 0f1609ade90d79743a2d8104281930f9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2061239146618224918, guid: 0f1609ade90d79743a2d8104281930f9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2061239146618224918, guid: 0f1609ade90d79743a2d8104281930f9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2061239146618224918, guid: 0f1609ade90d79743a2d8104281930f9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5328741123317860566, guid: 0f1609ade90d79743a2d8104281930f9, type: 3}
+      propertyPath: m_Name
+      value: Brawler ID
+      objectReference: {fileID: 0}
+    - target: {fileID: 7566309452731252117, guid: 0f1609ade90d79743a2d8104281930f9, type: 3}
+      propertyPath: interactableName
+      value: Brawler ID
+      objectReference: {fileID: 0}
+    - target: {fileID: 7566309452731252117, guid: 0f1609ade90d79743a2d8104281930f9, type: 3}
+      propertyPath: locationDescription
+      value: There also is some sort of Brawler ID which rests atop a patients bedside
+        table.
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0f1609ade90d79743a2d8104281930f9, type: 3}
 --- !u!1 &5673236767533906895
 GameObject:
   m_ObjectHideFlags: 0
