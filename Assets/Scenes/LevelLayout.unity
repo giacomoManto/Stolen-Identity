@@ -4147,6 +4147,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 687393472}
     m_Modifications:
+    - target: {fileID: 501784636640213182, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
+      propertyPath: locationDescription
+      value: The Thief ID lies where I last discovered it, asking to be taken much
+        like the items I've taken before it.
+      objectReference: {fileID: 0}
     - target: {fileID: 6448042394550906417, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
       propertyPath: m_Name
       value: Thief ID
@@ -4247,15 +4252,6 @@ PrefabInstance:
     - target: {fileID: 5328741123317860566, guid: 0f1609ade90d79743a2d8104281930f9, type: 3}
       propertyPath: m_Name
       value: Brawler ID
-      objectReference: {fileID: 0}
-    - target: {fileID: 7566309452731252117, guid: 0f1609ade90d79743a2d8104281930f9, type: 3}
-      propertyPath: interactableName
-      value: Brawler ID
-      objectReference: {fileID: 0}
-    - target: {fileID: 7566309452731252117, guid: 0f1609ade90d79743a2d8104281930f9, type: 3}
-      propertyPath: locationDescription
-      value: There also is some sort of Brawler ID which rests atop a patients bedside
-        table.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
