@@ -10,7 +10,7 @@ Apple : eat : Doctor: I…against my better judgement… eat the apple.
 
 
 # ID Cards
-Patient ID : inspect : Any : I walk over to the ID card and inspect it. It's a plain white card, nothing special. However, I get the feeling that something in me might change if I decide to take this.
+Patient ID : inspect : Any : I take a close look at the ID card, inspecting it. It's a plain white card with the words patient in big bold letters, nothing special. However, I get the feeling that I should take this with me and use it if needed.
 Patient ID : switch : Any : I hold the Patient ID before me and my mind drifts in confusion and unease until suddenly… I realize maybe I'm just a hospital patient. I wonder what I'm in here for?
 
 Thief ID : inspect : Any : I walk over to the ID card and inspect it. A portrait of a pretty shady individual is on the card along with a number to call for 'repossession' services.
@@ -117,5 +117,9 @@ Fire Exit : go through : Doctor : I push the metal bar and the door swings open.
 Fire Exit : go through : Guard : I push the metal bar and the door swings open. I walk through the door, leaving the hospital behind me. Guarding doesn't sound too bad. I guess I can live the rest of my life out as a guard. I wish I could remember who I really am - but, for now, I'm satisfied just leaving the hospital.
 Fire Exit : go through : Thief : I push the metal bar and the door swings open. I walk through the door, leaving the hospital behind me. Am I really a thief? It's who I am now, I guess. I just can't be sure.
 Fire Exit : go through : Brawler : I push the metal bar and the door swings open. I walk through the door, leaving the hospital behind me. I head straight to the closest bar. The smell of alcohol feels like it should sit right but deep down it disgusts me.
+
+#Doors
+red door : unlockFail : Any : I rattle the red door’s handle, trying to open it. It looks like it's one of those id card access doors and won't open up until I use a card.
+
 
 

@@ -89,7 +89,7 @@ public class PlayerInfo : MonoBehaviour
         // Check if the requested ID exists in the player's collection.
         if (!playerIDs.ContainsKey(idName))
         {
-            
+            GameManager.Instance().AddTextToJournal("");
             return false;
         }
 

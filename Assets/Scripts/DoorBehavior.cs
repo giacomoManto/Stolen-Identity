@@ -37,7 +37,7 @@ public class DoorBehavior : Interactable
     private void GoThrough(IDCard id)
     {
         if (!locked) {
-            GameManager.Instance().AddTextToJournal("I go through the door.");
+            GameManager.Instance().AddTextToJournal("I go through the " + interactableName + ".");
             GameManager.Instance().changeRoom(room);
         }
         else
@@ -49,7 +49,7 @@ public class DoorBehavior : Interactable
             }
             else
             {
-                GameManager.Instance().AddTextToJournal(GetTextFromJson("door", "unlockFail", id));
+                GameManager.Instance().AddTextToJournal(GetTextFromJson(interactableName, "unlockFail", id));
             }
         }
     }
