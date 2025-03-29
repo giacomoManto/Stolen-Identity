@@ -76,6 +76,7 @@ public class PlayerInfo : MonoBehaviour
     /// <returns>True if the switch is successful, false otherwise.</returns>
     public bool switchPlayerID(string idName)
     {
+        idName = idName.ToLower().Split()[0];
         Debug.Log("trying to switch to " + idName);
 
         // Check if the requested ID is already the current one.
@@ -89,7 +90,7 @@ public class PlayerInfo : MonoBehaviour
         // Check if the requested ID exists in the player's collection.
         if (!playerIDs.ContainsKey(idName))
         {
-            GameManager.Instance().AddTextToJournal("");
+            GameManager.Instance().AddTextToJournal("I reach out to use the " + idName + " id, but I realize in order to use it properly, i need to take it.");
             return false;
         }
 

@@ -59,16 +59,16 @@ public class DoorBehavior : Interactable
             if (this.locked)
             {
                 this.locked = false;
-                GameManager.Instance().AddTextToJournal("PLACEHOLDER: You skillfully lockpick the door. Unlocking it");
+                GameManager.Instance().AddTextToJournal("You skillfully lockpick the door. Unlocking it");
             }
             else
             {
-                GameManager.Instance().AddTextToJournal("PLACEHOLDER: You spend a couple minutes inserting, twisting and applying pressure to the door lock. This must be the hardest lock you have ever picked. In a bout of frustration you throw your tools on the ground, your alan key bounces up and hits the door knob revealing that it was unlocked the whole time.");
+                GameManager.Instance().AddTextToJournal("You spend a couple minutes inserting, twisting and applying pressure to the door lock. This must be the hardest lock you have ever picked. In a bout of frustration you throw your tools on the ground, your alan key bounces up and hits the door knob revealing that it was unlocked the whole time.");
             }
         }
         else
         {
-            GameManager.Instance().AddTextToJournal("PLACEHOLDER: I don't know how to do that.");
+            GameManager.Instance().AddTextToJournal("I don't know how to do that.");
         }
     }
 
@@ -78,16 +78,16 @@ public class DoorBehavior : Interactable
             if (this.locked)
             {
                 this.locked = false;
-                GameManager.Instance().AddTextToJournal("PLACEHOLDER: You smash a big hole where the door knob used to be.");
+                GameManager.Instance().AddTextToJournal("You smash a big hole where the door knob used to be.");
             }
             else
             {
-                GameManager.Instance().AddTextToJournal("PLACEHOLDER: You break a hole in the door. It was unlocked before you did this.");
+                GameManager.Instance().AddTextToJournal("You break a hole in the door. It was unlocked before you did this.");
             }
         }
         else
         {
-            GameManager.Instance().AddTextToJournal("PLACEHOLDER: I'm not strong enough for that.");
+            GameManager.Instance().AddTextToJournal("I'm not strong enough for that.");
         }
     }
 
