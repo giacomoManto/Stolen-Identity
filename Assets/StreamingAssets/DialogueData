@@ -153,6 +153,16 @@ Donuts : eat : Thief : I eat the donuts. Savoring each bite. Knowing these aren'
 
 Donuts : discoverID : Any : I discover a guard ID at the bottom of the donut box. Drenched in powdered sugar it may be, it still seems useful to have around.
 
+guards : talk : Any : I walk up to the guards and spend some time making small talk.
+guards : talk : Brawler : I walk up to the guards. They give me a pretty stanky eye. I try to make small talk but they just ignore me.
+guards : talk : Thief : I sneak up to the guards. They don't notice me at all due to my excellent sneaking skills. The guard looks me up and down before we make some small talk.
+guards : talk : Guard : I walk up to my fellow men in uniform. We make some small talk.
+
+guards : talkDonuts : Any : I walk up to the guards. They really appreciate the donuts I gave them. We make some small talk.
+guards : talkDonuts : Guard : I walk up to the guards. They thank me again for the donuts and offer me a quarter donut.
+guards : talkDonuts : Doctor : I walk up to the guards. "Are you judging us for eating the donuts YOU gave us Doctor?" the shorter one says. I chuckle and we make some small talk.
+guards : talkDonuts : Thief : I sneak up to the guards eating the donuts I gave them. I use my superb thieving skills to slowly creep my arm closer to the donut box. As I try to swipe a donut the taller guard gives me a stern look.
+
 # I am X fire escape
 Fire Alarm : inspect: Any : Looks like one of those super loud fire alarms that go off once someone goes through a fire exit or if smoke is detected. I probably shouldn't mess with that unless I really have to.
 Fire Alarm : inspect: Doctor: Standard hospital fire alarm, if a bit outdated. These will help keep patients and staff safe from fires.
@@ -170,8 +180,3 @@ Fire Exit : go through : Brawler : I push the metal bar and the door swings open
 #Doors
 door : unlock : Any : The door beeps, accepting the id and I hear the deadbolt retract. I open the door and walk through.
 red door : unlockFail : Any : I rattle the red door’s handle, trying to open it. It looks like it's one of those id card access doors and won't open up until I use a card.
-
-
-
-
-
