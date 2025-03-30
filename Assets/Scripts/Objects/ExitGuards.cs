@@ -33,6 +33,14 @@ public class ExitGuards : Interactable
 
     public void TalkTo(IDCard id)
     {
-        GameManager.Instance().AddTextToJournal(GetTextFromJson("talk", id));
+        if (GameManager.Instance().GetFlag("guardsDistracted"))
+        {
+            GameManager.Instance().AddTextToJournal(GetTextFromJson("talk", id));
+        }
+        else
+        {
+            GameManager.Instance().AddTextToJournal(GetTextFromJson("talkDonuts", id));
+        }
+        
     }
 }
