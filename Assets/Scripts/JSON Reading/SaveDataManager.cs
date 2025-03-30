@@ -1,9 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using UnityEditor.Overlays;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 /// <summary>
 ///A singleton class(only place one per scene) that keeps track of save and load data.

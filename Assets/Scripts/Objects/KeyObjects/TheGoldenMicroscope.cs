@@ -1,8 +1,6 @@
 using System;
 using System.Dynamic;
-using UnityEditor.Rendering;
 using UnityEngine;
-using UnityEngine.WSA;
 
 public class TheGoldenMicroscope : Interactable
 {
