@@ -26,6 +26,7 @@ Thief ID : on spawn : Any : After pocketing the item, I realize that there was a
 Brawler ID : inspect : Any : I take a look at the ID card, inspecting it closely. The card is a bit bent and has a few scratches on it. It's a bit hard to read but the profession says 'Bar Brawler'. That can't be a real job.
 
 Doctor ID : inspect : Any : I take a look at the ID card, inspecting it closely. The card is pristine and has a picture of an eager doctor on it.
+Doctor ID : on spawn : Any : Taking a closer look at the cutout I realize the Doctor ID pinned to the board is shiny, as if it's a real card and not just a printout.
 
 Guard ID : inspect : Any : I take a look at the ID card, inspecting it closely. The card is a bit worn but still legible. It has a picture of a stern looking guard on it.
 Guard ID : inspect : Thief : I take a look at the ID card, inspecting it closely. The card is a bit worn but my keen eye can still make out the picture. This is a guard, I need to keep an eye out for them.
@@ -138,6 +139,10 @@ Fire Exit : go through : Brawler : I push the metal bar and the door swings open
 door : unlock : Any : The door beeps, accepting the id and I hear the deadbolt retract. I open the door and walk through.
 red door : unlockFail : Any : I rattle the red door’s handle, trying to open it. It looks like it's one of those id card access doors and won't open up until I use a card.
 
+
+
+# Doctor Route
+Cardboard Cutout : object spawned : Any : A cardboard cutout of a doctor. It's a bit creepy how realistic it looks.
 
 
 

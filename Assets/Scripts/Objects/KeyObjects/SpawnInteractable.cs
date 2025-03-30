@@ -26,17 +26,17 @@ public class SpawnInteractable : Interactable
      */
     SpawnInteractable() : base()
     {
+
     }
 
-    public new void PerformAction(string action, IDCard id)
+    private void Start()
     {
-        action = action.ToLower();
-        base.PerformAction(action, id);
-        if (actionsWhichTriggerSpawn.Contains(action))
+        foreach (string action in actionsWhichTriggerSpawn)
         {
-            SpawnObject(id);
+            RegisterAction(action, SpawnObject);
         }
     }
+
 
 
     private void SpawnObject(IDCard idCard)

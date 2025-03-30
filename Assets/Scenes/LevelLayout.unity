@@ -416,15 +416,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 68484631}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7471b5bb5006cfc438650f2fd25f13cd, type: 3}
+  m_Script: {fileID: 11500000, guid: e9159d3f56e202542bdd3e2605439624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   destroyed: 0
-  interactableName: 
-  locationDescription: 
-  playerCanStore: 1
+  interactableName: Cardboard Cutout
+  locationDescription: In the middle of the shrine is a cardboard cutout of the doctor.
+    This is creepy.
+  playerCanStore: 0
   dialogueManager: {fileID: 0}
-  spawnedID: {fileID: 0}
+  spawnedObject: {fileID: 488915322010265457, guid: 5c58b602e84f8144eb58b98c4d490ec1, type: 3}
+  spawnedText: 
+  actionsWhichTriggerSpawn:
+  - inspect
+  - look at
+  - fiddle
+  - fiddle with
+  - peek at
+  - stare at
+  - poke
+  - touch
 --- !u!1 &79739998
 GameObject:
   m_ObjectHideFlags: 0
@@ -3462,9 +3473,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyed: 0
-  interactableName: 
-  locationDescription: 
-  playerCanStore: 1
+  interactableName: Janitor's Journal
+  locationDescription: On the floor below the shrine is a notebook. I lean forward
+    to take a closer look and see that it is the Janitor's Journal.
+  playerCanStore: 0
   dialogueManager: {fileID: 0}
 --- !u!1 &1679773187
 GameObject:
