@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 using static System.Net.Mime.MediaTypeNames;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Rendering.Universal;
 
 public class JournalOutput : MonoBehaviour
 {
@@ -72,11 +73,22 @@ public class JournalOutput : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // When histroy gets long trim it down.
+        if (history.Length >= 6000)
+        {
+            history = history.Substring(4000, history.Length - 4000);
+            viewableChars = history.Length;
+            Debug.Log("Trimming journal history");
+        }
+
+
         history = history.TrimStart('\n');
         if (gameTextQueue.Count > 0 && viewableChars >= viewableText.textInfo.characterCount)
         {
             history += gameTextQueue.Dequeue() + '\n' + '\n';
         }
+
+
 
         if (viewableChars < viewableText.textInfo.characterCount)
         {

@@ -2572,7 +2572,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1317429840}
-  - component: {fileID: 1317429841}
+  - component: {fileID: 1317429842}
   m_Layer: 0
   m_Name: Labcoat
   m_TagString: Untagged
@@ -2595,7 +2595,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 453564232}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1317429841
+--- !u!114 &1317429842
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2604,12 +2604,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1317429839}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 951cf8aff516b9845b4922f775221d55, type: 3}
+  m_Script: {fileID: 11500000, guid: 3937dd799e2f7c94092f04d921a5c911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   destroyed: 0
-  interactableName: Labcoat
-  locationDescription: 
+  interactableName: Lab Coat
+  locationDescription: On a pedestal in the middle of the vault is a lab coat,.
   playerCanStore: 1
   dialogueManager: {fileID: 0}
 --- !u!1 &1367396383

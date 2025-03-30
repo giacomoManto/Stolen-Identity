@@ -60,22 +60,6 @@ Bar Rewards Card : inspect : Guard : I pick up a battered, soggy bar loyalty car
 Bar Rewards Card : inspect : Doctor : I pick up a battered, soggy bar loyalty card. Looks like this belonged to a true hardcore drinker. Wasn’t there a patient that came in earlier directly from a bar?
 Bar Rewards Card : inspect : Brawler : My rewards card. Only thirteen more drinks and I'll get one for free.
 
-# Become a doctor
-Lab Coat : inspect : Any : I take a closer look at the lab coat. It's quite standard.
-Lab Coat : inspect : Doctor : My lucky lab coat. This bad boy was the only warmth during my residency.
-Lab Coat : inspect : Brawler : Looks like a napkin to me. Why was this in a vault?
-
-Punchcard : inspect : Any : I hold the punch card up to the light. Nope, no hidden messages.
-Punchcard : inspect : Doctor : My punch card. Contractually I can't leave until I get this punched.
-Punchcard : inspect : Brawler : This looks pretty punchable to me.
-
-Punch Card Punched : inspect : Any : I hold the punch card up to the light. The large hole lets the light through, blinding me temporarily. Still no hidden messages.
-Punch Card Punched : inspect : Doctor : My punch card. Now with a nice hole clocking me out.
-Punch Card Punched : inspect : Brawler : This looks like it could handle a couple more hits.
-
-PhD : inspect : Any : A framed Doctorate. Someone must be really proud about getting this to frame it so securely.
-PhD : inspect : Doctor : My framed Doctorate. Without this who really am I?
-
 # Become a thief
 Calling Card : location: Any :I see what looks like a calling card sitting atop a shiny metal surgical plate in the corner.
 Calling Card : location: Thief: I see my calling card, lying atop a shiny metal surgical plate in the corner, no doubt from one of my great heists.
@@ -139,8 +123,24 @@ door : unlock : Any : The door beeps, accepting the id and I hear the deadbolt r
 red door : unlockFail : Any : I rattle the red door’s handle, trying to open it. It looks like it's one of those id card access doors and won't open up until I use a card.
 
 
+# Become a doctor
+Lab Coat : inspect : Any : I take a closer look at the lab coat. It's quite standard.
+Lab Coat : inspect : Doctor : My lucky lab coat. This bad boy was the only warmth during my residency.
+Lab Coat : inspect : Brawler : Looks like a napkin to me. Why was this in a vault?
 
-# Doctor Route
+Labcoat : put on : Any : Why would I wear this. I'm not a doctor.
+Labcoat : put on : Doctor : I put on the lab coat. It feels like a second skin. Maybe I am a doctor afterall. I could live my life out like this.
+
+Punchcard : inspect : Any : I hold the punch card up to the light. Nope, no hidden messages.
+Punchcard : inspect : Doctor : My punch card. Contractually I can't leave until I get this punched.
+Punchcard : inspect : Brawler : This looks pretty punchable to me.
+
+Punch Card Punched : inspect : Any : I hold the punch card up to the light. The large hole lets the light through, blinding me temporarily. Still no hidden messages.
+Punch Card Punched : inspect : Doctor : My punch card. Now with a nice hole clocking me out.
+Punch Card Punched : inspect : Brawler : This looks like it could handle a couple more hits.
+
+PhD : inspect : Any : A framed Doctorate. Someone must be really proud about getting this to frame it so securely.
+PhD : inspect : Doctor : My framed Doctorate. Without this who really am I?
 
 coarkboard : object spawned : Any : A coarkboard with a whole bunch of notes pinned to it.
 coarkboard : object spawned : Brawler : A coarkboard with a whole bunch of notes pinned to it. I quickly scan it for any information about staff bars or really just bars in the area. I don't find anything.
