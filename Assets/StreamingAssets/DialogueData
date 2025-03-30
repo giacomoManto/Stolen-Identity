@@ -151,10 +151,19 @@ Note : inspect : Doctor : I take a look at the note. Nice quality paper. It read
 Note : read : Any : I take a look at the note. Nice quality paper. It reads, "Calling all admirers of the Doctor. I have a secret staff club behind my work area. - The Janitor"
 Note : read : Doctor : I take a look at the note. Nice quality paper. It reads, "Calling all admirers of the Doctor. I have a secret staff club behind my work area. - The Janitor". A shiver runs down my spine, I knew the janitor liked me a bit too much but I didn't think I had a fan club.
 
+painting : object spawned : Any : A large painting. I'm glad I was strong enough to move it.
+painting : object spawned : Brawler : A large painting. Pretty easy to move.
+
+painting : on spawn : Any : I use all my might to move the painting to the side. Behind it there is a vault door, interesting.
+painting : on spawn : Doctor : I use all my might to move the painting to the side. Behind it is my secret vault door.
+painting : on spawn : Brawler : I use all my might to move the painting to the side.
+
+painting : inspect : Any : A large painting. It's a bit crooked. Behind it I can see a metal plate. Strange.
+painting : inspect : Brawler : A large painting. It's a bit crooked.
+painting : inspect : Doctor : A large painting hiding my secret vault entrance.
 
 Cardboard Cutout : object spawned : Any : A cardboard cutout of a doctor. It's a bit creepy how realistic it looks.
 Cardboard Cutout : on spawn : Any : Taking a closer look at the cutout I realize the Doctor ID pinned to the board is shiny, as if it's a real card and not just a printout.
-
 
 Janitor's Journal : read : Any : I flip through the pages of the journal. It is filled to the brim with notes about the Doctor's daily routine. It seems the janitor has been keeping tabs on the Doctor for quite some time.
 Janitor's Journal : read : Doctor : I flip through the pages of the journal. It is filled to the brim with notes about my daily routine. This feels like an invasion of privacy. I really need to get out of this hospital if this is who my colleagues are.

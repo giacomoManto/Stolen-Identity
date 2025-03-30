@@ -16,6 +16,12 @@ public class DoorBehavior : Interactable
 
     private bool locked = true;
 
+    [SerializeField]
+    private bool lockPickable = false;
+
+    [SerializeField]
+    private bool breakable = false;
+
     private void Start()
     {
         if (lockLevel == 0)
@@ -55,7 +61,14 @@ public class DoorBehavior : Interactable
             }
             else
             {
-                GameManager.Instance().AddTextToJournal(GetTextFromJson(interactableName, "unlockFail", id));
+                if (GetTextFromJson(interactableName, "unlockFail", id).Contains("unlockFail"))
+                {
+                    GameManager.Instance().AddTextToJournal("The door is locked. I need a higher security level to unlock it.");
+                }
+                else
+                {
+                    GameManager.Instance().AddTextToJournal(GetTextFromJson(interactableName, "unlockFail", id));
+                }
             }
         }
     }
@@ -63,7 +76,7 @@ public class DoorBehavior : Interactable
     private void Lockpick(IDCard id) {
         assignRoomIfNone();
         if (id.Equals(IDCard.Thief)) {
-            if (this.locked)
+            if (this.lockPickable && this.locked)
             {
                 this.locked = false;
                 GameManager.Instance().AddTextToJournal("I skillfully lockpick the door. With a satisfying click the door unlocks completely.");
@@ -83,7 +96,7 @@ public class DoorBehavior : Interactable
         assignRoomIfNone();
         if (id.Equals(IDCard.Brawler))
         {
-            if (this.locked)
+            if (this.breakable && this.locked)
             {
                 this.locked = false;
                 GameManager.Instance().AddTextToJournal("I smash a big hole where the door knob used to be. A door cant be locked if the locking stuff is not in the door.");

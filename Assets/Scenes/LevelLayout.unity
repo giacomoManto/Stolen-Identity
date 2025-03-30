@@ -656,6 +656,8 @@ MonoBehaviour:
   room: {fileID: 1456374742}
   lockLevel: 0
   roomName: 
+  lockPickable: 0
+  breakable: 0
 --- !u!1 &201844054
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,6 +821,7 @@ Transform:
   m_Children:
   - {fileID: 444190420}
   - {fileID: 1189908567}
+  - {fileID: 1091062517}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &289139626
@@ -990,6 +993,8 @@ MonoBehaviour:
   room: {fileID: 52509126}
   lockLevel: 0
   roomName: 
+  lockPickable: 0
+  breakable: 0
 --- !u!1 &450535962
 GameObject:
   m_ObjectHideFlags: 0
@@ -1054,6 +1059,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1317429840}
+  - {fileID: 1407446880}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &453564233
@@ -1605,6 +1611,8 @@ MonoBehaviour:
   room: {fileID: 52509126}
   lockLevel: 0
   roomName: 
+  lockPickable: 0
+  breakable: 0
 --- !u!1 &653568686
 GameObject:
   m_ObjectHideFlags: 0
@@ -1658,6 +1666,8 @@ MonoBehaviour:
   room: {fileID: 1499385321}
   lockLevel: 0
   roomName: 
+  lockPickable: 0
+  breakable: 0
 --- !u!1 &673477764
 GameObject:
   m_ObjectHideFlags: 0
@@ -1913,6 +1923,8 @@ MonoBehaviour:
   room: {fileID: 289139626}
   lockLevel: 0
   roomName: 
+  lockPickable: 0
+  breakable: 0
 --- !u!1 &783765243
 GameObject:
   m_ObjectHideFlags: 0
@@ -2089,6 +2101,8 @@ MonoBehaviour:
   room: {fileID: 1501790960}
   lockLevel: 0
   roomName: 
+  lockPickable: 0
+  breakable: 0
 --- !u!1 &958311107
 GameObject:
   m_ObjectHideFlags: 0
@@ -2191,6 +2205,8 @@ MonoBehaviour:
   room: {fileID: 2124758853}
   lockLevel: 0
   roomName: 
+  lockPickable: 0
+  breakable: 0
 --- !u!1 &981524479
 GameObject:
   m_ObjectHideFlags: 0
@@ -2244,6 +2260,8 @@ MonoBehaviour:
   room: {fileID: 1501790960}
   lockLevel: 0
   roomName: 
+  lockPickable: 0
+  breakable: 0
 --- !u!1 &983849250 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1076241964794849526, guid: a5a04b823225513449a01a1fe3063c1c, type: 3}
@@ -2397,6 +2415,8 @@ MonoBehaviour:
   room: {fileID: 479178962}
   lockLevel: 1
   roomName: 
+  lockPickable: 0
+  breakable: 0
 --- !u!1001 &1088189800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2459,6 +2479,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
   m_PrefabInstance: {fileID: 1088189800}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1091062516
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1091062517}
+  - component: {fileID: 1091062518}
+  m_Layer: 0
+  m_Name: Painting
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1091062517
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091062516}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 289139625}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1091062518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091062516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9159d3f56e202542bdd3e2605439624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyed: 0
+  interactableName: painting
+  locationDescription: A large painting is against the left wall of the office.
+  playerCanStore: 0
+  dialogueManager: {fileID: 0}
+  destroyOnSpawn: 0
+  spawnedObject: {fileID: 3366364370833142340, guid: 4af069c9251737547b85eaaa12802869, type: 3}
+  spawnedText: 
+  actionsWhichTriggerSpawn:
+  - remove
+  - move
+  - break
+  - tear
+  - yank
+  - unmount
+  - take off the
+  - take off
 --- !u!1 &1189908566
 GameObject:
   m_ObjectHideFlags: 0
@@ -2563,6 +2644,8 @@ MonoBehaviour:
   room: {fileID: 1501790960}
   lockLevel: 0
   roomName: 
+  lockPickable: 0
+  breakable: 0
 --- !u!1 &1317429839
 GameObject:
   m_ObjectHideFlags: 0
@@ -2795,6 +2878,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1401071886}
   m_CullTransparentMesh: 1
+--- !u!1 &1407446879
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1407446880}
+  - component: {fileID: 1407446881}
+  m_Layer: 0
+  m_Name: DoorToDoctorOffice
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1407446880
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407446879}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 453564232}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1407446881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407446879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyed: 0
+  interactableName: Vault Door
+  locationDescription: Behind me there is a vault door. It's the one I came in through.
+  playerCanStore: 0
+  dialogueManager: {fileID: 0}
+  room: {fileID: 289139626}
+  lockLevel: 0
+  roomName: 
+  lockPickable: 0
+  breakable: 0
 --- !u!1 &1414727509
 GameObject:
   m_ObjectHideFlags: 0
@@ -2948,6 +3085,8 @@ MonoBehaviour:
   room: {fileID: 1950406220}
   lockLevel: 0
   roomName: 
+  lockPickable: 0
+  breakable: 0
 --- !u!1 &1444359589
 GameObject:
   m_ObjectHideFlags: 0
@@ -3000,6 +3139,8 @@ MonoBehaviour:
   room: {fileID: 52509126}
   lockLevel: 0
   roomName: 
+  lockPickable: 0
+  breakable: 0
 --- !u!1 &1456374740
 GameObject:
   m_ObjectHideFlags: 0
@@ -3235,6 +3376,8 @@ MonoBehaviour:
   room: {fileID: 275165892}
   lockLevel: 0
   roomName: 
+  lockPickable: 0
+  breakable: 0
 --- !u!1 &1582195720
 GameObject:
   m_ObjectHideFlags: 0
@@ -3493,6 +3636,8 @@ MonoBehaviour:
   room: {fileID: 2081048263}
   lockLevel: 0
   roomName: 
+  lockPickable: 0
+  breakable: 0
 --- !u!1 &1635026050
 GameObject:
   m_ObjectHideFlags: 0
@@ -3596,6 +3741,8 @@ MonoBehaviour:
   room: {fileID: 1582195722}
   lockLevel: 0
   roomName: 
+  lockPickable: 0
+  breakable: 0
 --- !u!1 &1688797945
 GameObject:
   m_ObjectHideFlags: 0
@@ -3648,6 +3795,8 @@ MonoBehaviour:
   room: {fileID: 1950406220}
   lockLevel: 0
   roomName: 
+  lockPickable: 0
+  breakable: 0
 --- !u!1 &1747834899
 GameObject:
   m_ObjectHideFlags: 0
@@ -4122,6 +4271,8 @@ MonoBehaviour:
   room: {fileID: 479178962}
   lockLevel: 0
   roomName: 
+  lockPickable: 0
+  breakable: 0
 --- !u!1 &1948041383
 GameObject:
   m_ObjectHideFlags: 0
@@ -4174,6 +4325,8 @@ MonoBehaviour:
   room: {fileID: 1501790960}
   lockLevel: 0
   roomName: 
+  lockPickable: 0
+  breakable: 0
 --- !u!1 &1950406218
 GameObject:
   m_ObjectHideFlags: 0
@@ -4328,6 +4481,8 @@ MonoBehaviour:
   room: {fileID: 479178962}
   lockLevel: 0
   roomName: 
+  lockPickable: 0
+  breakable: 0
 --- !u!1 &1960753703
 GameObject:
   m_ObjectHideFlags: 0
@@ -4430,6 +4585,8 @@ MonoBehaviour:
   room: {fileID: 687393473}
   lockLevel: 0
   roomName: 
+  lockPickable: 0
+  breakable: 0
 --- !u!1 &2061849513
 GameObject:
   m_ObjectHideFlags: 0
@@ -4482,6 +4639,8 @@ MonoBehaviour:
   room: {fileID: 1582195722}
   lockLevel: 0
   roomName: 
+  lockPickable: 0
+  breakable: 0
 --- !u!1 &2081048261
 GameObject:
   m_ObjectHideFlags: 0
