@@ -14,7 +14,8 @@ public class RoomBehavior : MonoBehaviour
     public String roomName = "";
     [SerializeField]
     String roomDescription = "";
-    List<Interactable> ItemList = new List<Interactable>();
+    [SerializeField]
+    List<string> consideredInRoom = new List<string>();
 
     [Header("Visit Text")]
     [SerializeField]
@@ -28,16 +29,23 @@ public class RoomBehavior : MonoBehaviour
 
     private void Awake()
     {
-        InitIteractables();
+        InitInteractables();
     }
 
-    public void InitIteractables()
+    public void InitInteractables()
     {
         ItemDictionary.Clear();
-        ItemList = new List<Interactable>(GetComponentsInChildren<Interactable>());
-        foreach (Interactable item in ItemList)
+        consideredInRoom.Clear();
+        Interactable[] childrenInteractables = GetComponentsInChildren<Interactable>();
+        foreach(Interactable child in childrenInteractables)
         {
-            ItemDictionary.Add(item.interactableName.ToLower(), item);
+            if(!child.destroyed)
+            {
+                Debug.Log(child.interactableName);
+                ItemDictionary.Add(child.interactableName.ToLower(), child);
+                consideredInRoom.Add(child.interactableName.ToLower());
+            }
+            
         }
     }
 
@@ -101,11 +109,6 @@ public class RoomBehavior : MonoBehaviour
         {
             Debug.Log("removed " + item.interactableName);
             ItemDictionary.Remove(item.interactableName.ToLower());
-
-        }
-        if (ItemList.Contains(item))
-        {
-            ItemList.Remove(item);
 
         }
 

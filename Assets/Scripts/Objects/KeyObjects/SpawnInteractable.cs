@@ -55,7 +55,7 @@ public class SpawnInteractable : Interactable
             GameObject spawnedObjectCopy = Instantiate(spawnedObject, transform.parent.position, Quaternion.identity);
             spawnedObjectCopy.SetActive(true);
             spawnedObjectCopy.transform.parent = transform.parent;
-            GetComponentInParent<RoomBehavior>().InitIteractables();
+            GetComponentInParent<RoomBehavior>().InitInteractables();
             gameMangagerText = dialogueManager.GetDialogue(interactableName, "on spawn", IDCard.None.Name);
             GameManager.Instance().AddTextToJournal(gameMangagerText);
         }

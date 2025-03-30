@@ -30,7 +30,7 @@ public class PileOfPaperPHD : Interactable
             GameObject PHDCopy = Instantiate(PHD, transform.parent.position, Quaternion.identity);
             PHDCopy.SetActive(true);
             PHDCopy.transform.parent = transform.parent;
-            GetComponentInParent<RoomBehavior>().InitIteractables();
+            GetComponentInParent<RoomBehavior>().InitInteractables();
             GameManager.Instance().AddTextToJournal("Bafflingly, I find a PHD in the pile of paper.");
         }
     }

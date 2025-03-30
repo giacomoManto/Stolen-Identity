@@ -4,7 +4,7 @@
 Apple : inspect: Any : I look at the apple closely and realize it's probably the most delicious looking apple ive seen. One bite wouldn't hurt anyone… probably?
 Apple : inspect: Doctor : Oh god an apple… better keep my distance.
 
-Apple : eat : Any : You walk over and decide to eat the apple. While munching you realize the apple is delicious. Praise the Apple!
+Apple : eat : Any : I walk over and decide to eat the apple. While munching I realize the apple is delicious. Praise the Apple!
 Apple : eat : Patient : I walk over to the apple ready to take a big bite and then... wait what was I doing? Oh right, I'm an amnesiac patient…
 Apple : eat : Doctor: I…against my better judgement… eat the apple.
 

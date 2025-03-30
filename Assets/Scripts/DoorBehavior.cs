@@ -66,11 +66,11 @@ public class DoorBehavior : Interactable
             if (this.locked)
             {
                 this.locked = false;
-                GameManager.Instance().AddTextToJournal("You skillfully lockpick the door. Unlocking it");
+                GameManager.Instance().AddTextToJournal("I skillfully lockpick the door. With a satisfying click the door unlocks completely.");
             }
             else
             {
-                GameManager.Instance().AddTextToJournal("You spend a couple minutes inserting, twisting and applying pressure to the door lock. This must be the hardest lock you have ever picked. In a bout of frustration you throw your tools on the ground, your alan key bounces up and hits the door knob revealing that it was unlocked the whole time.");
+                GameManager.Instance().AddTextToJournal("I spend a couple minutes inserting, twisting and applying pressure to the door lock. This must be the hardest lock I have ever picked. In a bout of frustration I throw my tools on the ground, my alan key bounces up and hits the door knob revealing that it was unlocked the whole time.");
             }
         }
         else
@@ -86,16 +86,16 @@ public class DoorBehavior : Interactable
             if (this.locked)
             {
                 this.locked = false;
-                GameManager.Instance().AddTextToJournal("You smash a big hole where the door knob used to be.");
+                GameManager.Instance().AddTextToJournal("I smash a big hole where the door knob used to be. A door cant be locked if the locking stuff is not in the door.");
             }
             else
             {
-                GameManager.Instance().AddTextToJournal("You break a hole in the door. It was unlocked before you did this.");
+                GameManager.Instance().AddTextToJournal("I break a hole in the door. It was probably unlocked before I did that but who cares? Its fun to break stuff.");
             }
         }
         else
         {
-            GameManager.Instance().AddTextToJournal("I'm not strong enough for that.");
+            GameManager.Instance().AddTextToJournal("As much as I hate to admit it, I'm not strong enough for that.");
         }
     }
     private void assignRoomIfNone()

@@ -33,8 +33,7 @@ public class ExampleApple : Interactable
     {
         GameManager.Instance().AddTextToJournal("I take a large bite out of the crisp apple. Juice drips down my chin as I start to chew. Each bite fills my mouth with an explosion of flavour which reminds me of ... what does it remind me of?");
         FindFirstObjectByType<PlayerInfo>().removeItem(this);
-        DestroyImmediate(this.gameObject);
-        GameManager.Instance().CurrentPlayerRoom.InitIteractables();
+        GameManager.Instance().destroyInteractble(gameObject);
     }
 
     private void Throw(IDCard id)
@@ -44,7 +43,6 @@ public class ExampleApple : Interactable
         GameObject crushedInstance = Instantiate(crushedApple, transform.parent.position, Quaternion.identity);
         crushedInstance.SetActive(true);
         crushedInstance.transform.parent = GameManager.Instance().CurrentPlayerRoom.transform;
-        GameManager.Instance().CurrentPlayerRoom.InitIteractables();
-        DestroyImmediate(this.gameObject);
+        GameManager.Instance().destroyInteractble(gameObject);
     }
 }

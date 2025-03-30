@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    
+
     [SerializeField]
     private TMP_InputField playerInput;
 
@@ -248,7 +250,7 @@ public class GameManager : MonoBehaviour
     {
         item.transform.parent = player.transform;
         player.addItem(item);
-        currentPlayerRoom.InitIteractables();
+        currentPlayerRoom.InitInteractables();
     }
     #endregion
 
@@ -325,7 +327,7 @@ public class GameManager : MonoBehaviour
             GameObject spawnedObjectCopy = Instantiate(ThiefID, currentPlayerRoom.transform.position, Quaternion.identity);
             spawnedObjectCopy.SetActive(true);
             spawnedObjectCopy.transform.parent = currentPlayerRoom.transform;
-            currentPlayerRoom.InitIteractables();
+            currentPlayerRoom.InitInteractables();
             string gameMangagerText = FindFirstObjectByType<DialogueManager>().GetDialogue("Thief ID", "on spawn", IDCard.None.Name);
             AddTextToJournal(gameMangagerText);
         }
@@ -353,6 +355,16 @@ public class GameManager : MonoBehaviour
         }
         Debug.LogWarning("Attempted to find room by name [" + givenName + "]. Current dictionary size is " + allRooms.Count);
         return null;
+    }
+    public void destroyInteractble(GameObject interactable)
+    {
+
+        CurrentPlayerRoom.removeItemFromDictionary(interactable.GetComponent<Interactable>());
+        interactable.GetComponent<Interactable>().destroyed = true;
+        Destroy(interactable.GetComponent<Interactable>());
+        Destroy(interactable);
+        currentPlayerRoom.InitInteractables();
+
     }
     #endregion
 

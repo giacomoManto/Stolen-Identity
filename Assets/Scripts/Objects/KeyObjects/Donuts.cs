@@ -24,7 +24,7 @@ public class Donuts : Interactable
     {
         try
         {
-            GetComponentInParent<RoomBehavior>().InitIteractables();
+            GetComponentInParent<RoomBehavior>().InitInteractables();
         }
         catch (NullReferenceException)
         {

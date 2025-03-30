@@ -8,6 +8,8 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
+    //putting this here until i figure out whatever the bug is with actually using Destroy();
+    public bool destroyed = false;
     public string interactableName;
 
     private Dictionary<string, Action<IDCard>> actions = new Dictionary<string, Action<IDCard>>();
