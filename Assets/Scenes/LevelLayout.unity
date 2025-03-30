@@ -2524,7 +2524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyed: 0
-  interactableName: painting
+  interactableName: Painting
   locationDescription: A large painting is against the left wall of the office.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
@@ -3874,7 +3874,7 @@ MonoBehaviour:
   - {fileID: 2528295220731421826, guid: 24e75692549a4894f9d9ef0510db8530, type: 3}
   - {fileID: -3578298931649939517, guid: ee2d87b63e3c9054fa0016c825f63757, type: 3}
   - {fileID: -4372663946440342171, guid: f1d62d74e30bb4444b099d5afad2f01c, type: 3}
-  - {fileID: 385903366105015525, guid: 2fdd7d18a80c0e741ae35fd20df688a2, type: 3}
+  - {fileID: 1229262022554434853, guid: 2fdd7d18a80c0e741ae35fd20df688a2, type: 3}
 --- !u!1 &1763008990
 GameObject:
   m_ObjectHideFlags: 0

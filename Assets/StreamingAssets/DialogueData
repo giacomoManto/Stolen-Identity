@@ -86,7 +86,7 @@ coarkboard : on spawn : Any : I take a closer look at the coarkboard and see a t
 
 Painting : inspect : Any : What looks to be a fancy oil painting, its gentle brush strokes depict some sort of jewel encrusted golden microscope. Who even comes up with this stuff?
 Painting : inspect : Doctor: A wonderful painting of my golden microscope. It also perfectly hides the entrance to my vault.
-Painting : inspect : Thief: S
+Painting : inspect : Thief: A painting that's too large to steal, unfortunate.
 Painting : object spawned : Any : The painting is still painted, though there's a small scratch from where I moved it off the wall. Oops?
 Painting : on spawn : Any : I move the painting revealing a large metal Vault Door. Who needs one of these in a hospital? 
 
@@ -151,6 +151,8 @@ Donuts : eat : Any : I check to make sure no one is looking and quickly scarf do
 Donuts : eat : Guard :  I open the box, open my throat and shove all the donuts straight to my stomach. All in a day's work.
 Donuts : eat : Thief : I eat the donuts. Savoring each bite. Knowing these aren't mine made them taste so much better. Only a mastermind criminal such as myself would be able to stomach this crime, literally.
 
+Donuts : discoverID : Any : I discover a guard ID at the bottom of the donut box. Drenched in powdered sugar it may be, it still seems useful to have around.
+
 # I am X fire escape
 Fire Alarm : inspect: Any : Looks like one of those super loud fire alarms that go off once someone goes through a fire exit or if smoke is detected. I probably shouldn't mess with that unless I really have to.
 Fire Alarm : inspect: Doctor: Standard hospital fire alarm, if a bit outdated. These will help keep patients and staff safe from fires.
@@ -168,4 +170,8 @@ Fire Exit : go through : Brawler : I push the metal bar and the door swings open
 #Doors
 door : unlock : Any : The door beeps, accepting the id and I hear the deadbolt retract. I open the door and walk through.
 red door : unlockFail : Any : I rattle the red door’s handle, trying to open it. It looks like it's one of those id card access doors and won't open up until I use a card.
+
+
+
+
 
