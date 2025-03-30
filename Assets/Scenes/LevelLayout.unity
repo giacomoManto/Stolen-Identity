@@ -2979,7 +2979,7 @@ MonoBehaviour:
   destroyed: 0
   interactableName: Pile of Paper
   locationDescription: There is a pile of paper on a clearly disorganized desk.
-  playerCanStore: 1
+  playerCanStore: 0
   dialogueManager: {fileID: 0}
   PHD: {fileID: 7846380480380432487, guid: ba6605a430bf5764187a2bd8bff6802d, type: 3}
 --- !u!1 &1422428916

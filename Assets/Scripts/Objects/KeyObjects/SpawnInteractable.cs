@@ -66,10 +66,7 @@ public class SpawnInteractable : Interactable
         }
         if (destroyOnSpawn)
         {
-            RoomBehavior room = GetComponentInParent<RoomBehavior>();
-            this.transform.parent = null;
-            room.InitInteractables();
-            Destroy(gameObject);
+            GameManager.Instance().DestroyInteractble(this.gameObject);
         }
     }
 }

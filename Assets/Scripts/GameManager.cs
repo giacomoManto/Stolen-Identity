@@ -366,7 +366,7 @@ public class GameManager : MonoBehaviour
         Debug.LogWarning("Attempted to find room by name [" + givenName + "]. Current dictionary size is " + allRooms.Count);
         return null;
     }
-    public void destroyInteractble(GameObject interactable)
+    public void DestroyInteractble(GameObject interactable)
     {
 
         CurrentPlayerRoom.removeItemFromDictionary(interactable.GetComponent<Interactable>());

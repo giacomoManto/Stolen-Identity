@@ -19,10 +19,7 @@ public class LabCoat : Interactable
             if (attemptedToPutOnAsBrawler)
             {
                 GameManager.Instance().AddTextToJournal("I pull the tiny lab coat over my arms. As I bring my arms together I hear a ripping sound. I turn around and find the labcoat ripped to pieces on the floor. I guess my muscles are just too big.");
-                RoomBehavior parent = this.transform.parent.GetComponent<RoomBehavior>();
-                transform.parent = null;
-                parent.InitInteractables();
-                Destroy(this);
+                GameManager.Instance().DestroyInteractble(this.gameObject);
                 return;
             }
             attemptedToPutOnAsBrawler = true;
@@ -35,10 +32,7 @@ public class LabCoat : Interactable
             if (id.Name == IDCard.Doctor.Name)
             {
                 GameManager.Instance().SetFlag("LabCoat", true);
-                RoomBehavior parent = this.transform.parent.GetComponent<RoomBehavior>();
-                transform.parent = null;
-                parent.InitInteractables();
-                Destroy(this);
+                GameManager.Instance().DestroyInteractble(this.gameObject);
             }
         }
     }
