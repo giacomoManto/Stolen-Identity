@@ -203,6 +203,7 @@ Transform:
   - {fileID: 775823340}
   - {fileID: 1990417180}
   - {fileID: 1422428917}
+  - {fileID: 1367396384}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &52509126
@@ -2611,6 +2612,66 @@ MonoBehaviour:
   locationDescription: 
   playerCanStore: 1
   dialogueManager: {fileID: 0}
+--- !u!1 &1367396383
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1367396384}
+  - component: {fileID: 1367396385}
+  m_Layer: 0
+  m_Name: Coarkboard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1367396384
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367396383}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 52509125}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1367396385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367396383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9159d3f56e202542bdd3e2605439624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyed: 0
+  interactableName: coarkboard
+  locationDescription: On one of the walls is a typical employee notice coarkboard.
+    It obviously does not have routine maintenance since it's covered in flyers and
+    paper some from years ago.
+  playerCanStore: 0
+  dialogueManager: {fileID: 0}
+  destroyOnSpawn: 0
+  spawnedObject: {fileID: 83732720592850844, guid: 9acd8f8e8ef97114fa8e8320ddd33409, type: 3}
+  spawnedText: 
+  actionsWhichTriggerSpawn:
+  - inspect
+  - look at
+  - peek at
+  - view
+  - approach
 --- !u!1 &1401071886
 GameObject:
   m_ObjectHideFlags: 0

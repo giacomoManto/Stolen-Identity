@@ -141,6 +141,17 @@ red door : unlockFail : Any : I rattle the red door’s handle, trying to open i
 
 
 # Doctor Route
+
+coarkboard : object spawned : Any : A coarkboard with a whole bunch of notes pinned to it.
+coarkboard : object spawned : Brawler : A coarkboard with a whole bunch of notes pinned to it. I quickly scan it for any information about staff bars or really just bars in the area. I don't find anything.
+coarkboard : on spawn : Any : I take a closer look at the coarkboard and see a tiny little note sticking out from behind it.
+
+Note : inspect : Any : I take a look at the note. Nice quality paper. It reads, "Calling all admirers of the Doctor. I have a secret staff club behind my work area. - The Janitor"
+Note : inspect : Doctor : I take a look at the note. Nice quality paper. It reads, "Calling all admirers of the Doctor. I have a secret staff club behind my work area. - The Janitor". A shiver runs down my spine, I knew the janitor liked me a bit too much but I didn't think I had a fan club.
+Note : read : Any : I take a look at the note. Nice quality paper. It reads, "Calling all admirers of the Doctor. I have a secret staff club behind my work area. - The Janitor"
+Note : read : Doctor : I take a look at the note. Nice quality paper. It reads, "Calling all admirers of the Doctor. I have a secret staff club behind my work area. - The Janitor". A shiver runs down my spine, I knew the janitor liked me a bit too much but I didn't think I had a fan club.
+
+
 Cardboard Cutout : object spawned : Any : A cardboard cutout of a doctor. It's a bit creepy how realistic it looks.
 Cardboard Cutout : on spawn : Any : Taking a closer look at the cutout I realize the Doctor ID pinned to the board is shiny, as if it's a real card and not just a printout.
 
