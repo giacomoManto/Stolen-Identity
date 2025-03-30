@@ -18,7 +18,7 @@ public class Interactable : MonoBehaviour
     protected string locationDescription;
 
     [SerializeField]
-    protected bool playerCanStore = true;
+    protected bool playerCanStore = false;
 
     [SerializeField]
     protected DialogueManager dialogueManager;
