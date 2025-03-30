@@ -24,7 +24,7 @@ public class Donuts : Interactable
     {
         try
         {
-            GetComponentInParent<RoomBehavior>().InitIteractables();
+            GetComponentInParent<RoomBehavior>().InitInteractables();
         }
         catch (NullReferenceException)
         {
@@ -39,7 +39,7 @@ public class Donuts : Interactable
 
         FindFirstObjectByType<PlayerInfo>().removeItem(this);
         // Destroy the eaten donouts
-        DestroyImmediate(this.gameObject);  
+        GameManager.Instance().DestroyInteractble(gameObject);
 
     }
 
@@ -49,7 +49,7 @@ public class Donuts : Interactable
         {
             GameManager.Instance().AddTextToJournal("I give the donuts to the guards by the door. They jump for joy and dive into the donuts. It's as if the world around them has dissapeared they are totally distracted.");
             GameManager.Instance().SetFlag("guardsDistracted", true);
-            DestroyImmediate(this.gameObject);
+            GameManager.Instance().DestroyInteractble(gameObject);
         }
         else
         {

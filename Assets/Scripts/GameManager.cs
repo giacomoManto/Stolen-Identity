@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    
+
     [SerializeField]
     private TMP_InputField playerInput;
 
@@ -17,6 +19,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Dictionary<string, RoomBehavior> allRooms = new Dictionary<string, RoomBehavior>();
 
+    [SerializeField]
+    GameObject ThiefID = null;
+
     private PlayerInfo player;
     private JournalOutput journal;
     private LeftPageOutput leftPageOutput;
@@ -24,7 +29,7 @@ public class GameManager : MonoBehaviour
     private Dictionary<IDCard, int> statRecorder = new Dictionary<IDCard, int>();
     private Dictionary<string, CommandTemplate> genericCommands = new Dictionary<string, CommandTemplate>();
 
-
+    private int itemsStolen = 0;
     private Dictionary<string, bool> gameFlags = new Dictionary<string, bool>();
     public RoomBehavior CurrentPlayerRoom
     {
@@ -65,19 +70,13 @@ public class GameManager : MonoBehaviour
         List<RoomBehavior> temp = new List<RoomBehavior>(rooms);
         foreach (RoomBehavior room in temp)
         {
-            allRooms[room.name] = room;
+            allRooms[room.roomName] = room;
         }
 
-        currentPlayerRoom = allRooms["Starting Room"];
+        currentPlayerRoom = allRooms["Patient Room"];
 
-        addGenericCommand(new CheckBag(this, player));
-        addGenericCommand(new InspectCommand(this));
-        addGenericCommand(new SaveGame(this, player));
-        addGenericCommand(new UseCommand(this));
-        addGenericCommand(new ViewRoom(this, player));
-        addGenericCommand(new InfoCommand(this));
-        addGenericCommand(new HelpCommand(this));
-
+        InitGenericCommands();
+        InitGameFlags();
         // Start coroutine to wait for DialogueManager to load before initializing dialogue elements.
         StartCoroutine(WaitForSingletonSetups());
     }
@@ -98,6 +97,22 @@ public class GameManager : MonoBehaviour
         currentPlayerRoom.OnEnter();
         displayCurrentRoomDesc();
     }
+    private void InitGenericCommands()
+    {
+        addGenericCommand(new CheckBag(this, player));
+        addGenericCommand(new InspectCommand(this));
+        addGenericCommand(new SaveGame(this, player));
+        addGenericCommand(new UseCommand(this));
+        addGenericCommand(new ViewRoom(this, player));
+        addGenericCommand(new InfoCommand(this));
+        addGenericCommand(new HelpCommand(this));
+    }
+
+    private void InitGameFlags()
+    {
+        gameFlags.Add("Thief Ending", false);
+    }
+
     #endregion
 
     #region GameState Management
@@ -245,7 +260,7 @@ public class GameManager : MonoBehaviour
     {
         item.transform.parent = player.transform;
         player.addItem(item);
-        currentPlayerRoom.InitIteractables();
+        currentPlayerRoom.InitInteractables();
     }
     #endregion
 
@@ -314,6 +329,19 @@ public class GameManager : MonoBehaviour
         }
         return false;
     }
+    public void increaseStealCount()
+    {
+        itemsStolen++;
+        if(itemsStolen == 5)
+        {
+            GameObject spawnedObjectCopy = Instantiate(ThiefID, currentPlayerRoom.transform.position, Quaternion.identity);
+            spawnedObjectCopy.SetActive(true);
+            spawnedObjectCopy.transform.parent = currentPlayerRoom.transform;
+            currentPlayerRoom.InitInteractables();
+            string gameMangagerText = FindFirstObjectByType<DialogueManager>().GetDialogue("Thief ID", "on spawn", IDCard.None.Name);
+            AddTextToJournal(gameMangagerText);
+        }
+    }
     #endregion
 
     #region Room Management
@@ -328,6 +356,25 @@ public class GameManager : MonoBehaviour
         updateJournalLeftSide();
         room.OnEnter();
         displayCurrentRoomDesc();
+    }
+    public RoomBehavior GetRoomByName(string givenName)
+    {
+        if (allRooms.ContainsKey(givenName))
+        {
+            return allRooms[givenName];
+        }
+        Debug.LogWarning("Attempted to find room by name [" + givenName + "]. Current dictionary size is " + allRooms.Count);
+        return null;
+    }
+    public void DestroyInteractble(GameObject interactable)
+    {
+
+        CurrentPlayerRoom.removeItemFromDictionary(interactable.GetComponent<Interactable>());
+        interactable.GetComponent<Interactable>().destroyed = true;
+        Destroy(interactable.GetComponent<Interactable>());
+        Destroy(interactable);
+        currentPlayerRoom.InitInteractables();
+
     }
     #endregion
 

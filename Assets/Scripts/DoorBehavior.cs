@@ -11,7 +11,16 @@ public class DoorBehavior : Interactable
     [SerializeField]
     private int lockLevel = 0;
 
+    [SerializeField]
+    private string roomName = "";
+
     private bool locked = true;
+
+    [SerializeField]
+    private bool lockPickable = false;
+
+    [SerializeField]
+    private bool breakable = false;
 
     private void Start()
     {
@@ -25,6 +34,8 @@ public class DoorBehavior : Interactable
         this.RegisterAction("lockpick", Lockpick);
         this.RegisterAction("breakdown", Breakdown);
         this.RegisterAction("break", Breakdown);
+        
+        
     }
 
     public DoorBehavior() : base()
@@ -36,8 +47,9 @@ public class DoorBehavior : Interactable
 
     private void GoThrough(IDCard id)
     {
+        assignRoomIfNone();
         if (!locked) {
-            GameManager.Instance().AddTextToJournal("I go through the door.");
+            GameManager.Instance().AddTextToJournal("I go through the " + interactableName + ".");
             GameManager.Instance().changeRoom(room);
         }
         else
@@ -49,46 +61,61 @@ public class DoorBehavior : Interactable
             }
             else
             {
-                GameManager.Instance().AddTextToJournal(GetTextFromJson("door", "unlockFail", id));
+                if (GetTextFromJson(interactableName, "unlockFail", id).Contains("unlockFail"))
+                {
+                    GameManager.Instance().AddTextToJournal("The door is locked. I need a higher security level to unlock it.");
+                }
+                else
+                {
+                    GameManager.Instance().AddTextToJournal(GetTextFromJson(interactableName, "unlockFail", id));
+                }
             }
         }
     }
 
     private void Lockpick(IDCard id) {
+        assignRoomIfNone();
         if (id.Equals(IDCard.Thief)) {
-            if (this.locked)
+            if (this.lockPickable && this.locked)
             {
                 this.locked = false;
-                GameManager.Instance().AddTextToJournal("PLACEHOLDER: You skillfully lockpick the door. Unlocking it");
+                GameManager.Instance().AddTextToJournal("I skillfully lockpick the door. With a satisfying click the door unlocks completely.");
             }
             else
             {
-                GameManager.Instance().AddTextToJournal("PLACEHOLDER: You spend a couple minutes inserting, twisting and applying pressure to the door lock. This must be the hardest lock you have ever picked. In a bout of frustration you throw your tools on the ground, your alan key bounces up and hits the door knob revealing that it was unlocked the whole time.");
+                GameManager.Instance().AddTextToJournal("I spend a couple minutes inserting, twisting and applying pressure to the door lock. This must be the hardest lock I have ever picked. In a bout of frustration I throw my tools on the ground, my alan key bounces up and hits the door knob revealing that it was unlocked the whole time.");
             }
         }
         else
         {
-            GameManager.Instance().AddTextToJournal("PLACEHOLDER: I don't know how to do that.");
+            GameManager.Instance().AddTextToJournal("I don't know how to do that.");
         }
     }
 
     private void Breakdown(IDCard id) {
+        assignRoomIfNone();
         if (id.Equals(IDCard.Brawler))
         {
-            if (this.locked)
+            if (this.breakable && this.locked)
             {
                 this.locked = false;
-                GameManager.Instance().AddTextToJournal("PLACEHOLDER: You smash a big hole where the door knob used to be.");
+                GameManager.Instance().AddTextToJournal("I smash a big hole where the door knob used to be. A door cant be locked if the locking stuff is not in the door.");
             }
             else
             {
-                GameManager.Instance().AddTextToJournal("PLACEHOLDER: You break a hole in the door. It was unlocked before you did this.");
+                GameManager.Instance().AddTextToJournal("I break a hole in the door. It was probably unlocked before I did that but who cares? Its fun to break stuff.");
             }
         }
         else
         {
-            GameManager.Instance().AddTextToJournal("PLACEHOLDER: I'm not strong enough for that.");
+            GameManager.Instance().AddTextToJournal("As much as I hate to admit it, I'm not strong enough for that.");
         }
     }
-
+    private void assignRoomIfNone()
+    {
+        if (roomName != "" && room == null)
+        {
+            room = GameManager.Instance().GetRoomByName(roomName);
+        }
+    }
     }

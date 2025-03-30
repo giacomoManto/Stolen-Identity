@@ -163,7 +163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bb591057174da2439f3782dfb96b560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyed: 0
   interactableName: Fire Alarm
   locationDescription: A fire alarm sits on the wall by a water cooler.
   playerCanStore: 0
@@ -203,7 +202,6 @@ Transform:
   - {fileID: 775823340}
   - {fileID: 1990417180}
   - {fileID: 1422428917}
-  - {fileID: 1367396384}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &52509126
@@ -224,7 +222,6 @@ MonoBehaviour:
     casual tables, and chairs create a comfortable setting. It seems there are a
     few people on break, but none of them seem really interested in breaking the
     peace or are just too tired to do so. '
-  consideredInRoom: []
   visitText: []
   allAfter: 
 --- !u!1 &62986275
@@ -366,7 +363,6 @@ Transform:
   - {fileID: 1501790959}
   - {fileID: 1950406219}
   - {fileID: 2124758852}
-  - {fileID: 2081048262}
   - {fileID: 275165891}
   - {fileID: 1582195721}
   - {fileID: 52509125}
@@ -376,68 +372,6 @@ Transform:
   - {fileID: 450535963}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &68484631
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 68484632}
-  - component: {fileID: 68484633}
-  m_Layer: 0
-  m_Name: Cardboard Cutout Of Doctor
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &68484632
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 68484631}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2081048262}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &68484633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 68484631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9159d3f56e202542bdd3e2605439624, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyed: 0
-  interactableName: Cardboard Cutout
-  locationDescription: In the middle of the shrine is a cardboard cutout of the doctor.
-    This is creepy.
-  playerCanStore: 0
-  dialogueManager: {fileID: 0}
-  destroyOnSpawn: 0
-  spawnedObject: {fileID: 488915322010265457, guid: 5c58b602e84f8144eb58b98c4d490ec1, type: 3}
-  spawnedText: 
-  actionsWhichTriggerSpawn:
-  - inspect
-  - look at
-  - fiddle
-  - fiddle with
-  - peek at
-  - stare at
-  - poke
-  - touch
 --- !u!1 &79739998
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,7 +447,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInput: {fileID: 0}
   currentPlayerRoom: {fileID: 0}
-  ThiefID: {fileID: 6448042394550906417, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
 --- !u!4 &145529331
 Transform:
   m_ObjectHideFlags: 0
@@ -648,16 +581,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyed: 0
   interactableName: red door
   locationDescription: There is a red door that leads to the room I woke up in.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
   room: {fileID: 1456374742}
   lockLevel: 0
-  roomName: 
-  lockPickable: 0
-  breakable: 0
 --- !u!1 &201844054
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,7 +696,6 @@ Transform:
   - {fileID: 1948041384}
   - {fileID: 526537624}
   - {fileID: 36046826}
-  - {fileID: 1763008991}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &275165892
@@ -786,7 +714,6 @@ MonoBehaviour:
   roomName: Hospital Lobby
   roomDescription: I move into a brightly lit hospital lobby, complete with a seating
     area for those awaiting admission.
-  consideredInRoom: []
   visitText: []
   allAfter: 
 --- !u!1 &289139624
@@ -821,7 +748,6 @@ Transform:
   m_Children:
   - {fileID: 444190420}
   - {fileID: 1189908567}
-  - {fileID: 1091062517}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &289139626
@@ -839,68 +765,8 @@ MonoBehaviour:
   securityLevel: 2
   roomName: Doctor Office
   roomDescription: 'I glance around, recognizing this as a doctor''s office. '
-  consideredInRoom: []
   visitText: []
   allAfter: 
---- !u!1 &354027864
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 354027865}
-  - component: {fileID: 354027866}
-  m_Layer: 0
-  m_Name: Health Poster
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &354027865
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 354027864}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1950406219}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &354027866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 354027864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9159d3f56e202542bdd3e2605439624, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyed: 0
-  interactableName: Health Poster
-  locationDescription: 
-  playerCanStore: 0
-  dialogueManager: {fileID: 0}
-  destroyOnSpawn: 1
-  spawnedObject: {fileID: 4899724337514399428, guid: 23e61882b2d665e408b10887b516a747, type: 3}
-  spawnedText: 
-  actionsWhichTriggerSpawn:
-  - remove
-  - destroy
-  - tear
-  - take
-  - pull
-  - destroy
 --- !u!1 &395825187
 GameObject:
   m_ObjectHideFlags: 0
@@ -935,11 +801,6 @@ Transform:
   - {fileID: 79740000}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &397591039 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8071382534770958044, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
-  m_PrefabInstance: {fileID: 3812411592218610489}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &444190419
 GameObject:
   m_ObjectHideFlags: 0
@@ -984,7 +845,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyed: 0
   interactableName: paper covered door
   locationDescription: There seems to be a... paper covered door? Which I think leads
     into some sort of doctors office.
@@ -992,9 +852,6 @@ MonoBehaviour:
   dialogueManager: {fileID: 0}
   room: {fileID: 52509126}
   lockLevel: 0
-  roomName: 
-  lockPickable: 0
-  breakable: 0
 --- !u!1 &450535962
 GameObject:
   m_ObjectHideFlags: 0
@@ -1024,8 +881,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 983849251}
-  - {fileID: 397591039}
+  - {fileID: 538016600}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &453564231
@@ -1059,7 +915,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1317429840}
-  - {fileID: 1407446880}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &453564233
@@ -1079,7 +934,6 @@ MonoBehaviour:
   roomDescription: 'I wander into a pristine vault that feels out of place in a hospital.
     Cold, bare steel walls and a few fluorescent lights illuminate the spotless,
     clinical space. '
-  consideredInRoom: []
   visitText: []
   allAfter: 
 --- !u!1 &464826050
@@ -1229,7 +1083,6 @@ MonoBehaviour:
   roomDescription: 'I walk into an awfully dull hallway that seems to connect patient
     rooms and the main wing of the hospital. I hope these people learn to decorate
     sometime soon. '
-  consideredInRoom: []
   visitText:
   - "One thing\u2019s for sure: the more I write in this journal and start to remember,
     the more determined I am to get out of here. I can only take the glaring lights,
@@ -1464,16 +1317,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28170560485a37a4c8ab3f7b7a0cf4b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyed: 0
   interactableName: Exit Door
-  locationDescription: A large glass exit door leading to the the outside.
-  playerCanStore: 0
+  locationDescription: A large glass exit door leading to the the outside. Standing
+    at attention next to each side fo the door are two guards.
+  playerCanStore: 1
   dialogueManager: {fileID: 0}
---- !u!4 &538016600 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2061239146618224918, guid: 0f1609ade90d79743a2d8104281930f9, type: 3}
-  m_PrefabInstance: {fileID: 4789754911816875678}
+--- !u!1 &538016599
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 538016600}
+  - component: {fileID: 538016601}
+  m_Layer: 0
+  m_Name: Brawler ID
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &538016600
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538016599}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 450535963}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &538016601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538016599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63384af4533103e43beeeec67b3432cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableName: Guard ID
+  locationDescription: There also is some sort of Patient ID which rests atop a patients
+    bedside table.
+  playerCanStore: 1
+  dialogueManager: {fileID: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1602,7 +1499,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyed: 0
   interactableName: metallic door
   locationDescription: The metallic door to the break room remains squarely behind
     me.
@@ -1610,9 +1506,6 @@ MonoBehaviour:
   dialogueManager: {fileID: 0}
   room: {fileID: 52509126}
   lockLevel: 0
-  roomName: 
-  lockPickable: 0
-  breakable: 0
 --- !u!1 &653568686
 GameObject:
   m_ObjectHideFlags: 0
@@ -1657,7 +1550,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyed: 0
   interactableName: green door
   locationDescription: There is also a green door that seems to lead another patient
     room.
@@ -1665,9 +1557,6 @@ MonoBehaviour:
   dialogueManager: {fileID: 0}
   room: {fileID: 1499385321}
   lockLevel: 0
-  roomName: 
-  lockPickable: 0
-  breakable: 0
 --- !u!1 &673477764
 GameObject:
   m_ObjectHideFlags: 0
@@ -1712,7 +1601,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63384af4533103e43beeeec67b3432cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyed: 0
   interactableName: Patient ID
   locationDescription: There also is some sort of Patient ID which rests atop a patients
     bedside table.
@@ -1749,7 +1637,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 643913728}
-  - {fileID: 1820977942}
+  - {fileID: 2142000704}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &687393473
@@ -1769,7 +1657,6 @@ MonoBehaviour:
   roomDescription: "I step into a somewhat cluttered storage room. Metal racks loaded
     with a random assortment of boxes line the walls\u2014finding anything in this
     jumble would be a real challenge. "
-  consideredInRoom: []
   visitText: []
   allAfter: 
 --- !u!1 &688669856
@@ -1816,7 +1703,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bb591057174da2439f3782dfb96b560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyed: 0
   interactableName: Fire Alarm
   locationDescription: There is a fire alarm on the southern wall.
   playerCanStore: 0
@@ -1865,7 +1751,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bb591057174da2439f3782dfb96b560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyed: 0
   interactableName: Fire Alarm
   locationDescription: A fire alarm rests on the wall by the door.
   playerCanStore: 0
@@ -1914,7 +1799,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyed: 0
   interactableName: paper covered door
   locationDescription: There seems to be a... paper covered door? Which I think leads
     into some sort of doctors office.
@@ -1922,9 +1806,6 @@ MonoBehaviour:
   dialogueManager: {fileID: 0}
   room: {fileID: 289139626}
   lockLevel: 0
-  roomName: 
-  lockPickable: 0
-  breakable: 0
 --- !u!1 &783765243
 GameObject:
   m_ObjectHideFlags: 0
@@ -2093,16 +1974,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyed: 0
   interactableName: orange door
   locationDescription: In front of me there is a orange door with no windows.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
   room: {fileID: 1501790960}
   lockLevel: 0
-  roomName: 
-  lockPickable: 0
-  breakable: 0
 --- !u!1 &958311107
 GameObject:
   m_ObjectHideFlags: 0
@@ -2147,66 +2024,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bb591057174da2439f3782dfb96b560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyed: 0
   interactableName: Fire Alarm
   locationDescription: A red fire alarm is next to the water cooler bubbling in the
     corner of the room.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
---- !u!1 &958371312
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 958371313}
-  - component: {fileID: 958371314}
-  m_Layer: 0
-  m_Name: DoorToJanitorMaze
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &958371313
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 958371312}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 363.85022, y: -65.920044, z: 7.3483124}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2081048262}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &958371314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 958371312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyed: 0
-  interactableName: hole in the wall
-  locationDescription: Behind me there is the hole in the wall that I came in through.
-  playerCanStore: 0
-  dialogueManager: {fileID: 0}
-  room: {fileID: 2124758853}
-  lockLevel: 0
-  roomName: 
-  lockPickable: 0
-  breakable: 0
 --- !u!1 &981524479
 GameObject:
   m_ObjectHideFlags: 0
@@ -2251,7 +2073,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyed: 0
   interactableName: black door
   locationDescription: The black door I walked through remains behind me, leading
     back to the cubicle work area.
@@ -2259,19 +2080,6 @@ MonoBehaviour:
   dialogueManager: {fileID: 0}
   room: {fileID: 1501790960}
   lockLevel: 0
-  roomName: 
-  lockPickable: 0
-  breakable: 0
---- !u!1 &983849250 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1076241964794849526, guid: a5a04b823225513449a01a1fe3063c1c, type: 3}
-  m_PrefabInstance: {fileID: 478548081088523399}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &983849251 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4959320627190995484, guid: a5a04b823225513449a01a1fe3063c1c, type: 3}
-  m_PrefabInstance: {fileID: 478548081088523399}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1016301092
 GameObject:
   m_ObjectHideFlags: 0
@@ -2406,7 +2214,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyed: 0
   interactableName: red door
   locationDescription: A red door with a small pane of glass is at the far end of
     the room. It looks like it leads into some sort of hallway.
@@ -2414,132 +2221,6 @@ MonoBehaviour:
   dialogueManager: {fileID: 0}
   room: {fileID: 479178962}
   lockLevel: 1
-  roomName: 
-  lockPickable: 0
-  breakable: 0
---- !u!1001 &1088189800
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2124758852}
-    m_Modifications:
-    - target: {fileID: 1471054829686080370, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
-      propertyPath: m_Name
-      value: Calling Card
-      objectReference: {fileID: 0}
-    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
---- !u!4 &1088189801 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
-  m_PrefabInstance: {fileID: 1088189800}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1091062516
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1091062517}
-  - component: {fileID: 1091062518}
-  m_Layer: 0
-  m_Name: Painting
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1091062517
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1091062516}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 289139625}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1091062518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1091062516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9159d3f56e202542bdd3e2605439624, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyed: 0
-  interactableName: Painting
-  locationDescription: A large painting is against the left wall of the office.
-  playerCanStore: 0
-  dialogueManager: {fileID: 0}
-  destroyOnSpawn: 0
-  spawnedObject: {fileID: 3366364370833142340, guid: 4af069c9251737547b85eaaa12802869, type: 3}
-  spawnedText: 
-  actionsWhichTriggerSpawn:
-  - remove
-  - move
-  - break
-  - tear
-  - yank
-  - unmount
-  - take off the
-  - take off
 --- !u!1 &1189908566
 GameObject:
   m_ObjectHideFlags: 0
@@ -2584,7 +2265,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bb591057174da2439f3782dfb96b560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyed: 0
   interactableName: Fire Alarm
   locationDescription: A fire alarm lathered in a coat of cream paint (must have
     received the landlord special) that roughly matches the wall color is next to
@@ -2635,7 +2315,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyed: 0
   interactableName: grey door
   locationDescription: Behind me is the grey door that goes back to the cubicle work
     area.
@@ -2643,9 +2322,6 @@ MonoBehaviour:
   dialogueManager: {fileID: 0}
   room: {fileID: 1501790960}
   lockLevel: 0
-  roomName: 
-  lockPickable: 0
-  breakable: 0
 --- !u!1 &1317429839
 GameObject:
   m_ObjectHideFlags: 0
@@ -2655,7 +2331,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1317429840}
-  - component: {fileID: 1317429842}
+  - component: {fileID: 1317429841}
   m_Layer: 0
   m_Name: Labcoat
   m_TagString: Untagged
@@ -2678,7 +2354,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 453564232}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1317429842
+--- !u!114 &1317429841
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2687,15 +2363,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1317429839}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3937dd799e2f7c94092f04d921a5c911, type: 3}
+  m_Script: {fileID: 11500000, guid: 951cf8aff516b9845b4922f775221d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyed: 0
-  interactableName: Lab Coat
-  locationDescription: On a pedestal in the middle of the vault is a lab coat,.
+  interactableName: Labcoat
+  locationDescription: 
   playerCanStore: 1
   dialogueManager: {fileID: 0}
---- !u!1 &1367396383
+--- !u!1 &1394184038
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2703,58 +2378,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1367396384}
-  - component: {fileID: 1367396385}
+  - component: {fileID: 1394184039}
+  - component: {fileID: 1394184040}
   m_Layer: 0
-  m_Name: Coarkboard
+  m_Name: Apple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1367396384
+--- !u!4 &1394184039
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1367396383}
+  m_GameObject: {fileID: 1394184038}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1025.7123, y: -519.346, z: 3.1467535}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 52509125}
+  m_Father: {fileID: 1456374741}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1367396385
+--- !u!114 &1394184040
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1367396383}
+  m_GameObject: {fileID: 1394184038}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9159d3f56e202542bdd3e2605439624, type: 3}
+  m_Script: {fileID: 11500000, guid: 7cfbcdced7fe8f54ea00b638ec2167f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyed: 0
-  interactableName: coarkboard
-  locationDescription: On one of the walls is a typical employee notice coarkboard.
-    It obviously does not have routine maintenance since it's covered in flyers and
-    paper some from years ago.
-  playerCanStore: 0
+  interactableName: Apple
+  locationDescription: A delecious red apple lies on what appears to be a doctors
+    desk.
+  playerCanStore: 1
   dialogueManager: {fileID: 0}
-  destroyOnSpawn: 0
-  spawnedObject: {fileID: 83732720592850844, guid: 9acd8f8e8ef97114fa8e8320ddd33409, type: 3}
-  spawnedText: 
-  actionsWhichTriggerSpawn:
-  - inspect
-  - look at
-  - peek at
-  - view
-  - approach
+  crushedApple: {fileID: 0}
 --- !u!1 &1401071886
 GameObject:
   m_ObjectHideFlags: 0
@@ -2878,60 +2543,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1401071886}
   m_CullTransparentMesh: 1
---- !u!1 &1407446879
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1407446880}
-  - component: {fileID: 1407446881}
-  m_Layer: 0
-  m_Name: DoorToDoctorOffice
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1407446880
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1407446879}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 453564232}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1407446881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1407446879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyed: 0
-  interactableName: Vault Door
-  locationDescription: Behind me there is a vault door. It's the one I came in through.
-  playerCanStore: 0
-  dialogueManager: {fileID: 0}
-  room: {fileID: 289139626}
-  lockLevel: 0
-  roomName: 
-  lockPickable: 0
-  breakable: 0
 --- !u!1 &1414727509
 GameObject:
   m_ObjectHideFlags: 0
@@ -2976,10 +2587,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5521eaba4587514488c2838b3f8b9cbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyed: 0
   interactableName: Pile of Paper
   locationDescription: There is a pile of paper on a clearly disorganized desk.
-  playerCanStore: 0
+  playerCanStore: 1
   dialogueManager: {fileID: 0}
   PHD: {fileID: 7846380480380432487, guid: ba6605a430bf5764187a2bd8bff6802d, type: 3}
 --- !u!1 &1422428916
@@ -3026,67 +2636,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bb591057174da2439f3782dfb96b560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyed: 0
   interactableName: Fire Alarm
   locationDescription: There is an old fire alarm half sticking out from behind the
     refrigerator.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
---- !u!1 &1428822187
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1428822188}
-  - component: {fileID: 1428822189}
-  m_Layer: 0
-  m_Name: DoorToJanitorRoom
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1428822188
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1428822187}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2124758852}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1428822189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1428822187}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyed: 0
-  interactableName: hidden door
-  locationDescription: The hidden door remains behind me which leads back to the
-    janitor room.
-  playerCanStore: 0
-  dialogueManager: {fileID: 0}
-  room: {fileID: 1950406220}
-  lockLevel: 0
-  roomName: 
-  lockPickable: 0
-  breakable: 0
 --- !u!1 &1444359589
 GameObject:
   m_ObjectHideFlags: 0
@@ -3131,16 +2685,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyed: 0
   interactableName: white door
   locationDescription: There seems to be a white door at the end of the hallway.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
   room: {fileID: 52509126}
   lockLevel: 0
-  roomName: 
-  lockPickable: 0
-  breakable: 0
 --- !u!1 &1456374740
 GameObject:
   m_ObjectHideFlags: 0
@@ -3171,7 +2721,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7063798344599000805}
+  - {fileID: 1394184039}
   - {fileID: 1039126090}
   - {fileID: 673477765}
   - {fileID: 688669857}
@@ -3193,7 +2743,6 @@ MonoBehaviour:
   roomName: Patient Room
   roomDescription: 'I look around the foreign room, taking in the details. Theres
     a few more patient beds next to mine, all empty. '
-  consideredInRoom: []
   visitText:
   - "I woke up in a hospital bed with no idea who I am. I found this journal on the
     bedside table, so I\u2019m using it to keep track of everything I do and see\u2014maybe
@@ -3242,7 +2791,6 @@ Transform:
   m_Children:
   - {fileID: 1902775118}
   - {fileID: 771437825}
-  - {fileID: 538016600}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1499385321
@@ -3262,7 +2810,6 @@ MonoBehaviour:
   roomDescription: 'Looks almost identical to the patient room I woke up in, except
     there''s a few more beds and slightly more sunlight. To the left of me there''s
     a trash can filled with used gauze. '
-  consideredInRoom: []
   visitText: []
   allAfter: 
 --- !u!1 &1501790958
@@ -3301,8 +2848,6 @@ Transform:
   - {fileID: 1520839185}
   - {fileID: 1414727510}
   - {fileID: 958311108}
-  - {fileID: 1844631724}
-  - {fileID: 1960753704}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1501790960
@@ -3321,7 +2866,6 @@ MonoBehaviour:
   roomName: Cubicle Work Area
   roomDescription: I look around the decently sized area with various cubicles. The
     walls aren't very tall so I can easily see into the work areas.
-  consideredInRoom: []
   visitText: []
   allAfter: 
 --- !u!1 &1520839184
@@ -3368,16 +2912,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyed: 0
   interactableName: blue door
   locationDescription: There is a blue door to what looks like a lobby.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
   room: {fileID: 275165892}
   lockLevel: 0
-  roomName: 
-  lockPickable: 0
-  breakable: 0
 --- !u!1 &1582195720
 GameObject:
   m_ObjectHideFlags: 0
@@ -3429,7 +2969,6 @@ MonoBehaviour:
   roomDescription: "I find myself in a corridor that resembles the patient hallway
     I passed earlier, but with tighter security\u2014ceiling cameras and patrolling
     guards keep a close watch. "
-  consideredInRoom: []
   visitText: []
   allAfter: 
 --- !u!1 &1586635845
@@ -3583,111 +3122,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 2
---- !u!1 &1607334677
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1607334678}
-  - component: {fileID: 1607334679}
-  m_Layer: 0
-  m_Name: DoorToJanitorShrine
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1607334678
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1607334677}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2124758852}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1607334679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1607334677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyed: 0
-  interactableName: hole in the wall
-  locationDescription: There is a hole in the wall in front of me with what looks
-    like candles in the room it leads to.
-  playerCanStore: 0
-  dialogueManager: {fileID: 0}
-  room: {fileID: 2081048263}
-  lockLevel: 0
-  roomName: 
-  lockPickable: 0
-  breakable: 0
---- !u!1 &1635026050
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1635026051}
-  - component: {fileID: 1635026052}
-  m_Layer: 0
-  m_Name: Janitor Journal
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1635026051
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1635026050}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2081048262}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1635026052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1635026050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 951cf8aff516b9845b4922f775221d55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyed: 0
-  interactableName: Janitor's Journal
-  locationDescription: On the floor below the shrine is a notebook. I lean forward
-    to take a closer look and see that it is the Janitor's Journal.
-  playerCanStore: 0
-  dialogueManager: {fileID: 0}
 --- !u!1 &1679773187
 GameObject:
   m_ObjectHideFlags: 0
@@ -3732,7 +3166,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyed: 0
   interactableName: black door
   locationDescription: Theres a secure looking, metal black door which seems to lead
     deeper into the hospital.
@@ -3740,9 +3173,6 @@ MonoBehaviour:
   dialogueManager: {fileID: 0}
   room: {fileID: 1582195722}
   lockLevel: 0
-  roomName: 
-  lockPickable: 0
-  breakable: 0
 --- !u!1 &1688797945
 GameObject:
   m_ObjectHideFlags: 0
@@ -3787,16 +3217,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyed: 0
   interactableName: grey door
   locationDescription: There is a grey door to what looks like a Janitor Room.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
   room: {fileID: 1950406220}
   lockLevel: 0
-  roomName: 
-  lockPickable: 0
-  breakable: 0
 --- !u!1 &1747834899
 GameObject:
   m_ObjectHideFlags: 0
@@ -3874,57 +3300,7 @@ MonoBehaviour:
   - {fileID: 2528295220731421826, guid: 24e75692549a4894f9d9ef0510db8530, type: 3}
   - {fileID: -3578298931649939517, guid: ee2d87b63e3c9054fa0016c825f63757, type: 3}
   - {fileID: -4372663946440342171, guid: f1d62d74e30bb4444b099d5afad2f01c, type: 3}
-  - {fileID: 1229262022554434853, guid: 2fdd7d18a80c0e741ae35fd20df688a2, type: 3}
---- !u!1 &1763008990
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1763008991}
-  - component: {fileID: 1763008992}
-  m_Layer: 0
-  m_Name: Two Guards
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1763008991
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1763008990}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 275165891}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1763008992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1763008990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3cf7926d7f461d4897fb473645a563e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyed: 0
-  interactableName: guards
-  locationDescription: Standing at attention next to each side of the exit door are
-    two guards.
-  playerCanStore: 1
-  dialogueManager: {fileID: 0}
+  - {fileID: 385903366105015525, guid: 2fdd7d18a80c0e741ae35fd20df688a2, type: 3}
 --- !u!1 &1788951274
 GameObject:
   m_ObjectHideFlags: 0
@@ -4076,7 +3452,519 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1788951274}
   m_CullTransparentMesh: 1
---- !u!1001 &1820977941
+--- !u!4 &1800498458 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
+  m_PrefabInstance: {fileID: 3158035715406404140}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1902775117
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1902775118}
+  - component: {fileID: 1902775119}
+  m_Layer: 0
+  m_Name: DoorToPatientHallway
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1902775118
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902775117}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1499385320}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1902775119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902775117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableName: green door
+  locationDescription: Behind me is the green door I came in through.
+  playerCanStore: 0
+  dialogueManager: {fileID: 0}
+  room: {fileID: 479178962}
+  lockLevel: 0
+--- !u!1 &1948041383
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1948041384}
+  - component: {fileID: 1948041385}
+  m_Layer: 0
+  m_Name: DoorToCubicleWorkArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1948041384
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948041383}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 275165891}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1948041385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948041383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableName: blue door
+  locationDescription: There is a blue door to the cubicle area.
+  playerCanStore: 0
+  dialogueManager: {fileID: 0}
+  room: {fileID: 1501790960}
+  lockLevel: 0
+--- !u!1 &1950406218
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1950406219}
+  - component: {fileID: 1950406220}
+  m_Layer: 0
+  m_Name: Janitor Room
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1950406219
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950406218}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1261492215}
+  m_Father: {fileID: 64296177}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1950406220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950406218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b7dfc23fdc50e74780c1f47aa89fdd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  securityLevel: 0
+  roomName: Janitor Room
+  roomDescription: I step into a bright, tidy room clearly maintained by the janitor.
+    Despite the age of the equipment, everything appears well cared for.
+  visitText: []
+  allAfter: 
+--- !u!1 &1950935140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1950935141}
+  - component: {fileID: 1950935142}
+  m_Layer: 0
+  m_Name: Bar Rewards Card
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1950935141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950935140}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 275165891}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1950935142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950935140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951cf8aff516b9845b4922f775221d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableName: Bar Rewards Card
+  locationDescription: 
+  playerCanStore: 1
+  dialogueManager: {fileID: 0}
+--- !u!1 &1951043251
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1951043252}
+  - component: {fileID: 1951043253}
+  m_Layer: 0
+  m_Name: DoorToPatientHallway
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1951043252
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951043251}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1501790959}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1951043253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951043251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableName: orange door
+  locationDescription: There is a orange door that I know goes to the patient hallway.
+  playerCanStore: 0
+  dialogueManager: {fileID: 0}
+  room: {fileID: 479178962}
+  lockLevel: 0
+--- !u!1 &1990417179
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1990417180}
+  - component: {fileID: 1990417181}
+  m_Layer: 0
+  m_Name: DoorToStorageRoom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1990417180
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990417179}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 52509125}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1990417181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990417179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableName: metallic door
+  locationDescription: On the wall adjacent to me there appears to be a metallic
+    door labelled storage room.
+  playerCanStore: 0
+  dialogueManager: {fileID: 0}
+  room: {fileID: 687393473}
+  lockLevel: 0
+--- !u!1 &2061849513
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2061849514}
+  - component: {fileID: 2061849515}
+  m_Layer: 0
+  m_Name: DoorToGuardedHallway
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2061849514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061849513}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 52509125}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2061849515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061849513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableName: white door
+  locationDescription: The white door I came remains shuts behind me.
+  playerCanStore: 0
+  dialogueManager: {fileID: 0}
+  room: {fileID: 1582195722}
+  lockLevel: 0
+--- !u!1 &2094455742
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2094455743}
+  - component: {fileID: 2094455745}
+  m_Layer: 0
+  m_Name: Fire Exit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2094455743
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094455742}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 479178961}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2094455745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094455742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce85976fb8a33c441ac9964330439739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableName: Fire Exit
+  locationDescription: A large red fire exit is at the end of the hallway.
+  playerCanStore: 1
+  dialogueManager: {fileID: 0}
+--- !u!1 &2098709137
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2098709138}
+  - component: {fileID: 2098709139}
+  m_Layer: 0
+  m_Name: Donuts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2098709138
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098709137}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 52509125}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2098709139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098709137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5461495efe37d74c92d6234ee7e6151, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableName: Donuts
+  locationDescription: A juicy box of donuts sits on a cheap plastic table in the
+    middle of the room.
+  playerCanStore: 1
+  dialogueManager: {fileID: 0}
+  lobbyRoom: {fileID: 275165892}
+  guardID: {fileID: 3324175017169126525, guid: 1b9f3927644c84f439f1c2fd58c7df9a, type: 3}
+--- !u!1 &2124758851
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2124758852}
+  - component: {fileID: 2124758853}
+  m_Layer: 0
+  m_Name: Janitor Maze
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2124758852
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124758851}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1800498458}
+  m_Father: {fileID: 64296177}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2124758853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124758851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b7dfc23fdc50e74780c1f47aa89fdd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  securityLevel: 0
+  roomName: Janitor Maze
+  roomDescription: "I enter a space that sharply contrasts with the neat janitor
+    room. Here, outdated and discarded equipment forms chaotic walls, arranged in
+    a way that almost seems intentional\u2014as if someone designed this mess to
+    be a maze."
+  visitText: []
+  allAfter: 
+--- !u!4 &2142000704 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1807000532342806654, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
+  m_PrefabInstance: {fileID: 1305169199415102286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1305169199415102286
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -4084,38 +3972,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 687393472}
     m_Modifications:
-    - target: {fileID: 1011865646109826233, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
-      propertyPath: thisName
-      value: Glass Case
-      objectReference: {fileID: 0}
-    - target: {fileID: 1011865646109826233, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
-      propertyPath: spawnedObject
-      value: 
-      objectReference: {fileID: 983849250}
-    - target: {fileID: 1011865646109826233, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
-      propertyPath: locationDescription
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1011865646109826233, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
-      propertyPath: actionsWhichTriggerSpawn.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1011865646109826233, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
-      propertyPath: 'actionsWhichTriggerSpawn.Array.data[0]'
-      value: use
-      objectReference: {fileID: 0}
-    - target: {fileID: 1011865646109826233, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
-      propertyPath: 'actionsWhichTriggerSpawn.Array.data[1]'
-      value: open
-      objectReference: {fileID: 0}
-    - target: {fileID: 1011865646109826233, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
-      propertyPath: 'actionsWhichTriggerSpawn.Array.data[2]'
-      value: unseal
-      objectReference: {fileID: 0}
-    - target: {fileID: 1011865646109826233, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
-      propertyPath: 'actionsWhichTriggerSpawn.Array.data[3]'
-      value: reveal
-      objectReference: {fileID: 0}
     - target: {fileID: 1807000532342806654, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4165,793 +4021,55 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
---- !u!4 &1820977942 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1807000532342806654, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
-  m_PrefabInstance: {fileID: 1820977941}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1844631723
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1844631724}
-  - component: {fileID: 1844631725}
-  m_Layer: 0
-  m_Name: Small Plant
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1844631724
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1844631723}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1501790959}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1844631725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1844631723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 951cf8aff516b9845b4922f775221d55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyed: 0
-  interactableName: Small Plant
-  locationDescription: 
-  playerCanStore: 1
-  dialogueManager: {fileID: 0}
---- !u!1 &1902775117
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1902775118}
-  - component: {fileID: 1902775119}
-  m_Layer: 0
-  m_Name: DoorToPatientHallway
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1902775118
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1902775117}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1499385320}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1902775119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1902775117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyed: 0
-  interactableName: green door
-  locationDescription: Behind me is the green door I came in through.
-  playerCanStore: 0
-  dialogueManager: {fileID: 0}
-  room: {fileID: 479178962}
-  lockLevel: 0
-  roomName: 
-  lockPickable: 0
-  breakable: 0
---- !u!1 &1948041383
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1948041384}
-  - component: {fileID: 1948041385}
-  m_Layer: 0
-  m_Name: DoorToCubicleWorkArea
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1948041384
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1948041383}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 275165891}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1948041385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1948041383}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyed: 0
-  interactableName: blue door
-  locationDescription: There is a blue door to the cubicle area.
-  playerCanStore: 0
-  dialogueManager: {fileID: 0}
-  room: {fileID: 1501790960}
-  lockLevel: 0
-  roomName: 
-  lockPickable: 0
-  breakable: 0
---- !u!1 &1950406218
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1950406219}
-  - component: {fileID: 1950406220}
-  m_Layer: 0
-  m_Name: Janitor Room
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1950406219
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1950406218}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1261492215}
-  - {fileID: 354027865}
-  m_Father: {fileID: 64296177}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1950406220
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1950406218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b7dfc23fdc50e74780c1f47aa89fdd9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  securityLevel: 0
-  roomName: Janitor Room
-  roomDescription: I step into a bright, tidy room clearly maintained by the janitor.
-    Despite the age of the equipment, everything appears well cared for.
-  consideredInRoom: []
-  visitText: []
-  allAfter: 
---- !u!1 &1950935140
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1950935141}
-  - component: {fileID: 1950935142}
-  m_Layer: 0
-  m_Name: Bar Rewards Card
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1950935141
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1950935140}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 275165891}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1950935142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1950935140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 951cf8aff516b9845b4922f775221d55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyed: 0
-  interactableName: Bar Rewards Card
-  locationDescription: 
-  playerCanStore: 1
-  dialogueManager: {fileID: 0}
---- !u!1 &1951043251
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1951043252}
-  - component: {fileID: 1951043253}
-  m_Layer: 0
-  m_Name: DoorToPatientHallway
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1951043252
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1951043251}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1501790959}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1951043253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1951043251}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyed: 0
-  interactableName: orange door
-  locationDescription: There is a orange door that I know goes to the patient hallway.
-  playerCanStore: 0
-  dialogueManager: {fileID: 0}
-  room: {fileID: 479178962}
-  lockLevel: 0
-  roomName: 
-  lockPickable: 0
-  breakable: 0
---- !u!1 &1960753703
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1960753704}
-  - component: {fileID: 1960753705}
-  m_Layer: 0
-  m_Name: Fancy Pen
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1960753704
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1960753703}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1501790959}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1960753705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1960753703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 951cf8aff516b9845b4922f775221d55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyed: 0
-  interactableName: Fancy Pen
-  locationDescription: 
-  playerCanStore: 1
-  dialogueManager: {fileID: 0}
---- !u!1 &1990417179
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1990417180}
-  - component: {fileID: 1990417181}
-  m_Layer: 0
-  m_Name: DoorToStorageRoom
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1990417180
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1990417179}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 52509125}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1990417181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1990417179}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyed: 0
-  interactableName: metallic door
-  locationDescription: On the wall adjacent to me there appears to be a metallic
-    door labelled storage room.
-  playerCanStore: 0
-  dialogueManager: {fileID: 0}
-  room: {fileID: 687393473}
-  lockLevel: 0
-  roomName: 
-  lockPickable: 0
-  breakable: 0
---- !u!1 &2061849513
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2061849514}
-  - component: {fileID: 2061849515}
-  m_Layer: 0
-  m_Name: DoorToGuardedHallway
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2061849514
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2061849513}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 52509125}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2061849515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2061849513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyed: 0
-  interactableName: white door
-  locationDescription: The white door I came remains shuts behind me.
-  playerCanStore: 0
-  dialogueManager: {fileID: 0}
-  room: {fileID: 1582195722}
-  lockLevel: 0
-  roomName: 
-  lockPickable: 0
-  breakable: 0
---- !u!1 &2081048261
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2081048262}
-  - component: {fileID: 2081048263}
-  m_Layer: 0
-  m_Name: Janitor Shrine
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2081048262
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2081048261}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -363.85022, y: 65.920044, z: -7.3483124}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 958371313}
-  - {fileID: 2104657241}
-  - {fileID: 68484632}
-  - {fileID: 1635026051}
-  m_Father: {fileID: 64296177}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2081048263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2081048261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b7dfc23fdc50e74780c1f47aa89fdd9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  securityLevel: 0
-  roomName: Shrine
-  roomDescription: A dusty crypt illuminated by small candles. There isn't much here
-    except the creepy shrine.
-  consideredInRoom: []
-  visitText: []
-  allAfter: 
---- !u!1 &2094455742
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2094455743}
-  - component: {fileID: 2094455745}
-  m_Layer: 0
-  m_Name: Fire Exit
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2094455743
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2094455742}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 479178961}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2094455745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2094455742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce85976fb8a33c441ac9964330439739, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyed: 0
-  interactableName: Fire Exit
-  locationDescription: A large red fire exit is at the end of the hallway.
-  playerCanStore: 1
-  dialogueManager: {fileID: 0}
---- !u!1 &2098709137
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2098709138}
-  - component: {fileID: 2098709139}
-  m_Layer: 0
-  m_Name: Donuts
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2098709138
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2098709137}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 52509125}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2098709139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2098709137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5461495efe37d74c92d6234ee7e6151, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyed: 0
-  interactableName: Donuts
-  locationDescription: A juicy box of donuts sits on a cheap plastic table in the
-    middle of the room.
-  playerCanStore: 1
-  dialogueManager: {fileID: 0}
-  lobbyRoom: {fileID: 275165892}
-  guardID: {fileID: 3324175017169126525, guid: 1b9f3927644c84f439f1c2fd58c7df9a, type: 3}
---- !u!1 &2104657240
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2104657241}
-  - component: {fileID: 2104657242}
-  m_Layer: 0
-  m_Name: Doctor Shrine
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2104657241
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2104657240}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2081048262}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2104657242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2104657240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 951cf8aff516b9845b4922f775221d55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyed: 0
-  interactableName: shrine
-  locationDescription: A ornate shrine of candles, pictures and stolen belongings
-    of the doctor.
-  playerCanStore: 1
-  dialogueManager: {fileID: 0}
---- !u!1 &2124758851
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2124758852}
-  - component: {fileID: 2124758853}
-  m_Layer: 0
-  m_Name: Janitor Maze
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2124758852
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2124758851}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1088189801}
-  - {fileID: 1428822188}
-  - {fileID: 1607334678}
-  m_Father: {fileID: 64296177}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2124758853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2124758851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b7dfc23fdc50e74780c1f47aa89fdd9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  securityLevel: 0
-  roomName: Janitor Maze
-  roomDescription: "I enter a space that sharply contrasts with the neat janitor
-    room. Here, outdated and discarded equipment forms chaotic walls, arranged in
-    a way that almost seems intentional\u2014as if someone designed this mess to
-    be a maze."
-  consideredInRoom: []
-  visitText: []
-  allAfter: 
---- !u!1001 &478548081088523399
+--- !u!1001 &3158035715406404140
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 450535963}
+    m_TransformParent: {fileID: 2124758852}
     m_Modifications:
-    - target: {fileID: 1076241964794849526, guid: a5a04b823225513449a01a1fe3063c1c, type: 3}
+    - target: {fileID: 1471054829686080370, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
       propertyPath: m_Name
-      value: The Golden Microscope
+      value: Calling Card
       objectReference: {fileID: 0}
-    - target: {fileID: 4959320627190995484, guid: a5a04b823225513449a01a1fe3063c1c, type: 3}
+    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4959320627190995484, guid: a5a04b823225513449a01a1fe3063c1c, type: 3}
+    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4959320627190995484, guid: a5a04b823225513449a01a1fe3063c1c, type: 3}
+    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4959320627190995484, guid: a5a04b823225513449a01a1fe3063c1c, type: 3}
+    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4959320627190995484, guid: a5a04b823225513449a01a1fe3063c1c, type: 3}
+    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4959320627190995484, guid: a5a04b823225513449a01a1fe3063c1c, type: 3}
+    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4959320627190995484, guid: a5a04b823225513449a01a1fe3063c1c, type: 3}
+    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4959320627190995484, guid: a5a04b823225513449a01a1fe3063c1c, type: 3}
+    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4959320627190995484, guid: a5a04b823225513449a01a1fe3063c1c, type: 3}
+    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4959320627190995484, guid: a5a04b823225513449a01a1fe3063c1c, type: 3}
+    - target: {fileID: 8047181825361553432, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
@@ -4959,172 +4077,7 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a5a04b823225513449a01a1fe3063c1c, type: 3}
---- !u!1001 &3812411592218610489
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 450535963}
-    m_Modifications:
-    - target: {fileID: 6448042394550906417, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
-      propertyPath: m_Name
-      value: Thief ID
-      objectReference: {fileID: 0}
-    - target: {fileID: 8071382534770958044, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8071382534770958044, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8071382534770958044, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8071382534770958044, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8071382534770958044, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8071382534770958044, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8071382534770958044, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8071382534770958044, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8071382534770958044, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8071382534770958044, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
---- !u!1001 &4789754911816875678
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1499385320}
-    m_Modifications:
-    - target: {fileID: 2061239146618224918, guid: 0f1609ade90d79743a2d8104281930f9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2061239146618224918, guid: 0f1609ade90d79743a2d8104281930f9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2061239146618224918, guid: 0f1609ade90d79743a2d8104281930f9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2061239146618224918, guid: 0f1609ade90d79743a2d8104281930f9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2061239146618224918, guid: 0f1609ade90d79743a2d8104281930f9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2061239146618224918, guid: 0f1609ade90d79743a2d8104281930f9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2061239146618224918, guid: 0f1609ade90d79743a2d8104281930f9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2061239146618224918, guid: 0f1609ade90d79743a2d8104281930f9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2061239146618224918, guid: 0f1609ade90d79743a2d8104281930f9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2061239146618224918, guid: 0f1609ade90d79743a2d8104281930f9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5328741123317860566, guid: 0f1609ade90d79743a2d8104281930f9, type: 3}
-      propertyPath: m_Name
-      value: Brawler ID
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0f1609ade90d79743a2d8104281930f9, type: 3}
---- !u!1 &5673236767533906895
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7063798344599000805}
-  - component: {fileID: 7063798344599000806}
-  m_Layer: 0
-  m_Name: Apple
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7063798344599000805
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5673236767533906895}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1025.7123, y: -519.346, z: 3.1467535}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1456374741}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7063798344599000806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5673236767533906895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cfbcdced7fe8f54ea00b638ec2167f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyed: 0
-  interactableName: apple
-  locationDescription: A crisp red apple sits on the bedside table. The sun reflects
-    off it gorgeous red skin.
-  playerCanStore: 1
-  dialogueManager: {fileID: 0}
-  crushedApple: {fileID: 1242989205509524980, guid: b547d376b02433047ae7e7dbd5400be7, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 754cfbd9dde783c4e895c9c949082abb, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -76,6 +76,7 @@ public class PlayerInfo : MonoBehaviour
     /// <returns>True if the switch is successful, false otherwise.</returns>
     public bool switchPlayerID(string idName)
     {
+        idName = idName.ToLower().Split()[0];
         Debug.Log("trying to switch to " + idName);
 
         // Check if the requested ID is already the current one.
@@ -89,7 +90,7 @@ public class PlayerInfo : MonoBehaviour
         // Check if the requested ID exists in the player's collection.
         if (!playerIDs.ContainsKey(idName))
         {
-            
+            GameManager.Instance().AddTextToJournal("I reach out to use the " + idName + " id, but I realize in order to use it properly, i need to take it.");
             return false;
         }
 
@@ -99,7 +100,15 @@ public class PlayerInfo : MonoBehaviour
 
         // Prepare the dialogue text for switching identities.
         string idSwitchDialogue = "I feel the fog of confusion around my mind grow denser until... suddenly it clears...I believe my real identity is that of a " + currentPlayerID.Name + ".";
-
+        try
+        {
+            idSwitchDialogue = DialogueManager.Instance().GetDialogue(idName, "switch", "Any");
+        }
+        catch (KeyNotFoundException e)
+        {
+            Debug.LogWarning(e + "when trying to get dialogue for id switch on " + idName + " id.");
+        }
+        
         // Add the ID switch dialogue to the game journal.
         GameManager.Instance().AddTextToJournal(idSwitchDialogue);
 
@@ -132,6 +141,11 @@ public class PlayerInfo : MonoBehaviour
     /// <param name="item">The interactable item to add.</param>
     public void addItem(Interactable item)
     {
+        if (itemInventory.ContainsKey(item.name.ToLower()))
+        {
+            GameManager.Instance().AddTextToJournal("I take out the "+ item.interactableName + " from my bag and then...");
+            return;
+        }
         // Determine if the item represents an ID card.
         IDCard possibleCard = IDCard.StringAsID(item.interactableName.Substring(0, item.interactableName.Length - 3));
 

@@ -1,33 +1,42 @@
 # Object : action : ID Card Name (or Any) : description
 
+#Random objects
 Apple : inspect: Any : I look at the apple closely and realize it's probably the most delicious looking apple ive seen. One bite wouldn't hurt anyone… probably?
 Apple : inspect: Doctor : Oh god an apple… better keep my distance.
 
-Apple : eat : Any : You walk over and decide to eat the apple. While munching you realize the apple is delicious. Praise the Apple!
+Apple : eat : Any : I walk over and decide to eat the apple. While munching I realize the apple is delicious. Praise the Apple!
 Apple : eat : Patient : I walk over to the apple ready to take a big bite and then... wait what was I doing? Oh right, I'm an amnesiac patient…
 Apple : eat : Doctor: I…against my better judgement… eat the apple.
 
+Fancy Pen : inspect : Any : A really fancy looking inkwell pen, dry of ink. Probably worth nothing but certainly looks cool.
+Fancy Pen : location : Any : A fancy pen rests on the desk of a paper cluttered cubicle.
 
+Small Plant: inspect : Any : Upon a closer look it's one of those undying cactus succulents. The pot it's planted in has some text painted on it which reads ‘George the Undying Cactus’. 
+Small Plant: location : Any : Surprisingly, one of the cubicles is quite neat, even containing a small plant which is the height of decoration from what i've seen from the previous hospital rooms.
+Small Plant: kill : Any : I try to destroy the cactus but just end up with thorns in my hands. ‘George’ remains unharmed.
+Small Plant: destroy : Any : I try to destroy the cactus but just end up with thorns in my hands. ‘George’ remains unharmed.
 
 # ID Cards
-Patient ID : inspect : Any : I walk over to the ID card and inspect it. It's a plain white card, nothing special. However, I get the feeling that something in me might change if I decide to take this.
-Patient ID : switch : Any : I hold the Patient ID before me and my mind drifts in confusion and unease until suddenly… I realize maybe I'm just a hospital patient. I wonder what I'm in here for?
+Patient ID : inspect : Any : I take a look at the ID card, inspecting it closely. It's a plain white card with the words patient in big bold letters, nothing special. However, I get the feeling that I should take this with me and use it if needed.
 
-Thief ID : inspect : Any : I walk over to the ID card and inspect it. A portrait of a pretty shady individual is on the card along with a number to call for 'repossession' services.
-Thief ID : inspect : Guard : I walk over to the ID card and inspect it. This is clearly a thief, why would they leave this hanging around? I really hope they aren't planning to steal from us, I can't get fired again.
-Thief ID : switch : Any : I take out the Thief ID, my eyes tracing the rough portrait and fading edges. A fragment of a rebellious dream stirs within me, whispering of secrets to uncover and treasures yet to be claimed.
+Thief ID : inspect : Any : I take a look at the ID card, inspecting it closely. A portrait of a pretty shady individual is on the card along with a number to call for 'repossession' services.
+Thief ID : inspect : Guard : I take a look at the ID card, inspecting it closely. This is clearly a thief, why would they leave this hanging around? I really hope they aren't planning to steal from us, I can't get fired again.
+Thief ID : on spawn : Any : After pocketing the item, I realize that there was actually underneath it. Upon closer inspection it looks to be some sort of Thief ID card.
 
-Brawler ID : inspect : Any : I walk over to the ID card and inspect it. The card is a bit bent and has a few scratches on it. It's a bit hard to read but the profession says 'Bar Brawler'. That can't be a real job.
-Brawler ID : switch : Any : I bring forth the battered Brawler ID, its worn edges and scratches speaking plainly of past conflicts. In that moment, my mind hazes as I feel raw strength and simmer anger within me, calling me to break any obstacles in my path.
+Brawler ID : inspect : Any : I take a look at the ID card, inspecting it closely. The card is a bit bent and has a few scratches on it. It's a bit hard to read but the profession says 'Bar Brawler'. That can't be a real job.
 
-Doctor ID : inspect : Any : I walk over to the ID card and inspect it. The card is pristine and has a picture of an eager doctor on it.
-Doctor ID : switch : Any : I gently lift the clean pristine Doctor ID, and a calming clarity envelops me. I take a cloth out of my pocket and clean off a small smudge on the ID I didn't see before. It was time to work.
+Doctor ID : inspect : Any : I take a look at the ID card, inspecting it closely. The card is pristine and has a picture of an eager doctor on it.
 
-Guard ID : inspect : Any : I walk over to the ID card and inspect it. The card is a bit worn but still legible. It has a picture of a stern looking guard on it.
-Guard ID : inspect : Thief : I walk over to the ID card and inspect it. The card is a bit worn but my keen eye can still make out the picture. This is a guard, I need to keep an eye out for them.
-Guard ID : switch : Any : I firmly clutch the Guard ID and feel a surge of duty course through my veins. I gain a stern look as in an instant, the world sharpens into focus as the call to protect and serve resonates deep within.
+Guard ID : inspect : Any : I take a look at the ID card, inspecting it closely. The card is a bit worn but still legible. It has a picture of a stern looking guard on it.
+Guard ID : inspect : Thief : I take a look at the ID card, inspecting it closely. The card is a bit worn but my keen eye can still make out the picture. This is a guard, I need to keep an eye out for them.
 
 
+#Switch Dialogue
+patient : switch : Any : I hold the Patient ID before me and my mind drifts in confusion and unease until suddenly… I realize maybe I'm just a hospital patient. I wonder what I'm in here for?
+thief : switch : Any : I take out the Thief ID, my eyes tracing the rough portrait and fading edges. A fragment of a rebellious dream stirs within me, whispering of secrets to uncover and treasures yet to be claimed. 
+brawler : switch : Any : I bring forth the battered Brawler ID, its worn edges and scratches speaking plainly of past conflicts. In that moment, my mind hazes as I feel raw strength and simmer anger within me, calling me to break any obstacles in my path.
+doctor : switch : Any : I gently lift the clean pristine Doctor ID, and a calming clarity envelops me. I take a cloth out of my pocket and clean off a small smudge on the ID I didn't see before. It was time to work.
+guard : switch : Any : I firmly clutch the Guard ID and feel a surge of duty course through my veins. I gain a stern look as in an instant, the world sharpens into focus as the call to protect and serve resonates deep within.
 
 # Rediscover Yourself
 Patient File : inspect : Any : I hold up the file. The medical jargon is too complicated to understand. Useless to me since I can t interpret it.
@@ -56,6 +65,9 @@ Lab Coat : inspect : Any : I take a closer look at the lab coat. It's quite stan
 Lab Coat : inspect : Doctor : My lucky lab coat. This bad boy was the only warmth during my residency.
 Lab Coat : inspect : Brawler : Looks like a napkin to me. Why was this in a vault?
 
+Labcoat : put on : Any : Why would I wear this. I'm not a doctor.
+Labcoat : put on : Doctor : I put on the lab coat. It feels like a second skin. Maybe I am a doctor afterall. I could live my life out like this.
+
 Punchcard : inspect : Any : I hold the punch card up to the light. Nope, no hidden messages.
 Punchcard : inspect : Doctor : My punch card. Contractually I can't leave until I get this punched.
 Punchcard : inspect : Brawler : This looks pretty punchable to me.
@@ -67,7 +79,34 @@ Punch Card Punched : inspect : Brawler : This looks like it could handle a coupl
 PhD : inspect : Any : A framed Doctorate. Someone must be really proud about getting this to frame it so securely.
 PhD : inspect : Doctor : My framed Doctorate. Without this who really am I?
 
+# This should be corkboard oops (i’ll change when I get home) 👍
+coarkboard : object spawned : Any : A coarkboard with a whole bunch of notes pinned to it.
+coarkboard : object spawned : Brawler : A coarkboard with a whole bunch of notes pinned to it. I quickly scan it for any information about staff bars or really just bars in the area. I don't find anything.
+coarkboard : on spawn : Any : I take a closer look at the coarkboard and see a tiny little note sticking out from behind it.
+
+Painting : inspect : Any : What looks to be a fancy oil painting, its gentle brush strokes depict some sort of jewel encrusted golden microscope. Who even comes up with this stuff?
+Painting : inspect : Doctor: A wonderful painting of my golden microscope. It also perfectly hides the entrance to my vault.
+Painting : inspect : Thief: A painting that's too large to steal, unfortunate.
+Painting : object spawned : Any : The painting is still painted, though there's a small scratch from where I moved it off the wall. Oops?
+Painting : on spawn : Any : I move the painting revealing a large metal Vault Door. Who needs one of these in a hospital? 
+
+
+Note : inspect : Any : I take a look at the note. Nice quality paper. It reads, "Calling all admirers of the Doctor. I have a secret staff club behind my work area. - The Janitor"
+Note : inspect : Doctor : I take a look at the note. Nice quality paper. It reads, "Calling all admirers of the Doctor. I have a secret staff club behind my work area. - The Janitor". A shiver runs down my spine, I knew the janitor liked me a bit too much but I didn't think I had a fan club.
+Note : read : Any : I take a look at the note. Nice quality paper. It reads, "Calling all admirers of the Doctor. I have a secret staff club behind my work area. - The Janitor"
+Note : read : Doctor : I take a look at the note. Nice quality paper. It reads, "Calling all admirers of the Doctor. I have a secret staff club behind my work area. - The Janitor". A shiver runs down my spine, I knew the janitor liked me a bit too much but I didn't think I had a fan club.
+
+
+Cardboard Cutout : object spawned : Any : A cardboard cutout of a doctor. It's a bit creepy how realistic it looks.
+Cardboard Cutout : on spawn : Any : Taking a closer look at the cutout I realize the Doctor ID pinned to the board is shiny, as if it's a real card and not just a printout.
+
+
+Janitor's Journal : read : Any : I flip through the pages of the journal. It is filled to the brim with notes about the Doctor's daily routine. It seems the janitor has been keeping tabs on the Doctor for quite some time.
+Janitor's Journal : read : Doctor : I flip through the pages of the journal. It is filled to the brim with notes about my daily routine. This feels like an invasion of privacy. I really need to get out of this hospital if this is who my colleagues are.
+
 # Become a thief
+Calling Card : location: Any :I see what looks like a calling card sitting atop a shiny metal surgical plate in the corner.
+Calling Card : location: Thief: I see my calling card, lying atop a shiny metal surgical plate in the corner, no doubt from one of my great heists.
 Calling Card : inspect : Any : A criminal's calling card. Why would you put your face on this?
 Calling Card : inspect : Guard : A criminal's calling card. Why would you put your face on this? I should keep an eye out for this person.
 Calling Card : inspect : Thief : My beautiful calling card. Silian Rail lettering, 16-point cardstock, it's a classic.
@@ -76,6 +115,31 @@ The Golden Microscope : inspect : Any : A priceless golden microscope encrusted 
 The Golden Microscope : inspect : Doctor : My precious golden microscope. What would I do on those long, lonely nights without it?
 The Golden Microscope : inspect : Guard : The doctor's golden microscope. I told them the hospital's insurance won't cover it if it gets stolen. I hope they listen because I am not paid enough to make sure it stays safe.
 The Golden Microscope : inspect : Thief : A priceless golden microscope encrusted with jewels. It should be in a museum... or in my bag.
+The Golden Microscope : location: Any : The Golden Microscope lies inside the glass case.
+The Golden Microscope : take : Guard : I am NOT taking that. If the Doctor found out he would be pissed and take away my donut privileges.
+The Golden Microscope : take : Brawler : That piece of junk is way too shiny, if I carried it with me there's no doubt I'd be the laughingstock of the pub.
+The Golden Microscope : take : Patient : I doubt taking this would help me restore my memory. Besides, I'm no crook or thief… at least I think?
+The Golden Microscope : take : Any: I doubt taking this would help me restore my memory. Besides, I'm no crook or thief… at least I think?
+
+Glass Case : location : Any : There seems to be a fairly large glass case which rests at the very back of the storage room.
+Glass Case : location : Doctor: At the back of the room lies a glass case containing my golden microscope in all its glory. 
+Glass Case : location : Thief: There seems to be a fairly large glass case which rests at the very back of the storage room. Whatever's inside is certain to be valuable.
+Glass Case : inspect : Any : I walk over to the glass case and realize it contains… a golden microscope? I do a double take before realizing it's not a fake. The glass case itself doesn't look like its locked, which feels like a mistake considering the value of its contents.
+Glass Case : inspect : Doctor: I walk over to the glass case knowing it contains my precious golden microscope. Even though I doubt the hospital insurance will cover it if it is stolen, how could I hide it away inside a safe?
+Glass Case : on spawn : Any : I open up the glass case, fully revealing the golden microscope which rests inside.
+Glass Case : object spawned: Any: An open glass case. There isn't really much else I can do with this.
+
+Health Poster: location : Any : At the end of the room rests a large health poster, which is quite well centered on the wall.
+Health Poster : location : Thief: At the end of the room rests a large health poster, which is poorly covering some sort of door. I could probably take it down to get to the door if I wanted to.
+Health Poster : inspect : Any : I walk over to the poster and notice something strange behind it.
+Health Poster : inspect : Thief: Besides the obvious <b>hidden door</b> behind the poster, the poster itself might be handmade. 
+Health Poster : inspect : Doctor: I look closely at the poster, realizing this is clearly hand made but well researched. Someone knows their stuff.
+Health Poster : on spawn : Any : I tear away the poster, revealing a <b>hidden door</b> which has no place in a janitor's room.
+Health Poster : object spawned: Any: Not much else to do with this poster.
+
+#I am Thief
+Fire Exit : thief ending : Thief : I push the cold metal bar of the fire exit and step into the night, the hospital’s sterile and tacky corridors fading behind me. I check my bag, glancing briefly at The Golden Microscope, a gleaming trophy of my legendary heist. However as I step into the night air, some part of me is still uncertain, wondering if this is who I really am.(Hidden Ending 1/4)
+Exit Door : thief ending : Thief : I walk through the front of the hospital, smiling to myself as the guards are none wiser of the heist I just pulled. I check my bag, glancing briefly at The Golden Microscope, a gleaming trophy of my legendary heist. However as I step into the night air, some part of me is still uncertain, wondering if this is who I really am.(Hidden Ending 1/4)
 
 # I am X
 Donuts : inspect : Any : A box of fresh donuts, still warm.
@@ -87,8 +151,7 @@ Donuts : eat : Any : I check to make sure no one is looking and quickly scarf do
 Donuts : eat : Guard :  I open the box, open my throat and shove all the donuts straight to my stomach. All in a day's work.
 Donuts : eat : Thief : I eat the donuts. Savoring each bite. Knowing these aren't mine made them taste so much better. Only a mastermind criminal such as myself would be able to stomach this crime, literally.
 
-Donuts : discoverID : Any : Underneath the last donut is a Guard ID. I wonder who left this here.
-Donuts : discoverID : Thief : Underneath the last donut is a Thief ID. The guards in this place really are fools.
+Donuts : discoverID : Any : I discover a guard ID at the bottom of the donut box. Drenched in powdered sugar it may be, it still seems useful to have around.
 
 # I am X fire escape
 Fire Alarm : inspect: Any : Looks like one of those super loud fire alarms that go off once someone goes through a fire exit or if smoke is detected. I probably shouldn't mess with that unless I really have to.
@@ -104,25 +167,11 @@ Fire Exit : go through : Guard : I push the metal bar and the door swings open. 
 Fire Exit : go through : Thief : I push the metal bar and the door swings open. I walk through the door, leaving the hospital behind me. Am I really a thief? It's who I am now, I guess. I just can't be sure.
 Fire Exit : go through : Brawler : I push the metal bar and the door swings open. I walk through the door, leaving the hospital behind me. I head straight to the closest bar. The smell of alcohol feels like it should sit right but deep down it disgusts me.
 
-# I am X Donut Escape
-Exit Door : go throughX : Patient : The guards are distracted with the donuts I gave them. They don't even notice me. I walk through the door, leaving the hospital behind me. Is this who I really am? I just can't be sure.
-Exit Door : go throughX : Doctor : The guards are distracted with the donuts I gave them. They don't even notice me.  I walk through the door, leaving the hospital behind me. I guess I'll live the rest of my life out as a Doctor. I don't have the qualifications, experience or lab coat. I just can't be sure that this is really who I am.
-Exit Door : go throughX : Guard : The guards are distracted with the donuts I gave them. They don't even notice me.  I walk through the door, leaving the hospital behind me. Guarding doesn't sound too bad. I guess I can live the rest of my life out as a guard. I wish I could remember who I really am - but, for now, I'm satisfied just leaving the hospital.
-Exit Door : go throughX : Thief : The guards are distracted with the donuts I gave them. They don't even notice me.  I walk through the door, leaving the hospital behind me. Am I really a thief? It's who I am now, I guess. I just can't be sure.
-Exit Door : go throughX : Brawler : The guards are distracted with the donuts I gave them. They don't even notice me.  I walk through the door, leaving the hospital behind me. I head straight to the closest bar. The smell of alcohol feels like it should sit right but deep down it disgusts me.
+#Doors
+door : unlock : Any : The door beeps, accepting the id and I hear the deadbolt retract. I open the door and walk through.
+red door : unlockFail : Any : I rattle the red door’s handle, trying to open it. It looks like it's one of those id card access doors and won't open up until I use a card.
 
 
-# Unlocking Doors
-door : unlock : Any : I fiddle with the lock trying to unlock the door. Turns out it was never actually locked.
-door : unlock : Patient : I swipe my patient id card and the door unlocks. I walk through the door.
-door : unlock : Doctor : I swipe my doctor id card and the door lock flashes green. I walk through the door with my labcoat flowing behind me.
-door : unlock : Guard : I swipe my guard id card and the door lock flashes green. I walk through the door.
-door : unlock : Thief : I swipe my thief id card. Somehow the door flashes green. Why would any door be locked and allow a thief to unlock it?
-door : unlock : Brawler : I swipe my brawler id card. The door lock flashes green. I walk through the door.
 
-door : unlockFail : Any : I try to go through the door. Twisting the handle, I realize it's locked. There is a card reader next to the door. Looks like I need to be somebody else to unlock this door.
-door : unlockFail : Patient : I try to go through the door. Twisting the handle, I realize it's locked. There is a card reader next to the door. Maybe an ID card of someone working here would work?
-door : unlockFail : Doctor : I try to go through the door. Twisting the handle, I realize it's locked. There is a card reader next to the door.
-door : unlockFail : Guard : I try to go through the door. Twisting the handle, I realize it's locked. There is a card reader next to the door.
-door : unlockFail : Thief : I try to go through the door. Twisting the handle, I realize it's locked. There is a card reader next to the door. Maybe an ID card of someone working here would work?
-door : unlockFail : Brawler : I try to go through the door. Twisting the handle, I realize it's locked. There is a card reader next to the door. Maybe an ID card of someone working here would work?
+
+

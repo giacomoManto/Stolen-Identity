@@ -8,6 +8,8 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
+    //putting this here until i figure out whatever the bug is with actually using Destroy();
+    public bool destroyed = false;
     public string interactableName;
 
     private Dictionary<string, Action<IDCard>> actions = new Dictionary<string, Action<IDCard>>();
@@ -16,10 +18,10 @@ public class Interactable : MonoBehaviour
     protected string locationDescription;
 
     [SerializeField]
-    protected bool playerCanStore = true;
+    protected bool playerCanStore = false;
 
     [SerializeField]
-    private DialogueManager dialogueManager;
+    protected DialogueManager dialogueManager;
 
     /// <summary>
     /// Default constructor.
@@ -160,9 +162,10 @@ public class Interactable : MonoBehaviour
         {
             GameManager.Instance().AddTextToJournal("Pretty sure I dont want to take that " + interactableName);
         }
-        else { 
-            FindFirstObjectByType<GameManager>().addObjectToPlayerInventory(this);
+        else {
+            GameManager.Instance().addObjectToPlayerInventory(this);
             GameManager.Instance().AddTextToJournal( "I pocket the " + interactableName + ", putting it into my bag for later use.");
+            GameManager.Instance().increaseStealCount();
         }
     }
 }

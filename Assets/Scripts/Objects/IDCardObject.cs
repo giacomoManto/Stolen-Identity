@@ -6,10 +6,10 @@ public class IDCardObject : Interactable
     public IDCardObject() : base()
     {
         this.SetName(interactableName);
-        this.RegisterAction(SwitchId, "use");
+        this.RegisterAction(SwitchId, "use","switch");
 
     }
-
+        
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void SwitchId(IDCard id)
     {
