@@ -3923,7 +3923,7 @@ MonoBehaviour:
   interactableName: guards
   locationDescription: Standing at attention next to each side of the exit door are
     two guards.
-  playerCanStore: 1
+  playerCanStore: 0
   dialogueManager: {fileID: 0}
 --- !u!1 &1788951274
 GameObject:
