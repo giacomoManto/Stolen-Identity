@@ -28,16 +28,17 @@ public class SpawnInteractable : Interactable
     {
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public new void PerformAction(string action, IDCard id)
     {
-        foreach(string action in actionsWhichTriggerSpawn)
+        action = action.ToLower();
+        base.PerformAction(action, id);
+        if (actionsWhichTriggerSpawn.Contains(action))
         {
-            this.RegisterAction(action, SpawnObject);
+            SpawnObject(id);
         }
     }
 
-    
+
     private void SpawnObject(IDCard idCard)
     {
         string gameMangagerText = "";
