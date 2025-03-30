@@ -11,6 +11,9 @@ public class DoorBehavior : Interactable
     [SerializeField]
     private int lockLevel = 0;
 
+    [SerializeField]
+    private string roomName = "";
+
     private bool locked = true;
 
     private void Start()
@@ -25,6 +28,8 @@ public class DoorBehavior : Interactable
         this.RegisterAction("lockpick", Lockpick);
         this.RegisterAction("breakdown", Breakdown);
         this.RegisterAction("break", Breakdown);
+        
+        
     }
 
     public DoorBehavior() : base()
@@ -36,6 +41,7 @@ public class DoorBehavior : Interactable
 
     private void GoThrough(IDCard id)
     {
+        assignRoomIfNone();
         if (!locked) {
             GameManager.Instance().AddTextToJournal("I go through the " + interactableName + ".");
             GameManager.Instance().changeRoom(room);
@@ -55,6 +61,7 @@ public class DoorBehavior : Interactable
     }
 
     private void Lockpick(IDCard id) {
+        assignRoomIfNone();
         if (id.Equals(IDCard.Thief)) {
             if (this.locked)
             {
@@ -73,6 +80,7 @@ public class DoorBehavior : Interactable
     }
 
     private void Breakdown(IDCard id) {
+        assignRoomIfNone();
         if (id.Equals(IDCard.Brawler))
         {
             if (this.locked)
@@ -90,5 +98,11 @@ public class DoorBehavior : Interactable
             GameManager.Instance().AddTextToJournal("I'm not strong enough for that.");
         }
     }
-
+    private void assignRoomIfNone()
+    {
+        if (roomName != "" && room == null)
+        {
+            room = GameManager.Instance().GetRoomByName(roomName);
+        }
+    }
     }

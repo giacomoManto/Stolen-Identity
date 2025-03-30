@@ -160,9 +160,10 @@ public class Interactable : MonoBehaviour
         {
             GameManager.Instance().AddTextToJournal("Pretty sure I dont want to take that " + interactableName);
         }
-        else { 
-            FindFirstObjectByType<GameManager>().addObjectToPlayerInventory(this);
+        else {
+            GameManager.Instance().addObjectToPlayerInventory(this);
             GameManager.Instance().AddTextToJournal( "I pocket the " + interactableName + ", putting it into my bag for later use.");
+            GameManager.Instance().increaseStealCount();
         }
     }
 }

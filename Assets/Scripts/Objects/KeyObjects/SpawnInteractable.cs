@@ -6,9 +6,6 @@ using UnityEngine.WSA;
 public class SpawnInteractable : Interactable
 {
     [SerializeField]
-    private string thisName;
-
-    [SerializeField]
     private GameObject spawnedObject;
 
     [SerializeField]
@@ -29,7 +26,6 @@ public class SpawnInteractable : Interactable
      */
     SpawnInteractable() : base()
     {
-        SetName(thisName);
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -47,7 +43,7 @@ public class SpawnInteractable : Interactable
         string gameMangagerText = "";
         if (objectSpawned)
         {
-            gameMangagerText = dialogueManager.GetDialogue(thisName, "object spawned", IDCard.None.Name);
+            gameMangagerText = dialogueManager.GetDialogue(interactableName, "object spawned", IDCard.None.Name);
             if (gameMangagerText == "")
             {
                 gameMangagerText = "I think before realizing nothing would come of doing that again.";
@@ -60,7 +56,7 @@ public class SpawnInteractable : Interactable
             spawnedObjectCopy.SetActive(true);
             spawnedObjectCopy.transform.parent = transform.parent;
             GetComponentInParent<RoomBehavior>().InitIteractables();
-            gameMangagerText = dialogueManager.GetDialogue(thisName, "on spawn", IDCard.None.Name);
+            gameMangagerText = dialogueManager.GetDialogue(interactableName, "on spawn", IDCard.None.Name);
             GameManager.Instance().AddTextToJournal(gameMangagerText);
         }
     }

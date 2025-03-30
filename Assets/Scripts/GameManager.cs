@@ -17,6 +17,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Dictionary<string, RoomBehavior> allRooms = new Dictionary<string, RoomBehavior>();
 
+    [SerializeField]
+    GameObject ThiefID = null;
+
     private PlayerInfo player;
     private JournalOutput journal;
     private LeftPageOutput leftPageOutput;
@@ -24,7 +27,7 @@ public class GameManager : MonoBehaviour
     private Dictionary<IDCard, int> statRecorder = new Dictionary<IDCard, int>();
     private Dictionary<string, CommandTemplate> genericCommands = new Dictionary<string, CommandTemplate>();
 
-
+    private int itemsStolen = 0;
     private Dictionary<string, bool> gameFlags = new Dictionary<string, bool>();
     public RoomBehavior CurrentPlayerRoom
     {
@@ -65,10 +68,10 @@ public class GameManager : MonoBehaviour
         List<RoomBehavior> temp = new List<RoomBehavior>(rooms);
         foreach (RoomBehavior room in temp)
         {
-            allRooms[room.name] = room;
+            allRooms[room.roomName] = room;
         }
 
-        currentPlayerRoom = allRooms["Starting Room"];
+        currentPlayerRoom = allRooms["Patient Room"];
 
         addGenericCommand(new CheckBag(this, player));
         addGenericCommand(new InspectCommand(this));
@@ -314,6 +317,19 @@ public class GameManager : MonoBehaviour
         }
         return false;
     }
+    public void increaseStealCount()
+    {
+        itemsStolen++;
+        if(itemsStolen == 5)
+        {
+            GameObject spawnedObjectCopy = Instantiate(ThiefID, currentPlayerRoom.transform.position, Quaternion.identity);
+            spawnedObjectCopy.SetActive(true);
+            spawnedObjectCopy.transform.parent = currentPlayerRoom.transform;
+            currentPlayerRoom.InitIteractables();
+            string gameMangagerText = FindFirstObjectByType<DialogueManager>().GetDialogue("Thief ID", "on spawn", IDCard.None.Name);
+            AddTextToJournal(gameMangagerText);
+        }
+    }
     #endregion
 
     #region Room Management
@@ -328,6 +344,15 @@ public class GameManager : MonoBehaviour
         updateJournalLeftSide();
         room.OnEnter();
         displayCurrentRoomDesc();
+    }
+    public RoomBehavior GetRoomByName(string givenName)
+    {
+        if (allRooms.ContainsKey(givenName))
+        {
+            return allRooms[givenName];
+        }
+        Debug.LogWarning("Attempted to find room by name [" + givenName + "]. Current dictionary size is " + allRooms.Count);
+        return null;
     }
     #endregion
 
