@@ -65,6 +65,9 @@ Lab Coat : inspect : Any : I take a closer look at the lab coat. It's quite stan
 Lab Coat : inspect : Doctor : My lucky lab coat. This bad boy was the only warmth during my residency.
 Lab Coat : inspect : Brawler : Looks like a napkin to me. Why was this in a vault?
 
+Labcoat : put on : Any : Why would I wear this. I'm not a doctor.
+Labcoat : put on : Doctor : I put on the lab coat. It feels like a second skin. Maybe I am a doctor afterall. I could live my life out like this.
+
 Punchcard : inspect : Any : I hold the punch card up to the light. Nope, no hidden messages.
 Punchcard : inspect : Doctor : My punch card. Contractually I can't leave until I get this punched.
 Punchcard : inspect : Brawler : This looks pretty punchable to me.
@@ -75,6 +78,31 @@ Punch Card Punched : inspect : Brawler : This looks like it could handle a coupl
 
 PhD : inspect : Any : A framed Doctorate. Someone must be really proud about getting this to frame it so securely.
 PhD : inspect : Doctor : My framed Doctorate. Without this who really am I?
+
+# This should be corkboard oops (i’ll change when I get home) 👍
+coarkboard : object spawned : Any : A coarkboard with a whole bunch of notes pinned to it.
+coarkboard : object spawned : Brawler : A coarkboard with a whole bunch of notes pinned to it. I quickly scan it for any information about staff bars or really just bars in the area. I don't find anything.
+coarkboard : on spawn : Any : I take a closer look at the coarkboard and see a tiny little note sticking out from behind it.
+
+Painting : inspect : Any : What looks to be a fancy oil painting, its gentle brush strokes depict some sort of jewel encrusted golden microscope. Who even comes up with this stuff?
+Painting : inspect : Doctor: A wonderful painting of my golden microscope. It also perfectly hides the entrance to my vault.
+Painting : inspect : Thief: S
+Painting : object spawned : Any : The painting is still painted, though there's a small scratch from where I moved it off the wall. Oops?
+Painting : on spawn : Any : I move the painting revealing a large metal Vault Door. Who needs one of these in a hospital? 
+
+
+Note : inspect : Any : I take a look at the note. Nice quality paper. It reads, "Calling all admirers of the Doctor. I have a secret staff club behind my work area. - The Janitor"
+Note : inspect : Doctor : I take a look at the note. Nice quality paper. It reads, "Calling all admirers of the Doctor. I have a secret staff club behind my work area. - The Janitor". A shiver runs down my spine, I knew the janitor liked me a bit too much but I didn't think I had a fan club.
+Note : read : Any : I take a look at the note. Nice quality paper. It reads, "Calling all admirers of the Doctor. I have a secret staff club behind my work area. - The Janitor"
+Note : read : Doctor : I take a look at the note. Nice quality paper. It reads, "Calling all admirers of the Doctor. I have a secret staff club behind my work area. - The Janitor". A shiver runs down my spine, I knew the janitor liked me a bit too much but I didn't think I had a fan club.
+
+
+Cardboard Cutout : object spawned : Any : A cardboard cutout of a doctor. It's a bit creepy how realistic it looks.
+Cardboard Cutout : on spawn : Any : Taking a closer look at the cutout I realize the Doctor ID pinned to the board is shiny, as if it's a real card and not just a printout.
+
+
+Janitor's Journal : read : Any : I flip through the pages of the journal. It is filled to the brim with notes about the Doctor's daily routine. It seems the janitor has been keeping tabs on the Doctor for quite some time.
+Janitor's Journal : read : Doctor : I flip through the pages of the journal. It is filled to the brim with notes about my daily routine. This feels like an invasion of privacy. I really need to get out of this hospital if this is who my colleagues are.
 
 # Become a thief
 Calling Card : location: Any :I see what looks like a calling card sitting atop a shiny metal surgical plate in the corner.
@@ -110,8 +138,8 @@ Health Poster : on spawn : Any : I tear away the poster, revealing a <b>hidden d
 Health Poster : object spawned: Any: Not much else to do with this poster.
 
 #I am Thief
-Fire Exit : thief ending : Thief : Congrats you escaped as the thief out the fire exit!
-Exit Door : thief ending : Thief : Congrats you escaped as the thief out the exit door!
+Fire Exit : thief ending : Thief : I push the cold metal bar of the fire exit and step into the night, the hospital’s sterile and tacky corridors fading behind me. I check my bag, glancing briefly at The Golden Microscope, a gleaming trophy of my legendary heist. However as I step into the night air, some part of me is still uncertain, wondering if this is who I really am.(Hidden Ending 1/4)
+Exit Door : thief ending : Thief : I walk through the front of the hospital, smiling to myself as the guards are none wiser of the heist I just pulled. I check my bag, glancing briefly at The Golden Microscope, a gleaming trophy of my legendary heist. However as I step into the night air, some part of me is still uncertain, wondering if this is who I really am.(Hidden Ending 1/4)
 
 # I am X
 Donuts : inspect : Any : A box of fresh donuts, still warm.
@@ -140,8 +168,4 @@ Fire Exit : go through : Brawler : I push the metal bar and the door swings open
 #Doors
 door : unlock : Any : The door beeps, accepting the id and I hear the deadbolt retract. I open the door and walk through.
 red door : unlockFail : Any : I rattle the red door’s handle, trying to open it. It looks like it's one of those id card access doors and won't open up until I use a card.
-
-
-
-
 
