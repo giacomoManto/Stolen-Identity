@@ -6,6 +6,9 @@ using UnityEngine.WSA;
 public class SpawnInteractable : Interactable
 {
     [SerializeField]
+    bool destroyOnSpawn = false;
+
+    [SerializeField]
     private GameObject spawnedObject;
 
     [SerializeField]
@@ -59,6 +62,14 @@ public class SpawnInteractable : Interactable
             GetComponentInParent<RoomBehavior>().InitInteractables();
             gameMangagerText = dialogueManager.GetDialogue(interactableName, "on spawn", IDCard.None.Name);
             GameManager.Instance().AddTextToJournal(gameMangagerText);
+            objectSpawned = true;
+        }
+        if (destroyOnSpawn)
+        {
+            RoomBehavior room = GetComponentInParent<RoomBehavior>();
+            this.transform.parent = null;
+            room.InitInteractables();
+            Destroy(gameObject);
         }
     }
 }

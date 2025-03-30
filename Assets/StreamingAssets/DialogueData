@@ -21,12 +21,11 @@ Patient ID : inspect : Any : I take a look at the ID card, inspecting it closely
 
 Thief ID : inspect : Any : I take a look at the ID card, inspecting it closely. A portrait of a pretty shady individual is on the card along with a number to call for 'repossession' services.
 Thief ID : inspect : Guard : I take a look at the ID card, inspecting it closely. This is clearly a thief, why would they leave this hanging around? I really hope they aren't planning to steal from us, I can't get fired again.
-Thief ID : on spawn : Any : After pocketing the item, I realize that there was actually underneath it. Upon closer inspection it looks to be some sort of Thief ID card.
+Thief ID : on spawn : Any : After pocketing the item, I realize that there was actually something underneath it. Upon closer inspection it looks to be some sort of Thief ID card.
 
 Brawler ID : inspect : Any : I take a look at the ID card, inspecting it closely. The card is a bit bent and has a few scratches on it. It's a bit hard to read but the profession says 'Bar Brawler'. That can't be a real job.
 
 Doctor ID : inspect : Any : I take a look at the ID card, inspecting it closely. The card is pristine and has a picture of an eager doctor on it.
-Doctor ID : on spawn : Any : Taking a closer look at the cutout I realize the Doctor ID pinned to the board is shiny, as if it's a real card and not just a printout.
 
 Guard ID : inspect : Any : I take a look at the ID card, inspecting it closely. The card is a bit worn but still legible. It has a picture of a stern looking guard on it.
 Guard ID : inspect : Thief : I take a look at the ID card, inspecting it closely. The card is a bit worn but my keen eye can still make out the picture. This is a guard, I need to keep an eye out for them.
@@ -36,7 +35,7 @@ Guard ID : inspect : Thief : I take a look at the ID card, inspecting it closely
 patient : switch : Any : I hold the Patient ID before me and my mind drifts in confusion and unease until suddenly… I realize maybe I'm just a hospital patient. I wonder what I'm in here for?
 thief : switch : Any : I take out the Thief ID, my eyes tracing the rough portrait and fading edges. A fragment of a rebellious dream stirs within me, whispering of secrets to uncover and treasures yet to be claimed. 
 brawler : switch : Any : I bring forth the battered Brawler ID, its worn edges and scratches speaking plainly of past conflicts. In that moment, my mind hazes as I feel raw strength and simmer anger within me, calling me to break any obstacles in my path.
-doctor : switch : Any : I gently lift the clean pristine Doctor ID, and a calming clarity envelops me. I take a cloth out of my pocket and clean off a small smudge on the ID I didn't see before. It was time to work.
+doctor : switch : Any : I gently lift the clean pristine Doctor ID, and a calming clarity envelops me. I take a cloth out of my pocket and clean off a small smudge on the ID I didn't see before. It's time to work.
 guard : switch : Any : I firmly clutch the Guard ID and feel a surge of duty course through my veins. I gain a stern look as in an instant, the world sharpens into focus as the call to protect and serve resonates deep within.
 
 # Rediscover Yourself
@@ -100,7 +99,7 @@ Glass Case : location : Thief: There seems to be a fairly large glass case which
 Glass Case : inspect : Any : I walk over to the glass case and realize it contains… a golden microscope? I do a double take before realizing it's not a fake. The glass case itself doesn't look like its locked, which feels like a mistake considering the value of its contents.
 Glass Case : inspect : Doctor: I walk over to the glass case knowing it contains my precious golden microscope. Even though I doubt the hospital insurance will cover it if it is stolen, how could I hide it away inside a safe?
 Glass Case : on spawn : Any : I open up the glass case, fully revealing the golden microscope which rests inside.
-Glass Case : object spawned: Any: An open glass case. There isn't really much else I can do with this.
+Glass Case : object spawned : Any: An open glass case. There isn't really much else I can do with this.
 
 Health Poster: location : Any : At the end of the room rests a large health poster, which is quite well centered on the wall.
 Health Poster : location : Thief: At the end of the room rests a large health poster, which is poorly covering some sort of door. I could probably take it down to get to the door if I wanted to.
@@ -143,7 +142,11 @@ red door : unlockFail : Any : I rattle the red door’s handle, trying to open i
 
 # Doctor Route
 Cardboard Cutout : object spawned : Any : A cardboard cutout of a doctor. It's a bit creepy how realistic it looks.
+Cardboard Cutout : on spawn : Any : Taking a closer look at the cutout I realize the Doctor ID pinned to the board is shiny, as if it's a real card and not just a printout.
 
+
+Janitor's Journal : read : Any : I flip through the pages of the journal. It is filled to the brim with notes about the Doctor's daily routine. It seems the janitor has been keeping tabs on the Doctor for quite some time.
+Janitor's Journal : read : Doctor : I flip through the pages of the journal. It is filled to the brim with notes about my daily routine. This feels like an invasion of privacy. I really need to get out of this hospital if this is who my colleagues are.
 
 
 

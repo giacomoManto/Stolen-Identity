@@ -425,6 +425,7 @@ MonoBehaviour:
     This is creepy.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
+  destroyOnSpawn: 0
   spawnedObject: {fileID: 488915322010265457, guid: 5c58b602e84f8144eb58b98c4d490ec1, type: 3}
   spawnedText: 
   actionsWhichTriggerSpawn:
@@ -886,6 +887,7 @@ MonoBehaviour:
   locationDescription: 
   playerCanStore: 0
   dialogueManager: {fileID: 0}
+  destroyOnSpawn: 1
   spawnedObject: {fileID: 4899724337514399428, guid: 23e61882b2d665e408b10887b516a747, type: 3}
   spawnedText: 
   actionsWhichTriggerSpawn:
@@ -893,6 +895,8 @@ MonoBehaviour:
   - destroy
   - tear
   - take
+  - pull
+  - destroy
 --- !u!1 &395825187
 GameObject:
   m_ObjectHideFlags: 0
@@ -4466,8 +4470,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   securityLevel: 0
-  roomName: 
-  roomDescription: 
+  roomName: Shrine
+  roomDescription: A dusty crypt illuminated by small candles. There isn't much here
+    except the creepy shrine.
   consideredInRoom: []
   visitText: []
   allAfter: 
@@ -4617,8 +4622,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyed: 0
-  interactableName: 
-  locationDescription: 
+  interactableName: shrine
+  locationDescription: A ornate shrine of candles, pictures and stolen belongings
+    of the doctor.
   playerCanStore: 1
   dialogueManager: {fileID: 0}
 --- !u!1 &2124758851
