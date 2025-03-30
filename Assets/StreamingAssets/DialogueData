@@ -21,7 +21,7 @@ Patient ID : inspect : Any : I take a look at the ID card, inspecting it closely
 
 Thief ID : inspect : Any : I take a look at the ID card, inspecting it closely. A portrait of a pretty shady individual is on the card along with a number to call for 'repossession' services.
 Thief ID : inspect : Guard : I take a look at the ID card, inspecting it closely. This is clearly a thief, why would they leave this hanging around? I really hope they aren't planning to steal from us, I can't get fired again.
-Thief ID : on spawn : Any : After pocketing the item, I realize that there was actually something underneath it. Upon closer inspection it looks to be some sort of Thief ID card.
+Thief ID : on spawn : Any : After pocketing the item, I realize that there was actually underneath it. Upon closer inspection it looks to be some sort of Thief ID card.
 
 Brawler ID : inspect : Any : I take a look at the ID card, inspecting it closely. The card is a bit bent and has a few scratches on it. It's a bit hard to read but the profession says 'Bar Brawler'. That can't be a real job.
 
@@ -35,7 +35,7 @@ Guard ID : inspect : Thief : I take a look at the ID card, inspecting it closely
 patient : switch : Any : I hold the Patient ID before me and my mind drifts in confusion and unease until suddenly… I realize maybe I'm just a hospital patient. I wonder what I'm in here for?
 thief : switch : Any : I take out the Thief ID, my eyes tracing the rough portrait and fading edges. A fragment of a rebellious dream stirs within me, whispering of secrets to uncover and treasures yet to be claimed. 
 brawler : switch : Any : I bring forth the battered Brawler ID, its worn edges and scratches speaking plainly of past conflicts. In that moment, my mind hazes as I feel raw strength and simmer anger within me, calling me to break any obstacles in my path.
-doctor : switch : Any : I gently lift the clean pristine Doctor ID, and a calming clarity envelops me. I take a cloth out of my pocket and clean off a small smudge on the ID I didn't see before. It's time to work.
+doctor : switch : Any : I gently lift the clean pristine Doctor ID, and a calming clarity envelops me. I take a cloth out of my pocket and clean off a small smudge on the ID I didn't see before. It was time to work.
 guard : switch : Any : I firmly clutch the Guard ID and feel a surge of duty course through my veins. I gain a stern look as in an instant, the world sharpens into focus as the call to protect and serve resonates deep within.
 
 # Rediscover Yourself
@@ -60,6 +60,22 @@ Bar Rewards Card : inspect : Guard : I pick up a battered, soggy bar loyalty car
 Bar Rewards Card : inspect : Doctor : I pick up a battered, soggy bar loyalty card. Looks like this belonged to a true hardcore drinker. Wasn’t there a patient that came in earlier directly from a bar?
 Bar Rewards Card : inspect : Brawler : My rewards card. Only thirteen more drinks and I'll get one for free.
 
+# Become a doctor
+Lab Coat : inspect : Any : I take a closer look at the lab coat. It's quite standard.
+Lab Coat : inspect : Doctor : My lucky lab coat. This bad boy was the only warmth during my residency.
+Lab Coat : inspect : Brawler : Looks like a napkin to me. Why was this in a vault?
+
+Punchcard : inspect : Any : I hold the punch card up to the light. Nope, no hidden messages.
+Punchcard : inspect : Doctor : My punch card. Contractually I can't leave until I get this punched.
+Punchcard : inspect : Brawler : This looks pretty punchable to me.
+
+Punch Card Punched : inspect : Any : I hold the punch card up to the light. The large hole lets the light through, blinding me temporarily. Still no hidden messages.
+Punch Card Punched : inspect : Doctor : My punch card. Now with a nice hole clocking me out.
+Punch Card Punched : inspect : Brawler : This looks like it could handle a couple more hits.
+
+PhD : inspect : Any : A framed Doctorate. Someone must be really proud about getting this to frame it so securely.
+PhD : inspect : Doctor : My framed Doctorate. Without this who really am I?
+
 # Become a thief
 Calling Card : location: Any :I see what looks like a calling card sitting atop a shiny metal surgical plate in the corner.
 Calling Card : location: Thief: I see my calling card, lying atop a shiny metal surgical plate in the corner, no doubt from one of my great heists.
@@ -83,7 +99,7 @@ Glass Case : location : Thief: There seems to be a fairly large glass case which
 Glass Case : inspect : Any : I walk over to the glass case and realize it contains… a golden microscope? I do a double take before realizing it's not a fake. The glass case itself doesn't look like its locked, which feels like a mistake considering the value of its contents.
 Glass Case : inspect : Doctor: I walk over to the glass case knowing it contains my precious golden microscope. Even though I doubt the hospital insurance will cover it if it is stolen, how could I hide it away inside a safe?
 Glass Case : on spawn : Any : I open up the glass case, fully revealing the golden microscope which rests inside.
-Glass Case : object spawned : Any: An open glass case. There isn't really much else I can do with this.
+Glass Case : object spawned: Any: An open glass case. There isn't really much else I can do with this.
 
 Health Poster: location : Any : At the end of the room rests a large health poster, which is quite well centered on the wall.
 Health Poster : location : Thief: At the end of the room rests a large health poster, which is poorly covering some sort of door. I could probably take it down to get to the door if I wanted to.
@@ -93,6 +109,9 @@ Health Poster : inspect : Doctor: I look closely at the poster, realizing this i
 Health Poster : on spawn : Any : I tear away the poster, revealing a <b>hidden door</b> which has no place in a janitor's room.
 Health Poster : object spawned: Any: Not much else to do with this poster.
 
+#I am Thief
+Fire Exit : thief ending : Thief : Congrats you escaped as the thief out the fire exit!
+Exit Door : thief ending : Thief : Congrats you escaped as the thief out the exit door!
 
 # I am X
 Donuts : inspect : Any : A box of fresh donuts, still warm.
@@ -123,50 +142,6 @@ door : unlock : Any : The door beeps, accepting the id and I hear the deadbolt r
 red door : unlockFail : Any : I rattle the red door’s handle, trying to open it. It looks like it's one of those id card access doors and won't open up until I use a card.
 
 
-# Become a doctor
-Lab Coat : inspect : Any : I take a closer look at the lab coat. It's quite standard.
-Lab Coat : inspect : Doctor : My lucky lab coat. This bad boy was the only warmth during my residency.
-Lab Coat : inspect : Brawler : Looks like a napkin to me. Why was this in a vault?
-
-Labcoat : put on : Any : Why would I wear this. I'm not a doctor.
-Labcoat : put on : Doctor : I put on the lab coat. It feels like a second skin. Maybe I am a doctor afterall. I could live my life out like this.
-
-Punchcard : inspect : Any : I hold the punch card up to the light. Nope, no hidden messages.
-Punchcard : inspect : Doctor : My punch card. Contractually I can't leave until I get this punched.
-Punchcard : inspect : Brawler : This looks pretty punchable to me.
-
-Punch Card Punched : inspect : Any : I hold the punch card up to the light. The large hole lets the light through, blinding me temporarily. Still no hidden messages.
-Punch Card Punched : inspect : Doctor : My punch card. Now with a nice hole clocking me out.
-Punch Card Punched : inspect : Brawler : This looks like it could handle a couple more hits.
-
-PhD : inspect : Any : A framed Doctorate. Someone must be really proud about getting this to frame it so securely.
-PhD : inspect : Doctor : My framed Doctorate. Without this who really am I?
-
-coarkboard : object spawned : Any : A coarkboard with a whole bunch of notes pinned to it.
-coarkboard : object spawned : Brawler : A coarkboard with a whole bunch of notes pinned to it. I quickly scan it for any information about staff bars or really just bars in the area. I don't find anything.
-coarkboard : on spawn : Any : I take a closer look at the coarkboard and see a tiny little note sticking out from behind it.
-
-Note : inspect : Any : I take a look at the note. Nice quality paper. It reads, "Calling all admirers of the Doctor. I have a secret staff club behind my work area. - The Janitor"
-Note : inspect : Doctor : I take a look at the note. Nice quality paper. It reads, "Calling all admirers of the Doctor. I have a secret staff club behind my work area. - The Janitor". A shiver runs down my spine, I knew the janitor liked me a bit too much but I didn't think I had a fan club.
-Note : read : Any : I take a look at the note. Nice quality paper. It reads, "Calling all admirers of the Doctor. I have a secret staff club behind my work area. - The Janitor"
-Note : read : Doctor : I take a look at the note. Nice quality paper. It reads, "Calling all admirers of the Doctor. I have a secret staff club behind my work area. - The Janitor". A shiver runs down my spine, I knew the janitor liked me a bit too much but I didn't think I had a fan club.
-
-painting : object spawned : Any : A large painting. I'm glad I was strong enough to move it.
-painting : object spawned : Brawler : A large painting. Pretty easy to move.
-
-painting : on spawn : Any : I use all my might to move the painting to the side. Behind it there is a vault door, interesting.
-painting : on spawn : Doctor : I use all my might to move the painting to the side. Behind it is my secret vault door.
-painting : on spawn : Brawler : I use all my might to move the painting to the side.
-
-painting : inspect : Any : A large painting. It's a bit crooked. Behind it I can see a metal plate. Strange.
-painting : inspect : Brawler : A large painting. It's a bit crooked.
-painting : inspect : Doctor : A large painting hiding my secret vault entrance.
-
-Cardboard Cutout : object spawned : Any : A cardboard cutout of a doctor. It's a bit creepy how realistic it looks.
-Cardboard Cutout : on spawn : Any : Taking a closer look at the cutout I realize the Doctor ID pinned to the board is shiny, as if it's a real card and not just a printout.
-
-Janitor's Journal : read : Any : I flip through the pages of the journal. It is filled to the brim with notes about the Doctor's daily routine. It seems the janitor has been keeping tabs on the Doctor for quite some time.
-Janitor's Journal : read : Doctor : I flip through the pages of the journal. It is filled to the brim with notes about my daily routine. This feels like an invasion of privacy. I really need to get out of this hospital if this is who my colleagues are.
 
 
 

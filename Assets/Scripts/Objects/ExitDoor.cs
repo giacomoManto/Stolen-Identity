@@ -23,6 +23,7 @@ public class ExitDoor : Interactable
             GameManager.Instance().AddTextToJournal("With the guards distracted I slip through the door and make my way towards freedom.");
             GameManager.Instance().SetFlag("gameOver", true);
             GameManager.Instance().SetFlag("escaped", true);
+            if (ThiefEnding(id)) { return; }
             GameManager.Instance().AddTextToJournal(this.GetTextFromJson("go through", id));
         }
         // Add other detections here
@@ -44,6 +45,15 @@ public class ExitDoor : Interactable
             GameManager.Instance().AddTextToJournal("It's the exit door. I can see the outside world through the glass. I can't wait to get out of here. Unfortunately two guards look like they are more focused on keeping people in rather than out.");
         }
 
+    }
+    private bool ThiefEnding(IDCard id)
+    {
+        if (!GameManager.Instance().GetFlag("Thief Ending") || id.Name != IDCard.Thief.Name)
+        {
+            return false;
+        }
+        GameManager.Instance().AddTextToJournal(this.GetTextFromJson("thief ending", id));
+        return true;
     }
 
 }
