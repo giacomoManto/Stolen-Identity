@@ -23,7 +23,7 @@ public class ExitDoor : Interactable
             GameManager.Instance().AddTextToJournal("With the guards distracted I slip through the door and make my way towards freedom.");
             GameManager.Instance().SetFlag("gameOver", true);
             GameManager.Instance().SetFlag("escaped", true);
-            GameManager.Instance().AddTextToJournal(this.GetTextFromJson("go throughX", id));
+            GameManager.Instance().AddTextToJournal(this.GetTextFromJson("go through", id));
         }
         // Add other detections here
         else

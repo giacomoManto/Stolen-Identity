@@ -75,14 +75,8 @@ public class GameManager : MonoBehaviour
 
         currentPlayerRoom = allRooms["Patient Room"];
 
-        addGenericCommand(new CheckBag(this, player));
-        addGenericCommand(new InspectCommand(this));
-        addGenericCommand(new SaveGame(this, player));
-        addGenericCommand(new UseCommand(this));
-        addGenericCommand(new ViewRoom(this, player));
-        addGenericCommand(new InfoCommand(this));
-        addGenericCommand(new HelpCommand(this));
-
+        InitGenericCommands();
+        InitGameFlags();
         // Start coroutine to wait for DialogueManager to load before initializing dialogue elements.
         StartCoroutine(WaitForSingletonSetups());
     }
@@ -103,6 +97,22 @@ public class GameManager : MonoBehaviour
         currentPlayerRoom.OnEnter();
         displayCurrentRoomDesc();
     }
+    private void InitGenericCommands()
+    {
+        addGenericCommand(new CheckBag(this, player));
+        addGenericCommand(new InspectCommand(this));
+        addGenericCommand(new SaveGame(this, player));
+        addGenericCommand(new UseCommand(this));
+        addGenericCommand(new ViewRoom(this, player));
+        addGenericCommand(new InfoCommand(this));
+        addGenericCommand(new HelpCommand(this));
+    }
+
+    private void InitGameFlags()
+    {
+        gameFlags.Add("Thief Ending", false);
+    }
+
     #endregion
 
     #region GameState Management

@@ -163,6 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bb591057174da2439f3782dfb96b560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: Fire Alarm
   locationDescription: A fire alarm sits on the wall by a water cooler.
   playerCanStore: 0
@@ -222,6 +223,7 @@ MonoBehaviour:
     casual tables, and chairs create a comfortable setting. It seems there are a
     few people on break, but none of them seem really interested in breaking the
     peace or are just too tired to do so. '
+  consideredInRoom: []
   visitText: []
   allAfter: 
 --- !u!1 &62986275
@@ -447,6 +449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInput: {fileID: 0}
   currentPlayerRoom: {fileID: 0}
+  ThiefID: {fileID: 6448042394550906417, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
 --- !u!4 &145529331
 Transform:
   m_ObjectHideFlags: 0
@@ -581,12 +584,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: red door
   locationDescription: There is a red door that leads to the room I woke up in.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
   room: {fileID: 1456374742}
   lockLevel: 0
+  roomName: 
 --- !u!1 &201844054
 GameObject:
   m_ObjectHideFlags: 0
@@ -715,6 +720,7 @@ MonoBehaviour:
   roomName: Hospital Lobby
   roomDescription: I move into a brightly lit hospital lobby, complete with a seating
     area for those awaiting admission.
+  consideredInRoom: []
   visitText: []
   allAfter: 
 --- !u!1 &289139624
@@ -766,8 +772,65 @@ MonoBehaviour:
   securityLevel: 2
   roomName: Doctor Office
   roomDescription: 'I glance around, recognizing this as a doctor''s office. '
+  consideredInRoom: []
   visitText: []
   allAfter: 
+--- !u!1 &354027864
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 354027865}
+  - component: {fileID: 354027866}
+  m_Layer: 0
+  m_Name: Health Poster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &354027865
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354027864}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1950406219}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &354027866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354027864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9159d3f56e202542bdd3e2605439624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyed: 0
+  interactableName: Health Poster
+  locationDescription: 
+  playerCanStore: 0
+  dialogueManager: {fileID: 0}
+  spawnedObject: {fileID: 4899724337514399428, guid: 23e61882b2d665e408b10887b516a747, type: 3}
+  spawnedText: 
+  actionsWhichTriggerSpawn:
+  - remove
+  - destroy
+  - tear
+  - take
 --- !u!1 &395825187
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,6 +914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: paper covered door
   locationDescription: There seems to be a... paper covered door? Which I think leads
     into some sort of doctors office.
@@ -858,6 +922,7 @@ MonoBehaviour:
   dialogueManager: {fileID: 0}
   room: {fileID: 52509126}
   lockLevel: 0
+  roomName: 
 --- !u!1 &450535962
 GameObject:
   m_ObjectHideFlags: 0
@@ -888,6 +953,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 983849251}
+  - {fileID: 397591039}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &453564231
@@ -940,6 +1006,7 @@ MonoBehaviour:
   roomDescription: 'I wander into a pristine vault that feels out of place in a hospital.
     Cold, bare steel walls and a few fluorescent lights illuminate the spotless,
     clinical space. '
+  consideredInRoom: []
   visitText: []
   allAfter: 
 --- !u!1 &464826050
@@ -1089,6 +1156,7 @@ MonoBehaviour:
   roomDescription: 'I walk into an awfully dull hallway that seems to connect patient
     rooms and the main wing of the hospital. I hope these people learn to decorate
     sometime soon. '
+  consideredInRoom: []
   visitText:
   - "One thing\u2019s for sure: the more I write in this journal and start to remember,
     the more determined I am to get out of here. I can only take the glaring lights,
@@ -1323,9 +1391,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28170560485a37a4c8ab3f7b7a0cf4b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: Exit Door
   locationDescription: A large glass exit door leading to the the outside.
-  playerCanStore: 1
+  playerCanStore: 0
   dialogueManager: {fileID: 0}
 --- !u!4 &538016600 stripped
 Transform:
@@ -1460,6 +1529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: metallic door
   locationDescription: The metallic door to the break room remains squarely behind
     me.
@@ -1467,6 +1537,7 @@ MonoBehaviour:
   dialogueManager: {fileID: 0}
   room: {fileID: 52509126}
   lockLevel: 0
+  roomName: 
 --- !u!1 &653568686
 GameObject:
   m_ObjectHideFlags: 0
@@ -1511,6 +1582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: green door
   locationDescription: There is also a green door that seems to lead another patient
     room.
@@ -1518,6 +1590,7 @@ MonoBehaviour:
   dialogueManager: {fileID: 0}
   room: {fileID: 1499385321}
   lockLevel: 0
+  roomName: 
 --- !u!1 &673477764
 GameObject:
   m_ObjectHideFlags: 0
@@ -1562,6 +1635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63384af4533103e43beeeec67b3432cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: Patient ID
   locationDescription: There also is some sort of Patient ID which rests atop a patients
     bedside table.
@@ -1599,8 +1673,6 @@ Transform:
   m_Children:
   - {fileID: 643913728}
   - {fileID: 1820977942}
-  - {fileID: 538016600}
-  - {fileID: 397591039}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &687393473
@@ -1620,6 +1692,7 @@ MonoBehaviour:
   roomDescription: "I step into a somewhat cluttered storage room. Metal racks loaded
     with a random assortment of boxes line the walls\u2014finding anything in this
     jumble would be a real challenge. "
+  consideredInRoom: []
   visitText: []
   allAfter: 
 --- !u!1 &688669856
@@ -1666,6 +1739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bb591057174da2439f3782dfb96b560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: Fire Alarm
   locationDescription: There is a fire alarm on the southern wall.
   playerCanStore: 0
@@ -1714,6 +1788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bb591057174da2439f3782dfb96b560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: Fire Alarm
   locationDescription: A fire alarm rests on the wall by the door.
   playerCanStore: 0
@@ -1762,6 +1837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: paper covered door
   locationDescription: There seems to be a... paper covered door? Which I think leads
     into some sort of doctors office.
@@ -1769,6 +1845,7 @@ MonoBehaviour:
   dialogueManager: {fileID: 0}
   room: {fileID: 289139626}
   lockLevel: 0
+  roomName: 
 --- !u!1 &783765243
 GameObject:
   m_ObjectHideFlags: 0
@@ -1937,12 +2014,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: orange door
   locationDescription: In front of me there is a orange door with no windows.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
   room: {fileID: 1501790960}
   lockLevel: 0
+  roomName: 
 --- !u!1 &958311107
 GameObject:
   m_ObjectHideFlags: 0
@@ -1987,6 +2066,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bb591057174da2439f3782dfb96b560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: Fire Alarm
   locationDescription: A red fire alarm is next to the water cooler bubbling in the
     corner of the room.
@@ -2036,6 +2116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: black door
   locationDescription: The black door I walked through remains behind me, leading
     back to the cubicle work area.
@@ -2043,6 +2124,7 @@ MonoBehaviour:
   dialogueManager: {fileID: 0}
   room: {fileID: 1501790960}
   lockLevel: 0
+  roomName: 
 --- !u!1 &983849250 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1076241964794849526, guid: a5a04b823225513449a01a1fe3063c1c, type: 3}
@@ -2187,6 +2269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: red door
   locationDescription: A red door with a small pane of glass is at the far end of
     the room. It looks like it leads into some sort of hallway.
@@ -2194,6 +2277,7 @@ MonoBehaviour:
   dialogueManager: {fileID: 0}
   room: {fileID: 479178962}
   lockLevel: 1
+  roomName: 
 --- !u!1001 &1088189800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2300,6 +2384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bb591057174da2439f3782dfb96b560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: Fire Alarm
   locationDescription: A fire alarm lathered in a coat of cream paint (must have
     received the landlord special) that roughly matches the wall color is next to
@@ -2350,6 +2435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: grey door
   locationDescription: Behind me is the grey door that goes back to the cubicle work
     area.
@@ -2357,6 +2443,7 @@ MonoBehaviour:
   dialogueManager: {fileID: 0}
   room: {fileID: 1501790960}
   lockLevel: 0
+  roomName: 
 --- !u!1 &1317429839
 GameObject:
   m_ObjectHideFlags: 0
@@ -2401,6 +2488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 951cf8aff516b9845b4922f775221d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: Labcoat
   locationDescription: 
   playerCanStore: 1
@@ -2572,6 +2660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5521eaba4587514488c2838b3f8b9cbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: Pile of Paper
   locationDescription: There is a pile of paper on a clearly disorganized desk.
   playerCanStore: 1
@@ -2621,11 +2710,65 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bb591057174da2439f3782dfb96b560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: Fire Alarm
   locationDescription: There is an old fire alarm half sticking out from behind the
     refrigerator.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
+--- !u!1 &1428822187
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1428822188}
+  - component: {fileID: 1428822189}
+  m_Layer: 0
+  m_Name: DoorToJanitorRoom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1428822188
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428822187}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2124758852}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1428822189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428822187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyed: 0
+  interactableName: hidden door
+  locationDescription: The hidden door remains behind me which leads back to the
+    janitor room.
+  playerCanStore: 0
+  dialogueManager: {fileID: 0}
+  room: {fileID: 1950406220}
+  lockLevel: 0
+  roomName: 
 --- !u!1 &1444359589
 GameObject:
   m_ObjectHideFlags: 0
@@ -2670,12 +2813,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: white door
   locationDescription: There seems to be a white door at the end of the hallway.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
   room: {fileID: 52509126}
   lockLevel: 0
+  roomName: 
 --- !u!1 &1456374740
 GameObject:
   m_ObjectHideFlags: 0
@@ -2728,6 +2873,7 @@ MonoBehaviour:
   roomName: Patient Room
   roomDescription: 'I look around the foreign room, taking in the details. Theres
     a few more patient beds next to mine, all empty. '
+  consideredInRoom: []
   visitText:
   - "I woke up in a hospital bed with no idea who I am. I found this journal on the
     bedside table, so I\u2019m using it to keep track of everything I do and see\u2014maybe
@@ -2776,6 +2922,7 @@ Transform:
   m_Children:
   - {fileID: 1902775118}
   - {fileID: 771437825}
+  - {fileID: 538016600}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1499385321
@@ -2795,6 +2942,7 @@ MonoBehaviour:
   roomDescription: 'Looks almost identical to the patient room I woke up in, except
     there''s a few more beds and slightly more sunlight. To the left of me there''s
     a trash can filled with used gauze. '
+  consideredInRoom: []
   visitText: []
   allAfter: 
 --- !u!1 &1501790958
@@ -2833,6 +2981,8 @@ Transform:
   - {fileID: 1520839185}
   - {fileID: 1414727510}
   - {fileID: 958311108}
+  - {fileID: 1844631724}
+  - {fileID: 1960753704}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1501790960
@@ -2851,6 +3001,7 @@ MonoBehaviour:
   roomName: Cubicle Work Area
   roomDescription: I look around the decently sized area with various cubicles. The
     walls aren't very tall so I can easily see into the work areas.
+  consideredInRoom: []
   visitText: []
   allAfter: 
 --- !u!1 &1520839184
@@ -2897,12 +3048,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: blue door
   locationDescription: There is a blue door to what looks like a lobby.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
   room: {fileID: 275165892}
   lockLevel: 0
+  roomName: 
 --- !u!1 &1582195720
 GameObject:
   m_ObjectHideFlags: 0
@@ -2954,6 +3107,7 @@ MonoBehaviour:
   roomDescription: "I find myself in a corridor that resembles the patient hallway
     I passed earlier, but with tighter security\u2014ceiling cameras and patrolling
     guards keep a close watch. "
+  consideredInRoom: []
   visitText: []
   allAfter: 
 --- !u!1 &1586635845
@@ -3151,6 +3305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: black door
   locationDescription: Theres a secure looking, metal black door which seems to lead
     deeper into the hospital.
@@ -3158,6 +3313,7 @@ MonoBehaviour:
   dialogueManager: {fileID: 0}
   room: {fileID: 1582195722}
   lockLevel: 0
+  roomName: 
 --- !u!1 &1688797945
 GameObject:
   m_ObjectHideFlags: 0
@@ -3202,12 +3358,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: grey door
   locationDescription: There is a grey door to what looks like a Janitor Room.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
   room: {fileID: 1950406220}
   lockLevel: 0
+  roomName: 
 --- !u!1 &1747834899
 GameObject:
   m_ObjectHideFlags: 0
@@ -3330,6 +3488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3cf7926d7f461d4897fb473645a563e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: guards
   locationDescription: Standing at attention next to each side of the exit door are
     two guards.
@@ -3580,6 +3739,55 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1807000532342806654, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
   m_PrefabInstance: {fileID: 1820977941}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1844631723
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1844631724}
+  - component: {fileID: 1844631725}
+  m_Layer: 0
+  m_Name: Small Plant
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1844631724
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844631723}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1501790959}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1844631725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844631723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951cf8aff516b9845b4922f775221d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyed: 0
+  interactableName: Small Plant
+  locationDescription: 
+  playerCanStore: 1
+  dialogueManager: {fileID: 0}
 --- !u!1 &1902775117
 GameObject:
   m_ObjectHideFlags: 0
@@ -3624,12 +3832,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: green door
   locationDescription: Behind me is the green door I came in through.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
   room: {fileID: 479178962}
   lockLevel: 0
+  roomName: 
 --- !u!1 &1948041383
 GameObject:
   m_ObjectHideFlags: 0
@@ -3674,12 +3884,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: blue door
   locationDescription: There is a blue door to the cubicle area.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
   room: {fileID: 1501790960}
   lockLevel: 0
+  roomName: 
 --- !u!1 &1950406218
 GameObject:
   m_ObjectHideFlags: 0
@@ -3711,6 +3923,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1261492215}
+  - {fileID: 354027865}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1950406220
@@ -3729,6 +3942,7 @@ MonoBehaviour:
   roomName: Janitor Room
   roomDescription: I step into a bright, tidy room clearly maintained by the janitor.
     Despite the age of the equipment, everything appears well cared for.
+  consideredInRoom: []
   visitText: []
   allAfter: 
 --- !u!1 &1950935140
@@ -3775,6 +3989,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 951cf8aff516b9845b4922f775221d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: Bar Rewards Card
   locationDescription: 
   playerCanStore: 1
@@ -3823,12 +4038,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: orange door
   locationDescription: There is a orange door that I know goes to the patient hallway.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
   room: {fileID: 479178962}
   lockLevel: 0
+  roomName: 
+--- !u!1 &1960753703
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1960753704}
+  - component: {fileID: 1960753705}
+  m_Layer: 0
+  m_Name: Fancy Pen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1960753704
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960753703}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1501790959}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1960753705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960753703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951cf8aff516b9845b4922f775221d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyed: 0
+  interactableName: Fancy Pen
+  locationDescription: 
+  playerCanStore: 1
+  dialogueManager: {fileID: 0}
 --- !u!1 &1990417179
 GameObject:
   m_ObjectHideFlags: 0
@@ -3873,6 +4139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: metallic door
   locationDescription: On the wall adjacent to me there appears to be a metallic
     door labelled storage room.
@@ -3880,6 +4147,7 @@ MonoBehaviour:
   dialogueManager: {fileID: 0}
   room: {fileID: 687393473}
   lockLevel: 0
+  roomName: 
 --- !u!1 &2061849513
 GameObject:
   m_ObjectHideFlags: 0
@@ -3924,12 +4192,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79058c372e77711438a70518d3944160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: white door
   locationDescription: The white door I came remains shuts behind me.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
   room: {fileID: 1582195722}
   lockLevel: 0
+  roomName: 
 --- !u!1 &2094455742
 GameObject:
   m_ObjectHideFlags: 0
@@ -3974,6 +4244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce85976fb8a33c441ac9964330439739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: Fire Exit
   locationDescription: A large red fire exit is at the end of the hallway.
   playerCanStore: 1
@@ -4022,6 +4293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5461495efe37d74c92d6234ee7e6151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: Donuts
   locationDescription: A juicy box of donuts sits on a cheap plastic table in the
     middle of the room.
@@ -4060,6 +4332,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1088189801}
+  - {fileID: 1428822188}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2124758853
@@ -4080,6 +4353,7 @@ MonoBehaviour:
     room. Here, outdated and discarded equipment forms chaotic walls, arranged in
     a way that almost seems intentional\u2014as if someone designed this mess to
     be a maze."
+  consideredInRoom: []
   visitText: []
   allAfter: 
 --- !u!1001 &478548081088523399
@@ -4145,13 +4419,8 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 687393472}
+    m_TransformParent: {fileID: 450535963}
     m_Modifications:
-    - target: {fileID: 501784636640213182, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
-      propertyPath: locationDescription
-      value: The Thief ID lies where I last discovered it, asking to be taken much
-        like the items I've taken before it.
-      objectReference: {fileID: 0}
     - target: {fileID: 6448042394550906417, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
       propertyPath: m_Name
       value: Thief ID
@@ -4207,7 +4476,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 687393472}
+    m_TransformParent: {fileID: 1499385320}
     m_Modifications:
     - target: {fileID: 2061239146618224918, guid: 0f1609ade90d79743a2d8104281930f9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4302,6 +4571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cfbcdced7fe8f54ea00b638ec2167f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: apple
   locationDescription: A crisp red apple sits on the bedside table. The sun reflects
     off it gorgeous red skin.
