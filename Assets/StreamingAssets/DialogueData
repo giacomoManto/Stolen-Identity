@@ -11,7 +11,7 @@ Fancy Pen : inspect : Any : A really fancy looking inkwell pen, dry of ink. Prob
 Fancy Pen : location : Any : A fancy pen rests on the desk of a paper cluttered cubicle.
 
 Small Plant: inspect : Any : Upon a closer look it's one of those undying cactus succulents. The pot it's planted in has some text painted on it which reads ‘George the Undying Cactus’.
-Small Plant: location : Any : Surprisingly, one of the cubicles is quite neat, even containing a small plant which is the height of decoration from what i've seen from the previous hospital rooms.
+Small Plant: location : Any : Surprisingly, one of the cubicles is quite neat, even containing a small plant which is the height of decoration from what I've seen from the previous hospital rooms.
 Small Plant: kill : Any : I try to destroy the cactus but just end up with thorns in my hands. ‘George’ remains unharmed.
 Small Plant: destroy : Any : I try to destroy the cactus but just end up with thorns in my hands. ‘George’ remains unharmed.
 
@@ -196,7 +196,7 @@ Fire Alarm : inspect: Guard: I’d be pissed if someone pulled that. I mean can 
 Fire Alarm : disable : Any : I fiddle with the fire alarm. Eventually I got it disabled.
 Fire Alarm : disable : Doctor : I reluctantly disable the fire alarm. This goes against everything I stand for.
 Fire Alarm : disable : Thief : I efficiently disable the fire alarm. Although this might make my escape easier, I can't help but feel a little guilty.
-Fire Alarm : disable : Brawler: I give the fire alarm a good smack and it just kind of falls apart. Why do they always make important things so delicate?
+Fire Alarm : disable : Brawler: I give the fire alarm a good smack and it just kind of falls apart. 
 
 
 Fire Exit : go through : Patient : I push the metal bar and the door swings open. I walk through the door, leaving the hospital behind me. Is this who I really am? I just can't be sure.
@@ -213,18 +213,18 @@ red door : unlockFail : Any : I rattle the red door’s handle, trying to open i
 
 # Brawler
 
-Brawler : inspect : Any : I take a step closer and take a look at the brawler. Wow they are entirely muscle. They must be incredible at punching and breaking. I wonder why they are here in this ward with me.
-Brawler : inspect : Doctor : Oh yes. This patient… Got so drunk at the local bar they haven’t been able to remember how to get home so they have just been staying here ever since.
-Brawler : inspect : Brawler : It’s me. Wait, I’m me. But on the bed it’s me. Am I not me? Are they not them? Is my life a lie? Am I just a shell pretending to be someone else? I need a drink…badly.
+Bar Brawler : inspect : Any : I take a step closer and take a look at the brawler. Wow they are entirely muscle. They must be incredible at punching and breaking. I wonder why they are here in this ward with me.
+Bar Brawler : inspect : Doctor : Oh yes. This patient… Got so drunk at the local bar they haven’t been able to remember how to get home so they have just been staying here ever since.
+Bar Brawler : inspect : Brawler : It’s me. Wait, I’m me. But on the bed it’s me. Am I not me? Are they not them? Is my life a lie? Am I just a shell pretending to be someone else? I need a drink…badly.
 
-Brawler : talk1 : Any : I poke the brawler waking them up. “Hey” I say. “Leave me alone before I punch you” they respond.
+Bar Brawler : talk1 : Any : I poke the brawler waking them up. “Hey” I say. “Leave me alone before I punch you” they respond.
 
-Brawler : talk2 : Any : I poke the brawler again. “Excuse me” I squeak out. “I have punched holes in people before. Don’t try me. And whatever you do, don't annoy me.” The brawler puts a set of ear plugs in.
+Bar Brawler : talk2 : Any : I poke the brawler again. “Excuse me” I squeak out. “I have punched holes in people before. Don’t try me. And whatever you do, don't annoy me.” The brawler puts a set of ear plugs in.
 
-Brawler : talk3: Any : I try to talk to the brawler but they have their earplugs in and (at least I think) can’t hear me.
+Bar Brawler : talk3: Any : I try to talk to the brawler but they have their earplugs in and (at least I think) can’t hear me.
 
-Brawler : talkToAnnoy : Any : I try to talk to the brawler but they have their earplugs in and (at least I think) can’t hear me. I could probably annoy them to get their attention.
+Bar Brawler : talkToAnnoy : Any : I try to talk to the brawler but they have their earplugs in and (at least I think) can’t hear me. I could probably annoy them to get their attention.
 
-Brawler : annoyPunchCard : Any : I foolishly decide to annoy the brawler by tickling their toes. The wake up and punch me harder than I've ever been punched before. I look down and luckily I don't have a hole in me. I check my pockets and realize my punch card took the blow for me. I guess it's a good thing I annoyed them.
+Bar Brawler : annoyPunchCard : Any : I foolishly decide to annoy the brawler by tickling their toes. The wake up and punch me harder than I've ever been punched before. I look down and luckily I don't have a hole in me. I check my pockets and realize my punch card took the blow for me. I guess it's a good thing I annoyed them.
 
-Brawler : annoyNoPunchCard : Any : I tickle the brawler's feet while making a goofy face. <br><br> I wake up looking at an oddly familiar ceiling. It seems I've been punched into the next room.
+Bar Brawler : annoyNoPunchCard : Any : I tickle the brawler's feet while making a goofy face. <br><br> I wake up looking at an oddly familiar ceiling. It seems I've been punched into the next room.

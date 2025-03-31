@@ -528,7 +528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyed: 0
-  interactableName: Brawler
+  interactableName: Bar Brawler
   locationDescription: Laying on one of the beds snoring is a big behemoth of a person.
     Honestly they look like a bar brawler.
   playerCanStore: 0

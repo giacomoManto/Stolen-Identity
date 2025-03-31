@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    
+
 
     [SerializeField]
     private TMP_InputField playerInput;
@@ -142,7 +142,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Key " + key + " not found in gameFlags");
+            Debug.LogWarning("Key " + key + " not found in gameFlags");
             this.SetFlag(key, defaultFlag);
             return defaultFlag;
         }
@@ -172,7 +172,7 @@ public class GameManager : MonoBehaviour
         {
             return;
         }
-        
+
         if (GetFlag("fail", false))
         {
             if (!GetFlag("reloading"))
@@ -336,7 +336,7 @@ public class GameManager : MonoBehaviour
     public void increaseStealCount()
     {
         itemsStolen++;
-        if(itemsStolen == 5)
+        if (itemsStolen == 5)
         {
             GameObject spawnedObjectCopy = Instantiate(ThiefID, currentPlayerRoom.transform.position, Quaternion.identity);
             spawnedObjectCopy.SetActive(true);
