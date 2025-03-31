@@ -27,6 +27,9 @@ public class PlayerInfo : MonoBehaviour
     [SerializeField]
     private Dictionary<string, Interactable> itemInventory;
 
+    [SerializeField]
+    private bool secondId = false;
+
     #endregion
 
     #region Private Fields
@@ -158,6 +161,11 @@ public class PlayerInfo : MonoBehaviour
         // If the item is a valid ID card, add it to the playerIDs dictionary.
         if (!possibleCard.Equals(IDCard.None))
         {
+            if (!secondId && !possibleCard.Equals(IDCard.Patient))
+            {
+                GameManager.Instance().AddTextToJournal("As I begin to pick up the " + item.interactableName + " I realize it calls to me, similar to the patient id. I wonder what would happen if I try to <b>use</b> it. I guess my mind would <b>switch</b> into the mindset of a " + possibleCard + ", hard to tell.");
+                secondId = true;
+            }
             playerIDs.Add(possibleCard.Name.ToLower(), possibleCard);
         }
 
