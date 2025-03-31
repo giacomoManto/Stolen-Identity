@@ -29,6 +29,9 @@ public class GameManager : MonoBehaviour
 
     private int itemsStolen = 0;
     private Dictionary<string, bool> gameFlags = new Dictionary<string, bool>();
+
+    public static int totalFireAlarms = 0;
+    public static int disabledFireAlarms = 0;
     public RoomBehavior CurrentPlayerRoom
     {
         get { return currentPlayerRoom; }
@@ -50,6 +53,8 @@ public class GameManager : MonoBehaviour
         {
             DestroyImmediate(gameObject);
         }
+        totalFireAlarms = 0;
+        disabledFireAlarms = 0;
     }
     #endregion
 

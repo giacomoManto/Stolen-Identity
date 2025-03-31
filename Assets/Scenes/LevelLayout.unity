@@ -706,9 +706,10 @@ MonoBehaviour:
   locationDescription: There is a red door that leads to the room I woke up in.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
+  roomName: 
   room: {fileID: 1456374742}
   lockLevel: 0
-  roomName: 
+  locked: 1
   lockPickable: 0
   breakable: 0
 --- !u!1 &201844054
@@ -961,6 +962,7 @@ MonoBehaviour:
   - yank
   - yank down
   - rip
+  - move
   requiredId: 0
 --- !u!1 &395825187
 GameObject:
@@ -1051,9 +1053,10 @@ MonoBehaviour:
     into some sort of doctors office.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
+  roomName: 
   room: {fileID: 52509126}
   lockLevel: 0
-  roomName: 
+  locked: 1
   lockPickable: 0
   breakable: 0
 --- !u!1 &450535962
@@ -1669,9 +1672,10 @@ MonoBehaviour:
     me.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
+  roomName: 
   room: {fileID: 52509126}
   lockLevel: 0
-  roomName: 
+  locked: 1
   lockPickable: 0
   breakable: 0
 --- !u!1 &653568686
@@ -1724,11 +1728,61 @@ MonoBehaviour:
     room.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
+  roomName: 
   room: {fileID: 1499385321}
   lockLevel: 0
-  roomName: 
+  locked: 1
   lockPickable: 0
   breakable: 0
+--- !u!1 &673392500
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 673392501}
+  - component: {fileID: 673392502}
+  m_Layer: 0
+  m_Name: Fire Alarm Manual
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &673392501
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673392500}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 687393472}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &673392502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673392500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951cf8aff516b9845b4922f775221d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyed: 0
+  interactableName: Fire Alarm Manual
+  locationDescription: 
+  playerCanStore: 0
+  dialogueManager: {fileID: 0}
 --- !u!1 &673477764
 GameObject:
   m_ObjectHideFlags: 0
@@ -1811,6 +1865,7 @@ Transform:
   m_Children:
   - {fileID: 643913728}
   - {fileID: 1820977942}
+  - {fileID: 673392501}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &687393473
@@ -1981,9 +2036,10 @@ MonoBehaviour:
     into some sort of doctors office.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
+  roomName: 
   room: {fileID: 289139626}
   lockLevel: 0
-  roomName: 
+  locked: 1
   lockPickable: 0
   breakable: 0
 --- !u!1 &783765243
@@ -2209,9 +2265,10 @@ MonoBehaviour:
   locationDescription: In front of me there is a orange door with no windows.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
+  roomName: 
   room: {fileID: 1501790960}
   lockLevel: 0
-  roomName: 
+  locked: 1
   lockPickable: 0
   breakable: 0
 --- !u!1 &958311107
@@ -2313,9 +2370,10 @@ MonoBehaviour:
   locationDescription: Behind me there is the hole in the wall that I came in through.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
+  roomName: 
   room: {fileID: 2124758853}
   lockLevel: 0
-  roomName: 
+  locked: 1
   lockPickable: 0
   breakable: 0
 --- !u!1 &981524479
@@ -2368,9 +2426,10 @@ MonoBehaviour:
     back to the cubicle work area.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
+  roomName: 
   room: {fileID: 1501790960}
   lockLevel: 0
-  roomName: 
+  locked: 1
   lockPickable: 0
   breakable: 0
 --- !u!1 &983849250 stripped
@@ -2523,9 +2582,10 @@ MonoBehaviour:
     the room. It looks like it leads into some sort of hallway.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
+  roomName: 
   room: {fileID: 479178962}
   lockLevel: 1
-  roomName: 
+  locked: 1
   lockPickable: 0
   breakable: 0
 --- !u!1001 &1088189800
@@ -2753,9 +2813,10 @@ MonoBehaviour:
     area.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
+  roomName: 
   room: {fileID: 1501790960}
   lockLevel: 0
-  roomName: 
+  locked: 1
   lockPickable: 0
   breakable: 0
 --- !u!1 &1317429839
@@ -3040,9 +3101,10 @@ MonoBehaviour:
   locationDescription: Behind me there is a vault door. It's the one I came in through.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
+  roomName: 
   room: {fileID: 289139626}
   lockLevel: 0
-  roomName: 
+  locked: 1
   lockPickable: 0
   breakable: 0
 --- !u!1 &1414727509
@@ -3086,15 +3148,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1414727509}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5521eaba4587514488c2838b3f8b9cbc, type: 3}
+  m_Script: {fileID: 11500000, guid: e9159d3f56e202542bdd3e2605439624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   destroyed: 0
   interactableName: Pile of Paper
-  locationDescription: There is a pile of paper on a clearly disorganized desk.
+  locationDescription: 
   playerCanStore: 0
   dialogueManager: {fileID: 0}
-  PHD: {fileID: 7846380480380432487, guid: ba6605a430bf5764187a2bd8bff6802d, type: 3}
+  destroyOnSpawn: 0
+  spawnedObject: {fileID: 7846380480380432487, guid: ba6605a430bf5764187a2bd8bff6802d, type: 3}
+  spawnedText: 
+  actionsWhichTriggerSpawn:
+  - search
+  - inspect
+  - scour
+  - rummage
+  - examine
+  requiredId: 0
 --- !u!1 &1422428916
 GameObject:
   m_ObjectHideFlags: 0
@@ -3195,9 +3266,10 @@ MonoBehaviour:
     janitor room.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
+  roomName: 
   room: {fileID: 1950406220}
   lockLevel: 0
-  roomName: 
+  locked: 1
   lockPickable: 0
   breakable: 0
 --- !u!1 &1444359589
@@ -3249,9 +3321,10 @@ MonoBehaviour:
   locationDescription: There seems to be a white door at the end of the hallway.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
+  roomName: 
   room: {fileID: 52509126}
   lockLevel: 0
-  roomName: 
+  locked: 1
   lockPickable: 0
   breakable: 0
 --- !u!1 &1456374740
@@ -3487,9 +3560,10 @@ MonoBehaviour:
   locationDescription: There is a blue door to what looks like a lobby.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
+  roomName: 
   room: {fileID: 275165892}
   lockLevel: 0
-  roomName: 
+  locked: 1
   lockPickable: 0
   breakable: 0
 --- !u!1 &1582195720
@@ -3747,9 +3821,10 @@ MonoBehaviour:
     like candles in the room it leads to.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
+  roomName: 
   room: {fileID: 2081048263}
   lockLevel: 0
-  roomName: 
+  locked: 1
   lockPickable: 0
   breakable: 0
 --- !u!1 &1635026050
@@ -3852,11 +3927,12 @@ MonoBehaviour:
     deeper into the hospital.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
+  roomName: 
   room: {fileID: 1582195722}
   lockLevel: 2
-  roomName: 
+  locked: 1
   lockPickable: 1
-  breakable: 0
+  breakable: 1
 --- !u!1 &1688797945
 GameObject:
   m_ObjectHideFlags: 0
@@ -3906,9 +3982,10 @@ MonoBehaviour:
   locationDescription: There is a grey door to what looks like a Janitor Room.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
+  roomName: 
   room: {fileID: 1950406220}
   lockLevel: 0
-  roomName: 
+  locked: 1
   lockPickable: 0
   breakable: 0
 --- !u!1 &1747834899
@@ -4382,9 +4459,10 @@ MonoBehaviour:
   locationDescription: Behind me is the green door I came in through.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
+  roomName: 
   room: {fileID: 479178962}
   lockLevel: 0
-  roomName: 
+  locked: 1
   lockPickable: 0
   breakable: 0
 --- !u!1 &1948041383
@@ -4436,9 +4514,10 @@ MonoBehaviour:
   locationDescription: There is a blue door to the cubicle area.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
+  roomName: 
   room: {fileID: 1501790960}
   lockLevel: 0
-  roomName: 
+  locked: 1
   lockPickable: 0
   breakable: 0
 --- !u!1 &1950406218
@@ -4592,9 +4671,10 @@ MonoBehaviour:
   locationDescription: There is a orange door that I know goes to the patient hallway.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
+  roomName: 
   room: {fileID: 479178962}
   lockLevel: 0
-  roomName: 
+  locked: 1
   lockPickable: 0
   breakable: 0
 --- !u!1 &1960753703
@@ -4696,9 +4776,10 @@ MonoBehaviour:
     door labelled storage room.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
+  roomName: 
   room: {fileID: 687393473}
   lockLevel: 0
-  roomName: 
+  locked: 1
   lockPickable: 0
   breakable: 0
 --- !u!1 &2061849513
@@ -4750,9 +4831,10 @@ MonoBehaviour:
   locationDescription: The white door I came remains shuts behind me.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
+  roomName: 
   room: {fileID: 1582195722}
   lockLevel: 0
-  roomName: 
+  locked: 1
   lockPickable: 0
   breakable: 0
 --- !u!1 &2081048261

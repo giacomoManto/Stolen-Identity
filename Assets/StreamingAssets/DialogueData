@@ -3,7 +3,6 @@
 #Random objects
 Apple : inspect: Any : I look at the apple closely and realize it's probably the most delicious looking apple ive seen. One bite wouldn't hurt anyone… probably?
 Apple : inspect: Doctor : Oh god an apple… better keep my distance.
-
 Apple : eat : Any : I walk over and decide to eat the apple. While munching I realize the apple is delicious. Praise the Apple!
 Apple : eat : Patient : I walk over to the apple ready to take a big bite and then... wait what was I doing? Oh right, I'm an amnesiac patient…
 Apple : eat : Doctor: I…against my better judgement… eat the apple.
@@ -15,6 +14,11 @@ Small Plant: inspect : Any : Upon a closer look it's one of those undying cactus
 Small Plant: location : Any : Surprisingly, one of the cubicles is quite neat, even containing a small plant which is the height of decoration from what i've seen from the previous hospital rooms.
 Small Plant: kill : Any : I try to destroy the cactus but just end up with thorns in my hands. ‘George’ remains unharmed.
 Small Plant: destroy : Any : I try to destroy the cactus but just end up with thorns in my hands. ‘George’ remains unharmed.
+
+Fire Alarm Manual : location : Any : A Fire Alarm Manual is pinned to the storage racks, looks like the hospital takes fires seriously.
+Fire Alarm Manual : inspect : Any : Details exactly how to take care of your fire alarms. Apparently you can <b>disable</b> them in an emergency which would prevent them from going off. It also lists a lot of warnings for doing so like… jail time? 
+Fire Alarm Manual : read : Any : Details exactly how to take care of your fire alarms. Apparently you can <b>disable</b> them in an emergency which would prevent them from going off. It also lists a lot of warnings for doing so like… jail time? 
+
 
 # ID Cards
 Patient ID : inspect : Any : I take a look at the ID card, inspecting it closely. It's a plain white card with the words patient in big bold letters, nothing special. However, I get the feeling that I should take this with me and use it if needed.
@@ -188,9 +192,12 @@ Exit Door : go through : Brawler :With the guards distracted I walk through the 
 Fire Alarm : inspect: Any : Looks like one of those super loud fire alarms that go off once someone goes through a fire exit or if smoke is detected. I probably shouldn't mess with that unless I really have to.
 Fire Alarm : inspect: Doctor: Standard hospital fire alarm, if a bit outdated. These will help keep patients and staff safe from fires.
 Fire Alarm : inspect: Brawler: That thing looks breakable.
+Fire Alarm : inspect: Guard: I’d be pissed if someone pulled that. I mean can you imagine being on break and then some loud annoying sound starts breaking your eardrums? I’d absolutely clobber whoever pulled it if there wasn't an actual fire.
 Fire Alarm : disable : Any : I fiddle with the fire alarm. Eventually I got it disabled.
 Fire Alarm : disable : Doctor : I reluctantly disable the fire alarm. This goes against everything I stand for.
 Fire Alarm : disable : Thief : I efficiently disable the fire alarm. Although this might make my escape easier, I can't help but feel a little guilty.
+Fire Alarm : disable : Brawler: I give the fire alarm a good smack and it just kind of falls apart. Why do they always make important things so delicate?
+
 
 Fire Exit : go through : Patient : I push the metal bar and the door swings open. I walk through the door, leaving the hospital behind me. Is this who I really am? I just can't be sure.
 Fire Exit : go through : Doctor : I push the metal bar and the door swings open. I walk through the door, leaving the hospital behind me. I guess I'll live the rest of my life out as a Doctor. I don't have the qualifications, experience or lab coat. I just can't be sure that this is really who I am.

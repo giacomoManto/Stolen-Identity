@@ -4,8 +4,7 @@ using UnityEngine;
 public class FireAlarm : Interactable
 {
 
-    private static int totalFireAlarms = 0;
-    private static int disabledFireAlarms = 0;
+    
     private bool isDisabled = false;
     private bool attemptedPull = false;
 
@@ -18,11 +17,15 @@ public class FireAlarm : Interactable
     void Start()
     {
         playerCanStore = false;
-        totalFireAlarms += 1;
+        GameManager.totalFireAlarms += 1;
         this.RegisterAction(Disable, "disable", "break", "destroy", "smash", "hit", "kick", "punch");
         this.RegisterAction(Pull, "pull", "activate", "trigger", "engage", "set off", "trip", "deploy", "yank");
+        this.RegisterAction(Use, "use");
     }
-
+    private void Use(IDCard id)
+    {
+        GameManager.Instance().AddTextToJournal("I mean... I could proabably <b>pull</b> this if I really wanted to. I shouldn't... but I could...");
+    }
     private void Disable(IDCard id)
     {
         if (isDisabled)
@@ -32,8 +35,8 @@ public class FireAlarm : Interactable
         else
         {
             isDisabled = true;
-            disabledFireAlarms += 1;
-            if (disabledFireAlarms == totalFireAlarms)
+            GameManager.disabledFireAlarms += 1;
+            if (GameManager.disabledFireAlarms == GameManager.totalFireAlarms)
             {
                 GameManager.Instance().SetFlag("fireAlarmDisabled", true);
                 GameManager.Instance().AddTextToJournal("I disable the fire alarm. All fire alarms are now disabled. This might let me get out of here.");
@@ -43,7 +46,7 @@ public class FireAlarm : Interactable
                 GameManager.Instance().AddTextToJournal(this.GetTextFromJson("disable", id));
             }
         }
-
+        Debug.Log("Disabled Fire Alarm " + GameManager.disabledFireAlarms + " of " + GameManager.totalFireAlarms);
     }
 
     private void Pull(IDCard id)
