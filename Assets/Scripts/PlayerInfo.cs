@@ -216,7 +216,7 @@ public class PlayerInfo : MonoBehaviour
         foreach (string item in itemInventory.Keys)
         {
             // Only list the item if it is not an ID card.
-            if (IDCard.StringAsID(item).Equals(IDCard.None))
+            if (itemInventory[item].interactableName.Contains(" id"))
             {
                 stringBuilder.Append(count + ". ").Append(item).Append("\n");
                 count++;
@@ -224,7 +224,7 @@ public class PlayerInfo : MonoBehaviour
         }
 
         // If no other items exist, note that.
-        if (itemInventory.Keys.Count == 0)
+        if (count <= 1)
         {
             stringBuilder.Append("None");
         }
