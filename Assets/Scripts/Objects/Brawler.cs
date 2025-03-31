@@ -14,7 +14,7 @@ public class Brawler : Interactable
     void Start()
     {
         this.RegisterAction(TalkTo, "talk to", "speak to", "converse with", "chat with", "communicate with", "address", "engage with", "discuss with", "confer with", "have a word with");
-        this.RegisterAction(Annoy, "annoy", "irritate", "bother", "pester", "provoke", "agitate", "disturb", "bug", "harass", "vex", "exasperate", "irk", "madden", "ruffle", "needle", "hassle", "plague", "torment", "badger", "nag", "molest");
+        this.RegisterAction(Annoy, "annoy", "tickle", "irritate", "bother", "pester", "provoke", "agitate", "disturb", "bug", "harass", "vex", "exasperate", "irk", "madden", "ruffle", "needle", "hassle", "plague", "torment", "badger", "nag", "molest");
 
     }
 
@@ -33,8 +33,12 @@ public class Brawler : Interactable
             case(1):
                 GameManager.Instance().AddTextToJournal(this.GetTextFromJson("talk2", id));
                 break;
+            case(3):
+                GameManager.Instance().AddTextToJournal(this.GetTextFromJson("talk3", id));
+                break;
             default:
-                GameManager.Instance().AddTextToJournal(this.GetTextFromJson("earplug", id));
+                GameManager.Instance().AddTextToJournal(this.GetTextFromJson("talkToAnnoy", id));
+                Annoy(id);
                 break;
         }
         talkTuahCount++;

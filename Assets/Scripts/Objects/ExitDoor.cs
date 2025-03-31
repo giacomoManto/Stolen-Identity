@@ -17,20 +17,27 @@ public class ExitDoor : Interactable
     }
     private void GoThrough(IDCard id)
     {
-        // Do this in order of ending level
-        if (GameManager.Instance().GetFlag("guardsDistracted"))
+        if (ThiefEnding(id) || DoctorEnding(id) || BrawlerEnding(id) || PatientEnding(id))
+        {
+            escapeSuccess();
+            return;
+        }
+        else if (GameManager.Instance().GetFlag("guardsDistracted"))
         {
             GameManager.Instance().AddTextToJournal("With the guards distracted I slip through the door and make my way towards freedom.");
-            GameManager.Instance().SetFlag("gameOver", true);
-            GameManager.Instance().SetFlag("escaped", true);
-            if (ThiefEnding(id)) { return; }
+            escapeSuccess();
             GameManager.Instance().AddTextToJournal(this.GetTextFromJson("go through", id));
         }
-        // Add other detections here
         else
         {
             GameManager.Instance().AddTextToJournal("The guards won't let me through. I need to distract them or get the correct permission to get out of here.");
         }
+    }
+
+    private void escapeSuccess()
+    {
+        GameManager.Instance().SetFlag("gameOver", true);
+        GameManager.Instance().SetFlag("escaped", true);
     }
 
 
@@ -55,5 +62,31 @@ public class ExitDoor : Interactable
         GameManager.Instance().AddTextToJournal(this.GetTextFromJson("thief ending", id));
         return true;
     }
+
+    private bool DoctorEnding(IDCard id)
+    {
+        if (id.Name == IDCard.Doctor.Name && GameManager.Instance().GetFlag("hasPunchedPunchcard") && GameManager.Instance().GetFlag("LabCoat") && FindFirstObjectByType<PlayerInfo>().getItemFromInventory("PhD"))
+        {
+            GameManager.Instance().AddTextToJournal(this.GetTextFromJson("Doctor Ending", id));
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    // Make sure to implement in FireExit.cs aswell
+    private bool BrawlerEnding(IDCard id)
+    {
+        return false;
+    }
+
+    private bool PatientEnding(IDCard id)
+    {
+        return false;
+    }
+
+
 
 }

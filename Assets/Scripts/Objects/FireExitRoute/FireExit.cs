@@ -22,7 +22,7 @@ public class FireExit : Interactable
         {
             GameManager.Instance().SetFlag("gameOver", true);
             GameManager.Instance().SetFlag("escaped", true);
-            if (ThiefEnding(id)) { return; } //If they have the thief id equipped and the ending is possible, leave.
+            if (ThiefEnding(id) || DoctorEnding(id)) {return; } //If they have the thief id equipped and the ending is possible, leave.
             GameManager.Instance().AddTextToJournal(this.GetTextFromJson("go through", id));
         }
         else
@@ -38,5 +38,29 @@ public class FireExit : Interactable
         }
         GameManager.Instance().AddTextToJournal(this.GetTextFromJson("thief ending", id));
         return true;
+    }
+
+    private bool DoctorEnding(IDCard id)
+    {
+        if (id.Name == IDCard.Doctor.Name && GameManager.Instance().GetFlag("hasPunchedPunchcard") && GameManager.Instance().GetFlag("LabCoat") && FindFirstObjectByType<PlayerInfo>().getItemFromInventory("PhD"))
+        {
+            GameManager.Instance().AddTextToJournal(this.GetTextFromJson("Doctor Ending", id));
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    // Make sure to implement in ExitDoor.cs aswell. 
+    private bool BrawlerEnding(IDCard id)
+    {
+        return false;
+    }
+
+    private bool PatientEnding(IDCard id)
+    {
+        return false;
     }
 }
