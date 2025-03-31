@@ -228,3 +228,15 @@ Bar Brawler : talkToAnnoy : Any : I try to talk to the brawler but they have the
 Bar Brawler : annoyPunchCard : Any : I foolishly decide to annoy the brawler by tickling their toes. The wake up and punch me harder than I've ever been punched before. I look down and luckily I don't have a hole in me. I check my pockets and realize my punch card took the blow for me. I guess it's a good thing I annoyed them.
 
 Bar Brawler : annoyNoPunchCard : Any : I tickle the brawler's feet while making a goofy face. <br><br> I wake up looking at an oddly familiar ceiling. It seems I've been punched into the next room.
+
+# I am Patient/True ending
+Filing Cabinet : inspect : Any : A pretty standard filing cabinet. Looks like they store patient files inside.
+
+Filing Cabinet : object spawned : Any : I search through the cabinet but don’t really find anything of interest. 
+Filing Cabinet : object spawned : Doctor : I search through the cabinet. It’s perfectly organized. I can’t find anything of interest.
+
+Filing Cabinet : on spawn : Any : I search through the filing cabinet. It’s extremely disorganized. Right as I am about to stop due to boredom one patient file jumps out to me. I pull it out and place it on top of the cabinet.
+
+Patient File : read : Any : I start reading the file … idiopathic … prognosis unknown … syncope … I have no clue what any of this means. I guess that’s why doctors get the big bucks to interpret these files.
+Patient File : read : Brawler : I start reading the file … blood pressure … amnesia … What does any of this mean? These words have to be made up.
+Patient File : read : Doctor : I start reading the file, “Patient suffers from memory loss including loss of identity … cause unknown … prognosis unknown … patient info unknown.” At the bottom in bold it reads “<b> Do not let the patient leave the facility without being identified. A doctor’s written approval is required. We cannot collect payment from unknown patients! - Thank you, Management</b>”.

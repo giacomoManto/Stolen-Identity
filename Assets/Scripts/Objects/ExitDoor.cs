@@ -1,8 +1,5 @@
-using System.Net.Sockets;
-using UnityEngine;
-
 public class ExitDoor : Interactable
-{   
+{
     ExitDoor() : base()
     {
         // Set the object's name
@@ -83,7 +80,15 @@ public class ExitDoor : Interactable
 
     private bool PatientEnding(IDCard id)
     {
-        return false;
+        if (id.Name == IDCard.Patient.Name && GameManager.Instance().GetFlag("PatientFileRead"))
+        {
+            GameManager.Instance().AddTextToJournal(this.GetTextFromJson("patient ending", id));
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
 

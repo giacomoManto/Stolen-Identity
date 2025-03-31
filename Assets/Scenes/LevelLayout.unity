@@ -1332,6 +1332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerIDString: 
+  secondId: 0
 --- !u!4 &481385762
 Transform:
   m_ObjectHideFlags: 0
@@ -3361,6 +3362,8 @@ Transform:
   - {fileID: 1039126090}
   - {fileID: 673477765}
   - {fileID: 688669857}
+  - {fileID: 1756258982}
+  - {fileID: 1495813100}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1456374742
@@ -3396,6 +3399,55 @@ MonoBehaviour:
     basic like <b>verb noun</b>\u2014to ensure they\u2019re easy to recall, especially
     since my memory for words isn\u2019t as strong as it could be."
   allAfter: 
+--- !u!1 &1495813099
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1495813100}
+  - component: {fileID: 1495813101}
+  m_Layer: 0
+  m_Name: Patient File
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1495813100
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495813099}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1456374741}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1495813101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495813099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e25a4072f52fbc04c9189e45ae4613a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyed: 0
+  interactableName: Patient File
+  locationDescription: A patient file sits ontop of the cabinet I pulled it out of.
+  playerCanStore: 1
+  dialogueManager: {fileID: 0}
 --- !u!1 &1499385319
 GameObject:
   m_ObjectHideFlags: 0
@@ -4066,6 +4118,72 @@ MonoBehaviour:
   - {fileID: -3578298931649939517, guid: ee2d87b63e3c9054fa0016c825f63757, type: 3}
   - {fileID: -4372663946440342171, guid: f1d62d74e30bb4444b099d5afad2f01c, type: 3}
   - {fileID: 1229262022554434853, guid: 2fdd7d18a80c0e741ae35fd20df688a2, type: 3}
+--- !u!1 &1756258981
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1756258982}
+  - component: {fileID: 1756258983}
+  m_Layer: 0
+  m_Name: FilingCabinet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1756258982
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756258981}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1456374741}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1756258983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756258981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9159d3f56e202542bdd3e2605439624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyed: 0
+  interactableName: Filing Cabinet
+  locationDescription: Across the room from the bed there is a filing cabinet.
+  playerCanStore: 0
+  dialogueManager: {fileID: 0}
+  destroyOnSpawn: 0
+  spawnedObject: {fileID: 0}
+  spawnedText: 
+  actionsWhichTriggerSpawn:
+  - search
+  - open
+  - look inside
+  - pull
+  - rummage
+  - rummage through
+  - sift through
+  - look through
+  - scour
+  - comb through
+  - probe
+  - file
+  requiredId: 0
 --- !u!1 &1763008990
 GameObject:
   m_ObjectHideFlags: 0

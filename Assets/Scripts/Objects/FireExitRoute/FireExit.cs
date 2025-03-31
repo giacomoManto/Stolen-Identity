@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class FireExit : Interactable
 {
     FireExit() : base()
@@ -22,7 +20,7 @@ public class FireExit : Interactable
         {
             GameManager.Instance().SetFlag("gameOver", true);
             GameManager.Instance().SetFlag("escaped", true);
-            if (ThiefEnding(id) || DoctorEnding(id)) {return; } //If they have the thief id equipped and the ending is possible, leave.
+            if (ThiefEnding(id) || DoctorEnding(id) || PatientEnding(id) || BrawlerEnding(id)) { return; } //If they have the thief id equipped and the ending is possible, leave.
             GameManager.Instance().AddTextToJournal(this.GetTextFromJson("go through", id));
         }
         else
@@ -32,7 +30,7 @@ public class FireExit : Interactable
     }
     private bool ThiefEnding(IDCard id)
     {
-        if(!GameManager.Instance().GetFlag("Thief Ending") || id.Name != IDCard.Thief.Name)
+        if (!GameManager.Instance().GetFlag("Thief Ending") || id.Name != IDCard.Thief.Name)
         {
             return false;
         }
@@ -61,6 +59,14 @@ public class FireExit : Interactable
 
     private bool PatientEnding(IDCard id)
     {
-        return false;
+        if (id.Name == IDCard.Patient.Name && GameManager.Instance().GetFlag("PatientFileRead"))
+        {
+            GameManager.Instance().AddTextToJournal(this.GetTextFromJson("patient ending", id));
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
