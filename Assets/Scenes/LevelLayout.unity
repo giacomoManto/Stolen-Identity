@@ -1254,12 +1254,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f764d586ae6ab9c4c847baaf584b5db1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyed: 0
-  interactableName: 
-  locationDescription: 
-  playerCanStore: 0
-  dialogueManager: {fileID: 0}
-  realName: 
 --- !u!1 &479178960
 GameObject:
   m_ObjectHideFlags: 0
@@ -4074,6 +4068,7 @@ MonoBehaviour:
   - Storage Room
   - Doctor Office
   - Vault
+  - Shrine
   allRoomSprites:
   - {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 1937749180558471230, guid: 3271a5790715b56428442943e762d163, type: 3}
@@ -4081,13 +4076,14 @@ MonoBehaviour:
   - {fileID: -11974414947007666, guid: 7633a8d524705274faee45ad73bbb45f, type: 3}
   - {fileID: 845509124840619032, guid: ec1c9d34c4e92944198049054a309434, type: 3}
   - {fileID: 4368159261670261500, guid: 11726642420b6b04fb4174e619248b8a, type: 3}
-  - {fileID: 0}
+  - {fileID: 2343512700593578675, guid: 9e3f8ffda87080d4fb641d401c25568c, type: 3}
   - {fileID: 5875038362160349911, guid: 7c2e4cca2e412ad4ca470ad28411b2f0, type: 3}
   - {fileID: 5120224674601135964, guid: fd10d48a7930df246b1d137f9734c0da, type: 3}
   - {fileID: 2528295220731421826, guid: 24e75692549a4894f9d9ef0510db8530, type: 3}
   - {fileID: -3578298931649939517, guid: ee2d87b63e3c9054fa0016c825f63757, type: 3}
   - {fileID: -4372663946440342171, guid: f1d62d74e30bb4444b099d5afad2f01c, type: 3}
   - {fileID: 1229262022554434853, guid: 2fdd7d18a80c0e741ae35fd20df688a2, type: 3}
+  - {fileID: -6864636455506809796, guid: 1a4231c43e5f2b94ab83b1cfb29e89d6, type: 3}
 --- !u!1 &1756258981
 GameObject:
   m_ObjectHideFlags: 0
@@ -4399,13 +4395,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f764d586ae6ab9c4c847baaf584b5db1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyed: 0
-  interactableName: person
-  locationDescription: There is a person in the seating area. Seemingly waiting for
-    someone or something.
-  playerCanStore: 0
-  dialogueManager: {fileID: 0}
-  realName: Ruth
 --- !u!1001 &1820977941
 PrefabInstance:
   m_ObjectHideFlags: 0
