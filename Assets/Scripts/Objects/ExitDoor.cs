@@ -67,7 +67,7 @@ public class ExitDoor : Interactable
     {
         if (id.Name == IDCard.Doctor.Name && GameManager.Instance().GetFlag("hasPunchedPunchcard") && GameManager.Instance().GetFlag("LabCoat") && FindFirstObjectByType<PlayerInfo>().getItemFromInventory("PhD"))
         {
-            GameManager.Instance().AddTextToJournal(this.GetTextFromJson("Doctor Ending", id));
+            GameManager.Instance().AddTextToJournal(this.GetTextFromJson("doctor ending", id));
             return true;
         }
         else

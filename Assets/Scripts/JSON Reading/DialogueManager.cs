@@ -33,6 +33,13 @@ public class DialogueManager : MonoBehaviour
         IsDialogueLoaded = true;
     }
 
+    [ContextMenu("Reload Dialogue From File")]
+    public void ReLoadDialogue()
+    {
+        dialogueData = ReadDialogueFromFile();
+        DebugDialogueData();
+    }
+
     public static DialogueManager Instance()
     {
         return instance;

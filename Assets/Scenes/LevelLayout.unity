@@ -533,6 +533,8 @@ MonoBehaviour:
     Honestly they look like a bar brawler.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
+  punchCardPunched: {fileID: 8334257877340841087, guid: 597fcaa7e792b5d4bb7e598de0a30625, type: 3}
+  startingRoom: {fileID: 1456374742}
 --- !u!1 &145529329
 GameObject:
   m_ObjectHideFlags: 0
@@ -958,6 +960,7 @@ MonoBehaviour:
   - pull down
   - yank
   - yank down
+  - rip
   requiredId: 0
 --- !u!1 &395825187
 GameObject:
@@ -2152,11 +2155,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyed: 0
-  interactableName: 
-  locationDescription: 
+  interactableName: Clerk
+  locationDescription: A clerk sits at a desk in the corner.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
-  punchcard: {fileID: 0}
+  punchcard: {fileID: 8334257877340841087, guid: 4cdf1f4b2e78a8c48b909e88a4e4ced6, type: 3}
 --- !u!1 &936510602
 GameObject:
   m_ObjectHideFlags: 0
@@ -2815,7 +2818,7 @@ GameObject:
   - component: {fileID: 1367396384}
   - component: {fileID: 1367396385}
   m_Layer: 0
-  m_Name: Coarkboard
+  m_Name: Corkboard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2849,8 +2852,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyed: 0
-  interactableName: coarkboard
-  locationDescription: On one of the walls is a typical employee notice coarkboard.
+  interactableName: corkboard
+  locationDescription: On one of the walls is a typical employee notice corkboard.
     It obviously does not have routine maintenance since it's covered in flyers and
     paper some from years ago.
   playerCanStore: 0
@@ -3535,7 +3538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7dfc23fdc50e74780c1f47aa89fdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  securityLevel: 1
+  securityLevel: 2
   roomName: Guarded Hallway
   roomDescription: "I find myself in a corridor that resembles the patient hallway
     I passed earlier, but with tighter security\u2014ceiling cameras and patrolling
@@ -3850,9 +3853,9 @@ MonoBehaviour:
   playerCanStore: 0
   dialogueManager: {fileID: 0}
   room: {fileID: 1582195722}
-  lockLevel: 0
+  lockLevel: 2
   roomName: 
-  lockPickable: 0
+  lockPickable: 1
   breakable: 0
 --- !u!1 &1688797945
 GameObject:

@@ -76,13 +76,14 @@ Punchcard Punched : inspect : Any : I hold the punch card up to the light. The l
 Punchcard Punched : inspect : Doctor : My punch card. Now with a nice hole clocking me out.
 Punchcard Punched : inspect : Brawler : This looks like it could handle a couple more hits.
 
+Pile of Paper : inspect : Any : A large pile of paper. If I had time to waste I could search through it but I doubt there is anything useful.
+
 PhD : inspect : Any : A framed Doctorate. Someone must be really proud about getting this to frame it so securely.
 PhD : inspect : Doctor : My framed Doctorate. Without this who really am I?
 
-# This should be corkboard oops (i’ll change when I get home) 👍
-coarkboard : object spawned : Any : A coarkboard with a whole bunch of notes pinned to it.
-coarkboard : object spawned : Brawler : A coarkboard with a whole bunch of notes pinned to it. I quickly scan it for any information about staff bars or really just bars in the area. I don't find anything.
-coarkboard : on spawn : Any : I take a closer look at the coarkboard and see a tiny little note sticking out from behind it.
+corkboard : object spawned : Any : A corkboard with a whole bunch of notes pinned to it.
+corkboard : object spawned : Brawler : A corkboard with a whole bunch of notes pinned to it. I quickly scan it for any information about staff bars or really just bars in the area. I can't find anything.
+corkboard : on spawn : Any : I take a closer look at the corkboard and see a tiny little note sticking out from behind it.
 
 Painting : inspect : Any : What looks to be a fancy oil painting, its gentle brush strokes depict some sort of jewel encrusted golden microscope. Who even comes up with this stuff?
 Painting : inspect : Doctor: A wonderful painting of my golden microscope. It also perfectly hides the entrance to my vault.
@@ -108,8 +109,9 @@ Clerk : inspect : Any : Looks like the person that handles patient and employee 
 Clerk : inspect : Guard : The trustworthy hospital clerk. I only talk to them when I have to.
 Clerk : inspect : Doctor : The clerk is always on my case for forgetting to punch in and out. That reminds me… nevermind.
 
-Fire Exit : doctor ending : Thief : I push the cold metal bar of the fire exit and step into the night, the hospital’s sterile and tacky corridors fading behind me. I check my bag, glancing briefly at The Golden Microscope, a gleaming trophy of my legendary heist. However as I step into the night air, some part of me is still uncertain, wondering if this is who I really am.(Hidden Ending 1/4)
-Exit Door : doctor ending : Thief : I walk through the front of the hospital, smiling to myself as the guards are none wiser of the heist I just pulled. I check my bag, glancing briefly at The Golden Microscope, a gleaming trophy of my legendary heist. However as I step into the night air, some part of me is still uncertain, wondering if this is who I really am.(Hidden Ending 1/4)
+Fire Exit : doctor ending : Thief : I push the cold metal bar of the fire exit and step into the night, the hospital’s sterile and tacky corridors fading behind me. I have my lab coat on, my punch card got punched and my PhD is safe and sound in my bag. I look down at my watch. Looks like my next shift starts in 15 minutes. I turn around and head back in to get ready. As I step back into the hospital and take a deep breath I know deep down I was rarely in a hospital before I lost my memory. (Hidden Ending 1/4)
+
+Exit Door : doctor ending : Thief : I walk through the hospital exit. Giving and receiving a courteous nod to each of the guards. I have my lab coat on, my punch card got punched and my PhD is safe and sound in my bag. I look down at my watch. Looks like my next shift starts in 15 minutes. I turn around and head back in to get ready. As I step back into the hospital and take a deep breath I know deep down I was rarely in a hospital before I lost my memory. (Hidden Ending 1/4)
 
 # Become a thief
 Calling Card : location: Any :I see what looks like a calling card sitting atop a shiny metal surgical plate in the corner.

@@ -87,6 +87,12 @@ public class PlayerInfo : MonoBehaviour
             return true;
         }
 
+        if (idName != IDCard.Doctor.Name.ToLower() && idName != IDCard.Guard.Name.ToLower() && idName != IDCard.Patient.Name.ToLower() && idName != IDCard.Brawler.Name.ToLower() && idName != IDCard.Thief.Name.ToLower())
+        {
+            GameManager.Instance().AddTextToJournal($"I try to put on {idName}'s id but I realize I both don't have it and made up that id. It doesn't exist.");
+            return false;
+        }
+
         // Check if the requested ID exists in the player's collection.
         if (!playerIDs.ContainsKey(idName))
         {

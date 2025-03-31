@@ -44,7 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 951cf8aff516b9845b4922f775221d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   interactableName: PhD
-  location: On the desk.
+  locationDescription: A PhD sits next to the pile of paper I found it in.
   playerCanStore: 1
   dialogueManager: {fileID: 0}
