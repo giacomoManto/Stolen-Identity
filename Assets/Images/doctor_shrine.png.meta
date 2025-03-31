@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      doctor_shrine_0: -6864636455506809796
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1254,6 +1254,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f764d586ae6ab9c4c847baaf584b5db1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
+  interactableName: 
+  locationDescription: 
+  playerCanStore: 0
+  dialogueManager: {fileID: 0}
+  realName: 
+  realDescription: 
 --- !u!1 &479178960
 GameObject:
   m_ObjectHideFlags: 0
@@ -4395,6 +4402,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f764d586ae6ab9c4c847baaf584b5db1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
+  interactableName: Acquaintance
+  locationDescription: 
+  playerCanStore: 0
+  dialogueManager: {fileID: 0}
+  realName: 
+  realDescription: 
 --- !u!1001 &1820977941
 PrefabInstance:
   m_ObjectHideFlags: 0

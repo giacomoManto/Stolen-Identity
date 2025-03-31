@@ -1,4 +1,3 @@
-using NUnit.Framework;
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
@@ -117,7 +116,7 @@ public class PlayerInfo : MonoBehaviour
         {
             Debug.LogWarning(e + "when trying to get dialogue for id switch on " + idName + " id.");
         }
-        
+
         // Add the ID switch dialogue to the game journal.
         GameManager.Instance().AddTextToJournal(idSwitchDialogue);
 
@@ -152,7 +151,7 @@ public class PlayerInfo : MonoBehaviour
     {
         if (itemInventory.ContainsKey(item.name.ToLower()))
         {
-            GameManager.Instance().AddTextToJournal("I take out the "+ item.interactableName + " from my bag and then...");
+            GameManager.Instance().AddTextToJournal("I take out the " + item.interactableName + " from my bag and then...");
             return;
         }
         // Determine if the item represents an ID card.
@@ -167,6 +166,7 @@ public class PlayerInfo : MonoBehaviour
                 secondId = true;
             }
             playerIDs.Add(possibleCard.Name.ToLower(), possibleCard);
+            return;
         }
 
         // Add the item to the item inventory regardless.
@@ -224,11 +224,10 @@ public class PlayerInfo : MonoBehaviour
         foreach (string item in itemInventory.Keys)
         {
             // Only list the item if it is not an ID card.
-            if (itemInventory[item].interactableName.Contains(" id"))
-            {
-                stringBuilder.Append(count + ". ").Append(item).Append("\n");
-                count++;
-            }
+
+            stringBuilder.Append(count + ". ").Append(item).Append("\n");
+            count++;
+
         }
 
         // If no other items exist, note that.
