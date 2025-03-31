@@ -16,7 +16,7 @@ public class PileOfPaperPHD : Interactable
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        this.RegisterAction("search", Search);
+        this.RegisterAction(Search,"search", "inspect");
     }
 
     private void Search(IDCard idCard)
@@ -31,7 +31,7 @@ public class PileOfPaperPHD : Interactable
             PHDCopy.SetActive(true);
             PHDCopy.transform.parent = transform.parent;
             GetComponentInParent<RoomBehavior>().InitInteractables();
-            GameManager.Instance().AddTextToJournal("Bafflingly, I find a PHD in the pile of paper.");
+            GameManager.Instance().AddTextToJournal("Bafflingly, I find a PHD in the pile of paper after going through it. Who would ever put this in here?");
         }
     }
 }

@@ -83,7 +83,7 @@ PhD : inspect : Doctor : My framed Doctorate. Without this who really am I?
 
 corkboard : object spawned : Any : A corkboard with a whole bunch of notes pinned to it.
 corkboard : object spawned : Brawler : A corkboard with a whole bunch of notes pinned to it. I quickly scan it for any information about staff bars or really just bars in the area. I can't find anything.
-corkboard : on spawn : Any : I take a closer look at the corkboard and see a tiny little note sticking out from behind it.
+corkboard : on spawn : Any : I take a closer look at the corkboard and see a tiny little <b>note</b> sticking out from behind it.
 
 Painting : inspect : Any : What looks to be a fancy oil painting, its gentle brush strokes depict some sort of jewel encrusted golden microscope. Who even comes up with this stuff?
 Painting : inspect : Doctor: A wonderful painting of my golden microscope. It also perfectly hides the entrance to my vault.
@@ -108,6 +108,11 @@ Janitor's Journal : read : Doctor : I flip through the pages of the journal. It 
 Clerk : inspect : Any : Looks like the person that handles patient and employee intake. They don’t look like someone that would enjoy a conversation.
 Clerk : inspect : Guard : The trustworthy hospital clerk. I only talk to them when I have to.
 Clerk : inspect : Doctor : The clerk is always on my case for forgetting to punch in and out. That reminds me… nevermind.
+
+Pile of Paper : location : Any : There is a chaotic pile of paper on a clearly disorganized desk.
+Pile of Paper : on spawn : Doctor: Aha! I pull out my PhD from the paper pile, I knew it was in one of these!
+Pile of Paper : on spawn : Any : Bafflingly, I find a PhD in the pile of paper after going through it. Who would ever put this in here?
+Pile of Paper : object spawned : Any : Mostly just useless medical jargon. I still can't believe I found that PhD there.
 
 Fire Exit : doctor ending : Doctor : I push the cold metal bar of the fire exit and step into the night, the hospital’s sterile and tacky corridors fading behind me. I have my lab coat on, my punch card got punched and my PhD is safe and sound in my bag. I look down at my watch. Looks like my next shift starts in 15 minutes. I turn around and head back in to get ready. As I step back into the hospital and take a deep breath I know deep down I was rarely in a hospital before I lost my memory. (Hidden Ending 1/4)
 
@@ -135,12 +140,12 @@ Glass Case : location : Doctor: At the back of the room lies a glass case contai
 Glass Case : location : Thief: There seems to be a fairly large glass case which rests at the very back of the storage room. Whatever's inside is certain to be valuable.
 Glass Case : inspect : Any : I walk over to the glass case and realize it contains… a golden microscope? I do a double take before realizing it's not a fake. The glass case itself doesn't look like its locked, which feels like a mistake considering the value of its contents.
 Glass Case : inspect : Doctor: I walk over to the glass case knowing it contains my precious golden microscope. Even though I doubt the hospital insurance will cover it if it is stolen, how could I hide it away inside a safe?
-Glass Case : on spawn : Any : I open up the glass case, fully revealing the golden microscope which rests inside.
+Glass Case : on spawn : Any : I open up the glass case, fully revealing <b>The Golden Microscope</b> which rests inside.
 Glass Case : object spawned: Any: An open glass case. There isn't really much else I can do with this.
 
 Health Poster: location : Any : At the end of the room rests a large health poster, which is quite well centered on the wall.
 Health Poster : location : Thief: At the end of the room rests a large health poster, which is poorly covering some sort of door. I could probably take it down to get to the door if I wanted to.
-Health Poster : inspect : Any : I walk over to the poster and notice something strange behind it.
+Health Poster : inspect : Any : I walk over to the poster and notice something strange behind it. I can't really get a good look at it with this poster in the way.
 Health Poster : inspect : Thief: Besides the obvious <b>hidden door</b> behind the poster, the poster itself might be handmade.
 Health Poster : inspect : Doctor: I look closely at the poster, realizing this is clearly hand made but well researched. Someone knows their stuff.
 Health Poster : on spawn : Any : I tear away the poster, revealing a <b>hidden door</b> which has no place in a janitor's room.
@@ -160,7 +165,7 @@ Donuts : eat : Any : I check to make sure no one is looking and quickly scarf do
 Donuts : eat : Guard :  I open the box, open my throat and shove all the donuts straight to my stomach. All in a day's work.
 Donuts : eat : Thief : I eat the donuts. Savoring each bite. Knowing these aren't mine made them taste so much better. Only a mastermind criminal such as myself would be able to stomach this crime, literally.
 
-Donuts : discoverID : Any : I discover a guard ID at the bottom of the donut box. Drenched in powdered sugar it may be, it still seems useful to have around.
+Donuts : discoverID : Any : I discover a guard ID at the bottom of the donut box. Drenched in powdered sugar it may be, it still seems useful to have around. I pocket the guard ID and put it into my bag for later use.
 
 guards : talk : Any : I walk up to the guards and spend some time making small talk.
 guards : talk : Brawler : I walk up to the guards. They give me a pretty stanky eye. I try to make small talk but they just ignore me.
@@ -171,6 +176,13 @@ guards : talkDonuts : Any : I walk up to the guards. They really appreciate the 
 guards : talkDonuts : Guard : I walk up to the guards. They thank me again for the donuts and offer me a quarter donut.
 guards : talkDonuts : Doctor : I walk up to the guards. "Are you judging us for eating the donuts YOU gave us Doctor?" the shorter one says. I chuckle and we make some small talk.
 guards : talkDonuts : Thief : I sneak up to the guards eating the donuts I gave them. I use my superb thieving skills to slowly creep my arm closer to the donut box. As I try to swipe a donut the taller guard gives me a stern look.
+
+Exit Door: go through : Patient : With the guards distracted I walk through the door towards my freedom, leaving the hospital behind me. Is this who I really am? I just can't be sure.
+Exit Door : go through : Doctor :With the guards distracted I walk through the door towards my freedom, leaving the hospital behind me. I guess I'll live the rest of my life out as a Doctor. I don't have the qualifications, experience or lab coat. I just can't be sure that this is really who I am.
+Exit Door : go through : Guard : With the guards distracted I walk through the door towards my freedom, leaving the hospital behind me. Guarding doesn't sound too bad. I guess I can live the rest of my life out as a guard. I wish I could remember who I really am - but, for now, I'm satisfied just leaving the hospital.
+Exit Door : go through : Thief : With the guards distracted I walk through the door towards my freedom, leaving the hospital behind me. Am I really a thief? It's who I am now, I guess. I just can't be sure.
+Exit Door : go through : Brawler :With the guards distracted I walk through the door towards my freedom, leaving the hospital behind me. I head straight to the closest bar. The smell of alcohol feels like it should sit right but deep down it disgusts me.
+
 
 # I am X fire escape
 Fire Alarm : inspect: Any : Looks like one of those super loud fire alarms that go off once someone goes through a fire exit or if smoke is detected. I probably shouldn't mess with that unless I really have to.

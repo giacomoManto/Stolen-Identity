@@ -6,14 +6,15 @@ using UnityEngine;
 public class DoorBehavior : Interactable
 {
     [SerializeField]
+    private string roomName = "";
+
+    [SerializeField]
     private RoomBehavior room;
 
     [SerializeField]
     private int lockLevel = 0;
 
     [SerializeField]
-    private string roomName = "";
-
     private bool locked = true;
 
     [SerializeField]
@@ -27,6 +28,10 @@ public class DoorBehavior : Interactable
         if (lockLevel == 0)
         {
             this.locked = false;
+        }
+        else 
+        {
+            this.locked = true;
         }
 
         // Action Registration
@@ -123,14 +128,18 @@ public class DoorBehavior : Interactable
                 this.locked = false;
                 GameManager.Instance().AddTextToJournal("I smash a big hole where the door knob used to be. A door cant be locked if the locking stuff is not in the door.");
             }
-            else
+            else if(!this.locked)
             {
                 GameManager.Instance().AddTextToJournal("I break a hole in the door. It was probably unlocked before I did that but who cares? Its fun to break stuff.");
+            }
+            else if (!breakable)
+            {
+                GameManager.Instance().AddTextToJournal("I give the door a solid boneshattering punch before realizing a horrible truth... this door is sturdy enough that it wont give way to brute force and ignorance.");
             }
         }
         else
         {
-            GameManager.Instance().AddTextToJournal("As much as I hate to admit it, I'm not strong enough for that.");
+            GameManager.Instance().AddTextToJournal("I am not strong enough for that. Who could break a door with their bare hands?");
         }
     }
     private void assignRoomIfNone()

@@ -24,9 +24,8 @@ public class ExitDoor : Interactable
         }
         else if (GameManager.Instance().GetFlag("guardsDistracted"))
         {
-            GameManager.Instance().AddTextToJournal("With the guards distracted I slip through the door and make my way towards freedom.");
-            escapeSuccess();
             GameManager.Instance().AddTextToJournal(this.GetTextFromJson("go through", id));
+            escapeSuccess();
         }
         else
         {

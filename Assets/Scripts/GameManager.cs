@@ -109,6 +109,7 @@ public class GameManager : MonoBehaviour
     private void InitGameFlags()
     {
         gameFlags.Add("Thief Ending", false);
+        gameFlags.Add("fail", false);
     }
 
     #endregion
