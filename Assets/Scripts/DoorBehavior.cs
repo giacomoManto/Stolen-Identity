@@ -33,12 +33,9 @@ public class DoorBehavior : Interactable
 
         // Action Registration
         this.RegisterAction(GoThrough, "use", "open", "go through", "pass through", "enter", "move through", "walk through", "step through", "proceed through", "traverse", "penetrate", "slip through", "creep through", "push through", "burst through", "barge through", "infiltrate", "tread through");
-        this.RegisterAction("lockpick", Lockpick);
-        this.RegisterAction("breakdown", Breakdown);
-        this.RegisterAction("break", Breakdown);
+        this.RegisterAction(Lockpick, "lockpick", "pick", "jimmy", "crack", "manipulate", "bypass", "fiddle with");
+        this.RegisterAction(Breakdown, "breakdown", "break", "smash", "destroy", "bust", "shatter", "demolish", "crack", "tear down", "wreck", "ruin");
         this.RegisterAction(Unlock, "unlock", "swipe", "scan", "slide", "pass", "insert", "tap", "wave", "flash", "activate", "trigger", "engage", "authorize", "validate", "verify");
-
-
     }
 
     public DoorBehavior() : base()
