@@ -1,6 +1,3 @@
-using System;
-using System.Threading;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class DoorBehavior : Interactable
@@ -29,19 +26,16 @@ public class DoorBehavior : Interactable
         {
             this.locked = false;
         }
-        else 
+        else
         {
             this.locked = true;
         }
 
         // Action Registration
         this.RegisterAction(GoThrough, "use", "open", "go through", "pass through", "enter", "move through", "walk through", "step through", "proceed through", "traverse", "penetrate", "slip through", "creep through", "push through", "burst through", "barge through", "infiltrate", "tread through");
-        this.RegisterAction("lockpick", Lockpick);
-        this.RegisterAction("breakdown", Breakdown);
-        this.RegisterAction("break", Breakdown);
+        this.RegisterAction(Lockpick, "lockpick", "pick", "jimmy", "crack", "manipulate", "bypass", "fiddle with");
+        this.RegisterAction(Breakdown, "breakdown", "break", "smash", "destroy", "bust", "shatter", "demolish", "crack", "tear down", "wreck", "ruin");
         this.RegisterAction(Unlock, "unlock", "swipe", "scan", "slide", "pass", "insert", "tap", "wave", "flash", "activate", "trigger", "engage", "authorize", "validate", "verify");
-        
-        
     }
 
     public DoorBehavior() : base()
@@ -75,7 +69,8 @@ public class DoorBehavior : Interactable
     private void GoThrough(IDCard id)
     {
         assignRoomIfNone();
-        if (!locked) {
+        if (!locked)
+        {
             GameManager.Instance().AddTextToJournal("I go through the " + interactableName + ".");
             GameManager.Instance().changeRoom(room);
         }
@@ -100,17 +95,23 @@ public class DoorBehavior : Interactable
         }
     }
 
-    private void Lockpick(IDCard id) {
+    private void Lockpick(IDCard id)
+    {
         assignRoomIfNone();
-        if (id.Equals(IDCard.Thief)) {
+        if (id.Equals(IDCard.Thief))
+        {
             if (this.lockPickable && this.locked)
             {
                 this.locked = false;
                 GameManager.Instance().AddTextToJournal("I skillfully lockpick the door. With a satisfying click the door unlocks completely.");
             }
-            else
+            else if (!this.locked)
             {
                 GameManager.Instance().AddTextToJournal("I spend a couple minutes inserting, twisting and applying pressure to the door lock. This must be the hardest lock I have ever picked. In a bout of frustration I throw my tools on the ground, my alan key bounces up and hits the door knob revealing that it was unlocked the whole time.");
+            }
+            else if (!this.lockPickable)
+            {
+                GameManager.Instance().AddTextToJournal("I spend a couple minutes inserting, twisting and applying delicate pressure to the doors lock. This is an impossible lock, not even the lock picking lawyer could pick this.");
             }
         }
         else
@@ -119,7 +120,8 @@ public class DoorBehavior : Interactable
         }
     }
 
-    private void Breakdown(IDCard id) {
+    private void Breakdown(IDCard id)
+    {
         assignRoomIfNone();
         if (id.Equals(IDCard.Brawler))
         {
@@ -128,7 +130,7 @@ public class DoorBehavior : Interactable
                 this.locked = false;
                 GameManager.Instance().AddTextToJournal("I smash a big hole where the door knob used to be. A door cant be locked if the locking stuff is not in the door.");
             }
-            else if(!this.locked)
+            else if (!this.locked)
             {
                 GameManager.Instance().AddTextToJournal("I break a hole in the door. It was probably unlocked before I did that but who cares? Its fun to break stuff.");
             }
@@ -149,4 +151,4 @@ public class DoorBehavior : Interactable
             room = GameManager.Instance().GetRoomByName(roomName);
         }
     }
-    }
+}
