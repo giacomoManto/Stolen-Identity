@@ -438,6 +438,7 @@ MonoBehaviour:
   - stare at
   - poke
   - touch
+  requiredId: 0
 --- !u!1 &79739998
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,6 +483,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 395825188}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &135320087
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 135320088}
+  - component: {fileID: 135320089}
+  m_Layer: 0
+  m_Name: Brawler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &135320088
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135320087}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1499385320}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &135320089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135320087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae6f43ce226afe4498ad7e6cbf60b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyed: 0
+  interactableName: Brawler
+  locationDescription: Laying on one of the beds snoring is a big behemoth of a person.
+    Honestly they look like a bar brawler.
+  playerCanStore: 0
+  dialogueManager: {fileID: 0}
 --- !u!1 &145529329
 GameObject:
   m_ObjectHideFlags: 0
@@ -768,6 +819,7 @@ Transform:
   - {fileID: 526537624}
   - {fileID: 36046826}
   - {fileID: 1763008991}
+  - {fileID: 935973429}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &275165892
@@ -901,6 +953,12 @@ MonoBehaviour:
   - take
   - pull
   - destroy
+  - tear down
+  - take down
+  - pull down
+  - yank
+  - yank down
+  requiredId: 0
 --- !u!1 &395825187
 GameObject:
   m_ObjectHideFlags: 0
@@ -1171,7 +1229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
-  doctorColor: {r: 0.8156863, g: 0.9411765, b: 0.7529412, a: 1}
+  doctorColor: {r: 0.9475891, g: 1, b: 0.9213836, a: 1}
   brawlerColor: {r: 1, g: 0.76862746, b: 0.75686276, a: 1}
   patientColor: {r: 0.8784314, g: 0.8862745, b: 1, a: 1}
   thiefColor: {r: 0.5803922, g: 0.5803922, b: 0.5803922, a: 1}
@@ -2049,6 +2107,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &935973428
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 935973429}
+  - component: {fileID: 935973430}
+  m_Layer: 0
+  m_Name: Clerk
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &935973429
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935973428}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 275165891}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &935973430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935973428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e76734efd5668b4ea7aff91a1f05ac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyed: 0
+  interactableName: 
+  locationDescription: 
+  playerCanStore: 0
+  dialogueManager: {fileID: 0}
+  punchcard: {fileID: 0}
 --- !u!1 &936510602
 GameObject:
   m_ObjectHideFlags: 0
@@ -2540,6 +2648,7 @@ MonoBehaviour:
   - unmount
   - take off the
   - take off
+  requiredId: 0
 --- !u!1 &1189908566
 GameObject:
   m_ObjectHideFlags: 0
@@ -2755,6 +2864,7 @@ MonoBehaviour:
   - peek at
   - view
   - approach
+  requiredId: 0
 --- !u!1 &1401071886
 GameObject:
   m_ObjectHideFlags: 0
@@ -3243,6 +3353,7 @@ Transform:
   - {fileID: 1902775118}
   - {fileID: 771437825}
   - {fileID: 538016600}
+  - {fileID: 135320088}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1499385321

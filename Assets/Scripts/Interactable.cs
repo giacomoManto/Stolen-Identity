@@ -132,7 +132,7 @@ public class Interactable : MonoBehaviour
         }
         else
         {
-            GameManager.Instance().AddTextToJournal("I take a closer look at the " + interactableName + " but I realize there isnt much else to see." );
+            GameManager.Instance().AddTextToJournal("I take a closer look at the " + interactableName + " but I realize there isn't much else to see." );
         }
     }
 

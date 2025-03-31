@@ -369,10 +369,10 @@ public class GameManager : MonoBehaviour
 
         CurrentPlayerRoom.removeItemFromDictionary(interactable.GetComponent<Interactable>());
         interactable.GetComponent<Interactable>().destroyed = true;
+        player.removeItem(interactable.GetComponent<Interactable>());
         Destroy(interactable.GetComponent<Interactable>());
         Destroy(interactable);
         currentPlayerRoom.InitInteractables();
-
     }
     #endregion
 

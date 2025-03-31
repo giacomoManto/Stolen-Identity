@@ -34,6 +34,7 @@ public class DoorBehavior : Interactable
         this.RegisterAction("lockpick", Lockpick);
         this.RegisterAction("breakdown", Breakdown);
         this.RegisterAction("break", Breakdown);
+        this.RegisterAction(Unlock, "unlock", "swipe", "scan", "slide", "pass", "insert", "tap", "wave", "flash", "activate", "trigger", "engage", "authorize", "validate", "verify");
         
         
     }
@@ -41,6 +42,27 @@ public class DoorBehavior : Interactable
     public DoorBehavior() : base()
     {
         this.SetName(interactableName);
+    }
+
+
+    private void Unlock(IDCard id)
+    {
+        if (id.GetSecurityLevel() >= lockLevel)
+        {
+            this.locked = false;
+            GameManager.Instance().AddTextToJournal($"I swipe my {id.Name} id. The door beeps and I can hear the latch unlock.");
+        }
+        else
+        {
+            if (GetTextFromJson(interactableName, "unlockFail", id).Contains("unlockFail"))
+            {
+                GameManager.Instance().AddTextToJournal("The door is locked. I need a higher security level to unlock it.");
+            }
+            else
+            {
+                GameManager.Instance().AddTextToJournal(GetTextFromJson(interactableName, "unlockFail", id));
+            }
+        }
     }
 
 
