@@ -192,3 +192,13 @@ red door : unlockFail : Any : I rattle the red door’s handle, trying to open i
 Brawler : inspect : Any : I take a step closer and take a look at the brawler. Wow they are entirely muscle. They must be incredible at punching and breaking. I wonder why they are here in this ward with me.
 Brawler : inspect : Doctor : Oh yes. This patient… Got so drunk at the local bar they haven’t been able to remember how to get home so they have just been staying here ever since.
 Brawler : inspect : Brawler : It’s me. Wait, I’m me. But on the bed it’s me. Am I not me? Are they not them? Is my life a lie? Am I just a shell pretending to be someone else? I need a drink…badly.
+
+Brawler : talk1 : Any : I poke the brawler waking them up. “Hey” I say. “Leave me alone before I punch you” they respond.
+
+Brawler : talk2 : Any : I poke the brawler again. “Excuse me” I squeak out. “I have punched holes in people before. Don’t try me. And whatever you do, don't annoy me.” The brawler puts a set of ear plugs in.
+
+Brawler : earplug : Any : I try to talk to the brawler but they have their earplugs in and (at least I think) can’t hear me.
+
+Brawler : annoyPunchCard : Any : I foolishly decide to annoy the brawler by tickling their toes. The wake up and punch me harder than I've ever been punched before. I look down and luckily I don't have a hole in me. I check my pockets and realize my punch card took the blow for me. I guess it's a good thing I annoyed them.
+
+Brawler : annoyNoPunchCard : Any : I tickle the brawler's feet while making a goofy face. <b><b> I wake up looking at an oddly familiar ceiling. It seems I've been punched into the next room.
