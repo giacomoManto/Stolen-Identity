@@ -43,4 +43,10 @@ public class Acquaintance : Interactable
         }
 
     }
+
+    private string ReplaceName(string originalText)
+    {
+        SaveData savedata = SaveDataManager.Instance().LoadGame();
+        return originalText;
+    }
 }
