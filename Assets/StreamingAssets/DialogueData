@@ -109,9 +109,9 @@ Clerk : inspect : Any : Looks like the person that handles patient and employee 
 Clerk : inspect : Guard : The trustworthy hospital clerk. I only talk to them when I have to.
 Clerk : inspect : Doctor : The clerk is always on my case for forgetting to punch in and out. That reminds me… nevermind.
 
-Fire Exit : doctor ending : Thief : I push the cold metal bar of the fire exit and step into the night, the hospital’s sterile and tacky corridors fading behind me. I have my lab coat on, my punch card got punched and my PhD is safe and sound in my bag. I look down at my watch. Looks like my next shift starts in 15 minutes. I turn around and head back in to get ready. As I step back into the hospital and take a deep breath I know deep down I was rarely in a hospital before I lost my memory. (Hidden Ending 1/4)
+Fire Exit : doctor ending : Doctor : I push the cold metal bar of the fire exit and step into the night, the hospital’s sterile and tacky corridors fading behind me. I have my lab coat on, my punch card got punched and my PhD is safe and sound in my bag. I look down at my watch. Looks like my next shift starts in 15 minutes. I turn around and head back in to get ready. As I step back into the hospital and take a deep breath I know deep down I was rarely in a hospital before I lost my memory. (Hidden Ending 1/4)
 
-Exit Door : doctor ending : Thief : I walk through the hospital exit. Giving and receiving a courteous nod to each of the guards. I have my lab coat on, my punch card got punched and my PhD is safe and sound in my bag. I look down at my watch. Looks like my next shift starts in 15 minutes. I turn around and head back in to get ready. As I step back into the hospital and take a deep breath I know deep down I was rarely in a hospital before I lost my memory. (Hidden Ending 1/4)
+Exit Door : doctor ending : Doctor : I walk through the hospital exit. Giving and receiving a courteous nod to each of the guards. I have my lab coat on, my punch card got punched and my PhD is safe and sound in my bag. I look down at my watch. Looks like my next shift starts in 15 minutes. I turn around and head back in to get ready. As I step back into the hospital and take a deep breath I know deep down I was rarely in a hospital before I lost my memory. (Hidden Ending 1/4)
 
 # Become a thief
 Calling Card : location: Any :I see what looks like a calling card sitting atop a shiny metal surgical plate in the corner.
@@ -208,4 +208,4 @@ Brawler : talkToAnnoy : Any : I try to talk to the brawler but they have their e
 
 Brawler : annoyPunchCard : Any : I foolishly decide to annoy the brawler by tickling their toes. The wake up and punch me harder than I've ever been punched before. I look down and luckily I don't have a hole in me. I check my pockets and realize my punch card took the blow for me. I guess it's a good thing I annoyed them.
 
-Brawler : annoyNoPunchCard : Any : I tickle the brawler's feet while making a goofy face. <b><b> I wake up looking at an oddly familiar ceiling. It seems I've been punched into the next room.
+Brawler : annoyNoPunchCard : Any : I tickle the brawler's feet while making a goofy face. <br><br> I wake up looking at an oddly familiar ceiling. It seems I've been punched into the next room.

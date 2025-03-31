@@ -53,6 +53,7 @@ public class Brawler : Interactable
             GameManager.Instance().addObjectToPlayerInventory(punchCardPunchedInstance.GetComponent<Interactable>());
             FindFirstObjectByType<PlayerInfo>().removeItem("punchcard");
             GameManager.Instance().SetFlag("hasPunchedPunchcard", true);
+            GameManager.Instance().SetFlag("hasPunchcard", false);
         }
         else
         {
