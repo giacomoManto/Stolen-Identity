@@ -25,6 +25,6 @@ public class SaveData
         endingDoctor = false;
         endingThief = false;
         endingBrawler = false;
-        playerName = "";
+        playerName = "John Random";
     }
 }

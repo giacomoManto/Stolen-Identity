@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &488915322010265457
+--- !u!1 &2244449425255925728
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,45 +8,44 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2606055341826009571}
-  - component: {fileID: 3444187382219950366}
+  - component: {fileID: 8681599842007505243}
+  - component: {fileID: -6210342052489374427}
   m_Layer: 0
-  m_Name: Doctor ID
+  m_Name: ReleaseSlip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2606055341826009571
+--- !u!4 &8681599842007505243
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 488915322010265457}
+  m_GameObject: {fileID: 2244449425255925728}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 661.86206, y: 585.26605, z: -10.495066}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3444187382219950366
+--- !u!114 &-6210342052489374427
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 488915322010265457}
+  m_GameObject: {fileID: 2244449425255925728}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63384af4533103e43beeeec67b3432cb, type: 3}
+  m_Script: {fileID: 11500000, guid: 951cf8aff516b9845b4922f775221d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   destroyed: 0
-  interactableName: Doctor ID
-  locationDescription: 'Pinned on the chest of the life size cutout of the doctor
-    sits an oddly realistic Doctor ID card. '
+  interactableName: Release Slip
+  locationDescription: 
   playerCanStore: 1
   dialogueManager: {fileID: 0}

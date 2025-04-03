@@ -6,7 +6,7 @@ public class IDCardObject : Interactable
     public IDCardObject() : base()
     {
         this.SetName(interactableName);
-        this.RegisterAction(SwitchId, "use","switch");
+        this.RegisterAction(SwitchId, "use","switch", "deploy");
 
     }
         

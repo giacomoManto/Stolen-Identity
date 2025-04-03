@@ -80,7 +80,7 @@ public class ExitDoor : Interactable
 
     private bool PatientEnding(IDCard id)
     {
-        if (id.Name == IDCard.Patient.Name && GameManager.Instance().GetFlag("PatientFileRead"))
+        if (id.Name == IDCard.Patient.Name && GameManager.Instance().GetFlag("PatientFileRead") && GameManager.Instance().GetFlag("releaseSlip"))
         {
             GameManager.Instance().AddTextToJournal(this.GetTextFromJson("patient ending", id));
             return true;

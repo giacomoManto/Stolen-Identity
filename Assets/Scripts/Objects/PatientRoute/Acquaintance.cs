@@ -10,11 +10,14 @@ public class Acquaintance : Interactable
     private string realDescription;
 
     private Dictionary<IDCard, int> talkCount = new Dictionary<IDCard, int>();
+    SaveData gameData;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         this.RegisterAction(TalkTuah, "say hello to", "talk", "hello", "talk to", "speak to", "converse with", "chat with", "communicate with", "address", "engage with", "discuss with", "confer with", "have a word with");
+        gameData = SaveDataManager.Instance().LoadGame();
     }
 
     private void TalkTuah(IDCard id)
@@ -27,26 +30,27 @@ public class Acquaintance : Interactable
         {
             talkCount[id] = 0;
         }
+        string dialogue;
         switch (talkCount[id])
         {
             case (0):
-                GameManager.Instance().AddTextToJournal(GetTextFromJson("talk0", id));
+                dialogue = GetTextFromJson("talk0", id);
                 this.locationDescription = realDescription;
+                this.SetName(realName);
                 this.GetComponentInParent<RoomBehavior>().InitInteractables();
                 break;
             case (1):
-                GameManager.Instance().AddTextToJournal(GetTextFromJson("talk1", id));
+                dialogue = GetTextFromJson("talk1", id);
                 break;
             default:
-                GameManager.Instance().AddTextToJournal(GetTextFromJson("talkDefault", id));
+                dialogue = GetTextFromJson("talkDefault", id);
+                if (id.Name == IDCard.Patient.Name)
+                {
+                    GameManager.Instance().SetFlag("discoveredName", true);
+                }
                 break;
         }
+        GameManager.Instance().AddTextToJournal(dialogue.Replace("{name}", gameData.playerName));
 
-    }
-
-    private string ReplaceName(string originalText)
-    {
-        SaveData savedata = SaveDataManager.Instance().LoadGame();
-        return originalText;
     }
 }

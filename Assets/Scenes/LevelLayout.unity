@@ -1959,6 +1959,56 @@ MonoBehaviour:
   locationDescription: There is a fire alarm on the southern wall.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
+--- !u!1 &702972086
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 702972087}
+  - component: {fileID: 702972088}
+  m_Layer: 0
+  m_Name: Doctor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &702972087
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702972086}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1582195721}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &702972088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702972086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07ea2428e9e9a5a45a4cb1772acddbe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyed: 0
+  interactableName: Doctor
+  locationDescription: A doctor is pacing the hallway. They look visibly stressed.
+  playerCanStore: 0
+  dialogueManager: {fileID: 0}
+  releaseSlip: {fileID: 2244449425255925728, guid: deefa8456877905429eb050f016dc145, type: 3}
 --- !u!1 &771437824
 GameObject:
   m_ObjectHideFlags: 0
@@ -3621,6 +3671,7 @@ Transform:
   m_Children:
   - {fileID: 981524480}
   - {fileID: 1444359590}
+  - {fileID: 702972087}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1582195722
@@ -4409,7 +4460,7 @@ MonoBehaviour:
   playerCanStore: 0
   dialogueManager: {fileID: 0}
   realName: Ruth
-  realDescription: Ruth is still sat waiting.
+  realDescription: In the waiting area Ruth still sits waiting.
 --- !u!1001 &1820977941
 PrefabInstance:
   m_ObjectHideFlags: 0
