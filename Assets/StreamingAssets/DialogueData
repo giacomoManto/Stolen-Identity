@@ -106,8 +106,8 @@ Cardboard Cutout : object spawned : Any : A cardboard cutout of a doctor. It's a
 Cardboard Cutout : on spawn : Any : Taking a closer look at the cutout I realize the Doctor ID pinned to the board is shiny, as if it's a real card and not just a printout.
 
 
-Janitor's Journal : read : Any : I flip through the pages of the journal. It is filled to the brim with notes about the Doctor's daily routine. It seems the janitor has been keeping tabs on the Doctor for quite some time. The only thing that stands out to me is the doctors checklist for clocking out of their shift. <br>1. The Doctor ID Card<br>2. The Doctor’s PhD<br>3. The Doctor’s lab coat<br>4.The Doctors punched punchcard
-Janitor's Journal : read : Doctor : I flip through the pages of the journal. It is filled to the brim with notes about my daily routine. This feels like an invasion of privacy. I really need to get out of this hospital if this is who my colleagues are. I especially don’t like that they stole my clocking out checklist. I haven’t been able to leave here without it. Thankfully I now remember what I need before I can clock out. <br>1. My ID<br>2. My PhD<br>3. My lab coat<br>4. My punched punchcard
+Journal : read : Any : I flip through the pages of the journal. It is filled to the brim with notes about the Doctor's daily routine. It seems the janitor has been keeping tabs on the Doctor for quite some time. The only thing that stands out to me is the doctors checklist for clocking out of their shift. <br>1. The Doctor ID Card<br>2. The Doctor’s PhD<br>3. The Doctor’s lab coat<br>4.The Doctors punched punchcard
+Journal : read : Doctor : I flip through the pages of the journal. It is filled to the brim with notes about my daily routine. This feels like an invasion of privacy. I really need to get out of this hospital if this is who my colleagues are. I especially don’t like that they stole my clocking out checklist. I haven’t been able to leave here without it. Thankfully I now remember what I need before I can clock out. <br>1. My ID<br>2. My PhD<br>3. My lab coat<br>4. My punched punchcard
 
 Clerk : inspect : Any : Looks like the person that handles patient and employee intake. They don’t look like someone that would enjoy a conversation.
 Clerk : inspect : Guard : The trustworthy hospital clerk. I only talk to them when I have to.
@@ -208,6 +208,7 @@ Fire Exit : go through : Brawler : I push the metal bar and the door swings open
 # Doors
 door : unlock : Any : The door beeps, accepting the id and I hear the deadbolt retract. I open the door and walk through.
 red door : unlockFail : Any : I rattle the red door’s handle, trying to open it. It looks like it's one of those id card access doors and won't open up until I use a card.
+red door : location : Any : A red door with a small pane of glass is at the far end of the room. It looks like it leads into some sort of hallway.
 
 
 

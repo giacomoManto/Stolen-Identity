@@ -1803,7 +1803,7 @@ MonoBehaviour:
   destroyed: 0
   interactableName: Fire Alarm Manual
   locationDescription: 
-  playerCanStore: 0
+  playerCanStore: 1
   dialogueManager: {fileID: 0}
 --- !u!1 &673477764
 GameObject:
@@ -3895,10 +3895,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyed: 0
-  interactableName: Janitor's Journal
+  interactableName: Journal
   locationDescription: On the floor below the shrine is a notebook. I lean forward
     to take a closer look and see that it is the Janitor's Journal.
-  playerCanStore: 0
+  playerCanStore: 1
   dialogueManager: {fileID: 0}
 --- !u!1 &1679773187
 GameObject:
@@ -4425,6 +4425,10 @@ PrefabInstance:
       propertyPath: spawnedObject
       value: 
       objectReference: {fileID: 983849250}
+    - target: {fileID: 1011865646109826233, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
+      propertyPath: playerCanStore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1011865646109826233, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
       propertyPath: locationDescription
       value: 
@@ -5081,7 +5085,7 @@ MonoBehaviour:
   destroyed: 0
   interactableName: Fire Exit
   locationDescription: A large red fire exit is at the end of the hallway.
-  playerCanStore: 1
+  playerCanStore: 0
   dialogueManager: {fileID: 0}
 --- !u!1 &2098709137
 GameObject:
@@ -5183,7 +5187,7 @@ MonoBehaviour:
   interactableName: shrine
   locationDescription: A ornate shrine of candles, pictures and stolen belongings
     of the doctor.
-  playerCanStore: 1
+  playerCanStore: 0
   dialogueManager: {fileID: 0}
 --- !u!1 &2124758851
 GameObject:
