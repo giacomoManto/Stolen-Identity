@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Text;
+using Unity.VisualScripting;
 using UnityEngine;
 
 /// <summary>
@@ -21,6 +22,7 @@ public class PlayerInfo : MonoBehaviour
     // A dictionary mapping id names to corresponding ID cards.
     [SerializeField]
     private Dictionary<string, IDCard> playerIDs = new Dictionary<string, IDCard>();
+    private Dictionary<string, Interactable> playerIDInteractables = new Dictionary<string, Interactable>();
 
     // A dictionary mapping item names to Interactable items.
     [SerializeField]
@@ -128,7 +130,7 @@ public class PlayerInfo : MonoBehaviour
     /// </summary>
     /// <param name="item">The name of the item to check.</param>
     /// <returns>True if the item is in the inventory; otherwise, false.</returns>
-    public bool getItemFromInventory(string item)
+    public bool isItemInInventory(string item)
     {
         return itemInventory.ContainsKey(item.ToLower()) || itemInventory.ContainsKey(item);
     }
@@ -139,7 +141,9 @@ public class PlayerInfo : MonoBehaviour
     /// <returns>A dictionary of item names and their corresponding Interactable objects.</returns>
     public Dictionary<string, Interactable> getPlayerInventory()
     {
-        return itemInventory;
+        Dictionary<string, Interactable> itemInventoryCopy = new Dictionary<string, Interactable>(itemInventory);
+        itemInventoryCopy.AddRange(playerIDInteractables);
+        return itemInventoryCopy;
     }
 
     /// <summary>
@@ -160,6 +164,7 @@ public class PlayerInfo : MonoBehaviour
         // If the item is a valid ID card, add it to the playerIDs dictionary.
         if (!possibleCard.Equals(IDCard.None))
         {
+            playerIDInteractables.Add(item.interactableName.ToLower(), item);
             if (!secondId && !possibleCard.Equals(IDCard.Patient))
             {
                 GameManager.Instance().AddTextToJournal("As I begin to pick up the " + item.interactableName + " I realize it calls to me, similar to the patient id. I wonder what would happen if I try to <b>use</b> it. I guess my mind would <b>switch</b> into the mindset of a " + possibleCard + ", hard to tell.");

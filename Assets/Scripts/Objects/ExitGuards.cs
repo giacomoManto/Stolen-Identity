@@ -10,7 +10,7 @@ public class ExitGuards : Interactable
 
     public void Give(IDCard id)
     {
-        if (FindFirstObjectByType<PlayerInfo>().getItemFromInventory("donuts"))
+        if (FindFirstObjectByType<PlayerInfo>().isItemInInventory("donuts"))
         {
             FindFirstObjectByType<PlayerInfo>().removeItem("donuts");
             GameManager.Instance().AddTextToJournal("I give the donuts to the guards by the door. They jump for joy and dive into the donuts. It's as if the world around them has dissapeared they are totally distracted.");
