@@ -247,3 +247,12 @@ Person : talk0 : Guard : I walk up and say hello to the person. They look at me 
 Person : talk0 : Brawler : I walk up and say hello to the person. They look at me with a face of recognition but then it fades. I see a bit of disappointment flash over their eyes. “Hello my name is Ruth, sorry for staring you just look like an acquaintance of mine but they aren’t a drunk.”
 Person : talk0 : Thief : I walk up and say hello to the person. They look at me with a face of recognition but then it fades. “Hello my name is Ruth, sorry for staring you just look like an acquaintance of mine but you aren’t them. You look like you are here to steal and they would never do that.”
 Person : talk0 : Patient : I walk up and say hello to the person. They look at me with a face of recognition. “{name}? Is that you {name}. It’s been so long, how have you been?” She notices the non-recognition in my face. “Oh sorry” she says, “My name's Ruth. You look exactly like this acquaintance I knew from years ago.”
+
+
+Person : talk1 : Doctor : I walk up to Ruth. She says “Hey Doctor. How’s it going?” I reply with, “it’s ok, just trying to clock out but I seem to have lost my pre-clockout checklist.”
+Person : talk1 : Any: I walk up and say “Hey Ruth how’s it hanging.” She raises her eyebrow and says, “It’s ok I guess. Just sitting here waiting.”
+Person : talk1 : Patient : I walk up and say “Hello Ruth!” Again there is a moment of recognition that quickly disappears from her face. “Oh hello, I never got your name," she replies. “Truthfully, I don’t know. My oldest memory is waking up in this hospital.”
+
+Person : talkDefault : Any : “Hey Ruth!” <br> “Hello” <br> I sit down and we chat for a while. It’s like talking to an old friend.
+Person : talkDefault : Patient : I walk up and spend some time chatting with Ruth. The longer we talk the more it feels like I knew this person from some time before my existence in this hospital. The name she first called me by “{name}” sticks with me.
+

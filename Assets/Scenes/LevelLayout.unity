@@ -4403,12 +4403,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyed: 0
-  interactableName: Acquaintance
-  locationDescription: 
+  interactableName: Person
+  locationDescription: A person is sitting in a seat. Seemingly waiting for someone
+    or something.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
-  realName: 
-  realDescription: 
+  realName: Ruth
+  realDescription: Ruth is still sat waiting.
 --- !u!1001 &1820977941
 PrefabInstance:
   m_ObjectHideFlags: 0

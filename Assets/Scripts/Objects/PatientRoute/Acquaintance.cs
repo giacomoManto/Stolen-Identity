@@ -9,7 +9,7 @@ public class Acquaintance : Interactable
     [SerializeField]
     private string realDescription;
 
-    private Dictionary<IDCard, int> talkCount;
+    private Dictionary<IDCard, int> talkCount = new Dictionary<IDCard, int>();
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
