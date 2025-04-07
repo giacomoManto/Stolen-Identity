@@ -2784,7 +2784,8 @@ MonoBehaviour:
   dialogueManager: {fileID: 0}
   destroyOnSpawn: 0
   addToPlayerInventory: 0
-  spawnedObjects: []
+  spawnedObjects:
+  - {fileID: 3366364370833142340, guid: 4af069c9251737547b85eaaa12802869, type: 3}
   spawnedText: 
   actionsWhichTriggerSpawn:
   - remove
@@ -5533,26 +5534,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gauze
       objectReference: {fileID: 0}
-    - target: {fileID: 5058469786790679101, guid: 19942a7bae71a1448b90a453eebaa4b3, type: 3}
-      propertyPath: destroyed
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5058469786790679101, guid: 19942a7bae71a1448b90a453eebaa4b3, type: 3}
-      propertyPath: interactableName
-      value: Gauze
-      objectReference: {fileID: 0}
-    - target: {fileID: 5058469786790679101, guid: 19942a7bae71a1448b90a453eebaa4b3, type: 3}
-      propertyPath: addToPlayerInventory
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5058469786790679101, guid: 19942a7bae71a1448b90a453eebaa4b3, type: 3}
-      propertyPath: spawnedObjects.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5058469786790679101, guid: 19942a7bae71a1448b90a453eebaa4b3, type: 3}
-      propertyPath: 'spawnedObjects.Array.data[0]'
-      value: 
-      objectReference: {fileID: 3557193481120524595, guid: 0a5beaf7708600d4e88f099ed48da1a9, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

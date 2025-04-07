@@ -45,12 +45,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyed: 0
-  interactableName: 
+  interactableName: Gauze
   locationDescription: Some gauze rests on the table nearby.
   playerCanStore: 1
   dialogueManager: {fileID: 0}
   destroyOnSpawn: 1
-  spawnedObjects: []
+  addToPlayerInventory: 1
+  spawnedObjects:
+  - {fileID: 3557193481120524595, guid: 0a5beaf7708600d4e88f099ed48da1a9, type: 3}
   spawnedText: I wrap the gauze around my fists. I doubt anything can stop me now.
   actionsWhichTriggerSpawn:
   - use
