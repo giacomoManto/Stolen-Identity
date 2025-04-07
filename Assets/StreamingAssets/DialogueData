@@ -73,7 +73,19 @@ Bar Rewards Card : location: Any : In the trash next to the water cooler, there 
 Bar Rewards Card : inspect : Any : I pick up a battered, soggy bar loyalty card.
 Bar Rewards Card : inspect : Guard : I pick up a battered, soggy bar loyalty card. Probably banned from half the bars in town, yet still working through the rewards program. Impressive.
 Bar Rewards Card : inspect : Doctor : I pick up a battered, soggy bar loyalty card. Looks like this belonged to a true hardcore drinker. Wasn’t there a patient that came in earlier directly from a bar?
-Bar Rewards Card : inspect : Brawler : My rewards card. Only thirteen more drinks and I'll get one for free.	
+Bar Rewards Card : inspect : Brawler : My rewards card. Only thirteen more drinks and I'll get one for free.
+
+Sleeping Man : location : Any : There’s also a sleeping man who is snoozing away across 3 of the seats who holds a nondescript brown paper bag.
+Sleeping Man : location : Brawler: There’s a sleeping man in the seating area sleeping with a brown bag. Looks like there’s booze in there.
+Sleeping Man : inspect: Any : Upon closer inspection, this guy definitely has booze in that bag and looks like he’s seen a few fights. Probably not best to remove the booze from the dude unless I have a plan.
+Sleeping Man : talk: Any : I try to get the sleeping man to give me any kind of response but he just grumbles and rolls over, ignoring me entirely.
+Sleeping Man : annoyTalk : Any :I start to approach the sleeping man who just snaps awake, somehow sensing I was coming. He moves in a blur and suddenly something thuds into my head. I think I fell to the ground and blacked out, hard to say considering I don't really remember what exactly happened.
+Sleeping Man : annoyTalkBrawler : Any : I start to approach the sleeping man who snaps awake. He moves in a blur, trying to use the bottle of booze to wack me over the head like some sort of drunken warrior. Being the better drunken warrior, I punch him square in the face before he does and he uh…goes back to sleep, slumped over all 3 chairs. The <b>booze</b> is mine for the taking.
+Sleeping Man : unconscious : Any : I look at the sleeping man and realize trying to do anything else to him while he’s this unconscious is kinda pointless.	
+
+Fire Exit : brawler ending : Brawler: True brawler ending (Hidden Ending 1/4)
+
+Exit Door : brawler ending : Brawler: True brawler ending (Hidden Ending 1/4)
 
 # Become a doctor
 Lab Coat : inspect : Any : I take a closer look at the lab coat. It's quite standard.
@@ -194,6 +206,7 @@ guards : talkDonuts : Doctor : I walk up to the guards. "Are you judging us for 
 guards : talkDonuts : Thief : I sneak up to the guards eating the donuts I gave them. I use my superb thieving skills to slowly creep my arm closer to the donut box. As I try to swipe a donut the taller guard gives me a stern look.
 guards : fight : Any : I approach the guards with a glint in my eye, looking for a fight. The stern guards scoff and proceed to absolutely demolish me. They haul me back to my patient room, clearly unimpressed.
 guards : fight : Brawler : I approach the guards ready to live up to my occupation of brawler. Fist start flying as the guards and I trade blows but I soon realize this is a losing battle. I wake up in a patient bed, unsure how I even lost consciousness in the first place. 
+guards : fightWin : Brawler : I approach the guards, now living up to my occupation of <b>Bar Brawler</b>. I take the bottle of booze out of my bag and take a swig, feeling the familiar burn spread through my chest like a gasoline fire. My fists twitch, wrapped in gauze and years of drunken bar fighting. The guards notice my approach and move to stop me from leaving. I twist out of the first guards grab, and drive my wrapped fist into his ribs, sending him skidding across the floor. The other swings a baton; I catch it midair, toss the booze bottle into the air for flair, and slam him to the floor with his own momentum. The bottle lands neatly in my hand. With no guards to stop me, it was time to leave…
 
 Exit Door: go through : Patient : With the guards distracted I walk through the door towards my freedom, leaving the hospital behind me. Is this who I really am? I just can't be sure.
 Exit Door : go through : Doctor :With the guards distracted I walk through the door towards my freedom, leaving the hospital behind me. I guess I'll live the rest of my life out as a Doctor. I don't have the qualifications, experience or lab coat. I just can't be sure that this is really who I am.
@@ -244,14 +257,6 @@ Bar Brawler : annoyPunchCard : Any : I foolishly decide to annoy the brawler by 
 
 Bar Brawler : annoyNoPunchCard : Any : I tickle the brawler's feet while making a goofy face. <br><br> I wake up looking at an oddly familiar ceiling. It seems I've been punched into the next room.
 
-#I am Brawler
-Sleeping Man : location : Any : There’s also a sleeping man who is snoozing away across 3 of the seats who holds a nondescript brown paper bag.
-Sleeping Man : location : Brawler: There’s a sleeping man in the seating area sleeping with a brown bag. Looks like there’s booze in there.
-Sleeping Man : inspect: Any : Upon closer inspection, this guy definitely has booze in that bag and looks like he’s seen a few fights. Probably not best to remove the booze from the dude unless I have a plan.
-Sleeping Man : talk: Any : I try to get the sleeping man to give me any kind of response but he just grumbles and rolls over, ignoring me entirely.
-Sleeping Man : annoyTalk : Any :I start to approach the sleeping man who just snaps awake, somehow sensing I was coming. He moves in a blur and suddenly something thuds into my head. I think I fell to the ground and blacked out, hard to say considering I don't really remember what exactly happened.
-Sleeping Man : annoyTalkBrawler : Any : I start to approach the sleeping man who snaps awake. He moves in a blur, trying to use the bottle of booze to wack me over the head like some sort of drunken warrior. Being the better drunken warrior, I punch him square in the face before he does and he uh…goes back to sleep, slumped over all 3 chairs. The <b>booze</b> is mine for the taking.
-Sleeping Man : unconscious : Any : I look at the sleeping man and realize trying to do anything else to him while he’s this unconscious is kinda pointless.
 
 # I am Patient/True ending
 Filing Cabinet : inspect : Any : A pretty standard filing cabinet. Looks like they store patient files inside.

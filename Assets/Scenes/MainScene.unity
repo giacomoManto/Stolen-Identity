@@ -825,8 +825,6 @@ Transform:
   - {fileID: 36046826}
   - {fileID: 1763008991}
   - {fileID: 935973429}
-  - {fileID: 1624243143}
-  - {fileID: 1711126986}
   - {fileID: 1789367491}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1896,6 +1894,8 @@ Transform:
   - {fileID: 643913728}
   - {fileID: 1820977942}
   - {fileID: 673392501}
+  - {fileID: 1624243143}
+  - {fileID: 1711126986}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &687393473
@@ -3993,12 +3993,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1624243142}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 275165891}
+  m_Father: {fileID: 687393472}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1624243144
 MonoBehaviour:
@@ -4205,12 +4205,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1711126985}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 275165891}
+  m_Father: {fileID: 687393472}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1711126987
 MonoBehaviour:
@@ -4429,6 +4429,7 @@ MonoBehaviour:
   playerCanStore: 0
   dialogueManager: {fileID: 0}
   gauze: {fileID: 1735400858826175503, guid: 19942a7bae71a1448b90a453eebaa4b3, type: 3}
+  exitDoor: {fileID: 526537625}
   brawlerRoom: {fileID: 1499385321}
   patientRoom: {fileID: 1456374742}
 --- !u!1 &1788951274

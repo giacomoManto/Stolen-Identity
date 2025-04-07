@@ -56,6 +56,7 @@ public class FireExit : Interactable
     {
         if(id.Equals(IDCard.Brawler) && GameManager.Instance().GetFlag("booze") && FindAnyObjectByType<PlayerInfo>().isItemInInventory("Gauze Fist Wraps"))
         {
+            GameManager.Instance().AddTextToJournal(this.GetTextFromJson("brawler ending", id));
             return true;
         }
         return false;

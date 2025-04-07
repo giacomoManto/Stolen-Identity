@@ -5,6 +5,8 @@ public class ExitGuards : Interactable
     [SerializeField]
     private GameObject gauze;
     [SerializeField]
+    private ExitDoor exitDoor;
+    [SerializeField]
     private RoomBehavior brawlerRoom;
     [SerializeField]
     private RoomBehavior patientRoom;
@@ -30,6 +32,12 @@ public class ExitGuards : Interactable
             GameManager.Instance().AddTextToJournal(GetTextFromJson("fight", id));
 
             GameManager.Instance().changeRoom(patientRoom);
+        }
+        else
+        {
+            GameManager.Instance().AddTextToJournal(GetTextFromJson("fightWin", id));
+            GameManager.Instance().SetFlag("guardsDistracted", true);
+            exitDoor.PerformAction("use",id);
         }
 
     }
