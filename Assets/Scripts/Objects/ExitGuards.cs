@@ -12,7 +12,7 @@ public class ExitGuards : Interactable
     {
         this.RegisterAction(Give, "give", "offer", "hand", "present", "deliver", "pass", "provide", "grant", "bestow", "supply");
         this.RegisterAction(TalkTo, "talk to", "speak to", "converse with", "chat with", "communicate with", "address", "engage with", "discuss with", "confer with", "have a word with");
-        this.RegisterAction(Fight, "fight", "attack", "combat", "battle", "clash", "engage", "assault", "struggle", "spar", "duel","punch","kick");
+        this.RegisterAction(Fight, "fight", "attack", "combat", "battle", "clash", "engage", "assault", "struggle", "spar", "duel", "punch", "kick");
 
     }
     public void Fight(IDCard id)
@@ -28,10 +28,10 @@ public class ExitGuards : Interactable
         else if (!id.Equals(IDCard.Brawler))
         {
             GameManager.Instance().AddTextToJournal(GetTextFromJson("fight", id));
-            
+
             GameManager.Instance().changeRoom(patientRoom);
         }
-        
+
     }
     public void Give(IDCard id)
     {
@@ -60,12 +60,12 @@ public class ExitGuards : Interactable
     {
         if (GameManager.Instance().GetFlag("guardsDistracted"))
         {
-            GameManager.Instance().AddTextToJournal(GetTextFromJson("talk", id));
+            GameManager.Instance().AddTextToJournal(GetTextFromJson("talkDonuts", id));
         }
         else
         {
-            GameManager.Instance().AddTextToJournal(GetTextFromJson("talkDonuts", id));
+            GameManager.Instance().AddTextToJournal(GetTextFromJson("talk", id));
         }
-        
+
     }
 }

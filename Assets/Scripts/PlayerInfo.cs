@@ -100,7 +100,7 @@ public class PlayerInfo : MonoBehaviour
         // Check if the requested ID exists in the player's collection.
         if (!playerIDs.ContainsKey(idName))
         {
-            GameManager.Instance().AddTextToJournal("I reach out to use the " + idName + " id, but I realize in order to use it properly, i need to take it.");
+            GameManager.Instance().AddTextToJournal("I reach out to use the " + idName + " id, but I realize in order to use it properly, I need to take it.");
             return false;
         }
 
