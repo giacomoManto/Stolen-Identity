@@ -3655,6 +3655,56 @@ MonoBehaviour:
   locked: 1
   lockPickable: 0
   breakable: 0
+--- !u!1 &1567841727
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1567841728}
+  - component: {fileID: 1567841729}
+  m_Layer: 0
+  m_Name: Doctor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1567841728
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567841727}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1582195721}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1567841729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567841727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07ea2428e9e9a5a45a4cb1772acddbe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyed: 0
+  interactableName: Doctor
+  locationDescription: A doctor is pacing the hallway. They look visibly stressed.
+  playerCanStore: 0
+  dialogueManager: {fileID: 0}
+  releaseSlip: {fileID: 2244449425255925728, guid: deefa8456877905429eb050f016dc145, type: 3}
 --- !u!1 &1582195720
 GameObject:
   m_ObjectHideFlags: 0
@@ -3687,6 +3737,7 @@ Transform:
   m_Children:
   - {fileID: 981524480}
   - {fileID: 1444359590}
+  - {fileID: 1567841728}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1582195722
@@ -4012,10 +4063,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyed: 0
-  interactableName: Janitor's Journal
+  interactableName: Journal
   locationDescription: On the floor below the shrine is a notebook. I lean forward
     to take a closer look and see that it is the Janitor's Journal.
-  playerCanStore: 0
+  playerCanStore: 1
   dialogueManager: {fileID: 0}
 --- !u!1 &1679773187
 GameObject:
@@ -4576,11 +4627,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyed: 0
   interactableName: Person
-  locationDescription: 
+  locationDescription: A person is sitting in a seat. Seemingly waiting for someone       
+    or something.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
-  realName: 
-  realDescription: 
+  realName: Ruth
+  realDescription: In the waiting area Ruth still sits waiting.
 --- !u!1001 &1820977941
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5212,7 +5264,7 @@ MonoBehaviour:
   destroyed: 0
   interactableName: Fire Exit
   locationDescription: A large red fire exit is at the end of the hallway.
-  playerCanStore: 1
+  playerCanStore: 0
   dialogueManager: {fileID: 0}
 --- !u!1 &2098709137
 GameObject:
@@ -5314,7 +5366,7 @@ MonoBehaviour:
   interactableName: shrine
   locationDescription: A ornate shrine of candles, pictures and stolen belongings
     of the doctor.
-  playerCanStore: 1
+  playerCanStore: 0
   dialogueManager: {fileID: 0}
 --- !u!1 &2124758851
 GameObject:
