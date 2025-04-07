@@ -246,7 +246,7 @@ Bar Brawler : annoyNoPunchCard : Any : I tickle the brawler's feet while making 
 
 #I am Brawler
 Sleeping Man : location : Any : There’s also a sleeping man who is snoozing away across 3 of the seats who holds a nondescript brown paper bag.
-Sleeping Man : location : Brawler: There’s a guy in the seating area sleeping with a brown bag. Looks like there’s booze in there.
+Sleeping Man : location : Brawler: There’s a sleeping man in the seating area sleeping with a brown bag. Looks like there’s booze in there.
 Sleeping Man : inspect: Any : Upon closer inspection, this guy definitely has booze in that bag and looks like he’s seen a few fights. Probably not best to remove the booze from the dude unless I have a plan.
 Sleeping Man : talk: Any : I try to get the sleeping man to give me any kind of response but he just grumbles and rolls over, ignoring me entirely.
 Sleeping Man : annoyTalk : Any :I start to approach the sleeping man who just snaps awake, somehow sensing I was coming. He moves in a blur and suddenly something thuds into my head. I think I fell to the ground and blacked out, hard to say considering I don't really remember what exactly happened.

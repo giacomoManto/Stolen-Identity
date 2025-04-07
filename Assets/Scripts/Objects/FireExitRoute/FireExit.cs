@@ -54,6 +54,10 @@ public class FireExit : Interactable
     // Make sure to implement in ExitDoor.cs aswell. 
     private bool BrawlerEnding(IDCard id)
     {
+        if(id.Equals(IDCard.Brawler) && GameManager.Instance().GetFlag("booze") && FindAnyObjectByType<PlayerInfo>().isItemInInventory("Gauze Fist Wraps"))
+        {
+            return true;
+        }
         return false;
     }
 

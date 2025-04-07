@@ -136,7 +136,6 @@ public class SpawnInteractable : Interactable
             spawnedObjectCopy.SetActive(true);
             spawnedObjectCopy.transform.parent = transform.parent;
             GameManager.Instance().addObjectToPlayerInventory(spawnedObjectCopy.GetComponent<Interactable>());
-            GetComponentInParent<RoomBehavior>().InitInteractables();
             string gameMangagerText = dialogueManager.GetDialogue(interactableName, "on spawn", IDCard.None.Name);
             GameManager.Instance().AddTextToJournal(gameMangagerText);
         }
