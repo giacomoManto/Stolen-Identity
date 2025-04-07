@@ -4628,7 +4628,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyed: 0
   interactableName: Person
-  locationDescription: A person is sitting in a seat. Seemingly waiting for someone       
+  locationDescription: A person is sitting in a seat. Seemingly waiting for someone
     or something.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
