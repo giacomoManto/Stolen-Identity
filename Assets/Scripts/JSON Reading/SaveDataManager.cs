@@ -28,7 +28,7 @@ public class SaveDataManager : MonoBehaviour
         instance = this;
         saveData = new SaveData();
         saveFileDataHandler = new FileDataHandler<SaveData>(Application.persistentDataPath, fileName);
-   
+
     }
     public static SaveDataManager Instance()
     {
@@ -75,6 +75,6 @@ public class SaveDataManager : MonoBehaviour
         Debug.Log("Saving Data");
         saveFileDataHandler.Save(save);
     }
-    
+
 
 }
