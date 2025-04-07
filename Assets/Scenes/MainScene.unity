@@ -566,7 +566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0b37981cb96ebf4f96e7437d23b036c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  godCommands: 0
+  godCommands: 1
   playerInput: {fileID: 0}
   currentPlayerRoom: {fileID: 0}
   ThiefID: {fileID: 6448042394550906417, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
