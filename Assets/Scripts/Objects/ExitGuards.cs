@@ -2,12 +2,37 @@ using UnityEngine;
 
 public class ExitGuards : Interactable
 {
+    [SerializeField]
+    private GameObject gauze;
+    [SerializeField]
+    private RoomBehavior brawlerRoom;
+    [SerializeField]
+    private RoomBehavior patientRoom;
     private void Start()
     {
         this.RegisterAction(Give, "give", "offer", "hand", "present", "deliver", "pass", "provide", "grant", "bestow", "supply");
         this.RegisterAction(TalkTo, "talk to", "speak to", "converse with", "chat with", "communicate with", "address", "engage with", "discuss with", "confer with", "have a word with");
-    }
+        this.RegisterAction(Fight, "fight", "attack", "combat", "battle", "clash", "engage", "assault", "struggle", "spar", "duel","punch","kick");
 
+    }
+    public void Fight(IDCard id)
+    {
+        if (id.Equals(IDCard.Brawler) && !GameManager.Instance().GetFlag("fist wraps") && !GameManager.Instance().GetFlag("booze"))
+        {
+            GameManager.Instance().AddTextToJournal(GetTextFromJson("fight", id));
+            GameManager.Instance().changeRoom(brawlerRoom);
+            GameObject temp = Instantiate(gauze);
+            temp.transform.parent = GameManager.Instance().CurrentPlayerRoom.transform;
+            GameManager.Instance().CurrentPlayerRoom.InitInteractables();
+        }
+        else if (!id.Equals(IDCard.Brawler))
+        {
+            GameManager.Instance().AddTextToJournal(GetTextFromJson("fight", id));
+            
+            GameManager.Instance().changeRoom(patientRoom);
+        }
+        
+    }
     public void Give(IDCard id)
     {
         if (FindFirstObjectByType<PlayerInfo>().isItemInInventory("donuts"))

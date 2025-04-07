@@ -7,7 +7,7 @@ public class SpawnInteractable : Interactable
     bool destroyOnSpawn = false;
 
     [SerializeField]
-    private GameObject spawnedObject;
+    private GameObject[] spawnedObjects;
 
     [SerializeField]
     private string spawnedText;
@@ -95,12 +95,16 @@ public class SpawnInteractable : Interactable
         }
         else
         {
-            GameObject spawnedObjectCopy = Instantiate(spawnedObject, transform.parent.position, Quaternion.identity);
-            spawnedObjectCopy.SetActive(true);
-            spawnedObjectCopy.transform.parent = transform.parent;
-            GetComponentInParent<RoomBehavior>().InitInteractables();
-            gameMangagerText = dialogueManager.GetDialogue(interactableName, "on spawn", IDCard.None.Name);
-            GameManager.Instance().AddTextToJournal(gameMangagerText);
+            foreach(GameObject spawnedObject in spawnedObjects)
+            {
+                GameObject spawnedObjectCopy = Instantiate(spawnedObject, transform.parent.position, Quaternion.identity);
+                spawnedObjectCopy.SetActive(true);
+                spawnedObjectCopy.transform.parent = transform.parent;
+                GetComponentInParent<RoomBehavior>().InitInteractables();
+                gameMangagerText = dialogueManager.GetDialogue(interactableName, "on spawn", IDCard.None.Name);
+                GameManager.Instance().AddTextToJournal(gameMangagerText);
+            }
+           
             objectSpawned = true;
         }
         if (destroyOnSpawn)

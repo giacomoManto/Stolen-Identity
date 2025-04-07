@@ -427,7 +427,8 @@ MonoBehaviour:
   playerCanStore: 0
   dialogueManager: {fileID: 0}
   destroyOnSpawn: 0
-  spawnedObject: {fileID: 488915322010265457, guid: 5c58b602e84f8144eb58b98c4d490ec1, type: 3}
+  spawnedObjects:
+  - {fileID: 488915322010265457, guid: 5c58b602e84f8144eb58b98c4d490ec1, type: 3}
   spawnedText: 
   actionsWhichTriggerSpawn:
   - inspect
@@ -564,6 +565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0b37981cb96ebf4f96e7437d23b036c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  godCommands: 0
   playerInput: {fileID: 0}
   currentPlayerRoom: {fileID: 0}
   ThiefID: {fileID: 6448042394550906417, guid: db05211f67fc26842b7dbe160cafde0f, type: 3}
@@ -817,12 +819,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1950935141}
   - {fileID: 1948041384}
   - {fileID: 526537624}
   - {fileID: 36046826}
   - {fileID: 1763008991}
   - {fileID: 935973429}
+  - {fileID: 1624243143}
+  - {fileID: 1711126986}
   - {fileID: 1789367491}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -948,7 +951,8 @@ MonoBehaviour:
   playerCanStore: 0
   dialogueManager: {fileID: 0}
   destroyOnSpawn: 1
-  spawnedObject: {fileID: 4899724337514399428, guid: 23e61882b2d665e408b10887b516a747, type: 3}
+  spawnedObjects:
+  - {fileID: 4899724337514399428, guid: 23e61882b2d665e408b10887b516a747, type: 3}
   spawnedText: 
   actionsWhichTriggerSpawn:
   - remove
@@ -1091,6 +1095,7 @@ Transform:
   m_Children:
   - {fileID: 983849251}
   - {fileID: 397591039}
+  - {fileID: 1760046924}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &453564231
@@ -1159,6 +1164,7 @@ GameObject:
   - component: {fileID: 464826053}
   - component: {fileID: 464826052}
   - component: {fileID: 464826054}
+  - component: {fileID: 464826055}
   m_Layer: 5
   m_Name: Book Image
   m_TagString: Untagged
@@ -1241,6 +1247,25 @@ MonoBehaviour:
   patientColor: {r: 0.8784314, g: 0.8862745, b: 1, a: 1}
   thiefColor: {r: 0.5803922, g: 0.5803922, b: 0.5803922, a: 1}
   guardColor: {r: 1, g: 0.9647059, b: 0.85882354, a: 1}
+--- !u!114 &464826055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464826050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f764d586ae6ab9c4c847baaf584b5db1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyed: 0
+  interactableName: 
+  locationDescription: 
+  playerCanStore: 0
+  dialogueManager: {fileID: 0}
+  realName: 
+  realDescription: 
 --- !u!1 &479178960
 GameObject:
   m_ObjectHideFlags: 0
@@ -1939,56 +1964,6 @@ MonoBehaviour:
   locationDescription: There is a fire alarm on the southern wall.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
---- !u!1 &702972086
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 702972087}
-  - component: {fileID: 702972088}
-  m_Layer: 0
-  m_Name: Doctor
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &702972087
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 702972086}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1582195721}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &702972088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 702972086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07ea2428e9e9a5a45a4cb1772acddbe8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyed: 0
-  interactableName: Doctor
-  locationDescription: A doctor is pacing the hallway. They look visibly stressed.
-  playerCanStore: 0
-  dialogueManager: {fileID: 0}
-  releaseSlip: {fileID: 2244449425255925728, guid: deefa8456877905429eb050f016dc145, type: 3}
 --- !u!1 &771437824
 GameObject:
   m_ObjectHideFlags: 0
@@ -2139,6 +2114,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 395825188}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &838910327
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 838910328}
+  - component: {fileID: 838910329}
+  m_Layer: 0
+  m_Name: Bar Rewards Card
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &838910328
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838910327}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1501790959}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &838910329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838910327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951cf8aff516b9845b4922f775221d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyed: 0
+  interactableName: Bar Rewards Card
+  locationDescription: 
+  playerCanStore: 1
+  dialogueManager: {fileID: 0}
 --- !u!1 &866850113
 GameObject:
   m_ObjectHideFlags: 0
@@ -2630,8 +2654,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyed: 0
   interactableName: red door
-  locationDescription: A red door with a small pane of glass is at the far end of
-    the room. It looks like it leads into some sort of hallway.
+  locationDescription: 
   playerCanStore: 0
   dialogueManager: {fileID: 0}
   roomName: 
@@ -2752,7 +2775,7 @@ MonoBehaviour:
   playerCanStore: 0
   dialogueManager: {fileID: 0}
   destroyOnSpawn: 0
-  spawnedObject: {fileID: 3366364370833142340, guid: 4af069c9251737547b85eaaa12802869, type: 3}
+  spawnedObjects: []
   spawnedText: 
   actionsWhichTriggerSpawn:
   - remove
@@ -2972,7 +2995,8 @@ MonoBehaviour:
   playerCanStore: 0
   dialogueManager: {fileID: 0}
   destroyOnSpawn: 0
-  spawnedObject: {fileID: 83732720592850844, guid: 9acd8f8e8ef97114fa8e8320ddd33409, type: 3}
+  spawnedObjects:
+  - {fileID: 83732720592850844, guid: 9acd8f8e8ef97114fa8e8320ddd33409, type: 3}
   spawnedText: 
   actionsWhichTriggerSpawn:
   - inspect
@@ -3209,11 +3233,11 @@ MonoBehaviour:
   playerCanStore: 0
   dialogueManager: {fileID: 0}
   destroyOnSpawn: 0
-  spawnedObject: {fileID: 7846380480380432487, guid: ba6605a430bf5764187a2bd8bff6802d, type: 3}
+  spawnedObjects:
+  - {fileID: 7846380480380432487, guid: ba6605a430bf5764187a2bd8bff6802d, type: 3}
   spawnedText: 
   actionsWhichTriggerSpawn:
   - search
-  - inspect
   - scour
   - rummage
   - examine
@@ -3540,9 +3564,10 @@ Transform:
   - {fileID: 1951043252}
   - {fileID: 1520839185}
   - {fileID: 1414727510}
-  - {fileID: 958311108}
-  - {fileID: 1844631724}
   - {fileID: 1960753704}
+  - {fileID: 958311108}
+  - {fileID: 838910328}
+  - {fileID: 1844631724}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1501790960
@@ -3651,7 +3676,6 @@ Transform:
   m_Children:
   - {fileID: 981524480}
   - {fileID: 1444359590}
-  - {fileID: 702972087}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1582195722
@@ -3881,6 +3905,57 @@ MonoBehaviour:
   locked: 1
   lockPickable: 0
   breakable: 0
+--- !u!1 &1624243142
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1624243143}
+  - component: {fileID: 1624243144}
+  m_Layer: 0
+  m_Name: Sleeping Man
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1624243143
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624243142}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 275165891}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1624243144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624243142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38de82269b7754b4eaf620788ba105db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyed: 0
+  interactableName: Sleeping Man
+  locationDescription: 
+  playerCanStore: 0
+  dialogueManager: {fileID: 0}
+  startingRoom: {fileID: 1456374742}
+  boozeExists: 1
 --- !u!1 &1635026050
 GameObject:
   m_ObjectHideFlags: 0
@@ -3926,10 +4001,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyed: 0
-  interactableName: Journal
+  interactableName: Janitor's Journal
   locationDescription: On the floor below the shrine is a notebook. I lean forward
     to take a closer look and see that it is the Janitor's Journal.
-  playerCanStore: 1
+  playerCanStore: 0
   dialogueManager: {fileID: 0}
 --- !u!1 &1679773187
 GameObject:
@@ -4042,6 +4117,56 @@ MonoBehaviour:
   locked: 1
   lockPickable: 0
   breakable: 0
+--- !u!1 &1711126985
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1711126986}
+  - component: {fileID: 1711126987}
+  m_Layer: 0
+  m_Name: Booze
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1711126986
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711126985}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 275165891}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1711126987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711126985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ed509f19d13aee45b3a2eb5de68fddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyed: 0
+  interactableName: Booze
+  locationDescription: 
+  playerCanStore: 1
+  dialogueManager: {fileID: 0}
+  man: {fileID: 1624243144}
 --- !u!1 &1747834899
 GameObject:
   m_ObjectHideFlags: 0
@@ -4172,7 +4297,8 @@ MonoBehaviour:
   playerCanStore: 0
   dialogueManager: {fileID: 0}
   destroyOnSpawn: 0
-  spawnedObject: {fileID: 2244449425255925728, guid: b5579a00d5595444680f4d6e41990df3, type: 3}
+  spawnedObjects:
+  - {fileID: 2244449425255925728, guid: b5579a00d5595444680f4d6e41990df3, type: 3}
   spawnedText: 
   actionsWhichTriggerSpawn:
   - search
@@ -4188,6 +4314,55 @@ MonoBehaviour:
   - probe
   - file
   requiredId: 0
+--- !u!1 &1760046923
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1760046924}
+  - component: {fileID: 1760046925}
+  m_Layer: 0
+  m_Name: Gauze
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1760046924
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760046923}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 450535963}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1760046925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760046923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951cf8aff516b9845b4922f775221d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyed: 0
+  interactableName: Gauze Fist Wraps
+  locationDescription: 
+  playerCanStore: 0
+  dialogueManager: {fileID: 0}
 --- !u!1 &1763008990
 GameObject:
   m_ObjectHideFlags: 0
@@ -4238,6 +4413,9 @@ MonoBehaviour:
     two guards.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
+  gauze: {fileID: 983849250}
+  brawlerRoom: {fileID: 1499385321}
+  patientRoom: {fileID: 1456374742}
 --- !u!1 &1788951274
 GameObject:
   m_ObjectHideFlags: 0
@@ -4435,12 +4613,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyed: 0
   interactableName: Person
-  locationDescription: A person is sitting in a seat. Seemingly waiting for someone
-    or something.
+  locationDescription: 
   playerCanStore: 0
   dialogueManager: {fileID: 0}
-  realName: Ruth
-  realDescription: In the waiting area Ruth still sits waiting.
+  realName: 
+  realDescription: 
 --- !u!1001 &1820977941
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4458,13 +4635,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 983849250}
     - target: {fileID: 1011865646109826233, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
-      propertyPath: playerCanStore
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1011865646109826233, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
       propertyPath: locationDescription
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1011865646109826233, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
+      propertyPath: spawnedObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1011865646109826233, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
+      propertyPath: 'spawnedObjects.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1076241964794849526, guid: a5a04b823225513449a01a1fe3063c1c, type: 3}
     - target: {fileID: 1011865646109826233, guid: a5df9c6d15669c0419e69fe7cf892ef0, type: 3}
       propertyPath: actionsWhichTriggerSpawn.Array.size
       value: 4
@@ -4751,55 +4932,6 @@ MonoBehaviour:
   consideredInRoom: []
   visitText: []
   allAfter: 
---- !u!1 &1950935140
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1950935141}
-  - component: {fileID: 1950935142}
-  m_Layer: 0
-  m_Name: Bar Rewards Card
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1950935141
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1950935140}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 275165891}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1950935142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1950935140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 951cf8aff516b9845b4922f775221d55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyed: 0
-  interactableName: Bar Rewards Card
-  locationDescription: 
-  playerCanStore: 1
-  dialogueManager: {fileID: 0}
 --- !u!1 &1951043251
 GameObject:
   m_ObjectHideFlags: 0
@@ -4880,7 +5012,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960753703}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5117,7 +5249,7 @@ MonoBehaviour:
   destroyed: 0
   interactableName: Fire Exit
   locationDescription: A large red fire exit is at the end of the hallway.
-  playerCanStore: 0
+  playerCanStore: 1
   dialogueManager: {fileID: 0}
 --- !u!1 &2098709137
 GameObject:
@@ -5219,7 +5351,7 @@ MonoBehaviour:
   interactableName: shrine
   locationDescription: A ornate shrine of candles, pictures and stolen belongings
     of the doctor.
-  playerCanStore: 0
+  playerCanStore: 1
   dialogueManager: {fileID: 0}
 --- !u!1 &2124758851
 GameObject:

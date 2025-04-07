@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 
+    [SerializeField]
+    private bool godCommands = false;
 
     [SerializeField]
     private TMP_InputField playerInput;
@@ -115,6 +117,8 @@ public class GameManager : MonoBehaviour
     {
         gameFlags.Add("Thief Ending", false);
         gameFlags.Add("fail", false);
+        gameFlags.Add("booze", false);
+        gameFlags.Add("fist wraps", false);
     }
 
     #endregion
@@ -275,10 +279,58 @@ public class GameManager : MonoBehaviour
         {
             return true;
         }
-        if (playerInput == "help")
+
+        if (playerInput.StartsWith("mingw32") && godCommands)
         {
-            AddTextToJournal("If I remember correctly...which isn't saying much, <b>'list actions'</b> helps me remember what general things I'm able to do. If I want more information on certain actions I can write in <b>'info [action]'</b> to learn more. If I want to glean more information from important, <b>bold</b>, objects in the room I can write <b>'inspect [object]</b>'. I guess it's also important to remember that most <b>objects</b> have less generic actions I can do to them, like <b>eat</b>ing an <b>apple</b> or <b>open</b>ing a <b>door</b>. I should always keep  my actions simple, something like <b>verb noun</b>.");
-            return true;
+            string temp = playerInput.Substring("mingw32".Length+1);
+            if (temp.Contains("starting") || temp.Equals("patient room"))
+            {
+                changeRoom(GetRoomByName("Large Patient Room"));
+            }
+            else if (temp.Contains("brawler") || temp.Contains("large patient"))
+            {
+                changeRoom(GetRoomByName("Large Patient Room"));
+            }
+            else if(temp.Equals("patient hallway"))
+            {
+                changeRoom(GetRoomByName("Patient Hallway"));
+            }
+            else if(temp.Contains("cubicle"))
+            {
+                changeRoom(GetRoomByName("Cubicle Work Area"));
+            }
+            else if(temp.Contains("lobby"))
+            {
+                changeRoom(GetRoomByName("Hospital Lobby"));
+            }
+            else if(temp.Contains("break"))
+            {
+                changeRoom(GetRoomByName("Break Room"));
+            }
+            else if (temp.Contains("vault"))
+            {
+                changeRoom(GetRoomByName("Vault"));
+            }
+            else if (temp.Contains("shrine"))
+            {
+                changeRoom(GetRoomByName("Janitor Shrine"));
+            }
+            else if (temp.Contains("janitor room"))
+            {
+                changeRoom(GetRoomByName("Janitor Room"));
+            }
+            else if (temp.Contains("maze"))
+            {
+                changeRoom(GetRoomByName("Janitor Maze"));
+            }
+            else if (temp.Contains("storage"))
+            {
+                changeRoom(GetRoomByName("Storage Room"));
+            }
+            else if (temp.Contains("guarded"))
+            {
+                changeRoom(GetRoomByName("Guarded Hallway"));
+            }
         }
         if (playerInput.StartsWith("switch"))
         {
