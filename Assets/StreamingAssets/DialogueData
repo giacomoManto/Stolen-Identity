@@ -55,9 +55,19 @@ Booze : inspect : Any : A bottle of nondescript alcohol. By the smell it must be
 Booze : inspect : Doctor : A bottle of nondescript alcohol. Smells strong enough to be used as a disinfectant. No way someone is drinking this right?   Right?
 Booze : inspect : Brawler: A bottle of delicious liquid sent by the gods. Now this just made my day better.
 
+Gauze : location :Any : A large pile of unused, clean white gauze.
+Gauze : location : Brawler  : A large pile of weird white fabric. I think doctors call it gauze?
+Gauze : inspect: Any : A large pile of unused, clean white gauze. 
+Gauze : inspect: Brawler : Looks like fistwrap material. I could totally use that to punch things harder.
+Gauze : on spawn : Any : I take the gauze and wrap it tightly around my fists. Punching things just got a whole lot easier.
+Gauze : object spawned : Any: The gauze is gone, leaving only emptiness. 
+
+
 Gauze Fist Wraps : inspect : Any : I take a step closer to the gauze wraps. They are covered in fresh blood. Gross.
 Gauze Fist Wraps : inspect : Doctor : I glance at the gauze wraps. They are clearly used. Great, someone left their medical waste lying around.
 Gauze Fist Wraps : inspect : Brawler : Hmm. These might make punching others hurt me less.
+Gauze Fist Wraps : use : Any : Don't know how I'd use these unless I want to punch something, I mean, they’re already on my fists.
+
 
 Bar Rewards Card : location: Any : In the trash next to the water cooler, there seems to be some sort of bar rewards card.
 Bar Rewards Card : inspect : Any : I pick up a battered, soggy bar loyalty card.
