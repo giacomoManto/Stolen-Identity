@@ -7,6 +7,9 @@ public class SpawnInteractable : Interactable
     bool destroyOnSpawn = false;
 
     [SerializeField]
+    bool addToPlayerInventory = false;
+
+    [SerializeField]
     private GameObject[] spawnedObjects;
 
     [SerializeField]
@@ -95,21 +98,47 @@ public class SpawnInteractable : Interactable
         }
         else
         {
-            foreach(GameObject spawnedObject in spawnedObjects)
+            if (addToPlayerInventory)
             {
-                GameObject spawnedObjectCopy = Instantiate(spawnedObject, transform.parent.position, Quaternion.identity);
-                spawnedObjectCopy.SetActive(true);
-                spawnedObjectCopy.transform.parent = transform.parent;
-                GetComponentInParent<RoomBehavior>().InitInteractables();
-                gameMangagerText = dialogueManager.GetDialogue(interactableName, "on spawn", IDCard.None.Name);
-                GameManager.Instance().AddTextToJournal(gameMangagerText);
+                SpawnObjectsInInventory();
             }
-           
+            else
+            {
+                SpawnObjectsInRoom();
+            }
+            
+
             objectSpawned = true;
         }
         if (destroyOnSpawn)
         {
             GameManager.Instance().DestroyInteractble(this.gameObject);
+        }
+    }
+    private void SpawnObjectsInRoom()
+    {
+        foreach (GameObject spawnedObject in spawnedObjects)
+        {
+            GameObject spawnedObjectCopy = Instantiate(spawnedObject, transform.parent.position, Quaternion.identity);
+            spawnedObjectCopy.SetActive(true);
+            spawnedObjectCopy.transform.parent = transform.parent;
+            GetComponentInParent<RoomBehavior>().InitInteractables();
+            string gameMangagerText = dialogueManager.GetDialogue(interactableName, "on spawn", IDCard.None.Name);
+            GameManager.Instance().AddTextToJournal(gameMangagerText);
+        }
+        
+    }
+    void SpawnObjectsInInventory()
+    {
+        foreach (GameObject spawnedObject in spawnedObjects)
+        {
+            GameObject spawnedObjectCopy = Instantiate(spawnedObject, transform.parent.position, Quaternion.identity);
+            spawnedObjectCopy.SetActive(true);
+            spawnedObjectCopy.transform.parent = transform.parent;
+            GameManager.Instance().addObjectToPlayerInventory(spawnedObjectCopy.GetComponent<Interactable>());
+            GetComponentInParent<RoomBehavior>().InitInteractables();
+            string gameMangagerText = dialogueManager.GetDialogue(interactableName, "on spawn", IDCard.None.Name);
+            GameManager.Instance().AddTextToJournal(gameMangagerText);
         }
     }
 }
