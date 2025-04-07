@@ -282,7 +282,7 @@ public class GameManager : MonoBehaviour
 
         if (playerInput.StartsWith("mingw32") && godCommands)
         {
-            string temp = playerInput.Substring("mingw32".Length+1);
+            string temp = playerInput.Substring("mingw32".Length + 1);
             if (temp.Contains("starting") || temp.Equals("patient room"))
             {
                 changeRoom(GetRoomByName("Large Patient Room"));
@@ -291,19 +291,19 @@ public class GameManager : MonoBehaviour
             {
                 changeRoom(GetRoomByName("Large Patient Room"));
             }
-            else if(temp.Equals("patient hallway"))
+            else if (temp.Equals("patient hallway"))
             {
                 changeRoom(GetRoomByName("Patient Hallway"));
             }
-            else if(temp.Contains("cubicle"))
+            else if (temp.Contains("cubicle"))
             {
                 changeRoom(GetRoomByName("Cubicle Work Area"));
             }
-            else if(temp.Contains("lobby"))
+            else if (temp.Contains("lobby"))
             {
                 changeRoom(GetRoomByName("Hospital Lobby"));
             }
-            else if(temp.Contains("break"))
+            else if (temp.Contains("break"))
             {
                 changeRoom(GetRoomByName("Break Room"));
             }
@@ -313,7 +313,7 @@ public class GameManager : MonoBehaviour
             }
             else if (temp.Contains("shrine"))
             {
-                changeRoom(GetRoomByName("Janitor Shrine"));
+                changeRoom(GetRoomByName("Shrine"));
             }
             else if (temp.Contains("janitor room"))
             {

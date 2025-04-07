@@ -115,6 +115,7 @@ Cardboard Cutout : object spawned : Any : A cardboard cutout of a doctor. It's a
 Cardboard Cutout : on spawn : Any : Taking a closer look at the cutout I realize the Doctor ID pinned to the board is shiny, as if it's a real card and not just a printout.
 
 
+Journal : inspect : Any : A Journal. I could probably read this huh?
 Journal : read : Any : I flip through the pages of the journal. It is filled to the brim with notes about the Doctor's daily routine. It seems the janitor has been keeping tabs on the Doctor for quite some time. The only thing that stands out to me is the doctors checklist for clocking out of their shift. <br>1. The Doctor ID Card<br>2. The Doctor’s PhD<br>3. The Doctor’s lab coat<br>4.The Doctors punched punchcard
 Journal : read : Doctor : I flip through the pages of the journal. It is filled to the brim with notes about my daily routine. This feels like an invasion of privacy. I really need to get out of this hospital if this is who my colleagues are. I especially don’t like that they stole my clocking out checklist. I haven’t been able to leave here without it. Thankfully I now remember what I need before I can clock out. <br>1. My ID<br>2. My PhD<br>3. My lab coat<br>4. My punched punchcard
 
