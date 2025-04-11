@@ -5,14 +5,26 @@ public class BookCover : MonoBehaviour
 {
     [SerializeField]
     private TMP_Text nameText;
+    private string enteredName = "";
 
     bool nameSet = false;
 
     public void setName(string name)
     {
-        nameText.text = name;
+        enteredName = name.Trim();
+        nameText.text = "By:\n" + enteredName;
         nameSet = true;
     }
+
+    public void FixedUpdate()
+    {
+        if (nameSet)
+        {
+            return;
+        }
+        nameText.text = "By:\n" + enteredName;
+    }
+
 
 
     void OnGUI()
@@ -28,28 +40,28 @@ public class BookCover : MonoBehaviour
         }
         if (e.keyCode == KeyCode.Return)
         {
-            if (nameText.text.Length <= 0)
+            if (enteredName.Length <= 0)
             {
                 return;
             }
-            FindAnyObjectByType<StartSceneController>().setName(nameText.text);
+            FindAnyObjectByType<StartSceneController>().setName(enteredName);
             nameSet = true;
         }
         if (e.keyCode == KeyCode.Backspace)
         {
-            if (nameText.text.Length <= 0)
+            if (enteredName.Length <= 0)
             {
                 return;
             }
-            nameText.text += nameText.text.Substring(0, nameText.text.Length - 1);
+            enteredName = enteredName.Substring(0, enteredName.Length - 1);
         }
         else
         {
             char c = e.character;
             if (!char.IsControl(c))
             {
-                nameText.text += c;
-                nameText.text = nameText.text.TrimStart();
+                enteredName += c;
+                enteredName = enteredName.TrimStart();
             }
         }
     }
