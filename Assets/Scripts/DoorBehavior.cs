@@ -20,6 +20,8 @@ public class DoorBehavior : Interactable
     [SerializeField]
     private bool breakable = false;
 
+    private int enterAttempts = 0;
+
     private void Start()
     {
         if (lockLevel == 0)
@@ -90,6 +92,11 @@ public class DoorBehavior : Interactable
                 else
                 {
                     GameManager.Instance().AddTextToJournal(GetTextFromJson(interactableName, "unlockFail", id));
+                }
+                enterAttempts++;
+                if (enterAttempts >= 3 && interactableName == "red door")
+                {
+                    GameManager.Instance().AddTextToJournal("I keep trying to enter this door and it doesn't work each time. Looking around the room I see a <b>patient id</b> maybe I can pick it up and <b>switch patient id</b> to steal the id's identity and then try the door again?");
                 }
             }
         }
