@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartSceneController : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class StartSceneController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        BookCover.gameObject.SetActive(true);
+        Book.gameObject.SetActive(false);
         penGoal = Pen.transform.position;
         bookCoverGoal = BookCover.transform.position;
         bookGoal = Book.transform.position;
@@ -46,6 +49,19 @@ public class StartSceneController : MonoBehaviour
         Vector3 diff = Pen.transform.position - BookCover.transform.position;
         bookCoverGoal = BookCover.transform.position + diff;
         penGoal = Pen.transform.position + diff;
-        Debug.Log("Clicked");
+        BookCover.GetComponent<BookCover>().enableText(true);
+    }
+
+    public void OpenBook()
+    {
+        BookCover.GetComponent<BookCover>().enableText(false);
+        BookCover.gameObject.SetActive(false);
+        Book.gameObject.SetActive(true);
+        Book.GetComponent<CompletionPage>().displayText();
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene("MainScene");
     }
 }

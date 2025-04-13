@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 ///A singleton class(only place one per scene) that keeps track of save and load data.
@@ -75,6 +76,4 @@ public class SaveDataManager : MonoBehaviour
         Debug.Log("Saving Data");
         saveFileDataHandler.Save(save);
     }
-
-
 }

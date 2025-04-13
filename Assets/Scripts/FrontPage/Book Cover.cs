@@ -1,26 +1,45 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BookCover : MonoBehaviour
 {
     [SerializeField]
     private TMP_Text nameText;
-    private string enteredName = "";
+    [SerializeField]
+    Button continueButton;
 
-    bool nameSet = false;
+    bool textEnabled = false;
+
+    private string enteredName = "";
 
     public void setName(string name)
     {
         enteredName = name.Trim();
         nameText.text = "By:\n" + enteredName;
-        nameSet = true;
+    }
+
+    public void enableText(bool val)
+    {
+        textEnabled = val;
+    }
+
+    public void saveName()
+    {
+        FindAnyObjectByType<StartSceneController>().setName(enteredName);
     }
 
     public void FixedUpdate()
     {
-        if (nameSet)
+        if (enteredName.Length <= 0)
         {
-            return;
+            continueButton.enabled = false;
+            continueButton.GetComponent<Image>().enabled = false;
+        }
+        else
+        {
+            continueButton.enabled = true;
+            continueButton.GetComponent<Image>().enabled = true;
         }
         nameText.text = "By:\n" + enteredName;
     }
@@ -29,7 +48,7 @@ public class BookCover : MonoBehaviour
 
     void OnGUI()
     {
-        if (nameSet)
+        if (!textEnabled)
         {
             return;
         }
@@ -37,15 +56,6 @@ public class BookCover : MonoBehaviour
         if (e.type != EventType.KeyDown)
         {
             return;
-        }
-        if (e.keyCode == KeyCode.Return)
-        {
-            if (enteredName.Length <= 0)
-            {
-                return;
-            }
-            FindAnyObjectByType<StartSceneController>().setName(enteredName);
-            nameSet = true;
         }
         if (e.keyCode == KeyCode.Backspace)
         {

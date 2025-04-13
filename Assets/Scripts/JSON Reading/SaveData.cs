@@ -20,6 +20,7 @@ public class SaveData
         endingIAMX.Add("Doctor", false);
         endingIAMX.Add("Thief", false);
         endingIAMX.Add("Brawler", false);
+        endingIAMX.Add("Guard", false);
 
         endingRediscoverYourself = false;
         endingDoctor = false;

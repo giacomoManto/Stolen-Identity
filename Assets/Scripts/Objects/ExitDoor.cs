@@ -23,6 +23,29 @@ public class ExitDoor : Interactable
         {
             GameManager.Instance().AddTextToJournal(this.GetTextFromJson("go through", id));
             escapeSuccess();
+            // Update the save data with the ending.
+            SaveData saveData = FindAnyObjectByType<SaveDataManager>().LoadGame();
+            if (id.Name == IDCard.Doctor.Name)
+            {
+                saveData.endingIAMX["Doctor"] = true;
+            }
+            else if (id.Name == IDCard.Patient.Name)
+            {
+                saveData.endingIAMX["Patient"] = true;
+            }
+            else if (id.Name == IDCard.Brawler.Name)
+            {
+                saveData.endingIAMX["Brawler"] = true;
+            }
+            else if (id.Name == IDCard.Thief.Name)
+            {
+                saveData.endingIAMX["Thief"] = true;
+            }
+            else if (id.Name == IDCard.Guard.Name)
+            {
+                saveData.endingIAMX["Guard"] = true;
+            }
+            FindAnyObjectByType<SaveDataManager>().SaveGame(saveData);
         }
         else
         {
@@ -56,6 +79,9 @@ public class ExitDoor : Interactable
             return false;
         }
         GameManager.Instance().AddTextToJournal(this.GetTextFromJson("thief ending", id));
+        SaveData saveData = FindAnyObjectByType<SaveDataManager>().LoadGame();
+        saveData.endingThief = true;
+        FindAnyObjectByType<SaveDataManager>().SaveGame(saveData);
         return true;
     }
 
@@ -64,6 +90,9 @@ public class ExitDoor : Interactable
         if (id.Name == IDCard.Doctor.Name && GameManager.Instance().GetFlag("hasPunchedPunchcard") && GameManager.Instance().GetFlag("LabCoat") && FindFirstObjectByType<PlayerInfo>().isItemInInventory("PhD"))
         {
             GameManager.Instance().AddTextToJournal(this.GetTextFromJson("doctor ending", id));
+            SaveData saveData = FindAnyObjectByType<SaveDataManager>().LoadGame();
+            saveData.endingDoctor = true;
+            FindAnyObjectByType<SaveDataManager>().SaveGame(saveData);
             return true;
         }
         else
@@ -78,6 +107,9 @@ public class ExitDoor : Interactable
         if (id.Equals(IDCard.Brawler) && GameManager.Instance().GetFlag("booze") && FindAnyObjectByType<PlayerInfo>().isItemInInventory("Gauze Fist Wraps"))
         {
             GameManager.Instance().AddTextToJournal(this.GetTextFromJson("brawler ending", id));
+            SaveData saveData = FindAnyObjectByType<SaveDataManager>().LoadGame();
+            saveData.endingBrawler = true;
+            FindAnyObjectByType<SaveDataManager>().SaveGame(saveData);
             return true;
         }
         return false;
@@ -88,6 +120,9 @@ public class ExitDoor : Interactable
         if (id.Name == IDCard.Patient.Name && GameManager.Instance().GetFlag("PatientFileRead") && GameManager.Instance().GetFlag("releaseSlip"))
         {
             GameManager.Instance().AddTextToJournal(this.GetTextFromJson("patient ending", id));
+            SaveData saveData = FindAnyObjectByType<SaveDataManager>().LoadGame();
+            saveData.endingRediscoverYourself = true;
+            FindAnyObjectByType<SaveDataManager>().SaveGame(saveData);
             return true;
         }
         else
