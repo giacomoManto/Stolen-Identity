@@ -22,8 +22,8 @@ public class CompletionPage : MonoBehaviour
     public void displayText()
     {
         SaveData data = FindAnyObjectByType<SaveDataManager>().LoadGame();
-        string text = "<size=36><align=center>Identities Stolen:</align></size>\n";
-        text += "\n<align=left>Non Unique Identities:";
+        string text = "<size=36><align=center>Endings Completed</align></size>\n";
+        text += "\n<align=left>Generic Endings";
         foreach (var item in data.endingIAMX)
         {
             if (item.Value)
@@ -35,7 +35,7 @@ public class CompletionPage : MonoBehaviour
                 text += "\n?????????: Not Completed";
             }
         }
-        text += "\n\nUnique Identities";
+        text += "\n\nUnique Endings";
         if (data.endingRediscoverYourself)
         {
             text += "\nRediscover Yourself: Completed";
