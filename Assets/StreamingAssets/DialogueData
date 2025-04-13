@@ -1,23 +1,23 @@
 # Object : action : ID Card Name (or Any) : description
 
 #Random objects
-Apple : inspect: Any : I look at the apple closely and realize it's probably the most delicious looking apple ive seen. One bite wouldn't hurt anyone… probably?
-Apple : inspect: Doctor : Oh god an apple… better keep my distance.
+Apple : inspect: Any : I look at the apple closely and realize it's probably the most delicious looking apple ive seen. One bite wouldn't hurt anyone... probably?
+Apple : inspect: Doctor : Oh god an apple... better keep my distance.
 Apple : eat : Any : I walk over and decide to eat the apple. While munching I realize the apple is delicious. Praise the Apple!
-Apple : eat : Patient : I walk over to the apple ready to take a big bite and then... wait what was I doing? Oh right, I'm an amnesiac patient…
-Apple : eat : Doctor: I…against my better judgement… eat the apple.
+Apple : eat : Patient : I walk over to the apple ready to take a big bite and then... wait what was I doing? Oh right, I'm an amnesiac patient...
+Apple : eat : Doctor: I...against my better judgement... eat the apple.
 
 Fancy Pen : inspect : Any : A really fancy looking inkwell pen, dry of ink. Probably worth nothing but certainly looks cool.
 Fancy Pen : location : Any : There also seems to be a fancy pen which rests among the piles of paper in the disorganized cubicle.
 
-Small Plant: inspect : Any : Upon a closer look it's one of those undying cactus succulents. The pot it's planted in has some text painted on it which reads ‘George the Undying Cactus’.
+Small Plant: inspect : Any : Upon a closer look it's one of those undying cactus succulents. The pot it's planted in has some text painted on it which reads 'George the Undying Cactus'.
 Small Plant: location : Any : Surprisingly, one of the cubicles is quite neat, even containing a small plant which is the height of decoration from what I've seen from the previous hospital rooms.
-Small Plant: kill : Any : I try to destroy the cactus but just end up with thorns in my hands. ‘George’ remains unharmed.
-Small Plant: destroy : Any : I try to destroy the cactus but just end up with thorns in my hands. ‘George’ remains unharmed.
+Small Plant: kill : Any : I try to destroy the cactus but just end up with thorns in my hands. 'George' remains unharmed.
+Small Plant: destroy : Any : I try to destroy the cactus but just end up with thorns in my hands. 'George' remains unharmed.
 
 Fire Alarm Manual : location : Any : A Fire Alarm Manual is pinned to the storage racks, looks like the hospital takes fires seriously.
-Fire Alarm Manual : inspect : Any : Details exactly how to take care of your fire alarms. Apparently you can <b>disable</b> them in an emergency which would prevent them from going off. It also lists a lot of warnings for doing so like… jail time? 
-Fire Alarm Manual : read : Any : Details exactly how to take care of your fire alarms. Apparently you can <b>disable</b> them in an emergency which would prevent them from going off. It also lists a lot of warnings for doing so like… jail time? 
+Fire Alarm Manual : inspect : Any : Details exactly how to take care of your fire alarms. Apparently you can <b>disable</b> them in an emergency which would prevent them from going off. It also lists a lot of warnings for doing so like... jail time? 
+Fire Alarm Manual : read : Any : Details exactly how to take care of your fire alarms. Apparently you can <b>disable</b> them in an emergency which would prevent them from going off. It also lists a lot of warnings for doing so like... jail time? 
 
 
 # ID Cards
@@ -66,22 +66,22 @@ Gauze : object spawned : Any: The gauze is gone, leaving only emptiness.
 Gauze Fist Wraps : inspect : Any : I take a step closer to the gauze wraps. They are covered in fresh blood. Gross.
 Gauze Fist Wraps : inspect : Doctor : I glance at the gauze wraps. They are clearly used. Great, someone left their medical waste lying around.
 Gauze Fist Wraps : inspect : Brawler : Hmm. These might make punching others hurt me less.
-Gauze Fist Wraps : use : Any : Don't know how I'd use these unless I want to punch something, I mean, they’re already on my fists.
+Gauze Fist Wraps : use : Any : Don't know how I'd use these unless I want to punch something, I mean, they're already on my fists.
 
 
 Bar Rewards Card : location: Any : In the trash next to the water cooler, there seems to be some sort of bar rewards card.
 Bar Rewards Card : inspect : Any : I pick up a battered, soggy bar loyalty card.
 Bar Rewards Card : inspect : Guard : I pick up a battered, soggy bar loyalty card. Probably banned from half the bars in town, yet still working through the rewards program. Impressive.
-Bar Rewards Card : inspect : Doctor : I pick up a battered, soggy bar loyalty card. Looks like this belonged to a true hardcore drinker. Wasn’t there a patient that came in earlier directly from a bar?
+Bar Rewards Card : inspect : Doctor : I pick up a battered, soggy bar loyalty card. Looks like this belonged to a true hardcore drinker. Wasn't there a patient that came in earlier directly from a bar?
 Bar Rewards Card : inspect : Brawler : My rewards card. Only thirteen more drinks and I'll get one for free.
 
-Sleeping Man : location : Any : There’s also a sleeping man who is snoozing away across 3 of the seats who holds a nondescript brown paper bag.
-Sleeping Man : location : Brawler: There’s a sleeping man in the seating area sleeping with a brown bag. Looks like there’s booze in there.
-Sleeping Man : inspect: Any : Upon closer inspection, this guy definitely has booze in that bag and looks like he’s seen a few fights. Probably not best to remove the booze from the dude unless I have a plan.
+Sleeping Man : location : Any : There's also a sleeping man who is snoozing away amongst the storage shelves. Must have had a rough shift.
+Sleeping Man : location : Brawler: There's a sleeping man in the seating area sleeping with a brown bag. Looks like there's booze in there.
+Sleeping Man : inspect: Any : Upon closer inspection, this guy definitely has booze in that bag and looks like he's seen a few fights. Probably not best to remove the booze from the dude unless I have a plan.
 Sleeping Man : talk: Any : I try to get the sleeping man to give me any kind of response but he just grumbles and rolls over, ignoring me entirely.
 Sleeping Man : annoyTalk : Any :I start to approach the sleeping man who just snaps awake, somehow sensing I was coming. He moves in a blur and suddenly something thuds into my head. I think I fell to the ground and blacked out, hard to say considering I don't really remember what exactly happened.
-Sleeping Man : annoyTalkBrawler : Any : I start to approach the sleeping man who snaps awake. He moves in a blur, trying to use the bottle of booze to wack me over the head like some sort of drunken warrior. Being the better drunken warrior, I punch him square in the face before he does and he uh…goes back to sleep, slumped over all 3 chairs. The <b>booze</b> is mine for the taking.
-Sleeping Man : unconscious : Any : I look at the sleeping man and realize trying to do anything else to him while he’s this unconscious is kinda pointless.	
+Sleeping Man : annoyTalkBrawler : Any : I start to approach the sleeping man who snaps awake. He moves in a blur, trying to use the bottle of booze to wack me over the head like some sort of drunk sleep warrior. Being the better drunken warrior, I punch him square in the face before he can land his blow and he uh...goes back to sleep, slumped amongst the storage shelves. The <b>booze</b> is mine for the taking.
+Sleeping Man : unconscious : Any : I look at the sleeping man and realize trying to do anything else to him while he's this unconscious is kinda pointless.	
 
 Fire Exit : brawler ending : Brawler: I stumble out the fire exit with a silly smile on my face as I almost accidentally knock the door off its hinges. I gaze at my bottle of booze, already half empty, and take another long swig before heading to the nearest bar to get to brawling. t(Hidden Ending 1/4)
 
@@ -128,12 +128,12 @@ Cardboard Cutout : on spawn : Any : Taking a closer look at the cutout I realize
 
 
 Journal : inspect : Any : A Journal. I could probably read this huh?
-Journal : read : Any : I flip through the pages of the journal. It is filled to the brim with notes about the Doctor's daily routine. It seems the janitor has been keeping tabs on the Doctor for quite some time. The only thing that stands out to me is the doctors checklist for clocking out of their shift. <br>1. The Doctor ID Card<br>2. The Doctor’s PhD<br>3. The Doctor’s lab coat<br>4.The Doctors punched punchcard
-Journal : read : Doctor : I flip through the pages of the journal. It is filled to the brim with notes about my daily routine. This feels like an invasion of privacy. I really need to get out of this hospital if this is who my colleagues are. I especially don’t like that they stole my clocking out checklist. I haven’t been able to leave here without it. Thankfully I now remember what I need before I can clock out. <br>1. My ID<br>2. My PhD<br>3. My lab coat<br>4. My punched punchcard
+Journal : read : Any : I flip through the pages of the journal. It is filled to the brim with notes about the Doctor's daily routine. It seems the janitor has been keeping tabs on the Doctor for quite some time. The only thing that stands out to me is the doctors checklist for clocking out of their shift. <br>1. The Doctor ID Card<br>2. The Doctor's PhD<br>3. The Doctor's lab coat<br>4.The Doctors punched punchcard
+Journal : read : Doctor : I flip through the pages of the journal. It is filled to the brim with notes about my daily routine. This feels like an invasion of privacy. I really need to get out of this hospital if this is who my colleagues are. I especially don't like that they stole my clocking out checklist. I haven't been able to leave here without it. Thankfully I now remember what I need before I can clock out. <br>1. My ID<br>2. My PhD<br>3. My lab coat<br>4. My punched punchcard
 
-Clerk : inspect : Any : Looks like the person that handles patient and employee intake. They don’t look like someone that would enjoy a conversation.
+Clerk : inspect : Any : Looks like the person that handles patient and employee intake. They don't look like someone that would enjoy a conversation.
 Clerk : inspect : Guard : The trustworthy hospital clerk. I only talk to them when I have to.
-Clerk : inspect : Doctor : The clerk is always on my case for forgetting to punch in and out. That reminds me… nevermind.
+Clerk : inspect : Doctor : The clerk is always on my case for forgetting to punch in and out. That reminds me... nevermind.
 
 Pile of Paper : inspect : Any : A large pile of paper. If I had time to waste I could search through it but I doubt there is anything useful.
 Pile of Paper : location : Any : There is a chaotic pile of paper on a clearly disorganized desk.
@@ -142,7 +142,7 @@ Pile of Paper : on spawn : Any : Bafflingly, I find a PhD in the pile of paper a
 Pile of Paper : object spawned : Any : Mostly just useless medical jargon. I still can't believe I found that PhD there.
 
 
-Fire Exit : doctor ending : Doctor : I push the cold metal bar of the fire exit and step into the night, the hospital’s sterile and tacky corridors fading behind me. I have my lab coat on, my punch card got punched and my PhD is safe and sound in my bag. I look down at my watch. Looks like my next shift starts in 15 minutes. I turn around and head back in to get ready. As I step back into the hospital and take a deep breath I know deep down I was rarely in a hospital before I lost my memory. (Hidden Ending 1/4)
+Fire Exit : doctor ending : Doctor : I push the cold metal bar of the fire exit and step into the night, the hospital's sterile and tacky corridors fading behind me. I have my lab coat on, my punch card got punched and my PhD is safe and sound in my bag. I look down at my watch. Looks like my next shift starts in 15 minutes. I turn around and head back in to get ready. As I step back into the hospital and take a deep breath I know deep down I was rarely in a hospital before I lost my memory. (Hidden Ending 1/4)
 
 Exit Door : doctor ending : Doctor : I walk through the hospital exit. Giving and receiving a courteous nod to each of the guards. I have my lab coat on, my punch card got punched and my PhD is safe and sound in my bag. I look down at my watch. Looks like my next shift starts in 15 minutes. I turn around and head back in to get ready. As I step back into the hospital and take a deep breath I know deep down I was rarely in a hospital before I lost my memory. (Hidden Ending 1/4)
 
@@ -156,17 +156,17 @@ Calling Card : inspect : Thief : My beautiful calling card. Silian Rail letterin
 The Golden Microscope : inspect : Any : A priceless golden microscope encrusted with jewels.
 The Golden Microscope : inspect : Doctor : My precious golden microscope. What would I do on those long, lonely nights without it?
 The Golden Microscope : inspect : Guard : The doctor's golden microscope. I told them the hospital's insurance won't cover it if it gets stolen. I hope they listen because I am not paid enough to make sure it stays safe.
-The Golden Microscope : inspect : Thief : A priceless golden microscope encrusted with jewels. It should be in a museum... or in my bag.
+The Golden Microscope : inspect : Thief : A priceless golden microscope encrusted with jewels. It should be in a museum...  or in my bag.
 The Golden Microscope : location: Any : The Golden Microscope lies inside the glass case.
 The Golden Microscope : take : Guard : I am NOT taking that. If the Doctor found out he would be pissed and take away my donut privileges.
 The Golden Microscope : take : Brawler : That piece of junk is way too shiny, if I carried it with me there's no doubt I'd be the laughingstock of the pub.
-The Golden Microscope : take : Patient : I doubt taking this would help me restore my memory. Besides, I'm no crook or thief… at least I think?
-The Golden Microscope : take : Any: I doubt taking this would help me restore my memory. Besides, I'm no crook or thief… at least I think?
+The Golden Microscope : take : Patient : I doubt taking this would help me restore my memory. Besides, I'm no crook or thief... at least I think?
+The Golden Microscope : take : Any: I doubt taking this would help me restore my memory. Besides, I'm no crook or thief... at least I think?
 
 Glass Case : location : Any : There seems to be a fairly large glass case which rests at the very back of the storage room.
 Glass Case : location : Doctor: At the back of the room lies a glass case containing my golden microscope in all its glory.
 Glass Case : location : Thief: There seems to be a fairly large glass case which rests at the very back of the storage room. Whatever's inside is certain to be valuable.
-Glass Case : inspect : Any : I walk over to the glass case and realize it contains… a golden microscope? I do a double take before realizing it's not a fake. The glass case itself doesn't look like its locked, which feels like a mistake considering the value of its contents.
+Glass Case : inspect : Any : I walk over to the glass case and realize it contains... a golden microscope? I do a double take before realizing it's not a fake. The glass case itself doesn't look like its locked, which feels like a mistake considering the value of its contents.
 Glass Case : inspect : Doctor: I walk over to the glass case knowing it contains my precious golden microscope. Even though I doubt the hospital insurance will cover it if it is stolen, how could I hide it away inside a safe?
 Glass Case : on spawn : Any : I open up the glass case, fully revealing <b>The Golden Microscope</b> which rests inside.
 Glass Case : object spawned: Any: An open glass case. There isn't really much else I can do with this.
@@ -180,7 +180,7 @@ Health Poster : on spawn : Any : I tear away the poster, revealing a <b>hidden d
 Health Poster : object spawned: Any: Not much else to do with this poster.
 
 #I am Thief
-Fire Exit : thief ending : Thief : I push the cold metal bar of the fire exit and step into the night, the hospital’s sterile and tacky corridors fading behind me. I check my bag, glancing briefly at The Golden Microscope, a gleaming trophy of my legendary heist. However as I step into the night air,  some part of me whispers in the back of my mind, still uncertain, wondering if this is who I really am.(Hidden Ending 1/4)
+Fire Exit : thief ending : Thief : I push the cold metal bar of the fire exit and step into the night, the hospital's sterile and tacky corridors fading behind me. I check my bag, glancing briefly at The Golden Microscope, a gleaming trophy of my legendary heist. However as I step into the night air,  some part of me whispers in the back of my mind, still uncertain, wondering if this is who I really am.(Hidden Ending 1/4)
 Exit Door : thief ending : Thief : I walk through the front of the hospital, smiling to myself as the guards are none wiser of the heist I just pulled. I check my bag, glancing briefly at The Golden Microscope, a gleaming trophy of my legendary heist. However as I step into the night air, some part of me whispers in the back of my mind, still uncertain, wondering if this is who I really am. (Hidden Ending 1/4)
 
 # I am X
@@ -206,7 +206,7 @@ guards : talkDonuts : Doctor : I walk up to the guards. "Are you judging us for 
 guards : talkDonuts : Thief : I sneak up to the guards eating the donuts I gave them. I use my superb thieving skills to slowly creep my arm closer to the donut box. As I try to swipe a donut the taller guard gives me a stern look.
 guards : fight : Any : I approach the guards with a glint in my eye, looking for a fight. The stern guards scoff and proceed to absolutely demolish me. They haul me back to my patient room, clearly unimpressed.
 guards : fight : Brawler : I approach the guards ready to live up to my occupation of brawler. Fist start flying as the guards and I trade blows but I soon realize this is a losing battle. I wake up in a patient bed, unsure how I even lost consciousness in the first place. 
-guards : fightWin : Brawler : I approach the guards, now living up to my occupation of <b>Bar Brawler</b>. I take the bottle of booze out of my bag and take a swig, feeling the familiar burn spread through my chest like a gasoline fire. My fists twitch, wrapped in gauze and years of drunken bar fighting. The guards notice my approach and move to stop me from leaving. I twist out of the first guards grab, and drive my wrapped fist into his ribs, sending him skidding across the floor. The other swings a baton; I catch it midair, toss the booze bottle into the air for flair, and slam him to the floor with his own momentum. The bottle lands neatly in my hand. With no guards to stop me, it was time to leave…
+guards : fightWin : Brawler : I approach the guards, now living up to my occupation of <b>Bar Brawler</b>. I take the bottle of booze out of my bag and take a swig, feeling the familiar burn spread through my chest like a gasoline fire. My fists twitch, wrapped in gauze and years of drunken bar fighting. The guards notice my approach and move to stop me from leaving. I twist out of the first guards grab, and drive my wrapped fist into his ribs, sending him skidding across the floor. The other swings a baton; I catch it midair, toss the booze bottle into the air for flair, and slam him to the floor with his own momentum. The bottle lands neatly in my hand. With no guards to stop me, it was time to leave...
 
 Exit Door: go through : Patient : With the guards distracted I walk through the door towards my freedom, leaving the hospital behind me. Is this who I really am? I just can't be sure.
 Exit Door : go through : Doctor :With the guards distracted I walk through the door towards my freedom, leaving the hospital behind me. I guess I'll live the rest of my life out as a Doctor. I don't have the qualifications, experience or lab coat. I just can't be sure that this is really who I am.
@@ -219,7 +219,7 @@ Exit Door : go through : Brawler :With the guards distracted I walk through the 
 Fire Alarm : inspect: Any : Looks like one of those super loud fire alarms that go off once someone goes through a fire exit or if smoke is detected. I probably shouldn't mess with that unless I really have to.
 Fire Alarm : inspect: Doctor: Standard hospital fire alarm, if a bit outdated. These will help keep patients and staff safe from fires.
 Fire Alarm : inspect: Brawler: That thing looks breakable.
-Fire Alarm : inspect: Guard: I’d be pissed if someone pulled that. I mean can you imagine being on break and then some loud annoying sound starts breaking your eardrums? I’d absolutely clobber whoever pulled it if there wasn't an actual fire.
+Fire Alarm : inspect: Guard: I'd be pissed if someone pulled that. I mean can you imagine being on break and then some loud annoying sound starts breaking your eardrums? I'd absolutely clobber whoever pulled it if there wasn't an actual fire.
 Fire Alarm : disable : Any : I fiddle with the fire alarm. Eventually I got it disabled.
 Fire Alarm : disable : Doctor : I reluctantly disable the fire alarm. This goes against everything I stand for.
 Fire Alarm : disable : Thief : I efficiently disable the fire alarm. Although this might make my escape easier, I can't help but feel a little guilty.
@@ -234,7 +234,7 @@ Fire Exit : go through : Brawler : I push the metal bar and the door swings open
 
 # Doors
 door : unlock : Any : The door beeps, accepting the id and I hear the deadbolt retract. I open the door and walk through.
-red door : unlockFail : Any : I rattle the red door’s handle, trying to open it. It looks like it's one of those id card access doors and won't open up until I use a card.
+red door : unlockFail : Any : I rattle the red door's handle, trying to open it. It looks like it's one of those id card access doors and won't open up until I use a card.
 red door : location : Any : A red door with a small pane of glass is at the far end of the room. It looks like it leads into some sort of hallway.
 
 
@@ -242,16 +242,16 @@ red door : location : Any : A red door with a small pane of glass is at the far 
 # Brawler
 
 Bar Brawler : inspect : Any : I take a step closer and take a look at the brawler. Wow they are entirely muscle. They must be incredible at punching and breaking. I wonder why they are here in this ward with me.
-Bar Brawler : inspect : Doctor : Oh yes. This patient… Got so drunk at the local bar they haven’t been able to remember how to get home so they have just been staying here ever since.
-Bar Brawler : inspect : Brawler : It’s me. Wait, I’m me. But on the bed it’s me. Am I not me? Are they not them? Is my life a lie? Am I just a shell pretending to be someone else? I need a drink…badly.
+Bar Brawler : inspect : Doctor : Oh yes. This patient... Got so drunk at the local bar they haven't been able to remember how to get home so they have just been staying here ever since.
+Bar Brawler : inspect : Brawler : It's me. Wait, I'm me. But on the bed it's me. Am I not me? Are they not them? Is my life a lie? Am I just a shell pretending to be someone else? I need a drink...badly.
 
-Bar Brawler : talk1 : Any : I poke the brawler waking them up. “Hey” I say. “Leave me alone before I punch you” they respond.
+Bar Brawler : talk1 : Any : I poke the brawler waking them up. "Hey" I say. "Leave me alone before I punch you" they respond.
 
-Bar Brawler : talk2 : Any : I poke the brawler again. “Excuse me” I squeak out. “I have punched holes in people before. Don’t try me. And whatever you do, don't annoy me.” The brawler puts a set of ear plugs in.
+Bar Brawler : talk2 : Any : I poke the brawler again. "Excuse me" I squeak out. "I have punched holes in people before. Don't try me. And whatever you do, don't annoy me." The brawler puts a set of ear plugs in.
 
-Bar Brawler : talk3: Any : I try to talk to the brawler but they have their earplugs in and (at least I think) can’t hear me.
+Bar Brawler : talk3: Any : I try to talk to the brawler but they have their earplugs in and (at least I think) can't hear me.
 
-Bar Brawler : talkToAnnoy : Any : I try to talk to the brawler but they have their earplugs in and (at least I think) can’t hear me. I could probably annoy them to get their attention.
+Bar Brawler : talkToAnnoy : Any : I try to talk to the brawler but they have their earplugs in and (at least I think) can't hear me. I could probably annoy them to get their attention.
 
 Bar Brawler : annoyPunchCard : Any : I foolishly decide to annoy the brawler by tickling their toes. The wake up and punch me harder than I've ever been punched before. I look down and luckily I don't have a hole in me. I check my pockets and realize my punch card took the blow for me. I guess it's a good thing I annoyed them.
 
@@ -261,54 +261,54 @@ Bar Brawler : annoyNoPunchCard : Any : I tickle the brawler's feet while making 
 # I am Patient/True ending
 Filing Cabinet : inspect : Any : A pretty standard filing cabinet. Looks like they store patient files inside.
 
-Filing Cabinet : object spawned : Any : I search through the cabinet but don’t really find anything of interest. 
-Filing Cabinet : object spawned : Doctor : I search through the cabinet. It’s perfectly organized. I can’t find anything of interest.
+Filing Cabinet : object spawned : Any : I search through the cabinet but don't really find anything of interest. 
+Filing Cabinet : object spawned : Doctor : I search through the cabinet. It's perfectly organized. I can't find anything of interest.
 
-Filing Cabinet : on spawn : Any : I search through the filing cabinet. It’s extremely disorganized. Right as I am about to stop due to boredom one patient file jumps out to me. I pull it out and place it on top of the cabinet.
+Filing Cabinet : on spawn : Any : I search through the filing cabinet. It's extremely disorganized. Right as I am about to stop due to boredom one patient file jumps out to me. I pull it out and place it on top of the cabinet.
 
-Patient File : read : Any : I start reading the file … idiopathic … prognosis unknown … syncope … I have no clue what any of this means. I guess that’s why doctors get the big bucks to interpret these files.
-Patient File : read : Brawler : I start reading the file … blood pressure … amnesia … What does any of this mean? These words have to be made up.
-Patient File : read : Doctor : I start reading the file, “Patient suffers from memory loss including loss of identity … cause unknown … prognosis unknown … patient info unknown.” At the bottom in bold it reads “<b> Do not let the patient leave the facility without being identified. A doctor’s written approval is required. We cannot collect payment from unknown patients! - Thank you, Management</b>”.
+Patient File : read : Any : I start reading the file ... idiopathic ... prognosis unknown ... syncope ... I have no clue what any of this means. I guess that's why doctors get the big bucks to interpret these files.
+Patient File : read : Brawler : I start reading the file ... blood pressure ... amnesia ... What does any of this mean? These words have to be made up.
+Patient File : read : Doctor : I start reading the file, "Patient suffers from memory loss including loss of identity ... cause unknown ... prognosis unknown ... patient info unknown." At the bottom in bold it reads "<b> Do not let the patient leave the facility without being identified. A doctor's written approval is required. We cannot collect payment from unknown patients! - Thank you, Management</b>".
 
 Person : inspect : Any : I take a closer look at the person. She is a middle aged woman.
 
-Person : talk0 : Doctor : I walk up and say hello to the person. They look at me with a face of recognition but then it fades. “Hello my name is Ruth, sorry for staring you just look like an acquaintance of mine but they aren’t a doctor.”
-Person : talk0 : Guard : I walk up and say hello to the person. They look at me with a face of recognition but then it fades. “Hello my name is Ruth, sorry for staring you just look like an acquaintance of mine but they aren’t a guard.”
-Person : talk0 : Brawler : I walk up and say hello to the person. They look at me with a face of recognition but then it fades. I see a bit of disappointment flash over their eyes. “Hello my name is Ruth, sorry for staring you just look like an acquaintance of mine but they aren’t a drunk.”
-Person : talk0 : Thief : I walk up and say hello to the person. They look at me with a face of recognition but then it fades. “Hello my name is Ruth, sorry for staring you just look like an acquaintance of mine but you aren’t them. You look like you are here to steal and they would never do that.”
-Person : talk0 : Patient : I walk up and say hello to the person. They look at me with a face of recognition. “{name}? Is that you {name}. It’s been so long, how have you been?” She notices the non-recognition in my face. “Oh sorry” she says, “My name's Ruth. You look exactly like this acquaintance I knew from years ago.”
+Person : talk0 : Doctor : I walk up and say hello to the person. They look at me with a face of recognition but then it fades. "Hello my name is Ruth, sorry for staring you just look like an acquaintance of mine but they aren't a doctor."
+Person : talk0 : Guard : I walk up and say hello to the person. They look at me with a face of recognition but then it fades. "Hello my name is Ruth, sorry for staring you just look like an acquaintance of mine but they aren't a guard."
+Person : talk0 : Brawler : I walk up and say hello to the person. They look at me with a face of recognition but then it fades. I see a bit of disappointment flash over their eyes. "Hello my name is Ruth, sorry for staring you just look like an acquaintance of mine but they aren't a drunk."
+Person : talk0 : Thief : I walk up and say hello to the person. They look at me with a face of recognition but then it fades. "Hello my name is Ruth, sorry for staring you just look like an acquaintance of mine but you aren't them. You look like you are here to steal and they would never do that."
+Person : talk0 : Patient : I walk up and say hello to the person. They look at me with a face of recognition. "{name}? Is that you {name}. It's been so long, how have you been?" She notices the non-recognition in my face. "Oh sorry" she says, "My name's Ruth. You look exactly like this acquaintance I knew from years ago."
 
 Ruth : inspect : Any : I take a closer look at Ruth. Yep, still a middle aged woman.
 Ruth : inspect : Patient : I take a closer look at Ruth. Yep, still a middle aged woman. She may have known me before I lost my memory.
 
-Ruth : talk1 : Doctor : I walk up to Ruth. She says “Hey Doctor. How’s it going?” I reply with, “it’s ok, just trying to clock out but I seem to have lost my pre-clockout checklist.”
-Ruth : talk1 : Any: I walk up and say “Hey Ruth how’s it hanging.” She raises her eyebrow and says, “It’s ok I guess. Just sitting here waiting.”
-Ruth : talk1 : Patient : I walk up and say “Hello Ruth!” Again there is a moment of recognition that quickly disappears from her face. “Oh hello, I never got your name," she replies. “Truthfully, I don’t know. My oldest memory is waking up in this hospital.”
+Ruth : talk1 : Doctor : I walk up to Ruth. She says "Hey Doctor. How's it going?" I reply with, "it's ok, just trying to clock out but I seem to have lost my pre-clockout checklist."
+Ruth : talk1 : Any: I walk up and say "Hey Ruth how's it hanging." She raises her eyebrow and says, "It's ok I guess. Just sitting here waiting."
+Ruth : talk1 : Patient : I walk up and say "Hello Ruth!" Again there is a moment of recognition that quickly disappears from her face. "Oh hello, I never got your name," she replies. "Truthfully, I don't know. My oldest memory is waking up in this hospital."
 
-Ruth : talkDefault : Any : “Hey Ruth!” <br> “Hello” <br> I sit down and we chat for a while. It’s like talking to an old friend.
-Ruth : talkDefault : Patient : I walk up and spend some time chatting with Ruth. The longer we talk the more it feels like I knew this person from some time before my existence in this hospital. The name she first called me by “{name}” sticks with me. Maybe a doctor can tell me more.
+Ruth : talkDefault : Any : "Hey Ruth!" <br> "Hello" <br> I sit down and we chat for a while. It's like talking to an old friend.
+Ruth : talkDefault : Patient : I walk up and spend some time chatting with Ruth. The longer we talk the more it feels like I knew this person from some time before my existence in this hospital. The name she first called me by "{name}" sticks with me. Maybe a doctor can tell me more.
 
 
 Doctor : inspect : Any : I look at the doctor. They are chewing on their fingernails and pacing anxiously.
 Doctor : inspect : Doctor : I look at the doctor. They look kind of like me.
 
-Doctor : talk : Any : I walk up to the doctor, “What’s wrong?” I ask. “Well a lot. For starters it feels like someone has been following me around all week. So I was already on edge today when out of nowhere I lost my id card. Now this wouldn’t usually be an issue but of course I manage to lose it while in the one place that requires an id card to get out of. So I’m stuck here until I find it. And before you offer. No, I can't just walk through the door with you. I have been yelled at many times by the guard for doing that before and I fear I am on my last strike.”
-Doctor : talk : Guard : I walk up to the doctor, "What's wrong?” I ask. “What’s wrong? What’s Wrong?!” They seem quite upset. “You guards refuse to break protocol and let anyone go anywhere without their own id. I lost mine and have been stuck here all day looking for it.”
+Doctor : talk : Any : I walk up to the doctor, "What's wrong?" I ask. "Well a lot. For starters it feels like someone has been following me around all week. So I was already on edge today when out of nowhere I lost my id card. Now this wouldn't usually be an issue but of course I manage to lose it while in the one place that requires an id card to get out of. So I'm stuck here until I find it. And before you offer. No, I can't just walk through the door with you. I have been yelled at many times by the guard for doing that before and I fear I am on my last strike."
+Doctor : talk : Guard : I walk up to the doctor, "What's wrong?" I ask. "What's wrong? What's Wrong?!" They seem quite upset. "You guards refuse to break protocol and let anyone go anywhere without their own id. I lost mine and have been stuck here all day looking for it."
 Doctor : talk : Doctor : I walk up to the doctor. Before I say anything I see their eyes dart to my id badge. I walk away slowly.
-Doctor : talk : Patient : I walk up to the clearly distraught doctor. “Oh hey,” they say to me “don’t mind me pacing, how are you feeling? Finally remembered who you are yet?” I shake my head no, “Well that’s ok, it takes time. When you do remember, let me know and I’ll write you a permission slip for release!”
+Doctor : talk : Patient : I walk up to the clearly distraught doctor. "Oh hey," they say to me "don't mind me pacing, how are you feeling? Finally remembered who you are yet?" I shake my head no, "Well that's ok, it takes time. When you do remember, let me know and I'll write you a permission slip for release!"
 
-Doctor : talkKnow : Patient : I run up to the doctor. “My name!” I exclaim. “What?” They look confused. “It’s {name}! My name is {name}.” <br> “Ohhhh, your name. Of course. Well {name} I’m glad you remember who you are. Let me get you your release slip!” I take the release slip. Before I leave they mention, “Oh yes, expect your bill in the mail in a couple weeks. I would have released you sooner but admin refused without the necessary identifiers to get you your bill.” My shoulders slump an inch.
+Doctor : talkKnow : Patient : I run up to the doctor. "My name!" I exclaim. "What?" They look confused. "It's {name}! My name is {name}." <br> "Ohhhh, your name. Of course. Well {name} I'm glad you remember who you are. Let me get you your release slip!" I take the release slip. Before I leave they mention, "Oh yes, expect your bill in the mail in a couple weeks. I would have released you sooner but admin refused without the necessary identifiers to get you your bill." My shoulders slump an inch.
 
-Doctor : talkReleased : Patient : I try to talk to the doctor but they wave me away. “I already gave you your release slip. I’m not your doctor anymore.”
+Doctor : talkReleased : Patient : I try to talk to the doctor but they wave me away. "I already gave you your release slip. I'm not your doctor anymore."
 
 Release Slip : inspect : Any : A release slip for a patient. Signed by a doctor.
 Release Slip : inspect : Patient : My release slip. Signed by the doctor.
 
-Doctor : give : Any : I really don’t want to give the Doctor id to the doctor. I’m still in the process of figuring out who I am. What if I am really the doctor?
-Doctor : give : Doctor : I really don’t want to give the Doctor id to the doctor. It might be who I truly am.
+Doctor : give : Any : I really don't want to give the Doctor id to the doctor. I'm still in the process of figuring out who I am. What if I am really the doctor?
+Doctor : give : Doctor : I really don't want to give the Doctor id to the doctor. It might be who I truly am.
 
-Doctor ID : give : Any : I really don’t want to give the Doctor id to the doctor. I’m still in the process of figuring out who I am. What if I am really the doctor?
-Doctor ID : give : Doctor : I really don’t want to give the Doctor id to the doctor. It might be who I truly am.
+Doctor ID : give : Any : I really don't want to give the Doctor id to the doctor. I'm still in the process of figuring out who I am. What if I am really the doctor?
+Doctor ID : give : Doctor : I really don't want to give the Doctor id to the doctor. It might be who I truly am.
 
 Fire Exit : patient ending : Patient : I push the cold metal bar of the fire exit and step into the night, the mystery of who I am fading as I get further and further away from the hospital. This feels right. I know who I am. Now just to figure out where I live. (Hidden Ending 1/4)
 
