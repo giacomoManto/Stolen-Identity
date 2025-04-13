@@ -36,7 +36,7 @@ Guard ID : inspect : Thief : I take a look at the ID card, inspecting it closely
 
 
 #Switch Dialogue
-patient : switch : Any : I hold the Patient ID before me and my mind drifts in confusion and unease until suddenly… I realize maybe I'm just a hospital patient. I wonder what I'm in here for?
+patient : switch : Any : I hold the Patient ID before me and my mind drifts in confusion and unease until suddenly... I realize maybe I'm just a hospital patient. I wonder what I'm in here for?
 thief : switch : Any : I take out the Thief ID, my eyes tracing the rough portrait and fading edges. A fragment of a rebellious dream stirs within me, whispering of secrets to uncover and treasures yet to be claimed.
 brawler : switch : Any : I bring forth the battered Brawler ID, its worn edges and scratches speaking plainly of past conflicts. In that moment, my mind hazes as I feel raw strength and simmer anger within me, calling me to break any obstacles in my path.
 doctor : switch : Any : I gently lift the clean pristine Doctor ID, and a calming clarity envelops me. I take a cloth out of my pocket and clean off a small smudge on the ID I didn't see before. It was time to work.
@@ -212,7 +212,7 @@ Exit Door: go through : Patient : With the guards distracted I walk through the 
 Exit Door : go through : Doctor :With the guards distracted I walk through the door towards my freedom, leaving the hospital behind me. I guess I'll live the rest of my life out as a Doctor. I don't have the qualifications, experience or lab coat. I just can't be sure that this is really who I am.
 Exit Door : go through : Guard : With the guards distracted I walk through the door towards my freedom, leaving the hospital behind me. Guarding doesn't sound too bad. I guess I can live the rest of my life out as a guard. I wish I could remember who I really am - but, for now, I'm satisfied just leaving the hospital.
 Exit Door : go through : Thief : With the guards distracted I walk through the door towards my freedom, leaving the hospital behind me. Am I really a thief? It's who I am now, I guess. I just can't be sure.
-Exit Door : go through : Brawler : With the guards distracted I walk through the door towards my freedom, leaving the hospital behind me. I head straight to the closest bar. The smell of alcohol feels like it should sit right but deep down it disgusts me.
+Exit Door : go through : Brawler :With the guards distracted I walk through the door towards my freedom, leaving the hospital behind me. I head straight to the closest bar. The smell of alcohol feels like it should sit right but deep down it disgusts me.
 
 
 # I am X fire escape
