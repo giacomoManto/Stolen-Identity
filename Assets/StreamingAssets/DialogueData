@@ -75,13 +75,13 @@ Bar Rewards Card : inspect : Guard : I pick up a battered, soggy bar loyalty car
 Bar Rewards Card : inspect : Doctor : I pick up a battered, soggy bar loyalty card. Looks like this belonged to a true hardcore drinker. Wasn't there a patient that came in earlier directly from a bar?
 Bar Rewards Card : inspect : Brawler : My rewards card. Only thirteen more drinks and I'll get one for free.
 
-Sleeping Man : location : Any : There's also a sleeping man who is snoozing away amongst the storage shelves. Must have had a rough shift.
-Sleeping Man : location : Brawler: There's a sleeping man in the seating area sleeping with a brown bag. Looks like there's booze in there.
-Sleeping Man : inspect: Any : Upon closer inspection, this guy definitely has booze in that bag and looks like he's seen a few fights. Probably not best to remove the booze from the dude unless I have a plan.
-Sleeping Man : talk: Any : I try to get the sleeping man to give me any kind of response but he just grumbles and rolls over, ignoring me entirely.
-Sleeping Man : annoyTalk : Any :I start to approach the sleeping man who just snaps awake, somehow sensing I was coming. He moves in a blur and suddenly something thuds into my head. I think I fell to the ground and blacked out, hard to say considering I don't really remember what exactly happened.
+Sleeping Man : location : Any : I see a man slumped among the storage shelves, deep in sleep after what must have been a grueling shift. 
+Sleeping Man : location : Brawler : Among the storage shelves, I spot a sleeping man sprawled out with a crumpled brown paper bag held by his side, looking like there's a bottle of booze inside. 
+Sleeping Man : inspect : Any : On closer inspection, I notice the bag definitely contains a bottle of booze. It’s probably best not to mess with the man or the drink unless I have a solid plan. 
+Sleeping Man : talk : Any : I try to get him to respond, but the sleeping man merely grumbles and turns over, offering nothing more than a half-hearted snore. 
+Sleeping Man : annoyTalk : Any : As I approach, the man suddenly snaps awake. He moves with lightning speed—a blur of limbs—and before I know it, a heavy blow strikes my head. The world goes dark, and I’m left wondering what just happened. 
 Sleeping Man : annoyTalkBrawler : Any : I start to approach the sleeping man who snaps awake. He moves in a blur, trying to use the bottle of booze to wack me over the head like some sort of drunk sleep warrior. Being the better drunken warrior, I punch him square in the face before he can land his blow and he uh...goes back to sleep, slumped amongst the storage shelves. The <b>booze</b> is mine for the taking.
-Sleeping Man : unconscious : Any : I look at the sleeping man and realize trying to do anything else to him while he's this unconscious is kinda pointless.	
+Sleeping Man : unconscious : Any : Now that the sleeping man is deeply unconscious, I realize that any further interaction is pointless.
 
 Fire Exit : brawler ending : Brawler: I stumble out the fire exit with a silly smile on my face as I almost accidentally knock the door off its hinges. I gaze at my bottle of booze, already half empty, and take another long swig before heading to the nearest bar to get to brawling. t(Hidden Ending 1/4)
 
