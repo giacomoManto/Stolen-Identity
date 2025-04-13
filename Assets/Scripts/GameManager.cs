@@ -136,6 +136,17 @@ public class GameManager : MonoBehaviour
             gameFlags.Add(key, value);
             Debug.Log("Added " + key + " with value " + value);
         }
+        if (key == "gameOver" && value)
+        {
+            Debug.Log("Game Over triggered");
+            StartCoroutine(LoadSceneAfterDelay("StartScene", 20));
+        }
+    }
+
+    private IEnumerator LoadSceneAfterDelay(string sceneName, int delaySeconds)
+    {
+        yield return new WaitForSeconds(delaySeconds);
+        SceneManager.LoadScene(sceneName);
     }
 
     public bool GetFlag(string key, bool defaultFlag = false)
