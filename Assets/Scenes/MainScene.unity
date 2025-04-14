@@ -3351,8 +3351,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyed: 0
-  interactableName: hole in the wall
-  locationDescription: Behind me there is the hole in the wall that I came in through.
+  interactableName: large hole
+  locationDescription: Behind me there is the large hole in the wall that I came
+    in through.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
   roomName: 
@@ -3817,7 +3818,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyed: 0
   interactableName: Painting
-  locationDescription: A large painting is against the left wall of the office.
+  locationDescription: 
   playerCanStore: 0
   dialogueManager: {fileID: 0}
   destroyOnSpawn: 0
@@ -5131,9 +5132,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyed: 0
-  interactableName: hole in the wall
-  locationDescription: There is a hole in the wall in front of me with what looks
-    like candles in the room it leads to.
+  interactableName: large hole
+  locationDescription: There is a large hole in the wall in front of me with what
+    looks like candles in the room it leads to.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
   roomName: 
