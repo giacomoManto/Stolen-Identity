@@ -22,6 +22,7 @@ Fire Alarm Manual : read : Any : Details exactly how to take care of your fire a
 
 # ID Cards
 Patient ID : inspect : Any : I take a look at the ID card, inspecting it closely. It's a plain white card with the words patient in big bold letters, nothing special. However, I get the feeling that I should take this with me and use it if needed.
+Patient ID : on pickup : Any : As I pick up the <b>Patient ID</b> I feel something call out from the back of my mind. The more I stare at the id, the more I realize if I <b>use</b> this <b>Patient ID</b> on myself my entire mindset might switch into that of a patient. 
 
 Thief ID : inspect : Any : I take a look at the ID card, inspecting it closely. A portrait of a pretty shady individual is on the card along with a number to call for 'repossession' services.
 Thief ID : inspect : Guard : I take a look at the ID card, inspecting it closely. This is clearly a thief, why would they leave this hanging around? I really hope they aren't planning to steal from us, I can't get fired again.
@@ -70,9 +71,9 @@ Gauze Fist Wraps : use : Any : Don't know how I'd use these unless I want to pun
 
 
 Bar Rewards Card : location: Any : In the trash next to the water cooler, there seems to be some sort of bar rewards card.
-Bar Rewards Card : inspect : Any : I pick up a battered, soggy bar loyalty card.
-Bar Rewards Card : inspect : Guard : I pick up a battered, soggy bar loyalty card. Probably banned from half the bars in town, yet still working through the rewards program. Impressive.
-Bar Rewards Card : inspect : Doctor : I pick up a battered, soggy bar loyalty card. Looks like this belonged to a true hardcore drinker. Wasn't there a patient that came in earlier directly from a bar?
+Bar Rewards Card : inspect : Any : I look at the bar rewards card. It is a battered, soggy bar loyalty card.
+Bar Rewards Card : inspect : Guard : I look at the bar rewards card. It is a soggy bar loyalty card. Probably banned from half the bars in town, yet still working through the rewards program. Impressive.
+Bar Rewards Card : inspect : Doctor : I look at the bar rewards card. It is a soggy bar loyalty card. Looks like this belonged to a true hardcore drinker. Wasn't there a patient that came in earlier directly from a bar?
 Bar Rewards Card : inspect : Brawler : My rewards card. Only thirteen more drinks and I'll get one for free.
 
 Sleeping Man : location : Any : I see a sleeping man slumped among the storage shelves, deep in sleep after what must have been a grueling shift. The man sleeps holding some sort of brown paper bag which seems important if the 
@@ -110,9 +111,11 @@ corkboard : object spawned : Any : A corkboard with a whole bunch of notes pinne
 corkboard : object spawned : Brawler : A corkboard with a whole bunch of notes pinned to it. I quickly scan it for any information about staff bars or really just bars in the area. I can't find anything.
 corkboard : on spawn : Any : I take a closer look at the corkboard and see a tiny little <b>note</b> sticking out from behind it.
 
-Painting : inspect : Any : What looks to be a fancy oil painting, its gentle brush strokes depict some sort of jewel encrusted golden microscope. Who even comes up with this stuff?
+Painting : location : Any : A massive painting is against the left wall of the office. 
+Painting : inspect : Any : What looks to be a huge fancy oil painting, its gentle brush strokes depict some sort of jewel encrusted golden microscope. Who even comes up with this stuff?
 Painting : inspect : Doctor: A wonderful painting of my golden microscope. It also perfectly hides the entrance to my vault.
 Painting : inspect : Thief: A painting that's too large to steal, unfortunate.
+Painting : steal : Thief : I put my thievery cap on while moving to steal the painting. As I start to begin the great heist, I realize my bag is definitely not big enough to steal this thing. I slowly take my hands of the painting, sad I cannot take such a piece. 
 Painting : object spawned : Any : The painting is still painted, though there's a small scratch from where I moved it off the wall. Oops?
 Painting : on spawn : Any : I move the painting revealing a large metal Vault Door. Who needs one of these in a hospital?
 
@@ -235,7 +238,8 @@ Fire Exit : go through : Brawler : I push the metal bar and the door swings open
 # Doors
 door : unlock : Any : The door beeps, accepting the id and I hear the deadbolt retract. I open the door and walk through.
 red door : unlockFail : Any : I rattle the red door's handle, trying to open it. It looks like it's one of those id card access doors and won't open up until I use a card.
-red door : location : Any : A red door with a small pane of glass is at the far end of the room. It looks like it leads into some sort of hallway.
+red door : inspect : Any : Looks like an id access door with some sort of weird scanner attached. Looks like its not just looking to scan an id card but to ensure i embody the mindset of the id. In short, to get past this, i would have to <b> switch </b> into the mindset of a <b>patient </b> or some other id.
+
 
 # Red door help
 red door : use patient id on : Any : I try to simply use the patient id on the door but the advanced security recognizes that I am not embodying the identity of a patient.

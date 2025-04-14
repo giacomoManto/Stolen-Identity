@@ -30,7 +30,7 @@ public class Interactable : MonoBehaviour
     /// <exception cref="ArgumentNullException"></exception>
     public Interactable()
     {
-        this.RegisterAction(InspectObject, "inspect", "look at", "peek at", "stare at");
+        this.RegisterAction(InspectObject, "inspect", "look at", "peek at", "stare at", "view");
         this.RegisterAction(TakeObject, "grab", "take", "steal", "pick up", "collect", "retrieve", "gather", "acquire", "obtain", "procure", "snatch", "seize", "hoard", "yoink");
     }
     void Awake()

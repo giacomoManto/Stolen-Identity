@@ -1410,9 +1410,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyed: 0
-  interactableName: paper covered door
-  locationDescription: There seems to be a... paper covered door? Which I think leads
-    into some sort of doctors office.
+  interactableName: paper door
+  locationDescription: There seems to be a... paper door? Which I think leads into
+    some sort of doctors office.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
   roomName: 
@@ -3699,7 +3699,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyed: 0
   interactableName: red door
-  locationDescription: 
+  locationDescription: A red door with a small pane of glass is at the far end of
+    the room. It looks like it leads into some sort of hallway.
   playerCanStore: 0
   dialogueManager: {fileID: 0}
   roomName: 

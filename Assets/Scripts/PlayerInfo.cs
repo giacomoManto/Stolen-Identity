@@ -168,6 +168,10 @@ public class PlayerInfo : MonoBehaviour
         if (!possibleCard.Equals(IDCard.None))
         {
             playerIDInteractables.Add(item.interactableName.ToLower(), item);
+            if (possibleCard.Equals(IDCard.Patient))
+            {
+                GameManager.Instance().AddTextToJournal(DialogueManager.Instance().GetDialogue("Patient ID", "on pickup", IDCard.None.Name));
+            }
             if (!secondId && !possibleCard.Equals(IDCard.Patient))
             {
                 GameManager.Instance().AddTextToJournal("As I begin to pick up the " + item.interactableName + " I realize it calls to me, similar to the patient id. I wonder what would happen if I try to <b>use</b> it. I guess my mind would <b>switch</b> into the mindset of a " + possibleCard + ", hard to tell.");
