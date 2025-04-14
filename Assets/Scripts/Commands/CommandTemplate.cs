@@ -3,6 +3,7 @@ using UnityEngine;
 public abstract class CommandTemplate {
     protected string commandName;
     protected string description;
+    protected string executeText;
     protected GameManager gameManager;
     public CommandTemplate(GameManager manager)
     {
@@ -14,6 +15,10 @@ public abstract class CommandTemplate {
     }
     public virtual bool Execute()
     {
+        if (executeText != null)
+        {
+            gameManager.AddTextToJournal(executeText);
+        }
         //return true if the command is successfully run
         //false if the command is not meant to be executed, or not implemented
         return false;

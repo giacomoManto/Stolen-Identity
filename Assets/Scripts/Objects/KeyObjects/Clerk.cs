@@ -24,7 +24,7 @@ public class Clerk : Interactable
                 given = true;
                 GameObject punchcardInstance = Instantiate(punchcard);
                 GameManager.Instance().addObjectToPlayerInventory(punchcardInstance.GetComponent<Interactable>());
-                GameManager.Instance().AddTextToJournal("The clerk looks up from thier work and says 'Oh, hello doctor. I've been expecting you. Here's your punchcard.' and turns back to their work.");
+                GameManager.Instance().AddTextToJournal("The clerk looks up from thier work and says 'Oh, hello doctor. I've been expecting you. Here's your <b>punchcard</b>.' and turns back to their work.");
                 GameManager.Instance().AddTextToJournal("As I turn away the clerk says without looking up, 'Don't forget to get it punched. Those guards by the door are strict with those sort of things.'.");
                 GameManager.Instance().SetFlag("hasPunchcard", true);
             }
