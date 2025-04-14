@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -153,13 +154,15 @@ public class PlayerInfo : MonoBehaviour
     /// <param name="item">The interactable item to add.</param>
     public void addItem(Interactable item)
     {
-        if (itemInventory.ContainsKey(item.name.ToLower()))
+        
+        // Determine if the item represents an ID card.
+        IDCard possibleCard = IDCard.StringAsID(item.interactableName.Substring(0, item.interactableName.Length - 3));
+
+        if (itemInventory.ContainsKey(item.name.ToLower()) || playerIDs.Values.Contains(possibleCard))
         {
             GameManager.Instance().AddTextToJournal("I take out the " + item.interactableName + " from my bag and then...");
             return;
         }
-        // Determine if the item represents an ID card.
-        IDCard possibleCard = IDCard.StringAsID(item.interactableName.Substring(0, item.interactableName.Length - 3));
 
         // If the item is a valid ID card, add it to the playerIDs dictionary.
         if (!possibleCard.Equals(IDCard.None))
