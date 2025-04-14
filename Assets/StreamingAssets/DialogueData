@@ -237,6 +237,12 @@ door : unlock : Any : The door beeps, accepting the id and I hear the deadbolt r
 red door : unlockFail : Any : I rattle the red door's handle, trying to open it. It looks like it's one of those id card access doors and won't open up until I use a card.
 red door : location : Any : A red door with a small pane of glass is at the far end of the room. It looks like it leads into some sort of hallway.
 
+# Red door help
+red door : use patient id on : Any : I try to simply use the patient id on the door but the advanced security recognizes that I am not embodying the identity of a patient.
+red door : use patient id on the : Any : I try to simply use the patient id on the door but the advanced security recognizes that I am not embodying the identity of a patient.
+red door : swipe patient id on : Any : I try to simply swipe the patient id on the door but the advanced security recognizes that I am not embodying the identity of a patient.
+red door : swipe patient id on the : Any : I try to simply swipe the patient id on the door but the advanced security recognizes that I am not embodying the identity of a patient.
+
 
 
 # Brawler
