@@ -239,7 +239,7 @@ Fire Exit : go through : Brawler : I push the metal bar and the door swings open
 door : unlock : Any : The door beeps, accepting the id and I hear the deadbolt retract. I open the door and walk through.
 red door : unlockFail : Any : I rattle the red door's handle, trying to open it. It looks like it's one of those id card access doors and won't open up until I use a card.
 red door : inspect : Any : Looks like an id access door with some sort of weird scanner attached. Looks like its not just looking to scan an id card but to ensure i embody the mindset of the id. In short, to get past this, i would have to <b> switch </b> into the mindset of a <b>patient </b> or some other id.
-
+large hole : inspect : Any : A large hole that I could probably fit through, looks like there's a creepy room with candles on the other side.
 
 # Red door help
 red door : use patient id on : Any : I try to simply use the patient id on the door but the advanced security recognizes that I am not embodying the identity of a patient.
@@ -287,6 +287,12 @@ Person : talk0 : Guard : I walk up and say hello to the person. They look at me 
 Person : talk0 : Brawler : I walk up and say hello to the person. They look at me with a face of recognition but then it fades. I see a bit of disappointment flash over their eyes. "Hello my name is Ruth, sorry for staring you just look like an acquaintance of mine but they aren't a drunk."
 Person : talk0 : Thief : I walk up and say hello to the person. They look at me with a face of recognition but then it fades. "Hello my name is Ruth, sorry for staring you just look like an acquaintance of mine but you aren't them. You look like you are here to steal and they would never do that."
 Person : talk0 : Patient : I walk up and say hello to the person. They look at me with a face of recognition. "{name}? Is that you {name}. It's been so long, how have you been?" She notices the non-recognition in my face. "Oh sorry" she says, "My name's Ruth. You look exactly like this acquaintance I knew from years ago."
+
+Ruth : talk0 : Doctor : I walk up and say hello to the person. They look at me with a face of recognition but then it fades. "Hello my name is Ruth, sorry for staring you just look like an acquaintance of mine but they aren't a doctor."
+Ruth : talk0 : Guard : I walk up and say hello to the person. They look at me with a face of recognition but then it fades. "Hello my name is Ruth, sorry for staring you just look like an acquaintance of mine but they aren't a guard."
+Ruth : talk0 : Brawler : I walk up and say hello to the person. They look at me with a face of recognition but then it fades. I see a bit of disappointment flash over their eyes. "Hello my name is Ruth, sorry for staring you just look like an acquaintance of mine but they aren't a drunk."
+Ruth : talk0 : Thief : I walk up and say hello to the person. They look at me with a face of recognition but then it fades. "Hello my name is Ruth, sorry for staring you just look like an acquaintance of mine but you aren't them. You look like you are here to steal and they would never do that."
+Ruth : talk0 : Patient : I walk up and say hello to the person. They look at me with a face of recognition. "{name}? Is that you {name}. It's been so long, how have you been?" She notices the non-recognition in my face. "Oh sorry" she says, "My name's Ruth. You look exactly like this acquaintance I knew from years ago."
 
 Ruth : inspect : Any : I take a closer look at Ruth. Yep, still a middle aged woman.
 Ruth : inspect : Patient : I take a closer look at Ruth. Yep, still a middle aged woman. She may have known me before I lost my memory.
