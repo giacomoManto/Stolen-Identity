@@ -1,7 +1,7 @@
 # Object : action : ID Card Name (or Any) : description
 
 #Random objects
-Apple : inspect: Any : I look at the apple closely and realize it's probably the most delicious looking apple ive seen. One bite wouldn't hurt anyone... probably?
+Apple : inspect: Any : I look at the apple closely and realize it's probably the most delicious looking apple I've seen. One bite wouldn't hurt anyone... probably?
 Apple : inspect: Doctor : Oh god an apple... better keep my distance.
 Apple : eat : Any : I walk over and decide to eat the apple. While munching I realize the apple is delicious. Praise the Apple!
 Apple : eat : Patient : I walk over to the apple ready to take a big bite and then... wait what was I doing? Oh right, I'm an amnesiac patient...
@@ -76,7 +76,7 @@ Bar Rewards Card : inspect : Guard : I look at the bar rewards card. It is a sog
 Bar Rewards Card : inspect : Doctor : I look at the bar rewards card. It is a soggy bar loyalty card. Looks like this belonged to a true hardcore drinker. Wasn't there a patient that came in earlier directly from a bar?
 Bar Rewards Card : inspect : Brawler : My rewards card. Only thirteen more drinks and I'll get one for free.
 
-Sleeping Man : location : Any : I see a sleeping man slumped among the storage shelves, deep in sleep after what must have been a grueling shift. The man sleeps holding some sort of brown paper bag which seems important if the 
+Sleeping Man : location : Any : I see a sleeping man slumped among the storage shelves, deep in sleep after what must have been a grueling shift. The man sleeps holding some sort of brown paper bag which seems important.
 Sleeping Man : location : Brawler : Among the storage shelves, I spot a sleeping man sprawled out with a crumpled brown paper bag held by his side, looking like there's a bottle of <b>booze</b> inside. 
 Sleeping Man : inspect : Any : On closer inspection, I notice the bag definitely contains a bottle of booze. It’s probably best not to mess with the man or the drink unless I have a solid plan. 
 Sleeping Man : talk : Any : I try to get him to respond, but the sleeping man merely grumbles and turns over, offering nothing more than a half-hearted snore. 
@@ -238,7 +238,7 @@ Fire Exit : go through : Brawler : I push the metal bar and the door swings open
 # Doors
 door : unlock : Any : The door beeps, accepting the id and I hear the deadbolt retract. I open the door and walk through.
 red door : unlockFail : Any : I rattle the red door's handle, trying to open it. It looks like it's one of those id card access doors and won't open up until I use a card.
-red door : inspect : Any : Looks like an id access door with some sort of weird scanner attached. Looks like its not just looking to scan an id card but to ensure i embody the mindset of the id. In short, to get past this, i would have to <b> switch </b> into the mindset of a <b>patient </b> or some other id.
+red door : inspect : Any : Looks like an id access door with some sort of weird scanner attached. Looks like it's not just looking to scan an id card but to ensure I embody the mindset of the id. In short, to get past this, I would have to <b> switch </b> into the mindset of a <b>patient </b> or some other id.
 large hole : inspect : Any : A large hole that I could probably fit through, looks like there's a creepy room with candles on the other side.
 
 # Red door help
