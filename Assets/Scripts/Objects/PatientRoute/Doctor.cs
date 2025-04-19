@@ -8,6 +8,7 @@ public class Doctor : Interactable
     void Start()
     {
         this.RegisterAction(TalkTuah, "say hello to", "talk", "hello", "talk to", "speak to", "converse with", "chat with", "communicate with", "address", "engage with", "discuss with", "confer with", "have a word with");
+        this.RegisterAction("use", Use);
         gameData = SaveDataManager.Instance().LoadGame();
         if (releaseSlip == null)
         {
@@ -39,5 +40,11 @@ public class Doctor : Interactable
         {
             GameManager.Instance().AddTextToJournal(GetTextFromJson("talk", id));
         }
+    }
+
+    // Cheap workaround to be able to use the doctor id card in presence of doctor.
+    private void Use(IDCard id)
+    {
+        FindFirstObjectByType<PlayerInfo>().switchPlayerID(IDCard.Doctor.Name);
     }
 }
