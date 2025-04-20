@@ -13,8 +13,8 @@ public class Brawler : Interactable
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        this.RegisterAction(TalkTo, "talk to", "speak to", "converse with", "chat with", "communicate with", "address", "engage with", "discuss with", "confer with", "have a word with");
-        this.RegisterAction(Annoy, "wake", "annoy", "tickle", "irritate", "bother", "pester", "provoke", "agitate", "disturb", "bug", "harass", "vex", "exasperate", "irk", "madden", "ruffle", "needle", "hassle", "plague", "torment", "badger", "nag", "molest");
+        this.RegisterAction(TalkTo, "talk", "talk to", "speak to", "converse with", "chat with", "communicate with", "address", "engage with", "discuss with", "confer with", "have a word with");
+        this.RegisterAction(Annoy, "poke", "wake", "annoy", "tickle", "irritate", "bother", "pester", "provoke", "agitate", "disturb", "bug", "harass", "vex", "exasperate", "irk", "madden", "ruffle", "needle", "hassle", "plague", "torment", "badger", "nag", "molest");
     }
 
     private void TalkTo(IDCard id)
