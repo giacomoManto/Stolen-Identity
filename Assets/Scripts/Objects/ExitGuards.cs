@@ -13,7 +13,7 @@ public class ExitGuards : Interactable
     private void Start()
     {
         this.RegisterAction(Give, "give", "offer", "hand", "present", "deliver", "pass", "provide", "grant", "bestow", "supply");
-        this.RegisterAction(TalkTo, "talk to", "speak to", "converse with", "chat with", "communicate with", "address", "engage with", "discuss with", "confer with", "have a word with");
+        this.RegisterAction(TalkTo, "talk", "talk to", "speak to", "converse with", "chat with", "communicate with", "address", "engage with", "discuss with", "confer with", "have a word with");
         this.RegisterAction(Fight, "fight", "attack", "combat", "battle", "clash", "engage", "assault", "struggle", "spar", "duel", "punch", "kick","break");
 
     }
