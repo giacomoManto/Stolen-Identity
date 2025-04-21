@@ -84,9 +84,9 @@ Sleeping Man : annoyTalk : Any : As I approach, the man suddenly snaps awake. He
 Sleeping Man : annoyTalkBrawler : Any : I start to approach the sleeping man who snaps awake. He moves in a blur, trying to use the bottle of booze to wack me over the head like some sort of drunk sleep warrior. Being the better drunken warrior, I punch him square in the face before he can land his blow and he uh...goes back to sleep, slumped amongst the storage shelves. The <b>booze</b> is mine for the taking.
 Sleeping Man : unconscious : Any : Now that the sleeping man is deeply unconscious, I realize that any further interaction is pointless.
 
-Fire Exit : brawler ending : Brawler: I stumble out the fire exit with a silly smile on my face as I almost accidentally knock the door off its hinges. I gaze at my bottle of booze, already half empty, and take another long swig before heading to the nearest bar to get to brawling. t(Hidden Ending 1/4)
+Fire Exit : brawler ending : Brawler: I stumble out the fire exit with a silly smile on my face as I almost accidentally knock the door off its hinges. I gaze at my bottle of booze, already half empty, and take another long swig before heading to the nearest bar to get to brawling. Yet deep down, I know the taste of booze disgusts me. (Hidden Ending 1/4)
 
-Exit Door : brawler ending : Brawler: True brawler ending (Hidden Ending 1/4)
+Exit Door : brawler ending : Brawler : I stumble out the exit door with a silly smile on my face as I almost accidentally knock the door off its hinges. I gaze at my bottle of booze, already half empty, and take another long swig before heading to the nearest bar to get to brawling. Yet deep down, I know the taste of booze disgusts me. (Hidden Ending 1/4)
 
 # Become a doctor
 Lab Coat : inspect : Any : I take a closer look at the lab coat. It's quite standard.
