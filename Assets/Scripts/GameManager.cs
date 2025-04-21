@@ -392,6 +392,7 @@ public class GameManager : MonoBehaviour
             }
             actionsList = actionsList.Substring(0, actionsList.Length - 1);
             AddTextToJournal(actionsList);
+            AddTextToJournal("I better not forget that these are NOT all the commands I can use. I can always just try the <b>verb noun</b> format. For example <b>eat apple</b>.");
             return true;
         }
         return false;
