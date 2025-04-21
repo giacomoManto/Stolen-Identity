@@ -338,7 +338,6 @@ Transform:
   - {fileID: 2061849514}
   - {fileID: 775823340}
   - {fileID: 1990417180}
-  - {fileID: 1422428917}
   - {fileID: 1367396384}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2509,55 +2508,6 @@ MonoBehaviour:
   consideredInRoom: []
   visitText: []
   allAfter: 
---- !u!1 &688669856
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 688669857}
-  - component: {fileID: 688669858}
-  m_Layer: 0
-  m_Name: Fire Alarm (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &688669857
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 688669856}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1456374741}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &688669858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 688669856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bb591057174da2439f3782dfb96b560, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyed: 0
-  interactableName: Fire Alarm
-  locationDescription: There is a fire alarm on the southern wall.
-  playerCanStore: 0
-  dialogueManager: {fileID: 0}
 --- !u!1 &746904301
 GameObject:
   m_ObjectHideFlags: 0
@@ -3354,56 +3304,6 @@ MonoBehaviour:
   locked: 1
   lockPickable: 0
   breakable: 0
---- !u!1 &958311107
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 958311108}
-  - component: {fileID: 958311109}
-  m_Layer: 0
-  m_Name: Fire Alarm
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &958311108
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 958311107}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1501790959}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &958311109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 958311107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bb591057174da2439f3782dfb96b560, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyed: 0
-  interactableName: Fire Alarm
-  locationDescription: A red fire alarm is next to the water cooler bubbling in the
-    corner of the room.
-  playerCanStore: 0
-  dialogueManager: {fileID: 0}
 --- !u!1 &958371312
 GameObject:
   m_ObjectHideFlags: 0
@@ -4527,56 +4427,6 @@ MonoBehaviour:
   - rummage
   - examine
   requiredId: 0
---- !u!1 &1422428916
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1422428917}
-  - component: {fileID: 1422428918}
-  m_Layer: 0
-  m_Name: Fire Alarm
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1422428917
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1422428916}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 52509125}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1422428918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1422428916}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bb591057174da2439f3782dfb96b560, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyed: 0
-  interactableName: Fire Alarm
-  locationDescription: There is an old fire alarm half sticking out from behind the
-    refrigerator.
-  playerCanStore: 0
-  dialogueManager: {fileID: 0}
 --- !u!1 &1428822187
 GameObject:
   m_ObjectHideFlags: 0
@@ -4721,7 +4571,6 @@ Transform:
   - {fileID: 7063798344599000805}
   - {fileID: 1039126090}
   - {fileID: 673477765}
-  - {fileID: 688669857}
   - {fileID: 1756258982}
   m_Father: {fileID: 64296177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4850,7 +4699,6 @@ Transform:
   - {fileID: 1520839185}
   - {fileID: 1414727510}
   - {fileID: 1960753704}
-  - {fileID: 958311108}
   - {fileID: 838910328}
   - {fileID: 1844631724}
   m_Father: {fileID: 64296177}
